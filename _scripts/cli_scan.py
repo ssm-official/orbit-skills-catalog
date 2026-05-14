@@ -141,6 +141,20 @@ def scan_one(row: dict) -> dict:
             cwd=repo_dir, output_file=log_dir / "semgrep.stdout.txt", timeout=300,
         )
 
+    # pip-audit (Python deps) — invoke as module since user-installed scripts dir may not be on PATH
+    if any(p.exists() for p in [repo_dir / "requirements.txt", repo_dir / "pyproject.toml", repo_dir / "setup.py"]):
+        try:
+            r = subprocess.run([sys.executable, "-m", "pip_audit", "--format=json", "--strict", "."],
+                               cwd=str(repo_dir), capture_output=True, text=True, timeout=180)
+            (log_dir / "pip-audit.json").write_text(r.stdout or "[]", encoding="utf-8")
+            audit["scanners_run"].append("pip-audit")
+            audit["external_scanners"]["pip_audit"] = {
+                "exit_code": r.returncode,
+                "output_path": f"_logs/scan/{owner}__{repo}/pip-audit.json",
+            }
+        except Exception as e:
+            audit["external_scanners"]["pip_audit"] = {"error": str(e)}
+
     # ---- verdict logic ----
     # §3.1 automatic rejects
     reject_reasons = []

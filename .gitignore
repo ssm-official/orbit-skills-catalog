@@ -7,6 +7,9 @@
 secrets/
 ~/.config/orbit-skills/
 
+# Bundled scanner binaries (downloaded by setup)
+_tools/
+
 # Caches
 _cache/
 __pycache__/

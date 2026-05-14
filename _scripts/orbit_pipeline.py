@@ -26,6 +26,13 @@ CACHE_DIR = ROOT / "_cache"
 LOG_DIR = ROOT / "_logs"
 RUN_LOG = LOG_DIR / "run" / "run.log"
 
+# Auto-prepend bundled scanner binaries to PATH (gitleaks, osv-scanner live in _tools/)
+_TOOLS_DIR = ROOT / "_tools"
+if _TOOLS_DIR.exists():
+    _path_sep = ";" if os.name == "nt" else ":"
+    if str(_TOOLS_DIR) not in os.environ.get("PATH", ""):
+        os.environ["PATH"] = str(_TOOLS_DIR) + _path_sep + os.environ.get("PATH", "")
+
 
 # ---------- logging ----------
 

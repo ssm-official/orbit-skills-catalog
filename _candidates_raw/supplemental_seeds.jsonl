@@ -1,0 +1,38 @@
+{"source_url":"https://github.com/duffelhq/duffel-api-javascript","kind":"sdk_wrapper","proposed_slot":"personal.travel.flights-duffel-sdk","track_hint":"personal","notes":"renamed from duffel-api-node"}
+{"source_url":"https://github.com/duffelhq/duffel-api-python","kind":"sdk_wrapper","proposed_slot":"personal.travel.flights-duffel-py","track_hint":"personal","notes":"Duffel Python SDK"}
+{"source_url":"https://github.com/anthropics/anthropic-cookbook","kind":"tool_folder","proposed_slot":"_meta.anthropic_cookbook","track_hint":"both","notes":"Recipe collection"}
+{"source_url":"https://github.com/openweathermap/openweathermap","kind":"sdk_wrapper","proposed_slot":"personal.home.weather-owm","track_hint":"personal","notes":"OWM official"}
+{"source_url":"https://github.com/open-meteo/open-meteo","kind":"sdk_wrapper","proposed_slot":"personal.home.weather-openmeteo","track_hint":"personal","notes":"Open-Meteo free weather"}
+{"source_url":"https://github.com/google-gemini/cookbook","kind":"tool_folder","proposed_slot":"_meta.gemini_cookbook","track_hint":"both","notes":"For reference only"}
+{"source_url":"https://github.com/asadovsky/transit-api","kind":"sdk_wrapper","proposed_slot":"personal.travel.transit-us","track_hint":"personal","notes":"US transit data"}
+{"source_url":"https://github.com/aws/aws-sdk-js-v3","kind":"sdk_wrapper","proposed_slot":"merchant.devops.aws-sdk-js","track_hint":"merchant","notes":"AWS official"}
+{"source_url":"https://github.com/aws/aws-sdk-python","kind":"sdk_wrapper","proposed_slot":"merchant.devops.aws-sdk-py","track_hint":"merchant","notes":"AWS official"}
+{"source_url":"https://github.com/boto/boto3","kind":"sdk_wrapper","proposed_slot":"merchant.devops.boto3","track_hint":"merchant","notes":"AWS Python (boto3)"}
+{"source_url":"https://github.com/googleapis/google-cloud-python","kind":"sdk_wrapper","proposed_slot":"merchant.devops.gcp-python","track_hint":"merchant","notes":"GCP Python SDK"}
+{"source_url":"https://github.com/Azure/azure-sdk-for-python","kind":"sdk_wrapper","proposed_slot":"merchant.devops.azure-py","track_hint":"merchant","notes":"Azure Python SDK"}
+{"source_url":"https://github.com/vercel/vercel","kind":"sdk_wrapper","proposed_slot":"merchant.devops.vercel-cli","track_hint":"merchant","notes":"Vercel CLI + SDK"}
+{"source_url":"https://github.com/SerpApi/serpapi-python","kind":"sdk_wrapper","proposed_slot":"merchant.marketing.serpapi-py","track_hint":"merchant","notes":"SerpAPI Python"}
+{"source_url":"https://github.com/tavily-ai/tavily-python","kind":"sdk_wrapper","proposed_slot":"both.search.tavily-py","track_hint":"both","notes":"Tavily official Python"}
+{"source_url":"https://github.com/exa-labs/exa-py","kind":"sdk_wrapper","proposed_slot":"both.search.exa-py","track_hint":"both","notes":"Exa search Python"}
+{"source_url":"https://github.com/serpapi/google-search-results-nodejs","kind":"sdk_wrapper","proposed_slot":"merchant.marketing.serpapi-node","track_hint":"merchant","notes":"SerpAPI Node"}
+{"source_url":"https://github.com/firecrawl/firecrawl","kind":"sdk_wrapper","proposed_slot":"both.search.firecrawl","track_hint":"both","notes":"Web scraping API"}
+{"source_url":"https://github.com/brave/brave-search-api","kind":"sdk_wrapper","proposed_slot":"both.search.brave","track_hint":"both","notes":"Brave Search API docs"}
+{"source_url":"https://github.com/deepgram/deepgram-python-sdk","kind":"sdk_wrapper","proposed_slot":"both.creative.deepgram-py","track_hint":"both","notes":"Deepgram STT Python"}
+{"source_url":"https://github.com/deepgram/deepgram-node-sdk","kind":"sdk_wrapper","proposed_slot":"both.creative.deepgram-node","track_hint":"both","notes":"Deepgram STT Node"}
+{"source_url":"https://github.com/AssemblyAI/assemblyai-python-sdk","kind":"sdk_wrapper","proposed_slot":"both.creative.assemblyai-py","track_hint":"both","notes":"AssemblyAI STT"}
+{"source_url":"https://github.com/DeepLcom/deepl-python","kind":"sdk_wrapper","proposed_slot":"both.creative.deepl-py","track_hint":"both","notes":"DeepL translation Python"}
+{"source_url":"https://github.com/DeepLcom/deepl-node","kind":"sdk_wrapper","proposed_slot":"both.creative.deepl-node","track_hint":"both","notes":"DeepL translation Node"}
+{"source_url":"https://github.com/sec-edgar/sec-edgar","kind":"sdk_wrapper","proposed_slot":"merchant.research.sec-edgar","track_hint":"merchant","notes":"SEC EDGAR public filings"}
+{"source_url":"https://github.com/companieshouse/api-sdk-node","kind":"sdk_wrapper","proposed_slot":"merchant.research.companies-house","track_hint":"merchant","notes":"UK Companies House"}
+{"source_url":"https://github.com/lukasschwab/arxiv.py","kind":"sdk_wrapper","proposed_slot":"both.learning.arxiv","track_hint":"both","notes":"arxiv search Python"}
+{"source_url":"https://github.com/martinblech/xmltodict","kind":"tool_folder","proposed_slot":"_meta.xml","track_hint":"both","notes":"For pubmed-like XML parsing"}
+{"source_url":"https://github.com/openweathermap/openweather-api-org","kind":"sdk_wrapper","proposed_slot":"personal.home.owm-spec","track_hint":"personal","notes":"OWM API spec"}
+{"source_url":"https://github.com/Mailgun/mailgun.js","kind":"sdk_wrapper","proposed_slot":"merchant.marketing.mailgun-js","track_hint":"merchant","notes":"Mailgun Node SDK"}
+{"source_url":"https://github.com/mailgun/mailgun-python","kind":"sdk_wrapper","proposed_slot":"merchant.marketing.mailgun-py","track_hint":"merchant","notes":"Mailgun Python"}
+{"source_url":"https://github.com/postmark/postmark.js","kind":"sdk_wrapper","proposed_slot":"merchant.marketing.postmark-js","track_hint":"merchant","notes":"Postmark Node"}
+{"source_url":"https://github.com/ActiveCampaign/activecampaign-api-php","kind":"sdk_wrapper","proposed_slot":"merchant.marketing.activecampaign-php","track_hint":"merchant","notes":"AC PHP SDK"}
+{"source_url":"https://github.com/klaviyo/klaviyo-api-python","kind":"sdk_wrapper","proposed_slot":"merchant.marketing.klaviyo-py","track_hint":"merchant","notes":"Klaviyo Python"}
+{"source_url":"https://github.com/klaviyo/klaviyo-api-node","kind":"sdk_wrapper","proposed_slot":"merchant.marketing.klaviyo-node","track_hint":"merchant","notes":"Klaviyo Node"}
+{"source_url":"https://github.com/woocommerce/wc-api-node","kind":"sdk_wrapper","proposed_slot":"merchant.ecommerce.woocommerce-node","track_hint":"merchant","notes":"WooCommerce Node"}
+{"source_url":"https://github.com/woocommerce/wc-api-python","kind":"sdk_wrapper","proposed_slot":"merchant.ecommerce.woocommerce-py","track_hint":"merchant","notes":"WooCommerce Python"}
+{"source_url":"https://github.com/orcasecurity/aws-public-ips","kind":"tool_folder","proposed_slot":"_skip","track_hint":"","notes":"OUT OF SCOPE; remove before triage"}
