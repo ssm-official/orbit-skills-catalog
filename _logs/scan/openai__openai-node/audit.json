@@ -1,0 +1,361 @@
+{
+  "source_url": "https://github.com/openai/openai-node",
+  "proposed_slot": "both.creative.openai-node",
+  "scanned_at": "2026-05-14T05:53:06.216545+00:00",
+  "clone_ok": true,
+  "commit_pinned": "b0e89cddad2e9ee4f8262c0f1157c7376ecf4156",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [
+      {
+        "file": "src/internal/detect-platform.ts",
+        "label": "exec-call",
+        "snippet": ") {     const match = pattern.exec(navigator.userAgent);     if ("
+      },
+      {
+        "file": "src/internal/utils/path.ts",
+        "label": "exec-call",
+        "snippet": "match = invalidSegmentPattern.exec(pathOnly)) !== null) {       i"
+      }
+    ],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "storage.googleapis.com": [
+        ".stats.yml"
+      ],
+      "learn.microsoft.com": [
+        "README.md",
+        "azure.md"
+      ],
+      "cognitiveservices.azure.com": [
+        "README.md",
+        "azure.md",
+        "examples/azure/chat.ts",
+        "examples/azure/realtime/websocket.ts",
+        "examples/azure/realtime/ws.ts"
+      ],
+      "github.com": [
+        ".devcontainer/devcontainer.json",
+        "CHANGELOG.md",
+        "CONTRIBUTING.md",
+        "MIGRATION.md",
+        "README.md"
+      ],
+      "classic.yarnpkg.com": [
+        "CONTRIBUTING.md"
+      ],
+      "www.github.com": [
+        ".github/workflows/publish-jsr.yml",
+        ".github/workflows/publish-npm.yml",
+        "CONTRIBUTING.md",
+        "README.md"
+      ],
+      "www.npmjs.com": [
+        "CONTRIBUTING.md",
+        "README.md",
+        "helpers.md",
+        "src/_vendor/partial-json-parser/README.md"
+      ],
+      "platform.openai.com": [
+        "MIGRATION.md",
+        "README.md",
+        "examples/fine-tuning.ts",
+        "helpers.md",
+        "realtime.md"
+      ],
+      "www.apache.org": [
+        "LICENSE"
+      ],
+      "developer.mozilla.org": [
+        "MIGRATION.md",
+        "realtime.md",
+        "src/client.ts",
+        "src/internal/builtin-types.ts",
+        "src/internal/to-file.ts"
+      ],
+      "nodejs.org": [
+        "MIGRATION.md",
+        "ecosystem-tests/bun/.gitignore",
+        "src/internal/detect-platform.ts"
+      ],
+      "bun.sh": [
+        "MIGRATION.md",
+        "README.md"
+      ],
+      "img.shields.io": [
+        "README.md"
+      ],
+      "npmjs.org": [
+        "README.md"
+      ],
+      "jsr.io": [
+        "README.md"
+      ],
+      "stainlessapi.com": [
+        "README.md"
+      ],
+      "somesite": [
+        "README.md"
+      ],
+      "raw.githubusercontent.com": [
+        "README.md",
+        "ecosystem-tests/bun/.gitignore",
+        "release-please-config.json"
+      ],
+      "docs.deno.com": [
+        "README.md"
+      ],
+      "semver.org": [
+        "README.md"
+      ],
+      "endoflife.date": [
+        "README.md"
+      ],
+      "stainless.com": [
+        "SECURITY.md"
+      ],
+      "openai.com": [
+        "SECURITY.md",
+        "src/resources/chat/completions/completions.ts",
+        "src/resources/responses/responses.ts"
+      ],
+      "registry.yarnpkg.com": [
+        "yarn.lock"
+      ],
+      "aka.ms": [
+        ".devcontainer/devcontainer.json",
+        "ecosystem-tests/cloudflare-worker/tsconfig.json",
+        "ecosystem-tests/node-ts-cjs-auto/tsconfig.json",
+        "ecosystem-tests/node-ts-cjs-auto/tsconfig.nodenext.json",
+        "ecosystem-tests/node-ts-cjs-web/tsconfig.json"
+      ],
+      "help.github.com": [
+        ".github/CODEOWNERS",
+        "ecosystem-tests/vercel-edge/.gitignore"
+      ],
+      "community.openai.com": [
+        ".github/ISSUE_TEMPLATE/bug_report.yml",
+        ".github/ISSUE_TEMPLATE/feature_request.yml"
+      ],
+      "help.openai.com": [
+        ".github/ISSUE_TEMPLATE/config.yml",
+        "src/client.ts",
+        "src/resources/files.ts"
+      ],
+      "pkg.stainless.com": [
+        ".github/workflows/ci.yml",
+        "scripts/utils/upload-artifact.sh"
+      ],
+      "registry.npmjs.org": [
+        "bin/publish-npm",
+        "ecosystem-tests/browser-direct-import/package-lock.json",
+        "ecosystem-tests/bun/bun.lockb",
+        "ecosystem-tests/cloudflare-worker/package-lock.json",
+        "ecosystem-tests/node-ts-cjs-auto/package-lock.json"
+      ],
+      "www.patreon.com": [
+        "ecosystem-tests/browser-direct-import/package-lock.json",
+        "ecosystem-tests/ts-browser-webpack/package-lock.json",
+        "ecosystem-tests/vercel-edge/package-lock.json",
+        "examples/package-lock.json"
+      ],
+      "feross.org": [
+        "ecosystem-tests/browser-direct-import/package-lock.json",
+        "ecosystem-tests/ts-browser-webpack/package-lock.json",
+        "ecosystem-tests/vercel-edge/package-lock.json",
+        "examples/package-lock.json"
+      ],
+      "audio-samples.github.io": [
+        "ecosystem-tests/browser-direct-import/public/index.js",
+        "ecosystem-tests/bun/openai.test.ts",
+        "ecosystem-tests/cloudflare-worker/src/uploadWebApiTestCases.ts",
+        "ecosystem-tests/deno/main_test.ts",
+        "ecosystem-tests/node-ts-cjs-auto/tests/test.ts"
+      ],
+      "gruntjs.com": [
+        "ecosystem-tests/bun/.gitignore"
+      ],
+      "bower.io": [
+        "ecosystem-tests/bun/.gitignore"
+      ],
+      "snowpack.dev": [
+        "ecosystem-tests/bun/.gitignore"
+      ],
+      "parceljs.org": [
+        "ecosystem-tests/bun/.gitignore"
+      ],
+      "nextjs.org": [
+        "ecosystem-tests/bun/.gitignore"
+      ],
+      "editorconfig.org": [
+        "ecosystem-tests/cloudflare-worker/.editorconfig"
+      ],
+      "opencollective.com": [
+        "ecosystem-tests/cloudflare-worker/package-lock.json",
+        "ecosystem-tests/node-ts-cjs-auto/package-lock.json",
+        "ecosystem-tests/node-ts-cjs-web/package-lock.json",
+        "ecosystem-tests/node-ts-cjs/package-lock.json",
+        "ecosystem-tests/node-ts-esm-auto/package-lock.json"
+      ],
+      "tidelift.com": [
+        "ecosystem-tests/cloudflare-worker/package-lock.json",
+        "ecosystem-tests/node-ts-cjs-auto/package-lock.json",
+        "ecosystem-tests/node-ts-cjs-web/package-lock.json",
+        "ecosystem-tests/node-ts-cjs/package-lock.json",
+        "ecosystem-tests/node-ts-esm-auto/package-lock.json"
+      ],
+      "paulmillr.com": [
+        "ecosystem-tests/cloudflare-worker/package-lock.json",
+        "ecosystem-tests/ts-browser-webpack/package-lock.json"
+      ],
+      "developers.cloudflare.com": [
+        "ecosystem-tests/cloudflare-worker/src/worker.ts",
+        "ecosystem-tests/cloudflare-worker/wrangler.toml"
+      ],
+      "deno.land": [
+        "ecosystem-tests/deno/deno.lock",
+        "ecosystem-tests/deno/main_test.ts"
+      ],
+      "paypal.me": [
+        "ecosystem-tests/node-ts-cjs-auto/package-lock.json",
+        "ecosystem-tests/node-ts-cjs-web/package-lock.json",
+        "ecosystem-tests/node-ts-cjs/package-lock.json",
+        "ecosystem-tests/node-ts-esm-auto/package-lock.json",
+        "ecosystem-tests/node-ts-esm-web/package-lock.json"
+      ],
+      "patreon.com": [
+        "ecosystem-tests/ts-browser-webpack/package-lock.json"
+      ],
+      "dotenvx.com": [
+        "examples/package-lock.json"
+      ],
+      "example-resource.azure.openai.com": [
+        "src/azure.ts"
+      ],
+      "api.example.com": [
+        "src/client.ts"
+      ],
+      "api.openai.com": [
+        "src/auth/subject-token-providers.ts",
+        "src/client.ts",
+        "tests/auth/subject-token-providers.test.ts",
+        "tests/index.test.ts"
+      ],
+      "example": [
+        "src/client.ts"
+      ],
+      "management.azure.com": [
+        "src/auth/subject-token-providers.ts",
+        "tests/auth/subject-token-providers.test.ts"
+      ],
+      "169.254.169.254": [
+        "src/auth/subject-token-providers.ts"
+      ],
+      "metadata.google.internal": [
+        "src/auth/subject-token-providers.ts"
+      ],
+      "auth.openai.com": [
+        "src/auth/workload-identity-auth.ts",
+        "tests/auth/workload-identity-auth.test.ts"
+      ],
+      "docs.expo.dev": [
+        "src/core/streaming.ts"
+      ],
+      "npm.im": [
+        "src/helpers/audio.ts"
+      ],
+      "doc.deno.land": [
+        "src/internal/detect-platform.ts"
+      ],
+      "undici.nodejs.org": [
+        "src/internal/shims.ts"
+      ],
+      "www.typescriptlang.org": [
+        "src/internal/types.ts"
+      ],
+      "datatracker.ietf.org": [
+        "src/internal/utils/path.ts"
+      ],
+      "stackoverflow.com": [
+        "src/internal/utils/uuid.ts",
+        "src/internal/utils/values.ts",
+        "src/resources/vector-stores/file-batches.ts"
+      ],
+      "url.spec.whatwg.org": [
+        "src/internal/utils/values.ts"
+      ],
+      "eslint.org": [
+        "src/internal/utils/values.ts"
+      ],
+      "tools.ietf.org": [
+        "src/lib/jsonschema.ts"
+      ],
+      "json-schema.org": [
+        "src/_vendor/zod-to-json-schema/zodToJsonSchema.ts",
+        "src/lib/jsonschema.ts",
+        "src/resources/chat/completions/completions.ts",
+        "src/resources/evals/evals.ts",
+        "src/resources/responses/responses.ts"
+      ],
+      "cookbook.openai.com": [
+        "src/resources/completions.ts",
+        "src/resources/embeddings.ts"
+      ],
+      "pypi.org": [
+        "src/resources/embeddings.ts"
+      ],
+      "en.wikipedia.org": [
+        "src/resources/audio/transcriptions.ts",
+        "src/resources/audio/translations.ts",
+        "src/resources/beta/realtime/realtime.ts",
+        "src/resources/beta/realtime/sessions.ts",
+        "src/resources/beta/realtime/transcription-sessions.ts"
+      ],
+      "timeapi.io": [
+        "src/resources/chat/completions/completions.ts",
+        "src/resources/responses/responses.ts"
+      ],
+      "modelcontextprotocol.io": [
+        "src/resources/realtime/client-secrets.ts",
+        "src/resources/realtime/realtime.ts",
+        "src/resources/responses/responses.ts"
+      ],
+      "example.com').href": [
+        "tests/path.test.ts"
+      ],
+      "anotherexample.com": [
+        "tests/lib/azure.test.ts"
+      ],
+      "goo.gl": [
+        "tests/lib/__snapshots__/ChatCompletionStream.test.ts.snap",
+        "tests/lib/__snapshots__/ResponseStream.test.ts.snap",
+        "tests/lib/__snapshots__/parser.test.ts.snap"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\openai__openai-node\\gitleaks.json",
+      "exit_code": 1,
+      "output_path": "_logs/scan/openai__openai-node/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/openai__openai-node/osv.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "exec-call in src/internal/detect-platform.ts; exec-call in src/internal/utils/path.ts; trusted-vendor: 1 gitleaks finding(s) downgraded to notes (likely SDK docs/example values)",
+  "files_scanned": 606,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

@@ -1,0 +1,136 @@
+{
+  "source_url": "https://github.com/mapbox/mapbox-sdk-js",
+  "proposed_slot": "both.maps.mapbox",
+  "scanned_at": "2026-05-14T05:49:02.693336+00:00",
+  "clone_ok": true,
+  "commit_pinned": "314e747d3e43cd5299a9b255c0cadb60940d9435",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "github.com": [
+        "CHANGELOG.md",
+        "README.md",
+        "docs/development.md",
+        "docs/services.md",
+        "lib/helpers/__tests__/parse-link-header.test.js"
+      ],
+      "contributor-covenant.org": [
+        "CODE_OF_CONDUCT.md"
+      ],
+      "registry.npmjs.org": [
+        "package-lock.json"
+      ],
+      "opencollective.com": [
+        "package-lock.json"
+      ],
+      "tidelift.com": [
+        "package-lock.json"
+      ],
+      "www.patreon.com": [
+        "package-lock.json"
+      ],
+      "feross.org": [
+        "package-lock.json"
+      ],
+      "paulmillr.com": [
+        "package-lock.json"
+      ],
+      "travis-ci.com": [
+        "README.md"
+      ],
+      "docs.mapbox.com": [
+        "README.md",
+        "docs/services.md",
+        "services/datasets.js",
+        "services/directions.js",
+        "services/geocoding-v6.js"
+      ],
+      "unpkg.com": [
+        "README.md"
+      ],
+      "nodejs.org": [
+        "README.md"
+      ],
+      "developer.mozilla.org": [
+        "README.md",
+        "docs/classes.md",
+        "docs/services.md"
+      ],
+      "api.mapbox.com": [
+        "docs/classes.md",
+        "lib/classes/mapi-client.js",
+        "lib/constants.js",
+        "services/__tests__/static.test.js",
+        "test/browser-interface.test.js"
+      ],
+      "upload.wikimedia.org": [
+        "docs/services.md",
+        "services/__tests__/static.test.js",
+        "services/static.js"
+      ],
+      "en.wikipedia.org": [
+        "docs/services.md",
+        "services/geocoding-v6.js",
+        "services/geocoding.js"
+      ],
+      "www.mapbox.com": [
+        "docs/services.md",
+        "services/static.js"
+      ],
+      "weep.com": [
+        "lib/classes/__tests__/mapi-response.test.js"
+      ],
+      "api.github.com": [
+        "lib/helpers/__tests__/parse-link-header.test.js"
+      ],
+      "imaginary.url.notreal": [
+        "lib/helpers/__tests__/parse-link-header.test.js"
+      ],
+      "tools.ietf.org": [
+        "lib/helpers/__tests__/parse-link-header.test.js"
+      ],
+      "www.first.com": [
+        "lib/helpers/__tests__/url-utils.test.js"
+      ],
+      "second.com": [
+        "lib/helpers/__tests__/url-utils.test.js"
+      ],
+      "test.com": [
+        "lib/helpers/__tests__/url-utils.test.js"
+      ],
+      "test.com')).tobe(": [
+        "lib/helpers/__tests__/url-utils.test.js"
+      ],
+      "www.fake.com": [
+        "test/test-shared-interface.js"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\mapbox__mapbox-sdk-js\\gitleaks.json",
+      "exit_code": 1,
+      "output_path": "_logs/scan/mapbox__mapbox-sdk-js/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/mapbox__mapbox-sdk-js/osv.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "trusted-vendor: 2 gitleaks finding(s) downgraded to notes (likely SDK docs/example values); gitleaks: 2 test-path secret(s)",
+  "files_scanned": 89,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

@@ -1447,5 +1447,7 @@
   "verdict": "pass_with_notes",
   "verdict_reason": "exec-call in apps/shinkai-desktop/src/components/mcp-servers/composio-mcp-servers.tsx; exec-call in apps/shinkai-desktop/src/components/mcp-servers/composio-mcp-servers.tsx; Function-constructor in apps/shinkai-desktop/src/windows/shinkai-artifacts/main.tsx; exec-call in ci-scripts/download-side-binaries.ts; exec-call in libs/shinkai-node-state/src/v2/queries/getChatConversation/index.ts; exec-call in libs/shinkai-ui/src/components/chat/sqlite-preview.tsx; exec-call in libs/shinkai-ui/src/components/chat/sqlite-preview.tsx; exec-call in libs/shinkai-ui/src/components/chat/sqlite-preview.tsx; exec-call in libs/shinkai-ui/src/components/chat/sqlite-preview.tsx",
   "files_scanned": 1101,
-  "files_skipped": 0
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
 }

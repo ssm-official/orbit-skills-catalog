@@ -1,0 +1,264 @@
+{
+  "source_url": "https://github.com/stripe/stripe-python",
+  "proposed_slot": "merchant.finance.stripe-py",
+  "scanned_at": "2026-05-14T05:54:08.976890+00:00",
+  "clone_ok": true,
+  "commit_pinned": "41a2ece934c8d365b9fc88253bc3c4675913d09e",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner",
+    "pip-audit"
+  ],
+  "findings": {
+    "secrets": [
+      {
+        "file": "tests/test_http_client.py",
+        "label": "stripe test key",
+        "match_redacted": true
+      }
+    ],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "editorconfig.org": [
+        ".editorconfig"
+      ],
+      "github.com": [
+        ".github/workflows/ci.yml",
+        "CHANGELOG.md",
+        "README.md",
+        "pyproject.toml",
+        "stripe/_stripe_client.py"
+      ],
+      "docs.stripe.com": [
+        ".github/workflows/ci.yml",
+        "CHANGELOG.md",
+        "README.md",
+        "stripe/_account.py",
+        "stripe/_account_external_account_service.py"
+      ],
+      "docs.corp.stripe.com": [
+        "CHANGELOG.md"
+      ],
+      "www.python.org": [
+        "CHANGELOG.md",
+        "README.md"
+      ],
+      "stripe.com": [
+        ".github/ISSUE_TEMPLATE/bug_report.yml",
+        "CHANGELOG.md",
+        "LICENSE",
+        "README.md",
+        "pyproject.toml"
+      ],
+      "nvd.nist.gov": [
+        "CHANGELOG.md"
+      ],
+      "www.contributor-covenant.org": [
+        "CODE_OF_CONDUCT.md"
+      ],
+      "www.github.com": [
+        "CONTRIBUTING.md"
+      ],
+      "curl.se": [
+        "justfile",
+        "stripe/data/ca-certificates.crt"
+      ],
+      "img.shields.io": [
+        "README.md"
+      ],
+      "user:pass@example.com:1234": [
+        "README.md"
+      ],
+      "myawesomeplugin.info": [
+        "README.md",
+        "tests/test_api_requestor.py"
+      ],
+      "peps.python.org": [
+        "README.md"
+      ],
+      "discuss.python.org": [
+        "README.md"
+      ],
+      "packaging.python.org": [
+        "README.md"
+      ],
+      "pip.pypa.io": [
+        "README.md"
+      ],
+      "mise.jdx.dev": [
+        "README.md"
+      ],
+      "dashboard.stripe.com": [
+        "README.md",
+        "stripe/_account.py",
+        "stripe/_account_service.py",
+        "stripe/_coupon.py",
+        "stripe/_coupon_service.py"
+      ],
+      "support.stripe.com": [
+        ".github/ISSUE_TEMPLATE/config.yml",
+        "stripe/_account.py",
+        "stripe/_bank_account.py",
+        "stripe/_card.py",
+        "stripe/_payment_link.py"
+      ],
+      "go": [
+        "flake8_stripe/flake8_stripe.py",
+        "stripe/_stripe_object.py"
+      ],
+      "www.iso.org": [
+        "stripe/_account.py",
+        "stripe/_application_fee.py",
+        "stripe/_application_fee_refund.py",
+        "stripe/_balance.py",
+        "stripe/_balance_transaction.py"
+      ],
+      "en.wikipedia.org": [
+        "stripe/_account.py",
+        "stripe/_charge.py",
+        "stripe/_confirmation_token.py",
+        "stripe/_customer.py",
+        "stripe/_dispute.py"
+      ],
+      "api.stripe.com": [
+        "stripe/__init__.py",
+        "stripe/_account.py",
+        "stripe/_balance.py",
+        "stripe/_coupon.py",
+        "stripe/_discount.py"
+      ],
+      "www.iana.org": [
+        "stripe/_account.py",
+        "stripe/params/reporting/_report_run_create_params.py",
+        "stripe/reporting/_report_run.py"
+      ],
+      "code.google.com": [
+        "stripe/_http_client.py"
+      ],
+      "twitter.com": [
+        "stripe/_http_client.py"
+      ],
+      "connect.stripe.com": [
+        "stripe/__init__.py"
+      ],
+      "files.stripe.com": [
+        "stripe/__init__.py",
+        "tests/api_resources/test_file.py",
+        "tests/api_resources/test_file_upload.py",
+        "tests/api_resources/test_quote.py",
+        "tests/test_generated_examples.py"
+      ],
+      "meter-events.stripe.com": [
+        "stripe/__init__.py",
+        "tests/test_generated_examples.py"
+      ],
+      "frontierclimate.com": [
+        "stripe/climate/_order.py"
+      ],
+      "raw.githubusercontent.com": [
+        "stripe/data/ca-certificates.crt"
+      ],
+      "www.conexxus.org": [
+        "stripe/issuing/_authorization.py",
+        "stripe/issuing/_transaction.py",
+        "stripe/params/issuing/_authorization_capture_params.py",
+        "stripe/params/issuing/_authorization_create_params.py",
+        "stripe/params/issuing/_authorization_finalize_amount_params.py"
+      ],
+      "www.gov.uk": [
+        "stripe/issuing/_card.py"
+      ],
+      "ec.europa.eu": [
+        "stripe/issuing/_card.py"
+      ],
+      "www.affirm.com": [
+        "stripe/params/_payment_method_configuration_create_params.py",
+        "stripe/params/_payment_method_configuration_modify_params.py",
+        "stripe/params/_payment_method_configuration_update_params.py"
+      ],
+      "www.grab.com": [
+        "stripe/params/_payment_method_configuration_create_params.py",
+        "stripe/params/_payment_method_configuration_modify_params.py",
+        "stripe/params/_payment_method_configuration_update_params.py"
+      ],
+      "www.sofort.com": [
+        "stripe/params/_payment_method_configuration_create_params.py",
+        "stripe/params/_payment_method_configuration_modify_params.py",
+        "stripe/params/_payment_method_configuration_update_params.py"
+      ],
+      "www.census.gov": [
+        "stripe/params/tax/_registration_create_params.py",
+        "stripe/tax/_registration.py"
+      ],
+      "www.stripe.com": [
+        "tests/test_generated_examples.py"
+      ],
+      "fake.url": [
+        "tests/test_http_client.py"
+      ],
+      "slap": [
+        "tests/test_http_client.py"
+      ],
+      "user:withpwd@slap:8888": [
+        "tests/test_http_client.py"
+      ],
+      "slap:8888": [
+        "tests/test_http_client.py"
+      ],
+      "slap2:444": [
+        "tests/test_http_client.py"
+      ],
+      "foo": [
+        "tests/test_http_client.py"
+      ],
+      "bad-url": [
+        "tests/test_integration.py"
+      ],
+      "api.example.com": [
+        "tests/test_requestor_options.py"
+      ],
+      "connect.example.com": [
+        "tests/services/test_oauth.py",
+        "tests/test_requestor_options.py"
+      ],
+      "files.example.com": [
+        "tests/test_requestor_options.py"
+      ],
+      "upload.example.com": [
+        "tests/test_requestor_options.py"
+      ],
+      "meter-events.example.com": [
+        "tests/test_requestor_options.py"
+      ],
+      "example2.com": [
+        "tests/test_stripe_client.py"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\stripe__stripe-python\\gitleaks.json",
+      "exit_code": 1,
+      "output_path": "_logs/scan/stripe__stripe-python/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/stripe__stripe-python/osv.json"
+    },
+    "pip_audit": {
+      "exit_code": 0,
+      "output_path": "_logs/scan/stripe__stripe-python/pip-audit.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "test-path secret findings (1); gitleaks: 4 test-path secret(s)",
+  "files_scanned": 1346,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

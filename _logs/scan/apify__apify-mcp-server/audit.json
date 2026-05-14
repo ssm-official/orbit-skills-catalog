@@ -1,0 +1,334 @@
+{
+  "source_url": "https://github.com/apify/apify-mcp-server",
+  "proposed_slot": "both.maps.apify-apify-mcp-server",
+  "scanned_at": "2026-05-14T05:49:06.823919+00:00",
+  "clone_ok": true,
+  "commit_pinned": "8fe310260da3f18a7d82f640abf0cdc589193984",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner",
+    "pip-audit"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "editorconfig.org": [
+        ".editorconfig"
+      ],
+      "openrouter.ai": [
+        ".env.example",
+        "evals/README.md",
+        "evals/config.ts",
+        "evals/shared/config.ts",
+        "evals/workflows/README.md"
+      ],
+      "baldasseva--storybook-mcp.apify.actor": [
+        ".mcp.json"
+      ],
+      "mcp.figma.com": [
+        ".mcp.json"
+      ],
+      "github.com": [
+        ".claude/skills/bug-triage/SKILL.md",
+        ".claude/skills/dig/SKILL.md",
+        ".github/workflows/manual_release_stable.yaml",
+        "CHANGELOG.md",
+        "CLAUDE.md"
+      ],
+      "modelcontextprotocol.io": [
+        ".claude/skills/dig/SKILL.md",
+        "CLAUDE.md",
+        "evals/workflows/README.md",
+        "res/call_actor_redesign_v4.md",
+        "src/mcp/server.ts"
+      ],
+      "www.conventionalcommits.org": [
+        "CONTRIBUTING.md"
+      ],
+      "mcp.apify.com)**": [
+        "DEVELOPMENT.md",
+        "README.md"
+      ],
+      "developers.openai.com": [
+        "DEVELOPMENT.md",
+        "evals/README.md",
+        "res/chatgpt-app-submission.md",
+        "src/resources/widgets.ts"
+      ],
+      "console.apify.com": [
+        "DEVELOPMENT.md",
+        "evals/workflows/README.md",
+        "manifest.json",
+        "src/mcp/server.ts",
+        "src/web/src/pages/ActorRun/ActorRun.tsx"
+      ],
+      "mcp.apify.com": [
+        ".claude/skills/bug-triage/SKILL.md",
+        ".github/ISSUE_TEMPLATE/bug_report.yml",
+        "DEVELOPMENT.md",
+        "README.md",
+        "manifest.json"
+      ],
+      "www.mcpjam.com": [
+        "DEVELOPMENT.md"
+      ],
+      "chatgpt.com": [
+        "DEVELOPMENT.md"
+      ],
+      "docs.apify.com": [
+        ".claude/skills/bug-triage/SKILL.md",
+        ".github/workflows/_smoke_test_npm_package.yaml",
+        "DEVELOPMENT.md",
+        "README.md",
+        "evals/config.ts"
+      ],
+      "mcp-apify.ngrok.dev": [
+        "DEVELOPMENT.md"
+      ],
+      "glama.ai": [
+        "glama.json"
+      ],
+      "apify.com": [
+        "README.md",
+        "manifest.json",
+        "notebooks/evaluation_2025.ipynb",
+        "res/chatgpt-app-submission.md",
+        "src/const.ts"
+      ],
+      "help.apify.com": [
+        "manifest.json"
+      ],
+      "registry.npmjs.org": [
+        ".github/workflows/manual_publish_to_npm.yaml",
+        "package-lock.json",
+        "src/web/package-lock.json"
+      ],
+      "opencollective.com": [
+        "package-lock.json",
+        "src/web/package-lock.json"
+      ],
+      "eslint.org": [
+        "package-lock.json"
+      ],
+      "paulmillr.com": [
+        "package-lock.json",
+        "src/web/package-lock.json"
+      ],
+      "www.patreon.com": [
+        "package-lock.json",
+        "src/web/package-lock.json"
+      ],
+      "feross.org": [
+        "package-lock.json",
+        "src/web/package-lock.json"
+      ],
+      "dotenvx.com": [
+        "package-lock.json"
+      ],
+      "tidelift.com": [
+        "package-lock.json",
+        "src/web/package-lock.json"
+      ],
+      "raw.githubusercontent.com": [
+        "README.md",
+        "evals/README.md"
+      ],
+      "www.npmjs.com": [
+        "README.md"
+      ],
+      "img.shields.io": [
+        "README.md",
+        "src/web/src/utils/mock-actor-details.ts"
+      ],
+      "smithery.ai": [
+        "README.md",
+        "smithery.yaml"
+      ],
+      "img.youtube.com": [
+        "README.md"
+      ],
+      "claude.ai": [
+        "README.md",
+        "docs/claude-code-tools.json"
+      ],
+      "code.visualstudio.com": [
+        "README.md"
+      ],
+      "modelcontextprotocol.org": [
+        "README.md"
+      ],
+      "kiro.dev": [
+        "README.md"
+      ],
+      "base.org": [
+        "README.md"
+      ],
+      "www.x402.org": [
+        "README.md"
+      ],
+      "www.skyfire.xyz": [
+        "README.md"
+      ],
+      "api.skyfire.xyz": [
+        "README.md"
+      ],
+      "blog.apify.com": [
+        "README.md",
+        "notebooks/evaluation_2025.ipynb"
+      ],
+      "sentry.io": [
+        "README.md"
+      ],
+      "nodejs.org": [
+        "README.md",
+        "src/stdio.ts"
+      ],
+      "pkg.pr.new": [
+        "README.md"
+      ],
+      "hub.docker.com": [
+        "README.md"
+      ],
+      "json-schema.org": [
+        "README.md",
+        "docs/claude-code-tools.json",
+        "notebooks/evaluation_2025.ipynb",
+        "src/tools/utils.ts"
+      ],
+      "www.youtube.com": [
+        "README.md"
+      ],
+      "static.modelcontextprotocol.io": [
+        "server.json",
+        "src/server_card.ts",
+        "tests/unit/server_card.test.ts"
+      ],
+      "discord.com": [
+        ".github/ISSUE_TEMPLATE/config.yml"
+      ],
+      "www.w3.org": [
+        "docs/apify-logo.svg"
+      ],
+      "app.phoenix.arize.com": [
+        "evals/2025_11_04_failed_cases_analysis.md",
+        "evals/README.md",
+        "notebooks/evaluation_2025.ipynb"
+      ],
+      "docs.claude.com": [
+        "evals/README.md"
+      ],
+      "platform.openai.com": [
+        "evals/workflows/README.md",
+        "res/chatgpt-app-submission.md"
+      ],
+      "colab.research.google.com": [
+        "notebooks/evaluation_2025.ipynb"
+      ],
+      "ipywidgets.readthedocs.io": [
+        "notebooks/evaluation_2025.ipynb"
+      ],
+      "www.cnn.com": [
+        "notebooks/evaluation_2025.ipynb"
+      ],
+      "crawlee.dev": [
+        "res/algolia.md",
+        "src/const.ts",
+        "src/tools/common/fetch_apify_docs.ts",
+        "tests/integration/suite.ts",
+        "tests/unit/tools.fetch_apify_docs.test.ts"
+      ],
+      "standardschema.dev": [
+        "res/patterns_for_simplification.md"
+      ],
+      "blocked.com": [
+        "res/patterns_for_simplification.md"
+      ],
+      "api.apify.com": [
+        "src/apify_client.ts",
+        "src/resources/widgets.ts"
+      ],
+      "$": [
+        "src/dev_server.ts",
+        "src/mcp/actors.ts",
+        "src/web/build.js"
+      ],
+      "916ec26e2f0abda151403acb5d8370c7@o272833.ingest.us.sentry.io": [
+        "src/instrument.ts"
+      ],
+      "images.apifyusercontent.com": [
+        "src/resources/widgets.ts"
+      ],
+      "apify-image-uploads-prod.s3.us-east-1.amazonaws.com": [
+        "src/resources/widgets.ts",
+        "src/web/src/utils/mock-actor-details.ts"
+      ],
+      "apify-image-uploads-prod.s3.amazonaws.com": [
+        "src/resources/widgets.ts"
+      ],
+      "fonts.googleapis.com": [
+        "src/resources/widgets.ts",
+        "src/web/src/utils/init-widget.tsx"
+      ],
+      "fonts.gstatic.com": [
+        "src/resources/widgets.ts",
+        "src/web/src/utils/init-widget.tsx"
+      ],
+      "docs.apify.com.evil.com": [
+        "src/tools/common/fetch_apify_docs.ts",
+        "tests/unit/tools.fetch_apify_docs.test.ts"
+      ],
+      "docs.apify.com@evil.com": [
+        "src/tools/common/fetch_apify_docs.ts",
+        "tests/unit/tools.fetch_apify_docs.test.ts"
+      ],
+      "www.example.com": [
+        "src/utils/apify_properties.ts"
+      ],
+      "x.com": [
+        "src/web/src/utils/mock-actor-details.ts"
+      ],
+      "docs.apify.com.evil.com:8080": [
+        "tests/unit/tools.fetch_apify_docs.test.ts"
+      ],
+      "crawlee.dev.evil.com": [
+        "tests/unit/tools.fetch_apify_docs.test.ts"
+      ],
+      "evil.com": [
+        "tests/unit/tools.fetch_apify_docs.test.ts"
+      ],
+      "example.com')).tobe(true": [
+        "tests/unit/utils.generic.test.ts"
+      ],
+      "192.168.1.1')).tobe(true": [
+        "tests/unit/utils.generic.test.ts"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\apify__apify-mcp-server\\gitleaks.json",
+      "exit_code": 1,
+      "output_path": "_logs/scan/apify__apify-mcp-server/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/apify__apify-mcp-server/osv.json"
+    },
+    "pip_audit": {
+      "exit_code": 0,
+      "output_path": "_logs/scan/apify__apify-mcp-server/pip-audit.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "trusted-vendor: 4 gitleaks finding(s) downgraded to notes (likely SDK docs/example values)",
+  "files_scanned": 297,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

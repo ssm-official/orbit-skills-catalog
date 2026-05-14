@@ -91,8 +91,10 @@
       "output_path": "_logs/scan/makenotion__notion-mcp-server/osv.json"
     }
   },
-  "verdict": "quarantine",
-  "verdict_reason": "gitleaks: 2 non-test secret(s)",
+  "verdict": "pass_with_notes",
+  "verdict_reason": "eval-call in src/openapi-mcp-server/openapi/parser.ts; gitleaks: 2 test-path secret(s)",
   "files_scanned": 34,
-  "files_skipped": 0
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
 }

@@ -1,0 +1,36 @@
+{
+  "source_url": "https://github.com/ccxt/ccxt",
+  "proposed_slot": "personal.finance.crypto-ccxt",
+  "smoked_at": "2026-05-14T06:07:27.532569+00:00",
+  "platform": "windows",
+  "sandbox": "fresh venv / fresh node_modules (Docker unavailable on host)",
+  "network_monitoring": "Get-NetTCPConnection deltas (weaker than netns isolation)",
+  "package": "ccxt__ccxt",
+  "language": "python",
+  "kind": "python",
+  "steps": [
+    {
+      "step": "uv_dryrun",
+      "rc": 2,
+      "stderr": "uld not rely on automatic discovery.\nInstead, consider the following options:\n\n1. set up custom discovery (`find` directive with `include` or `exclude`)\n2. use a `src-layout`\n3. explicitly set `py_modules` or `packages` with a list of names\n\nTo find more information, look for \"package discovery\" on setuptools docs.\n\nhint: This usually indicates a problem with the package or the build environment.\n"
+    },
+    {
+      "step": "uv_run_import",
+      "rc": 1,
+      "stdout": "",
+      "stderr": "  \u00c3\u2014 Failed to resolve `--with` requirement\n  \u00e2\u2022\u00b0\u00e2\u201d\u20ac\u00e2\u2013\u00b6 The build backend returned an error\n",
+      "new_outbound_connections": [
+        {
+          "host": "151.101.0.223",
+          "port": 443
+        },
+        {
+          "host": "151.101.192.223",
+          "port": 443
+        }
+      ]
+    }
+  ],
+  "verdict": "deferred",
+  "reason": "uv install dry-run failed; package may need uvx-style invocation or extra system deps"
+}

@@ -31,4 +31,15 @@ Thumbs.db
 
 # Logs that are too noisy to track (keep curated logs only)
 _logs/run/*.log
-_logs/scan/**/raw/
+
+# Raw scanner output contains apparent-secret strings (even when they're
+# false-positive matches like docstring examples or model identifiers).
+# GitHub's secret-scanning push protection blocks these. Keep them local
+# only — the sanitised audit.json is the public audit trail.
+_logs/scan/**/gitleaks.json
+_logs/scan/**/gitleaks.stdout.txt
+_logs/scan/**/trufflehog.json
+_logs/scan/**/osv.json
+_logs/scan/**/pip-audit.json
+_logs/scan/**/semgrep.json
+_logs/scan/**/semgrep.stdout.txt

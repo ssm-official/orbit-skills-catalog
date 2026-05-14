@@ -1,0 +1,287 @@
+{
+  "source_url": "https://github.com/stripe/stripe-node",
+  "proposed_slot": "merchant.finance.stripe-node",
+  "scanned_at": "2026-05-14T05:54:30.829416+00:00",
+  "clone_ok": true,
+  "commit_pinned": "185f336fe42aba87a1eb8533299e4a760e82021e",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner"
+  ],
+  "findings": {
+    "secrets": [
+      {
+        "file": "test/telemetry.spec.ts",
+        "label": "stripe test key",
+        "match_redacted": true
+      },
+      {
+        "file": "test/telemetry.spec.ts",
+        "label": "stripe test key",
+        "match_redacted": true
+      },
+      {
+        "file": "test/telemetry.spec.ts",
+        "label": "stripe test key",
+        "match_redacted": true
+      }
+    ],
+    "suspicious": [
+      {
+        "file": "examples/webhook-signing/nextjs/main.ts",
+        "label": "exec-call",
+        "snippet": "const process = child_process.exec('npm run dev --verbose'); proc"
+      },
+      {
+        "file": "examples/webhook-signing/nextjs/main.ts",
+        "label": "exec-call",
+        "snippet": "  const match = /url: (.*)/gm.exec(line);   if (match) {     cons"
+      },
+      {
+        "file": "examples/webhook-signing/test/main.ts",
+        "label": "exec-call",
+        "snippet": " const server = child_process.exec('./main.ts', {   cwd: path, })"
+      },
+      {
+        "file": "examples/webhook-signing/test/main.ts",
+        "label": "exec-call",
+        "snippet": "endpoint available at (.*)/gm.exec(data);     if (match) {       "
+      },
+      {
+        "file": "src/Decimal.ts",
+        "label": "exec-call",
+        "snippet": ".(\\d+))?(?:[eE]([+-]?\\d+))?$/.exec(trimmed);     if (!match) {   "
+      },
+      {
+        "file": "test/Integration.spec.ts",
+        "label": "exec-call",
+        "snippet": "   const child = childProcess.exec(cmd);      let out = '';     c"
+      }
+    ],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "endoflife.date": [
+        ".mise.toml"
+      ],
+      "github.com": [
+        "CHANGELOG.md",
+        "README.md",
+        "examples/snippets/package-lock.json",
+        "examples/webhook-signing/README.md",
+        "examples/webhook-signing/deno/main.ts"
+      ],
+      "docs.stripe.com": [
+        ".github/workflows/main.yml",
+        "CHANGELOG.md",
+        "README.md",
+        "src/Webhooks.ts",
+        "src/lib.ts"
+      ],
+      "stripe.com": [
+        ".github/ISSUE_TEMPLATE/bug_report.yml",
+        "CHANGELOG.md",
+        "LICENSE",
+        "README.md",
+        "examples/webhook-signing/README.md"
+      ],
+      "dashboard.stripe.com": [
+        "CHANGELOG.md",
+        "README.md",
+        "examples/webhook-signing/README.md",
+        "src/resources/Accounts.ts",
+        "src/resources/Charges.ts"
+      ],
+      "nodejs.org": [
+        ".github/workflows/main.yml",
+        "CHANGELOG.md",
+        "examples/webhook-signing/README.md",
+        "src/Webhooks.ts"
+      ],
+      "www.contributor-covenant.org": [
+        "CODE_OF_CONDUCT.md"
+      ],
+      "www.github.com": [
+        "CONTRIBUTING.md"
+      ],
+      "www.askask.com": [
+        "package.json"
+      ],
+      "img.shields.io": [
+        "README.md"
+      ],
+      "myawesomeplugin.info": [
+        "README.md"
+      ],
+      "babeljs.io": [
+        "README.md"
+      ],
+      "classic.yarnpkg.com": [
+        "README.md"
+      ],
+      "prettier.io": [
+        "README.md"
+      ],
+      "www.semver-ts.org": [
+        "tsconfig.cjs.json"
+      ],
+      "registry.yarnpkg.com": [
+        "yarn.lock"
+      ],
+      "support.stripe.com": [
+        ".github/ISSUE_TEMPLATE/config.yml",
+        "src/resources/Accounts.ts",
+        "src/resources/BankAccounts.ts",
+        "src/resources/Cards.ts",
+        "src/resources/PaymentLinks.ts"
+      ],
+      "registry.npmjs.org": [
+        ".github/workflows/main.yml",
+        "examples/snippets/package-lock.json"
+      ],
+      "opencollective.com": [
+        "examples/snippets/package-lock.json"
+      ],
+      "tidelift.com": [
+        "examples/snippets/package-lock.json"
+      ],
+      "www.patreon.com": [
+        "examples/snippets/package-lock.json"
+      ],
+      "feross.org": [
+        "examples/snippets/package-lock.json"
+      ],
+      "ngrok.com": [
+        "examples/webhook-signing/README.md"
+      ],
+      "deno.land": [
+        "examples/webhook-signing/deno/main.ts"
+      ],
+      "nextjs.org": [
+        "examples/webhook-signing/nextjs/next-env.d.ts"
+      ],
+      "standards.ieee.org": [
+        "src/Decimal.ts"
+      ],
+      "developer.mozilla.org": [
+        "src/Decimal.ts"
+      ],
+      "datatracker.ietf.org": [
+        "src/RequestSender.ts"
+      ],
+      "en.wikipedia.org": [
+        "src/resources/Accounts.ts",
+        "src/resources/Charges.ts",
+        "src/resources/Checkout/Sessions.ts",
+        "src/resources/ConfirmationTokens.ts",
+        "src/resources/FundingInstructions.ts"
+      ],
+      "go": [
+        "src/Webhooks.ts",
+        "src/resources/Reserve/index.ts",
+        "src/resources/V2/V2Amounts.ts"
+      ],
+      "stackoverflow.com": [
+        "src/platform/PlatformFunctions.ts"
+      ],
+      "www.iso.org": [
+        "src/resources/Accounts.ts",
+        "src/resources/ApplicationFees.ts",
+        "src/resources/Balance.ts",
+        "src/resources/BalanceTransactions.ts",
+        "src/resources/Billing/CreditBalanceSummary.ts"
+      ],
+      "api.stripe.com": [
+        "src/resources/Accounts.ts",
+        "src/resources/Balance.ts",
+        "src/resources/Charges.ts",
+        "src/resources/Checkout/Sessions.ts",
+        "src/resources/Customers.ts"
+      ],
+      "www.iana.org": [
+        "src/resources/Accounts.ts",
+        "src/resources/Reporting/ReportRuns.ts"
+      ],
+      "$": [
+        "src/resources/OAuth.ts",
+        "test/RequestSender.spec.ts",
+        "test/V2Int64Integration.spec.ts"
+      ],
+      "www.affirm.com": [
+        "src/resources/PaymentMethodConfigurations.ts"
+      ],
+      "www.grab.com": [
+        "src/resources/PaymentMethodConfigurations.ts"
+      ],
+      "www.sofort.com": [
+        "src/resources/PaymentMethodConfigurations.ts"
+      ],
+      "frontierclimate.com": [
+        "src/resources/Climate/Orders.ts"
+      ],
+      "www.conexxus.org": [
+        "src/resources/Issuing/Authorizations.ts",
+        "src/resources/Issuing/Transactions.ts",
+        "src/resources/TestHelpers/Issuing/Authorizations.ts",
+        "src/resources/TestHelpers/Issuing/Transactions.ts"
+      ],
+      "www.gov.uk": [
+        "src/resources/Issuing/Cards.ts"
+      ],
+      "ec.europa.eu": [
+        "src/resources/Issuing/Cards.ts"
+      ],
+      "www.census.gov": [
+        "src/resources/Tax/Registrations.ts"
+      ],
+      "createuuid.com": [
+        "test/PlatformFunctions.spec.ts"
+      ],
+      "files.stripe.com": [
+        "test/RequestSender.spec.ts",
+        "test/StripeResource.spec.ts"
+      ],
+      "connect.stripe.com": [
+        "test/RequestSender.spec.ts"
+      ],
+      "myawesomeapp.info": [
+        "test/stripe.spec.ts"
+      ],
+      "stripe.com').get('": [
+        "test/net/helpers.ts"
+      ],
+      "stripe.com:1234": [
+        "test/net/helpers.ts"
+      ],
+      "www.stripe.com": [
+        "test/resources/generated_examples_test.spec.js"
+      ],
+      "meter-events.stripe.com": [
+        "test/resources/generated_examples_test.spec.js"
+      ],
+      "www.typescriptlang.org": [
+        "testProjects/types/typescriptTest.ts"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\stripe__stripe-node\\gitleaks.json",
+      "exit_code": 1,
+      "output_path": "_logs/scan/stripe__stripe-node/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/stripe__stripe-node/osv.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "test-path secret findings (3); exec-call in examples/webhook-signing/nextjs/main.ts; exec-call in examples/webhook-signing/nextjs/main.ts; exec-call in examples/webhook-signing/test/main.ts; exec-call in examples/webhook-signing/test/main.ts; exec-call in src/Decimal.ts; exec-call in test/Integration.spec.ts; gitleaks: 9 test-path secret(s)",
+  "files_scanned": 418,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

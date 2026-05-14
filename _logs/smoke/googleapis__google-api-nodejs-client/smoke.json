@@ -1,0 +1,20 @@
+{
+  "source_url": "https://github.com/googleapis/google-api-nodejs-client",
+  "proposed_slot": "both.productivity.google-apis-js",
+  "smoked_at": "2026-05-14T06:07:39.008488+00:00",
+  "platform": "windows",
+  "sandbox": "fresh venv / fresh node_modules (Docker unavailable on host)",
+  "network_monitoring": "Get-NetTCPConnection deltas (weaker than netns isolation)",
+  "package": "googleapis",
+  "language": "node",
+  "kind": "node",
+  "steps": [
+    {
+      "step": "npm_install",
+      "rc": 1,
+      "stderr": ""
+    }
+  ],
+  "verdict": "deferred",
+  "reason": "npm install failed (may need vendor-provided lockfile or a release-only entry point)"
+}

@@ -1,0 +1,137 @@
+{
+  "source_url": "https://github.com/HubSpot/hubspot-api-python",
+  "proposed_slot": "merchant.crm.hubspot-py",
+  "scanned_at": "2026-05-14T05:53:18.385054+00:00",
+  "clone_ok": true,
+  "commit_pinned": "a2a528a97f4c1131d7f65d0303bfbd2e523a8eba",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner",
+    "pip-audit"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "editorconfig.org": [
+        ".editorconfig"
+      ],
+      "keepachangelog.com": [
+        "CHANGELOG.md"
+      ],
+      "semver.org": [
+        "CHANGELOG.md"
+      ],
+      "github.com": [
+        "CHANGELOG.md",
+        "README.md",
+        "hubspot/automation/actions/__init__.py",
+        "hubspot/automation/actions/api/callbacks_api.py",
+        "hubspot/automation/actions/api/definitions_api.py"
+      ],
+      "pypi.org": [
+        "CHANGELOG.md",
+        "README.md"
+      ],
+      "docs.pytest.org": [
+        "CHANGELOG.md"
+      ],
+      "www.apache.org": [
+        "LICENSE"
+      ],
+      "developers.hubspot.com": [
+        "README.md",
+        "hubspot/cms/blogs/blog_posts/api/multi_language_api.py",
+        "hubspot/cms/hubdb/api/rows_api.py",
+        "hubspot/cms/hubdb/api/tables_api.py",
+        "hubspot/cms/hubdb/models/hub_db_table_v3.py"
+      ],
+      "docs.python.org": [
+        "README.md"
+      ],
+      "urllib3.readthedocs.io": [
+        "README.md",
+        "hubspot/automation/actions/rest.py",
+        "hubspot/cms/audit_logs/rest.py",
+        "hubspot/cms/blogs/authors/rest.py",
+        "hubspot/cms/blogs/blog_posts/rest.py"
+      ],
+      "openapi-generator.tech": [
+        "hubspot/automation/actions/__init__.py",
+        "hubspot/automation/actions/api/callbacks_api.py",
+        "hubspot/automation/actions/api/definitions_api.py",
+        "hubspot/automation/actions/api/functions_api.py",
+        "hubspot/automation/actions/api/revisions_api.py"
+      ],
+      "pypi.python.org": [
+        "setup.py"
+      ],
+      "private.hubteam.com": [
+        ".github/CODEOWNERS"
+      ],
+      "help.github.com": [
+        ".github/workflows/pythonapp.yml",
+        ".github/workflows/pythonintegrationtest.yml",
+        ".github/workflows/pythonpublish.yml"
+      ],
+      "api.hubapi.com": [
+        "hubspot/automation/actions/configuration.py",
+        "hubspot/cms/audit_logs/configuration.py",
+        "hubspot/cms/blogs/authors/configuration.py",
+        "hubspot/cms/blogs/blog_posts/configuration.py",
+        "hubspot/cms/blogs/tags/configuration.py"
+      ],
+      "en.wikipedia.org": [
+        "hubspot/cms/site_search/api/public_api.py"
+      ],
+      "www.elastic.co": [
+        "hubspot/cms/site_search/api/public_api.py"
+      ],
+      "knowledge.hubspot.com": [
+        "hubspot/cms/url_redirects/models/url_mapping.py",
+        "hubspot/crm/companies/api/basic_api.py",
+        "hubspot/crm/companies/api/batch_api.py",
+        "hubspot/crm/contacts/api/basic_api.py",
+        "hubspot/crm/contacts/api/batch_api.py"
+      ],
+      "my.event.app": [
+        "hubspot/marketing/events/models/event_detail_settings_url.py"
+      ],
+      "app.hubspot.com": [
+        "hubspot/utils/oauth.py"
+      ],
+      "www.test.com": [
+        "tests/integration/test_webhooks.py"
+      ],
+      "www.example.com": [
+        "tests/spec/utils/test_signature.py"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\HubSpot__hubspot-api-python\\gitleaks.json",
+      "exit_code": 0,
+      "output_path": "_logs/scan/HubSpot__hubspot-api-python/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/HubSpot__hubspot-api-python/osv.json"
+    },
+    "pip_audit": {
+      "exit_code": 1,
+      "output_path": "_logs/scan/HubSpot__hubspot-api-python/pip-audit.json"
+    }
+  },
+  "verdict": "pass",
+  "verdict_reason": "no findings of concern in static scan",
+  "files_scanned": 2268,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

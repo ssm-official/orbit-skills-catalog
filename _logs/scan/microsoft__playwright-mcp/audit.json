@@ -15,7 +15,7 @@
       {
         "file": "tests/testserver/key.pem",
         "label": "private key",
-        "match_prefix": "-----BEGIN PRIVATE KEY--"
+        "match_redacted": true
       }
     ],
     "suspicious": [],
@@ -149,8 +149,10 @@
       "output_path": "_logs/scan/microsoft__playwright-mcp/osv.json"
     }
   },
-  "verdict": "quarantine",
-  "verdict_reason": "hardcoded secrets in non-test paths (1 hits, e.g. tests/testserver/key.pem); gitleaks: 1 non-test secret(s)",
+  "verdict": "pass_with_notes",
+  "verdict_reason": "test-path secret findings (1); gitleaks: 1 test-path secret(s)",
   "files_scanned": 33,
-  "files_skipped": 0
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
 }

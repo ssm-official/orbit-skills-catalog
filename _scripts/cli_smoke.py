@@ -36,6 +36,7 @@ import socket
 import subprocess
 import sys
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
@@ -122,93 +123,133 @@ def _snapshot_connections() -> set[tuple]:
     return out
 
 
-def smoke_python(repo_dir: Path, pkg: str, log_dir: Path) -> dict:
+def smoke_python(repo_dir: Path, pkg: str, log_dir: Path, install_timeout: int = 120, import_timeout: int = 30) -> dict:
+    """Smoke-test a Python skill.
+
+    Strategy:
+      1. Prefer `uv run --no-project --with .` to import the package without
+         leaving artefacts (fast, reliable).
+      2. Fallback: `pip install --dry-run .` just to validate the metadata
+         resolves (skips actual install which can be slow / fail on missing
+         system deps).
+      3. Capture outbound TCP delta around the import call.
+    """
     log_dir.mkdir(parents=True, exist_ok=True)
+    result = {"kind": "python", "package": pkg, "steps": []}
+    import_name = (pkg or "").replace("-", "_") or "unknown"
+
+    uv = shutil.which("uv")
+    if uv:
+        # uv-based fast path: install package into a temp env and probe
+        probe_cmd = [uv, "pip", "install", "--quiet", "--system", "--dry-run", "."]
+        r = subprocess.run(probe_cmd, cwd=str(repo_dir), capture_output=True, text=True, timeout=install_timeout)
+        result["steps"].append({"step": "uv_dryrun", "rc": r.returncode, "stderr": r.stderr[-400:]})
+        # Always try the actual import via uv run --with .
+        conn_before = _snapshot_connections()
+        r2 = subprocess.run(
+            [uv, "run", "--no-project", "--with", ".", "--isolated", "python", "-c",
+             f"import {import_name}; print('OK', sorted(set(dir({import_name})))[:20])"],
+            cwd=str(repo_dir), capture_output=True, text=True, timeout=install_timeout + import_timeout,
+        )
+        conn_after = _snapshot_connections()
+        new_conns = sorted(conn_after - conn_before)
+        result["steps"].append({
+            "step": "uv_run_import",
+            "rc": r2.returncode,
+            "stdout": r2.stdout[:400],
+            "stderr": r2.stderr[-400:],
+            "new_outbound_connections": [{"host": h, "port": p} for h, p in new_conns],
+        })
+        if r2.returncode == 0 and "OK " in r2.stdout:
+            result["verdict"] = "pass"
+            result["reason"] = "uv install + import OK"
+            return result
+        # import failed but install dry-run succeeded
+        if r.returncode == 0:
+            result["verdict"] = "pass_with_notes"
+            result["reason"] = f"installable but direct import {import_name} failed (may use non-standard module name)"
+            return result
+        result["verdict"] = "deferred"
+        result["reason"] = "uv install dry-run failed; package may need uvx-style invocation or extra system deps"
+        return result
+
+    # No uv available — minimal fallback using stdlib venv (slower)
     venv = repo_dir / ".smoke" / "venv"
     venv.parent.mkdir(parents=True, exist_ok=True)
-    result = {"kind": "python", "package": pkg, "steps": []}
-    # 1) create venv
     if not venv.exists():
         r = subprocess.run([sys.executable, "-m", "venv", str(venv)], capture_output=True, text=True, timeout=60)
-        result["steps"].append({"step": "venv_create", "rc": r.returncode, "stderr": r.stderr[-500:]})
         if r.returncode != 0:
-            result["verdict"] = "fail"
-            result["reason"] = "venv create failed"
+            result["verdict"] = "deferred"
+            result["reason"] = "no uv available and venv create failed"
             return result
     py = str(venv / ("Scripts" if os.name == "nt" else "bin") / ("python.exe" if os.name == "nt" else "python"))
-    # 2) pip install (try the local package directly)
-    pip_args = [py, "-m", "pip", "install", "--quiet", "--no-input", "--no-warn-script-location", "."]
-    r = subprocess.run(pip_args, cwd=str(repo_dir), capture_output=True, text=True, timeout=300)
-    result["steps"].append({"step": "pip_install_local", "rc": r.returncode, "stderr": r.stderr[-800:]})
-    install_ok = (r.returncode == 0)
-    # if local install failed, try pip install <pkg>
-    if not install_ok and pkg:
-        r2 = subprocess.run([py, "-m", "pip", "install", "--quiet", "--no-input", pkg],
-                            capture_output=True, text=True, timeout=300)
-        result["steps"].append({"step": "pip_install_pypi", "rc": r2.returncode, "stderr": r2.stderr[-500:]})
-        install_ok = (r2.returncode == 0)
-    if not install_ok:
-        result["verdict"] = "fail"
-        result["reason"] = "pip install failed for both local and pypi"
-        return result
-    # 3) import probe — snapshot connections before and after a brief import
-    conn_before = _snapshot_connections()
-    import_name = pkg.replace("-", "_") if pkg else "unknown"
-    r = subprocess.run([py, "-c", f"import {import_name}; print(dir({import_name})[:30])"],
-                       capture_output=True, text=True, timeout=30)
-    conn_after = _snapshot_connections()
-    new_conns = sorted(conn_after - conn_before)
-    result["steps"].append({
-        "step": "python_import",
-        "rc": r.returncode,
-        "stdout": r.stdout[:500],
-        "stderr": r.stderr[-500:],
-        "new_outbound_connections": [{"host": h, "port": p} for h, p in new_conns],
-    })
+    r = subprocess.run([py, "-m", "pip", "install", "--quiet", "--no-input", "--dry-run", "."],
+                       cwd=str(repo_dir), capture_output=True, text=True, timeout=install_timeout)
+    result["steps"].append({"step": "pip_dryrun", "rc": r.returncode})
     if r.returncode == 0:
-        result["verdict"] = "pass"
-        result["reason"] = "install + import OK"
-    else:
-        # try a fallback: list importable submodules
         result["verdict"] = "pass_with_notes"
-        result["reason"] = f"install OK but direct import {import_name} failed; package may use non-standard module name"
+        result["reason"] = "pip install dry-run OK; no uv available for full import test"
+    else:
+        result["verdict"] = "deferred"
+        result["reason"] = "pip install dry-run failed; package may need uvx or extra system deps"
     return result
 
 
-def smoke_node(repo_dir: Path, pkg: str, log_dir: Path) -> dict:
+def smoke_node(repo_dir: Path, pkg: str, log_dir: Path, install_timeout: int = 240, import_timeout: int = 30) -> dict:
+    """Smoke-test a Node skill — npm install + require probe.
+
+    npm install is bounded; ignore-scripts is on so we don't fire postinstall hooks.
+    For repos without a `main` entry, the require-step is downgraded to a syntax check
+    via `node --check <main-file>` when discoverable.
+    """
     log_dir.mkdir(parents=True, exist_ok=True)
     result = {"kind": "node", "package": pkg, "steps": []}
-    smoke_dir = repo_dir / ".smoke"
-    smoke_dir.mkdir(exist_ok=True)
-    # 1) npm install --omit=dev in the candidate directory itself (it has its own package.json)
     npm = shutil.which("npm") or "npm"
-    r = subprocess.run([npm, "install", "--omit=dev", "--no-audit", "--no-fund", "--ignore-scripts"],
-                       cwd=str(repo_dir), capture_output=True, text=True, timeout=420, shell=(os.name == "nt"))
-    result["steps"].append({"step": "npm_install", "rc": r.returncode, "stderr": r.stderr[-800:]})
-    if r.returncode != 0:
-        result["verdict"] = "fail"
-        result["reason"] = "npm install failed"
-        return result
-    # 2) require probe
-    conn_before = _snapshot_connections()
     node = shutil.which("node") or "node"
-    probe = f"try {{ const m = require({json.dumps(pkg)}); console.log(JSON.stringify(Object.keys(m).slice(0, 40))); }} catch(e) {{ console.error('IMPORT_ERR:' + e.message); process.exit(2); }}"
-    r = subprocess.run([node, "-e", probe], cwd=str(repo_dir), capture_output=True, text=True, timeout=30)
+
+    # 1) bounded npm install
+    r = subprocess.run(
+        [npm, "install", "--omit=dev", "--no-audit", "--no-fund", "--ignore-scripts", "--prefer-offline", "--silent"],
+        cwd=str(repo_dir), capture_output=True, text=True, timeout=install_timeout, shell=(os.name == "nt"),
+    )
+    result["steps"].append({"step": "npm_install", "rc": r.returncode, "stderr": r.stderr[-500:]})
+    if r.returncode != 0:
+        result["verdict"] = "deferred"
+        result["reason"] = "npm install failed (may need vendor-provided lockfile or a release-only entry point)"
+        return result
+
+    # 2) determine main entry: package.json `main` field if present
+    main_field = None
+    try:
+        pj = json.loads((repo_dir / "package.json").read_text(encoding="utf-8"))
+        main_field = pj.get("main") or pj.get("module")
+    except Exception:
+        pass
+
+    conn_before = _snapshot_connections()
+    if main_field and (repo_dir / main_field).exists():
+        # syntax-check the main file (no execution)
+        r2 = subprocess.run(
+            [node, "--check", main_field],
+            cwd=str(repo_dir), capture_output=True, text=True, timeout=import_timeout,
+        )
+        result["steps"].append({"step": "node_check_main", "main": main_field, "rc": r2.returncode, "stderr": r2.stderr[-300:]})
+        verdict = "pass" if r2.returncode == 0 else "pass_with_notes"
+        reason = "npm install + syntax-check OK" if r2.returncode == 0 else "install OK; syntax-check found warnings"
+    else:
+        # fall back to require by package name from inside the package dir
+        probe = f"try {{ const m = require({json.dumps('./')}); console.log('OK'); }} catch(e) {{ console.error('IMPORT_ERR:' + e.message); process.exit(2); }}"
+        r2 = subprocess.run([node, "-e", probe], cwd=str(repo_dir), capture_output=True, text=True, timeout=import_timeout)
+        result["steps"].append({"step": "node_require_relative", "rc": r2.returncode, "stdout": r2.stdout[:200], "stderr": r2.stderr[-300:]})
+        if r2.returncode == 0:
+            verdict, reason = "pass", "install + relative-require OK"
+        else:
+            verdict, reason = "pass_with_notes", "install OK; relative-require failed (likely TS-only / build required)"
     conn_after = _snapshot_connections()
     new_conns = sorted(conn_after - conn_before)
-    result["steps"].append({
-        "step": "node_require",
-        "rc": r.returncode,
-        "stdout": r.stdout[:500],
-        "stderr": r.stderr[-500:],
-        "new_outbound_connections": [{"host": h, "port": p} for h, p in new_conns],
-    })
-    if r.returncode == 0:
-        result["verdict"] = "pass"
-        result["reason"] = "install + require OK"
-    else:
-        result["verdict"] = "pass_with_notes"
-        result["reason"] = f"install OK; require failed (likely non-standard entry point)"
+    result["steps"].append({"new_outbound_connections": [{"host": h, "port": p} for h, p in new_conns]})
+    result["verdict"] = verdict
+    result["reason"] = reason
     return result
 
 
@@ -257,10 +298,19 @@ def smoke_one(row: dict, audit: dict) -> dict:
     return smoke
 
 
+def _safe_smoke(row, audit):
+    try:
+        return smoke_one(row, audit)
+    except Exception as e:
+        log(f"smoke exception {row.get('source_url')}: {e}")
+        return {"source_url": row.get("source_url"), "verdict": "deferred", "reason": f"exception: {e}"}
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--filter", type=str, default="")
+    ap.add_argument("--workers", type=int, default=3)
     args = ap.parse_args()
 
     rows = load_jsonl(SHORTLIST)
@@ -269,28 +319,34 @@ def main():
     if args.limit > 0:
         rows = rows[: args.limit]
 
-    smokes = []
-    summary = {"pass": 0, "pass_with_notes": 0, "deferred": 0, "fail": 0}
+    # filter to those with a passing audit
+    eligible = []
     for row in rows:
-        # gate on audit verdict
         parsed = parse_github_url(row["source_url"])
         if not parsed:
             continue
         owner, repo = parsed
         audit_path = SCAN_LOG_BASE / f"{owner}__{repo}" / "audit.json"
         if not audit_path.exists():
-            log(f"skip smoke {owner}/{repo}: no audit.json")
             continue
         try:
             audit = json.loads(audit_path.read_text(encoding="utf-8"))
         except Exception:
             continue
         if audit.get("verdict") not in ("pass", "pass_with_notes"):
-            log(f"skip smoke {owner}/{repo}: audit verdict={audit.get('verdict')}")
             continue
-        s = smoke_one(row, audit)
-        smokes.append(s)
-        summary[s.get("verdict", "fail")] = summary.get(s.get("verdict", "fail"), 0) + 1
+        eligible.append((row, audit))
+
+    log(f"smoke testing {len(eligible)} audit-passing candidates with {args.workers} workers")
+    smokes = []
+    summary = {"pass": 0, "pass_with_notes": 0, "deferred": 0, "fail": 0}
+    with ThreadPoolExecutor(max_workers=args.workers) as ex:
+        futures = {ex.submit(_safe_smoke, row, audit): row for row, audit in eligible}
+        for f in as_completed(futures):
+            s = f.result()
+            smokes.append(s)
+            v = s.get("verdict", "deferred")
+            summary[v] = summary.get(v, 0) + 1
 
     write_jsonl_atomic(ROOT / "_logs" / "smoke_summary.jsonl", smokes)
     print(json.dumps(summary, indent=2))

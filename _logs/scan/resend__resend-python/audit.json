@@ -1,0 +1,107 @@
+{
+  "source_url": "https://github.com/resend/resend-python",
+  "proposed_slot": "both.marketing.resend-py",
+  "scanned_at": "2026-05-14T05:53:51.593963+00:00",
+  "clone_ok": true,
+  "commit_pinned": "d0420a60a2c237ed71e2b1271e5b9a77bca4b158",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner",
+    "pip-audit"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "intellij-support.jetbrains.com": [
+        ".gitignore"
+      ],
+      "github.com": [
+        ".gitignore",
+        "README.md",
+        "setup.py"
+      ],
+      "plugins.jetbrains.com": [
+        ".gitignore"
+      ],
+      "youtrack.jetbrains.com": [
+        ".gitignore"
+      ],
+      "jupyter.org": [
+        ".gitignore"
+      ],
+      "python-poetry.org": [
+        ".gitignore"
+      ],
+      "www.toptal.com": [
+        ".gitignore"
+      ],
+      "api.resend.com": [
+        "docker-compose.yaml",
+        "resend/__init__.py"
+      ],
+      "img.shields.io": [
+        "README.md"
+      ],
+      "codecov.io": [
+        "README.md"
+      ],
+      "resend.com": [
+        "README.md",
+        "examples/with_inline_attachments.py",
+        "resend/api_keys/_api_keys.py",
+        "resend/audiences/_audiences.py",
+        "resend/automations/_automations.py"
+      ],
+      "docs.renovatebot.com": [
+        "renovate.json"
+      ],
+      "webhook.example.com": [
+        "examples/webhooks.py"
+      ],
+      "new-webhook.example.com": [
+        "examples/webhooks.py"
+      ],
+      "docs.svix.com": [
+        "resend/webhooks/_webhooks.py"
+      ],
+      "cdn.resend.com": [
+        "tests/attachments_async_test.py"
+      ],
+      "inbound-cdn.resend.com": [
+        "tests/attachments_test.py",
+        "tests/receiving_async_test.py"
+      ],
+      "new-endpoint.com": [
+        "tests/webhooks_async_test.py",
+        "tests/webhooks_test.py"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\resend__resend-python\\gitleaks.json",
+      "exit_code": 1,
+      "output_path": "_logs/scan/resend__resend-python/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/resend__resend-python/osv.json"
+    },
+    "pip_audit": {
+      "exit_code": 1,
+      "output_path": "_logs/scan/resend__resend-python/pip-audit.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "gitleaks: 6 test-path secret(s)",
+  "files_scanned": 173,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

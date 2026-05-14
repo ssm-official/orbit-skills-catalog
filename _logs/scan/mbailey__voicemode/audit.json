@@ -1,0 +1,422 @@
+{
+  "source_url": "https://github.com/mbailey/voicemode",
+  "proposed_slot": "both.creative.mbailey-voicemode",
+  "scanned_at": "2026-05-14T05:49:01.299778+00:00",
+  "clone_ok": true,
+  "commit_pinned": "733a95df636acb52043e2c7d4e3554e9dce462d1",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner",
+    "pip-audit"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [
+      {
+        "file": "Makefile",
+        "label": "exec-call",
+        "snippet": "_VERSION=$$(uv run python -c \"exec(open('voice_mode/__version__.p"
+      }
+    ],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "docs.readthedocs.io": [
+        ".readthedocs.yaml"
+      ],
+      "keepachangelog.com": [
+        "CHANGELOG.md"
+      ],
+      "semver.org": [
+        "CHANGELOG.md"
+      ],
+      "github.com": [
+        ".claude-plugin/marketplace.json",
+        ".claude/skills/impressions/SKILL.md",
+        ".claude/skills/impressions/docs/finding-samples.md",
+        ".github/STAR_NOTIFICATIONS.md",
+        ".github/workflows/publish-pypi-and-mcp.yml"
+      ],
+      "musicforprogramming.net": [
+        "CHANGELOG.md",
+        "docs/reference/dj/mfp.md",
+        "voice_mode/dj/mfp.py"
+      ],
+      "getvoicemode.com": [
+        ".github/workflows/create-release.yml",
+        "CHANGELOG.md",
+        "README.md",
+        "docs/.archive/conversations/2025-07-03-claude-gemini-cli-discussion/README.md",
+        "docs/.archive/conversations/2025-07-03-claude-gemini-human-creativity/README.md"
+      ],
+      "astral.sh": [
+        ".claude/commands/install.md",
+        ".github/workflows/create-release.yml",
+        ".github/workflows/test.yml",
+        "CONTRIBUTING.md",
+        "README.md"
+      ],
+      "docs.github.com": [
+        ".github/dependabot.yml",
+        "llms.txt"
+      ],
+      "test.pypi.org": [
+        "Makefile"
+      ],
+      "pypi.org": [
+        "Makefile",
+        "README.md",
+        "docs/.archive/uv.md",
+        "docs/web/claude.html",
+        "docs/web/index-voice-mcp-backup.html"
+      ],
+      "google.github.io": [
+        "Makefile"
+      ],
+      "voice-mode.readthedocs.io": [
+        "README.md",
+        "mkdocs.yml"
+      ],
+      "twitter.com": [
+        "README.md",
+        "mkdocs.yml"
+      ],
+      "discord.gg": [
+        "docs/web/index-minimal-v1.html",
+        "docs/web/index-minimal-v2.html",
+        "docs/web/index-minimal-v3.html",
+        "mkdocs.yml"
+      ],
+      "youtube.com": [
+        "README.md",
+        "docs/.archive/conversations/2025-07-03-claude-gemini-human-creativity/README.md",
+        "docs/.archive/conversations/README.md",
+        "mkdocs.yml"
+      ],
+      "static.pepy.tech": [
+        "README.md"
+      ],
+      "img.youtube.com": [
+        "README.md"
+      ],
+      "img.shields.io": [
+        "README.md"
+      ],
+      "failmode.com": [
+        "README.md",
+        "docs/web/claude.html",
+        "docs/web/index-minimal-v1.html",
+        "docs/web/index-minimal-v2.html",
+        "docs/web/index-minimal-v3.html"
+      ],
+      "static.modelcontextprotocol.io": [
+        "server.json"
+      ],
+      "files.pythonhosted.org": [
+        "installer/uv.lock",
+        "uv.lock"
+      ],
+      "ms2.your-tailnet.ts.net:8890": [
+        ".claude/skills/impressions/docs/setup.md",
+        "docs/guides/impressions.md"
+      ],
+      "ms2.your-tailnet.ts.net": [
+        ".claude/skills/impressions/docs/setup.md"
+      ],
+      "app.voicemode.dev": [
+        ".claude/skills/voicemode/SKILL.md"
+      ],
+      "voicemode.dev": [
+        ".claude/skills/voicemode-connect/SKILL.md",
+        "docs/troubleshooting/index.md",
+        "voice_mode/auth.py"
+      ],
+      "apps.apple.com": [
+        ".github/STAR_NOTIFICATIONS.md",
+        "docs/guides/macbook-portable.md"
+      ],
+      "play.google.com": [
+        ".github/STAR_NOTIFICATIONS.md"
+      ],
+      "ntfy.sh": [
+        ".github/STAR_NOTIFICATIONS.md",
+        ".github/workflows/star-notification.yml"
+      ],
+      "docs.ntfy.sh": [
+        ".github/STAR_NOTIFICATIONS.md"
+      ],
+      "registry.modelcontextprotocol.io": [
+        ".github/workflows/publish-pypi-and-mcp.yml"
+      ],
+      "api.github.com": [
+        ".github/workflows/star-notification.yml",
+        "voice_mode/utils/services/version_info.py"
+      ],
+      "api.openai.com": [
+        "docs/.archive/api-discovery-urls.md",
+        "docs/.archive/configuration/configuration-reference.md",
+        "docs/.archive/mcp-config-json.md",
+        "docs/.archive/openai-api-routing.md",
+        "docs/.archive/specs/conversation-logging-jsonl.md"
+      ],
+      "huggingface.co": [
+        "docs/.archive/kokoro.md",
+        "docs/.archive/services/kokoro.md",
+        "docs/.archive/services/whisper.md",
+        "docs/.archive/vscode-configuration.md",
+        "docs/guides/kokoro-setup.md"
+      ],
+      "get.livekit.io": [
+        "docs/.archive/livekit-service-design.md"
+      ],
+      "forum.cursor.com": [
+        "docs/.archive/mcp-config-json.md"
+      ],
+      "docs.getvoicemode.com": [
+        "docs/.archive/migration-guide.md"
+      ],
+      "raw.githubusercontent.com": [
+        "docs/.archive/development/TESTING-CHECKLIST.md",
+        "docs/.archive/npm-global-no-sudo.md",
+        "docs/web/install.sh",
+        "installer/voicemode_install/cli.py",
+        "voice_mode/dj/mfp.py"
+      ],
+      "volta.sh": [
+        "docs/.archive/npm-global-no-sudo.md"
+      ],
+      "docs.npmjs.com": [
+        "docs/.archive/npm-global-no-sudo.md"
+      ],
+      "nodejs.org": [
+        "docs/.archive/npm-global-no-sudo.md"
+      ],
+      "formulae.brew.sh": [
+        "docs/.archive/npm-global-no-sudo.md"
+      ],
+      "openai_primary": [
+        "docs/.archive/openai-api-routing.md"
+      ],
+      "openai_fallback": [
+        "docs/.archive/openai-api-routing.md"
+      ],
+      "router.example.com": [
+        "docs/.archive/openai-api-routing.md"
+      ],
+      "code.visualstudio.com": [
+        "docs/.archive/vscode-configuration.md"
+      ],
+      "brew.sh": [
+        "docs/.archive/whisper.cpp.md",
+        "docs/guides/whisper-setup.md",
+        "installer/voicemode_install/cli.py",
+        "voice_mode/tools/whisper/install.py"
+      ],
+      "www.bose.com.au": [
+        "docs/.archive/audio/devices/README.md"
+      ],
+      "modelcontextprotocol.io": [
+        "docs/.archive/configuration/mcp-env-precedence.md",
+        "docs/web/index-voice-mcp-backup.html"
+      ],
+      "www.youtube.com": [
+        "docs/.archive/conversations/2025-07-03-claude-gemini-cli-discussion/README.md",
+        "docs/.archive/conversations/2025-07-03-claude-gemini-human-creativity/README.md",
+        "docs/.archive/conversations/2025-07-03-claude-gemini-philosophy/README.md",
+        "docs/.archive/conversations/README.md",
+        "docs/web/claude.html"
+      ],
+      "youtu.be": [
+        "docs/.archive/conversations/2025-07-03-claude-gemini-cli-discussion/README.md",
+        "docs/.archive/conversations/2025-07-03-claude-gemini-human-creativity/README.md",
+        "docs/.archive/conversations/2025-07-03-claude-gemini-philosophy/README.md",
+        "docs/.archive/conversations/README.md"
+      ],
+      "cloud.google.com": [
+        "docs/.archive/conversations/2025-07-03-claude-gemini-cli-discussion/README.md"
+      ],
+      "mike.bailey.net.au": [
+        "docs/.archive/design/h2g2-graphics-analysis.md"
+      ],
+      "archive.org": [
+        "docs/.archive/design/h2g2-graphics-analysis.md"
+      ],
+      "www.apple.com": [
+        "docs/.archive/services/kokoro.md",
+        "docs/.archive/services/whisper.md",
+        "docs/guides/kokoro-setup.md",
+        "voice_mode/templates/launchd/com.voicemode.kokoro.plist",
+        "voice_mode/templates/launchd/com.voicemode.mlx-audio.plist"
+      ],
+      "download.pytorch.org": [
+        "docs/.archive/services/whisper-coreml.md"
+      ],
+      "tts-prod.internal": [
+        "docs/.archive/specs/provider-endpoint-lists.md"
+      ],
+      "stt-prod.internal": [
+        "docs/.archive/specs/provider-endpoint-lists.md"
+      ],
+      "www.freedesktop.org": [
+        "docs/.archive/troubleshooting/wsl2-microphone-access.md"
+      ],
+      "discourse.ubuntu.com": [
+        "docs/.archive/troubleshooting/wsl2-microphone-access.md"
+      ],
+      "stackoverflow.com": [
+        "docs/.archive/troubleshooting/wsl2-microphone-access.md"
+      ],
+      "www.linuxuprising.com": [
+        "docs/.archive/troubleshooting/wsl2-microphone-access.md"
+      ],
+      "code.claude.com": [
+        "docs/guides/configuration.md"
+      ],
+      "regex101.com": [
+        "docs/guides/pronunciation.md"
+      ],
+      "192.168.1.100:8765": [
+        "docs/guides/serve-configuration.md"
+      ],
+      "your-server:8765": [
+        "docs/guides/serve-configuration.md"
+      ],
+      "tailscale.com": [
+        "docs/guides/serve-configuration.md"
+      ],
+      "login.tailscale.com": [
+        "docs/guides/serve-configuration.md"
+      ],
+      "your-machine.tail12345.ts.net": [
+        "docs/guides/serve-configuration.md"
+      ],
+      "your-host:8765": [
+        "docs/reference/cli.md"
+      ],
+      "mpv.io": [
+        "docs/reference/dj/ipc.md",
+        "voice_mode/dj/player.py"
+      ],
+      "datashat.net": [
+        "docs/reference/dj/mfp.md",
+        "tests/dj/test_mfp.py"
+      ],
+      "docs.astral.sh": [
+        "docs/tutorials/getting-started.md",
+        "docs/web/install.sh"
+      ],
+      "getvoicemode.goatcounter.com": [
+        "docs/web/claude.html",
+        "docs/web/index.html"
+      ],
+      "livekit.io": [
+        "docs/web/index-voice-mcp-backup.html"
+      ],
+      "docs.livekit.io": [
+        "docs/web/index-voice-mcp-backup.html"
+      ],
+      "buttondown.com": [
+        "docs/web/index.html"
+      ],
+      "no-color.org": [
+        "docs/web/install.sh"
+      ],
+      "sh.rustup.rs": [
+        "docs/web/install.sh"
+      ],
+      "rustup.rs": [
+        "docs/web/install.sh"
+      ],
+      "a.example": [
+        "tests/test_clone_profiles.py"
+      ],
+      "b.example": [
+        "tests/test_clone_profiles.py"
+      ],
+      "unreachable.invalid:1": [
+        "tests/test_clone_transcribe.py"
+      ],
+      "good.example": [
+        "tests/test_clone_transcribe.py"
+      ],
+      "unreachable.invalid": [
+        "tests/test_clone_transcribe.py"
+      ],
+      "first.invalid": [
+        "tests/test_clone_transcribe.py"
+      ],
+      "second.invalid": [
+        "tests/test_clone_transcribe.py"
+      ],
+      "host:8890": [
+        "tests/test_clone_transcribe.py"
+      ],
+      "api.example.com": [
+        "tests/test_provider_detection.py",
+        "tests/test_provider_discovery.py",
+        "tests/test_provider_resilience.py"
+      ],
+      "api.anthropic.com": [
+        "tests/test_provider_resilience.py"
+      ],
+      "192.168.1.100:8880": [
+        "tests/test_provider_selection.py"
+      ],
+      "external-server.com:8080": [
+        "tests/test_provider_selection.py"
+      ],
+      "10.0.0.5:9999": [
+        "tests/test_provider_selection.py"
+      ],
+      "custom.cloud.service": [
+        "tests/test_stt_local_compression_skip.py"
+      ],
+      "ms2:8890": [
+        "tests/test_voices_enumerator.py",
+        "voice_mode/tools/impressions/profiles.py"
+      ],
+      "x": [
+        "tests/test_voices_enumerator.py"
+      ],
+      "stream.example.com": [
+        "voice_mode/cli.py"
+      ],
+      "platform.openai.com": [
+        "voice_mode/config.py",
+        "voice_mode/openai_error_parser.py",
+        "voice_mode/voices.py"
+      ],
+      "docs.anthropic.com": [
+        "voice_mode/serve_middleware.py"
+      ],
+      "www.ffmpeg.org": [
+        "voice_mode/utils/ffmpeg_check.py"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\mbailey__voicemode\\gitleaks.json",
+      "exit_code": 1,
+      "output_path": "_logs/scan/mbailey__voicemode/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/mbailey__voicemode/osv.json"
+    },
+    "pip_audit": {
+      "exit_code": 0,
+      "output_path": "_logs/scan/mbailey__voicemode/pip-audit.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "manual override: gitleaks generic-api-key match is `AUTH0_CLIENT_ID`, which is a public OAuth client identifier (the corresponding client_secret stays server-side and is not in this file). Confirmed by hand 2026-05-14.",
+  "files_scanned": 434,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_manual_override": true,
+  "_sanitized": true
+}

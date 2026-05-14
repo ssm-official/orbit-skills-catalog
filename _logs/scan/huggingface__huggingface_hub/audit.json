@@ -1,0 +1,759 @@
+{
+  "source_url": "https://github.com/huggingface/huggingface_hub",
+  "proposed_slot": "both.creative.huggingface",
+  "scanned_at": "2026-05-14T05:52:41.594106+00:00",
+  "clone_ok": true,
+  "commit_pinned": "9c05199c41e8a1dc20082a25af2d6927a4c21002",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner",
+    "pip-audit"
+  ],
+  "findings": {
+    "secrets": [
+      {
+        "file": "tests/cassettes/InferenceApiTest.test_inference_missing_input.yaml",
+        "label": "jwt-like",
+        "match_redacted": true
+      },
+      {
+        "file": "tests/cassettes/InferenceApiTest.test_inference_missing_input.yaml",
+        "label": "jwt-like",
+        "match_redacted": true
+      },
+      {
+        "file": "tests/cassettes/InferenceApiTest.test_inference_missing_input.yaml",
+        "label": "jwt-like",
+        "match_redacted": true
+      },
+      {
+        "file": "tests/cassettes/InferenceApiTest.test_inference_missing_input.yaml",
+        "label": "jwt-like",
+        "match_redacted": true
+      },
+      {
+        "file": "tests/cassettes/InferenceApiTest.test_inference_missing_input.yaml",
+        "label": "jwt-like",
+        "match_redacted": true
+      },
+      {
+        "file": "tests/cassettes/InferenceApiTest.test_inference_missing_input.yaml",
+        "label": "jwt-like",
+        "match_redacted": true
+      }
+    ],
+    "suspicious": [
+      {
+        "file": "src/huggingface_hub/hub_mixin.py",
+        "label": "eval-call",
+        "snippet": " mode by default using `model.eval()` (dropout modules are deacti"
+      },
+      {
+        "file": "src/huggingface_hub/hub_mixin.py",
+        "label": "eval-call",
+        "snippet": " # type: ignore         model.eval()  # type: ignore         retu"
+      },
+      {
+        "file": "src/huggingface_hub/hub_mixin.py",
+        "label": "eval-call",
+        "snippet": "nore [arg-type]         model.eval()  # type: ignore         retu"
+      },
+      {
+        "file": "tests/test_utils_typing.py",
+        "label": "eval-call",
+        "snippet": "ssert is_simple_optional_type(eval(type_)) is is_optional   @pyte"
+      },
+      {
+        "file": "tests/test_utils_typing.py",
+        "label": "eval-call",
+        "snippet": "t unwrap_simple_optional_type(eval(optional_type)) is inner_type "
+      }
+    ],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "github.com": [
+        ".github/ISSUE_TEMPLATE/config.yml",
+        ".github/ISSUE_TEMPLATE/i18n.md",
+        ".github/workflows/model_card_consistency_reminder.yml",
+        ".github/workflows/python-prerelease.yml",
+        ".github/workflows/python-quality.yml"
+      ],
+      "opencode.ai": [
+        ".github/workflows/release.yml",
+        "blog.md"
+      ],
+      "huggingface.co": [
+        ".github/workflows/release.yml",
+        ".opencode/skills/hf-release-notes/SKILL.md",
+        ".opencode/skills/hf-release-notes/VALIDATE.md",
+        "CONTRIBUTING.md",
+        "README.md"
+      ],
+      "docs.codecov.com": [
+        "codecov.yml"
+      ],
+      "www.contributor-covenant.org": [
+        "CODE_OF_CONDUCT.md"
+      ],
+      "www.apache.org": [
+        "CONTRIBUTING.md",
+        "LICENSE",
+        "docs/README.md",
+        "src/huggingface_hub/__init__.py",
+        "src/huggingface_hub/_buckets.py"
+      ],
+      "git-scm.com": [
+        "CONTRIBUTING.md",
+        "docs/source/cn/guides/repository.md",
+        "docs/source/de/guides/repository.md",
+        "docs/source/en/guides/repository.md",
+        "src/huggingface_hub/_login.py"
+      ],
+      "docs.github.com": [
+        "CONTRIBUTING.md",
+        "docs/TRANSLATING.md",
+        "docs/source/en/guides/cli-extensions.md",
+        "src/huggingface_hub/utils/_pagination.py"
+      ],
+      "docs.python.org": [
+        "CONTRIBUTING.md",
+        "docs/source/cn/guides/community.md",
+        "docs/source/cn/installation.md",
+        "docs/source/de/guides/community.md",
+        "docs/source/de/guides/download.md"
+      ],
+      "docs.astral.sh": [
+        "CONTRIBUTING.md",
+        "docs/source/en/guides/cli.md",
+        "docs/source/en/guides/jobs.md",
+        "docs/source/ko/guides/cli.md"
+      ],
+      "docs.microsoft.com": [
+        "CONTRIBUTING.md",
+        "docs/source/de/guides/manage-cache.md",
+        "docs/source/en/guides/manage-cache.md",
+        "docs/source/ko/guides/manage-cache.md",
+        "src/huggingface_hub/file_download.py"
+      ],
+      "chris.beams.io": [
+        "CONTRIBUTING.md"
+      ],
+      "img.shields.io": [
+        "README.md",
+        "i18n/README_cn.md",
+        "i18n/README_de.md",
+        "i18n/README_fr.md",
+        "i18n/README_hi.md"
+      ],
+      "pypi.org": [
+        ".github/workflows/release.yml",
+        "README.md",
+        "docs/source/cn/installation.md",
+        "docs/source/de/installation.md",
+        "docs/source/en/guides/cli.md"
+      ],
+      "codecov.io": [
+        "README.md",
+        "i18n/README_cn.md",
+        "i18n/README_de.md",
+        "i18n/README_fr.md",
+        "i18n/README_hi.md"
+      ],
+      "hf.co": [
+        "README.md",
+        "docs/source/cn/guides/repository.md",
+        "docs/source/de/guides/model-cards.md",
+        "docs/source/de/guides/repository.md",
+        "docs/source/de/guides/upload.md"
+      ],
+      "urllib3.readthedocs.io": [
+        "setup.py"
+      ],
+      "discuss.huggingface.co": [
+        ".github/ISSUE_TEMPLATE/config.yml",
+        ".github/ISSUE_TEMPLATE/i18n.md"
+      ],
+      "slack.com": [
+        ".github/workflows/release.yml"
+      ],
+      "x-access-token:$": [
+        ".github/workflows/style-bot-action.yml"
+      ],
+      "sphinxcontrib-napoleon.readthedocs.io": [
+        "docs/README.md"
+      ],
+      "www.loc.gov": [
+        "docs/TRANSLATING.md"
+      ],
+      "packaging.python.org": [
+        "docs/source/cn/installation.md",
+        "docs/source/de/installation.md",
+        "docs/source/en/installation.md",
+        "docs/source/fr/installation.md",
+        "docs/source/hi/installation.md"
+      ],
+      "setuptools.pypa.io": [
+        "docs/source/cn/installation.md",
+        "docs/source/de/installation.md",
+        "docs/source/en/installation.md",
+        "docs/source/fr/installation.md",
+        "docs/source/hi/installation.md"
+      ],
+      "pip.pypa.io": [
+        "docs/source/cn/installation.md",
+        "docs/source/de/installation.md",
+        "docs/source/en/installation.md",
+        "docs/source/fr/installation.md",
+        "docs/source/hi/installation.md"
+      ],
+      "anaconda.org": [
+        "docs/source/cn/installation.md",
+        "docs/source/de/installation.md",
+        "docs/source/en/installation.md",
+        "docs/source/fr/installation.md",
+        "docs/source/hi/installation.md"
+      ],
+      "learn.microsoft.com": [
+        "docs/source/cn/installation.md",
+        "docs/source/de/installation.md",
+        "docs/source/en/installation.md",
+        "docs/source/fr/installation.md",
+        "docs/source/ko/installation.md"
+      ],
+      "filesystem-spec.readthedocs.io": [
+        "docs/source/cn/guides/hf_file_system.md",
+        "docs/source/de/guides/hf_file_system.md",
+        "docs/source/en/guides/hf_file_system.md",
+        "docs/source/en/package_reference/hf_file_system.md",
+        "docs/source/ko/guides/hf_file_system.md"
+      ],
+      "pandas.pydata.org": [
+        "docs/source/cn/guides/hf_file_system.md",
+        "docs/source/de/guides/hf_file_system.md",
+        "docs/source/en/guides/hf_file_system.md",
+        "docs/source/ko/guides/hf_file_system.md"
+      ],
+      "docs.dask.org": [
+        "docs/source/cn/guides/hf_file_system.md",
+        "docs/source/de/guides/hf_file_system.md",
+        "docs/source/en/guides/hf_file_system.md",
+        "docs/source/ko/guides/hf_file_system.md"
+      ],
+      "pola-rs.github.io": [
+        "docs/source/cn/guides/hf_file_system.md",
+        "docs/source/de/guides/hf_file_system.md",
+        "docs/source/en/guides/hf_file_system.md",
+        "docs/source/ko/guides/hf_file_system.md"
+      ],
+      "duckdb.org": [
+        "docs/source/cn/guides/hf_file_system.md",
+        "docs/source/de/guides/hf_file_system.md",
+        "docs/source/en/guides/hf_file_system.md",
+        "docs/source/ko/guides/hf_file_system.md"
+      ],
+      "zarr.readthedocs.io": [
+        "docs/source/cn/guides/hf_file_system.md",
+        "docs/source/de/guides/hf_file_system.md",
+        "docs/source/en/guides/hf_file_system.md",
+        "docs/source/ko/guides/hf_file_system.md"
+      ],
+      "tldp.org": [
+        "docs/source/de/guides/download.md",
+        "docs/source/de/guides/upload.md",
+        "docs/source/en/guides/cli.md",
+        "docs/source/en/guides/download.md",
+        "docs/source/en/guides/upload.md"
+      ],
+      "www.tablesgenerator.com": [
+        "docs/source/de/guides/download.md",
+        "docs/source/de/guides/integrations.md",
+        "docs/source/en/guides/integrations.md",
+        "docs/source/fr/guides/integrations.md",
+        "docs/source/ko/guides/download.md"
+      ],
+      "uu149rez6gw9ehej.eu-west-1.aws.endpoints.huggingface.cloud": [
+        "docs/source/de/guides/inference.md",
+        "docs/source/en/guides/inference.md",
+        "docs/source/ko/guides/inference.md"
+      ],
+      "upload.wikimedia.org": [
+        "docs/source/de/guides/inference.md",
+        "docs/source/en/guides/inference.md",
+        "docs/source/ko/guides/inference.md",
+        "src/huggingface_hub/inference/_client.py",
+        "src/huggingface_hub/inference/_generated/_async_client.py"
+      ],
+      "stackoverflow.com": [
+        "docs/source/de/guides/integrations.md",
+        "docs/source/en/guides/integrations.md",
+        "docs/source/fr/guides/integrations.md",
+        "docs/source/ko/guides/integrations.md",
+        "src/huggingface_hub/_commit_api.py"
+      ],
+      "jinja.palletsprojects.com": [
+        "docs/source/de/guides/model-cards.md",
+        "docs/source/en/guides/model-cards.md",
+        "docs/source/ko/guides/model-cards.md"
+      ],
+      "git-lfs.github.com": [
+        "docs/source/de/guides/repository.md",
+        "docs/source/de/guides/upload.md",
+        "src/huggingface_hub/README.md"
+      ],
+      "1fadb0f52d8bf825fc.gradio.live": [
+        "docs/source/de/guides/webhooks_server.md",
+        "docs/source/en/guides/webhooks.md",
+        "docs/source/ko/guides/webhooks_server.md"
+      ],
+      "gradio.app": [
+        "docs/source/de/guides/webhooks_server.md",
+        "docs/source/en/guides/webhooks.md",
+        "docs/source/en/package_reference/webhooks_server.md",
+        "docs/source/ko/guides/webhooks_server.md",
+        "docs/source/ko/package_reference/webhooks_server.md"
+      ],
+      "twitter.com": [
+        "docs/source/en/quick-start.md",
+        "docs/source/hi/quick-start.md"
+      ],
+      "www.python-httpx.org": [
+        "docs/source/en/concepts/migration.md",
+        "docs/source/en/package_reference/utilities.md",
+        "src/huggingface_hub/utils/_validators.py"
+      ],
+      "brew.sh": [
+        "docs/source/en/guides/cli.md",
+        "docs/source/ko/guides/cli.md"
+      ],
+      "formulae.brew.sh": [
+        "docs/source/en/guides/cli.md",
+        "docs/source/ko/guides/cli.md",
+        "src/huggingface_hub/cli/_cli_utils.py"
+      ],
+      "new-url.com": [
+        "docs/source/en/guides/cli.md",
+        "docs/source/en/guides/webhooks.md",
+        "docs/source/en/package_reference/cli.md",
+        "src/huggingface_hub/cli/webhooks.py"
+      ],
+      "ollama.com": [
+        "docs/source/en/guides/inference.md",
+        "docs/source/en/package_reference/inference_client.md"
+      ],
+      "docs.litellm.ai": [
+        "docs/source/en/guides/inference.md",
+        "docs/source/en/package_reference/inference_client.md"
+      ],
+      "replicate.com": [
+        "docs/source/en/guides/inference.md"
+      ],
+      "www.together.ai": [
+        "docs/source/en/guides/inference.md"
+      ],
+      "nebius.com": [
+        "docs/source/en/guides/inference.md"
+      ],
+      "www.cerebras.ai": [
+        "docs/source/en/guides/inference.md"
+      ],
+      "modelcontextprotocol.io": [
+        "docs/source/en/guides/inference.md",
+        "docs/source/en/package_reference/mcp.md"
+      ],
+      "evalstate-flux1-schnell.hf.space": [
+        "docs/source/en/guides/inference.md"
+      ],
+      "endpoints.huggingface.co": [
+        "docs/source/en/guides/inference_endpoints.md",
+        "src/huggingface_hub/constants.py",
+        "src/huggingface_hub/hf_api.py"
+      ],
+      "api.endpoints.huggingface.cloud": [
+        "docs/source/en/guides/inference_endpoints.md",
+        "docs/source/en/package_reference/inference_endpoints.md",
+        "docs/source/ko/guides/inference_endpoints.md",
+        "docs/source/ko/package_reference/inference_endpoints.md",
+        "src/huggingface_hub/constants.py"
+      ],
+      "ui.endpoints.huggingface.co": [
+        "docs/source/en/guides/inference_endpoints.md",
+        "docs/source/ko/guides/inference_endpoints.md"
+      ],
+      "jpj7k2q4j805b727.us-east-1.aws.endpoints.huggingface.cloud": [
+        "docs/source/en/guides/inference_endpoints.md",
+        "docs/source/ko/guides/inference_endpoints.md"
+      ],
+      "keras.io": [
+        "docs/source/en/guides/integrations.md",
+        "docs/source/ko/guides/integrations.md",
+        "src/huggingface_hub/hub_mixin.py"
+      ],
+      "raw.githubusercontent.com": [
+        "docs/source/en/guides/jobs.md",
+        "src/huggingface_hub/cli/extensions.py",
+        "src/huggingface_hub/cli/skills.py",
+        "src/huggingface_hub/hf_api.py"
+      ],
+      "bford.info": [
+        "docs/source/en/guides/manage-cache.md",
+        "src/huggingface_hub/_local_folder.py"
+      ],
+      "hf.cos": [
+        "docs/source/en/guides/repository.md"
+      ],
+      "webhook.site": [
+        "docs/source/en/guides/webhooks.md",
+        "src/huggingface_hub/hf_api.py",
+        "tests/test_hf_api.py"
+      ],
+      "new.webhook.site": [
+        "docs/source/en/guides/webhooks.md",
+        "src/huggingface_hub/hf_api.py"
+      ],
+      "linuxize.com": [
+        "docs/source/en/package_reference/environment_variables.md",
+        "docs/source/ko/package_reference/environment_variables.md"
+      ],
+      "phoenixnap.com": [
+        "docs/source/en/package_reference/environment_variables.md",
+        "docs/source/ko/package_reference/environment_variables.md"
+      ],
+      "api-inference.huggingface.co": [
+        "docs/source/en/package_reference/environment_variables.md",
+        "docs/source/ko/package_reference/environment_variables.md",
+        "src/huggingface_hub/constants.py",
+        "tests/cassettes/InferenceApiTest.test_inference_missing_input.yaml",
+        "tests/cassettes/InferenceApiTest.test_inference_overriding_task.yaml"
+      ],
+      "consoledonottrack.com": [
+        "docs/source/en/package_reference/environment_variables.md",
+        "docs/source/ko/package_reference/environment_variables.md",
+        "src/huggingface_hub/constants.py"
+      ],
+      "no-color.org": [
+        "docs/source/en/package_reference/environment_variables.md",
+        "docs/source/ko/package_reference/environment_variables.md",
+        "src/huggingface_hub/utils/_terminal.py"
+      ],
+      "wiki.archlinux.org": [
+        "docs/source/en/package_reference/environment_variables.md",
+        "docs/source/ko/package_reference/environment_variables.md"
+      ],
+      "tensorboardx.readthedocs.io": [
+        "docs/source/en/package_reference/tensorboard.md",
+        "docs/source/ko/package_reference/tensorboard.md"
+      ],
+      "pydantic-docs.helpmanual.io": [
+        "docs/source/en/package_reference/utilities.md",
+        "docs/source/ko/package_reference/utilities.md"
+      ],
+      "astral.sh": [
+        "docs/source/ko/guides/cli.md"
+      ],
+      "hub-ci.huggingface.co": [
+        "src/huggingface_hub/constants.py",
+        "src/huggingface_hub/hf_api.py",
+        "tests/test_hf_api.py",
+        "tests/test_kernels.py",
+        "tests/test_oauth.py"
+      ],
+      "datasets-server.huggingface.co": [
+        "src/huggingface_hub/constants.py"
+      ],
+      "router.huggingface.co": [
+        "src/huggingface_hub/constants.py",
+        "src/huggingface_hub/inference/_providers/_common.py",
+        "tests/test_inference_client.py",
+        "tests/test_inference_providers.py"
+      ],
+      "discord.com": [
+        "src/huggingface_hub/fastai_utils.py"
+      ],
+      "developer.mozilla.org": [
+        "src/huggingface_hub/file_download.py"
+      ],
+      "requests.readthedocs.io": [
+        "src/huggingface_hub/hf_api.py",
+        "src/huggingface_hub/repocard.py",
+        "src/huggingface_hub/utils/_pagination.py"
+      ],
+      "url": [
+        "src/huggingface_hub/hf_api.py"
+      ],
+      "my-text-to-image.region.vendor.endpoints.huggingface.cloud": [
+        "src/huggingface_hub/_inference_endpoints.py",
+        "src/huggingface_hub/hf_api.py"
+      ],
+      "coqui.ai": [
+        "src/huggingface_hub/hub_mixin.py"
+      ],
+      "arxiv.org": [
+        "src/huggingface_hub/hub_mixin.py",
+        "src/huggingface_hub/inference/_client.py",
+        "src/huggingface_hub/inference/_generated/_async_client.py",
+        "src/huggingface_hub/inference/_generated/types/text_generation.py",
+        "src/huggingface_hub/templates/modelcard_template.md"
+      ],
+      "ndjson.org": [
+        "src/huggingface_hub/_commit_api.py"
+      ],
+      "www.brynosaurus.com": [
+        "src/huggingface_hub/_local_folder.py"
+      ],
+      "pytorch.org": [
+        "src/huggingface_hub/_tensorboard_logger.py",
+        "src/huggingface_hub/serialization/_torch.py"
+      ],
+      "api.github.com": [
+        "src/huggingface_hub/cli/extensions.py"
+      ],
+      "huggingface.slack.com": [
+        "src/huggingface_hub/inference/_client.py",
+        "tests/test_hf_api.py"
+      ],
+      "cdn.britannica.com": [
+        "src/huggingface_hub/inference/_client.py",
+        "src/huggingface_hub/inference/_generated/_async_client.py"
+      ],
+      "jzgu0buei5.us-east-1.aws.endpoints.huggingface.cloud": [
+        "src/huggingface_hub/inference/_client.py",
+        "src/huggingface_hub/inference/_generated/_async_client.py"
+      ],
+      "json-schema.org": [
+        "src/huggingface_hub/inference/_generated/types/chat_completion.py",
+        "src/huggingface_hub/inference/_generated/types/text_generation.py"
+      ],
+      "api.us1.bfl.ai": [
+        "src/huggingface_hub/inference/_providers/black_forest_labs.py"
+      ],
+      "api.cerebras.ai": [
+        "src/huggingface_hub/inference/_providers/cerebras.py"
+      ],
+      "api.clarifai.com": [
+        "src/huggingface_hub/inference/_providers/clarifai.py",
+        "tests/test_inference_providers.py"
+      ],
+      "api.cohere.com": [
+        "src/huggingface_hub/inference/_providers/cohere.py",
+        "tests/test_inference_providers.py"
+      ],
+      "api.deepinfra.com": [
+        "src/huggingface_hub/inference/_providers/deepinfra.py"
+      ],
+      "fal.run": [
+        "src/huggingface_hub/inference/_providers/fal_ai.py"
+      ],
+      "queue.fal.run": [
+        "src/huggingface_hub/inference/_providers/fal_ai.py",
+        "tests/test_inference_providers.py"
+      ],
+      "fal.ai": [
+        "src/huggingface_hub/inference/_providers/fal_ai.py"
+      ],
+      "api.featherless.ai": [
+        "src/huggingface_hub/inference/_providers/featherless_ai.py",
+        "tests/test_inference_providers.py"
+      ],
+      "api.fireworks.ai": [
+        "src/huggingface_hub/inference/_providers/fireworks_ai.py",
+        "tests/test_inference_providers.py"
+      ],
+      "api.groq.com": [
+        "src/huggingface_hub/inference/_providers/groq.py"
+      ],
+      "api.hyperbolic.xyz": [
+        "src/huggingface_hub/inference/_providers/hyperbolic.py"
+      ],
+      "api.studio.nebius.ai": [
+        "src/huggingface_hub/inference/_providers/nebius.py"
+      ],
+      "api.novita.ai": [
+        "src/huggingface_hub/inference/_providers/novita.py",
+        "tests/test_inference_providers.py"
+      ],
+      "inference.api.nscale.com": [
+        "src/huggingface_hub/inference/_providers/nscale.py"
+      ],
+      "integrate.api.nvidia.com": [
+        "src/huggingface_hub/inference/_providers/nvidia.py",
+        "tests/test_inference_providers.py"
+      ],
+      "api.openai.com": [
+        "src/huggingface_hub/inference/_providers/openai.py",
+        "tests/test_inference_providers.py"
+      ],
+      "oai.endpoints.kepler.ai.cloud.ovh.net": [
+        "src/huggingface_hub/inference/_providers/ovhcloud.py",
+        "tests/test_inference_providers.py"
+      ],
+      "api.publicai.co": [
+        "src/huggingface_hub/inference/_providers/publicai.py",
+        "tests/test_inference_providers.py"
+      ],
+      "api.replicate.com": [
+        "src/huggingface_hub/inference/_providers/replicate.py"
+      ],
+      "api.sambanova.ai": [
+        "src/huggingface_hub/inference/_providers/sambanova.py",
+        "tests/test_inference_providers.py"
+      ],
+      "api.scaleway.ai": [
+        "src/huggingface_hub/inference/_providers/scaleway.py",
+        "tests/test_inference_providers.py"
+      ],
+      "api.together.xyz": [
+        "src/huggingface_hub/inference/_providers/together.py"
+      ],
+      "api.wavespeed.ai": [
+        "src/huggingface_hub/inference/_providers/wavespeed.py",
+        "tests/test_inference_providers.py"
+      ],
+      "api.z.ai": [
+        "src/huggingface_hub/inference/_providers/zai_org.py",
+        "tests/test_inference_providers.py"
+      ],
+      "platform.openai.com": [
+        "src/huggingface_hub/inference/_providers/_common.py"
+      ],
+      "en.wikipedia.org": [
+        "src/huggingface_hub/serialization/_dduf.py"
+      ],
+      "mlco2.github.io": [
+        "src/huggingface_hub/templates/modelcard_template.md"
+      ],
+      "gist.github.com": [
+        "src/huggingface_hub/utils/_http.py",
+        "src/huggingface_hub/utils/sha.py"
+      ],
+      "www.scivision.dev": [
+        "src/huggingface_hub/utils/_fixes.py",
+        "tests/conftest.py"
+      ],
+      "huggingface.co.helper=store": [
+        "src/huggingface_hub/utils/_git_credential.py"
+      ],
+      "www.ietf.org": [
+        "src/huggingface_hub/utils/_http.py"
+      ],
+      "www.google.com": [
+        "src/huggingface_hub/utils/_http.py",
+        "tests/test_utils_http.py"
+      ],
+      "www.w3.org": [
+        "src/huggingface_hub/_hot_reload/sse_client.py"
+      ],
+      "10.255.255.1": [
+        "tests/testing_utils.py"
+      ],
+      "...": [
+        "tests/test_cli.py"
+      ],
+      "new.example.com": [
+        "tests/test_cli.py"
+      ],
+      "hf-ci.co": [
+        "tests/test_file_download.py"
+      ],
+      "cdn-media.huggingface.co": [
+        "tests/test_hf_api.py"
+      ],
+      "unknown-endpoint.co": [
+        "tests/test_hf_api.py"
+      ],
+      "hf.co)!": [
+        "tests/test_hf_api.py"
+      ],
+      "rur2d6yoccusjxgn.us-east-1.aws.endpoints.huggingface.cloud": [
+        "tests/test_inference_client.py"
+      ],
+      "my-custom-endpoint.com": [
+        "tests/test_inference_client.py"
+      ],
+      "another-endpoint.com": [
+        "tests/test_inference_client.py"
+      ],
+      "specific-chat-endpoint.com": [
+        "tests/test_inference_client.py"
+      ],
+      "my-url.com": [
+        "tests/test_inference_client.py"
+      ],
+      "vksrvs8pc1xnifhq.us-east-1.aws.endpoints.huggingface.cloud": [
+        "tests/test_inference_endpoints.py"
+      ],
+      "api.provider.com": [
+        "tests/test_inference_providers.py"
+      ],
+      "any-url.com": [
+        "tests/test_inference_providers.py"
+      ],
+      "api.example.com": [
+        "tests/test_inference_providers.py"
+      ],
+      "api.test.com": [
+        "tests/test_inference_providers.py"
+      ],
+      "testserver": [
+        "tests/test_oauth.py"
+      ],
+      "github": [
+        "tests/test_repocard.py"
+      ],
+      "docs.pytest.org": [
+        "tests/test_utils_deprecation.py"
+      ],
+      "mirror.co": [
+        "tests/test_utils_http.py"
+      ],
+      "proxy.example1.com:8080": [
+        "tests/test_utils_http.py"
+      ],
+      "proxy.example2.com:8181": [
+        "tests/test_utils_http.py"
+      ],
+      "example.invalid": [
+        "tests/test_xet_upload.py"
+      ],
+      "xet.example.com": [
+        "tests/test_xet_utils.py"
+      ],
+      "example.xethub.hf.co": [
+        "tests/test_xet_utils.py"
+      ],
+      "custom.xethub.hf.co": [
+        "tests/test_xet_utils.py"
+      ],
+      "python.org": [
+        "utils/installers/install.ps1"
+      ],
+      "www.python.org": [
+        "utils/installers/install.sh"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\huggingface__huggingface_hub\\gitleaks.json",
+      "exit_code": 1,
+      "output_path": "_logs/scan/huggingface__huggingface_hub/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/huggingface__huggingface_hub/osv.json"
+    },
+    "pip_audit": {
+      "exit_code": 1,
+      "output_path": "_logs/scan/huggingface__huggingface_hub/pip-audit.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "test-path secret findings (6); eval-call in src/huggingface_hub/hub_mixin.py; eval-call in src/huggingface_hub/hub_mixin.py; eval-call in src/huggingface_hub/hub_mixin.py; eval-call in tests/test_utils_typing.py; eval-call in tests/test_utils_typing.py; trusted-vendor: 2 gitleaks finding(s) downgraded to notes (likely SDK docs/example values); gitleaks: 8 test-path secret(s)",
+  "files_scanned": 476,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

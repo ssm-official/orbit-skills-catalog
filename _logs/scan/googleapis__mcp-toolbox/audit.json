@@ -1,0 +1,795 @@
+{
+  "source_url": "https://github.com/googleapis/mcp-toolbox",
+  "proposed_slot": "both.productivity.googleapis-mcp-toolbox",
+  "scanned_at": "2026-05-14T05:48:29.337284+00:00",
+  "clone_ok": true,
+  "commit_pinned": "15d2cc6ef049f4a488e4c6a62de6c87677e61b3b",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "github.com": [
+        ".github/ISSUE_TEMPLATE/bug_report.yml",
+        ".github/ISSUE_TEMPLATE/feature_request.yml",
+        ".github/ISSUE_TEMPLATE/question.yml",
+        ".github/PULL_REQUEST_TEMPLATE.md",
+        ".github/trusted-contribution.yml"
+      ],
+      "www.apache.org": [
+        ".ci/continuous.release.cloudbuild.yaml",
+        ".ci/integration.cloudbuild.yaml",
+        ".ci/sample_tests/pre_post_processing/go.integration.cloudbuild.yaml",
+        ".ci/sample_tests/pre_post_processing/js.integration.cloudbuild.yaml",
+        ".ci/sample_tests/pre_post_processing/py.integration.cloudbuild.yaml"
+      ],
+      "example": [
+        ".lycheeignore"
+      ],
+      "img": [
+        ".lycheeignore"
+      ],
+      "cloud-run-url.app": [
+        ".lycheeignore",
+        "docs/en/documentation/deploy-to/cloud-run/_index.md"
+      ],
+      "xxx.cloud.dgraph.io": [
+        ".lycheeignore",
+        "docs/en/integrations/dgraph/source.md"
+      ],
+      "cloud.dgraph.io": [
+        ".lycheeignore",
+        "docs/en/integrations/dgraph/source.md"
+      ],
+      "dgraph.io": [
+        ".lycheeignore",
+        "docs/en/integrations/dgraph/source.md"
+      ],
+      "play.dgraph.io": [
+        ".ci/integration.cloudbuild.yaml",
+        ".lycheeignore",
+        "DEVELOPER.md"
+      ],
+      "claude.ai": [
+        ".lycheeignore",
+        "docs/en/documentation/connect-to/ides/cloud_sql_mssql_admin_mcp.md",
+        "docs/en/documentation/connect-to/ides/cloud_sql_mysql_admin_mcp.md",
+        "docs/en/documentation/connect-to/ides/cloud_sql_pg_admin_mcp.md",
+        "docs/en/documentation/connect-to/ides/looker_mcp.md"
+      ],
+      "cloud.google.com": [
+        ".github/ISSUE_TEMPLATE/config.yml",
+        ".lycheeignore",
+        "DEVELOPER.md",
+        "MCP-TOOLBOX-EXTENSION.md",
+        "README.md"
+      ],
+      "console.cloud.google.com": [
+        ".lycheeignore",
+        "docs/en/documentation/connect-to/ides/cloud_sql_mssql_admin_mcp.md",
+        "docs/en/documentation/connect-to/ides/cloud_sql_mysql_admin_mcp.md",
+        "docs/en/documentation/connect-to/ides/cloud_sql_pg_admin_mcp.md",
+        "docs/en/documentation/monitoring/export_telemetry.md"
+      ],
+      "dev.mysql.com": [
+        ".lycheeignore",
+        "docs/en/documentation/connect-to/ides/mysql_mcp.md",
+        "docs/en/integrations/mindsdb/tools/mindsdb-sql.md",
+        "docs/en/integrations/mysql/source.md",
+        "docs/en/integrations/mysql/tools/mysql-sql.md"
+      ],
+      "www.oceanbase.com": [
+        ".lycheeignore",
+        "docs/en/integrations/oceanbase/source.md"
+      ],
+      "medium.com": [
+        ".lycheeignore",
+        "docs/en/blogs/_index.md"
+      ],
+      "pypi.org": [
+        "CHANGELOG.md",
+        "README.md",
+        "docs/en/documentation/getting-started/colab_quickstart.ipynb",
+        "docs/en/documentation/getting-started/local_quickstart.md",
+        "docs/en/documentation/introduction/_index.md"
+      ],
+      "www.contributor-covenant.org": [
+        "CODE_OF_CONDUCT.md"
+      ],
+      "cla.developers.google.com": [
+        "CONTRIBUTING.md",
+        "DEVELOPER.md"
+      ],
+      "opensource.google": [
+        "CONTRIBUTING.md"
+      ],
+      "help.github.com": [
+        ".github/CODEOWNERS",
+        "CONTRIBUTING.md"
+      ],
+      "www.conventionalcommits.org": [
+        "CONTRIBUTING.md",
+        "DEVELOPER.md",
+        "GEMINI.md"
+      ],
+      "go.dev": [
+        ".ci/integration.cloudbuild.yaml",
+        "DEVELOPER.md",
+        "README.md",
+        "docs/en/documentation/getting-started/local_quickstart_go.md",
+        "docs/en/documentation/introduction/_index.md"
+      ],
+      "ziglang.org": [
+        ".ci/continuous.release.cloudbuild.yaml",
+        ".ci/versioned.release.cloudbuild.yaml",
+        "DEVELOPER.md",
+        "Dockerfile"
+      ],
+      "discord.gg": [
+        "DEVELOPER.md",
+        "README.md",
+        "docs/en/discord/_index.md"
+      ],
+      "mcp-toolbox.dev": [
+        ".github/workflows/deploy_dev_docs_to_cf.yaml",
+        ".github/workflows/deploy_previous_version_docs_to_cf.yaml",
+        ".github/workflows/deploy_versioned_docs_to_cf.yaml",
+        ".hugo/hugo.cloudflare.toml",
+        ".hugo/hugo.toml"
+      ],
+      "gohugo.io": [
+        "DEVELOPER.md"
+      ],
+      "pantheon.corp.google.com": [
+        "DEVELOPER.md"
+      ],
+      "npmjs.com": [
+        "DEVELOPER.md"
+      ],
+      "www.npmjs.com": [
+        "DEVELOPER.md",
+        "README.md",
+        "docs/ALLOYDBADMIN_README.md",
+        "docs/ALLOYDBPG_README.md",
+        "docs/BIGQUERY_README.md"
+      ],
+      "registry.npmjs.org": [
+        ".hugo/package-lock.json",
+        "DEVELOPER.md",
+        "docs/en/documentation/configuration/pre-post-processing/js/adk/package-lock.json",
+        "docs/en/documentation/configuration/pre-post-processing/js/langchain/package-lock.json",
+        "docs/en/documentation/getting-started/quickstart/js/adk/package-lock.json"
+      ],
+      "trendshift.io": [
+        "README.md"
+      ],
+      "goreportcard.com": [
+        "README.md"
+      ],
+      "img.shields.io": [
+        "README.md",
+        "docs/en/documentation/connect-to/toolbox-sdks/javascript-sdk/_index.md",
+        "docs/en/documentation/connect-to/toolbox-sdks/python-sdk/_index.md"
+      ],
+      "antigravity.google": [
+        "README.md"
+      ],
+      "storage.googleapis.com": [
+        ".ci/generate_release_table.sh",
+        ".ci/sample_tests/run_tests.sh",
+        ".github/ISSUE_TEMPLATE/bug_report.yml",
+        "README.md",
+        "docs/en/documentation/connect-to/ides/cloud_sql_mssql_admin_mcp.md"
+      ],
+      "geminicli.com": [
+        "README.md"
+      ],
+      "brew.sh": [
+        "README.md"
+      ],
+      "pkg.go.dev": [
+        "README.md",
+        "docs/en/documentation/introduction/_index.md",
+        "docs/en/documentation/monitoring/telemetry/index.md",
+        "docs/en/integrations/http/source.md",
+        "docs/en/integrations/http/tools/http-tool.md"
+      ],
+      "agentskills.io": [
+        "README.md",
+        "docs/en/documentation/configuration/skills/_index.md"
+      ],
+      "semver.org": [
+        "README.md",
+        "docs/en/reference/versioning.md"
+      ],
+      "static.modelcontextprotocol.io": [
+        "server.json"
+      ],
+      "opentelemetry.io": [
+        "UPGRADING.md",
+        "docs/en/documentation/connect-to/toolbox-sdks/python-sdk/adk/index.md",
+        "docs/en/documentation/connect-to/toolbox-sdks/python-sdk/core/index.md",
+        "docs/en/documentation/connect-to/toolbox-sdks/python-sdk/langchain/index.md",
+        "docs/en/documentation/connect-to/toolbox-sdks/python-sdk/llamaindex/index.md"
+      ],
+      "modelcontextprotocol.io": [
+        "UPGRADING.md",
+        "docs/en/documentation/configuration/authentication/_index.md",
+        "docs/en/documentation/configuration/authentication/generic.md",
+        "docs/en/documentation/configuration/prompts/_index.md",
+        "docs/en/documentation/configuration/toolbox_mcp_auth.md"
+      ],
+      "api.cloudflare.com": [
+        ".github/workflows/docs_preview_clean_cf.yaml"
+      ],
+      "us-central1-docker.pkg.dev": [
+        ".github/workflows/publish-mcp.yml"
+      ],
+      "opencollective.com": [
+        ".hugo/package-lock.json",
+        "docs/en/documentation/configuration/pre-post-processing/js/adk/package-lock.json",
+        "docs/en/documentation/configuration/pre-post-processing/js/langchain/package-lock.json",
+        "docs/en/documentation/getting-started/quickstart/js/adk/package-lock.json",
+        "docs/en/documentation/getting-started/quickstart/js/genAI/package-lock.json"
+      ],
+      "tidelift.com": [
+        ".hugo/package-lock.json"
+      ],
+      "paulmillr.com": [
+        ".hugo/package-lock.json"
+      ],
+      "www.patreon.com": [
+        ".hugo/package-lock.json",
+        "docs/en/documentation/configuration/pre-post-processing/js/adk/package-lock.json",
+        "docs/en/documentation/configuration/pre-post-processing/js/langchain/package-lock.json",
+        "docs/en/documentation/getting-started/quickstart/js/adk/package-lock.json",
+        "docs/en/documentation/getting-started/quickstart/js/genAI/package-lock.json"
+      ],
+      "feross.org": [
+        ".hugo/package-lock.json",
+        "docs/en/documentation/configuration/pre-post-processing/js/adk/package-lock.json",
+        "docs/en/documentation/configuration/pre-post-processing/js/langchain/package-lock.json",
+        "docs/en/documentation/getting-started/quickstart/js/adk/package-lock.json",
+        "docs/en/documentation/getting-started/quickstart/js/genAI/package-lock.json"
+      ],
+      "www.w3.org": [
+        ".hugo/assets/icons/logo.svg",
+        ".hugo/layouts/shortcodes/list-db.html",
+        ".hugo/layouts/shortcodes/list-prebuilt-configs.html",
+        ".hugo/layouts/shortcodes/samples-gallery.html",
+        "docs/en/documentation/monitoring/telemetry/index.md"
+      ],
+      "fonts.googleapis.com": [
+        ".hugo/assets/scss/components/_typography.scss",
+        "internal/server/static/toolsets.html"
+      ],
+      "www.docsy.dev": [
+        ".hugo/layouts/partials/page-meta-links.html"
+      ],
+      "foo.bar": [
+        ".hugo/layouts/shortcodes/production-security-warning.html"
+      ],
+      "foo.com,http:": [
+        "cmd/root_test.go"
+      ],
+      "foo.com": [
+        "cmd/root_test.go"
+      ],
+      "bar.com": [
+        "cmd/root_test.go"
+      ],
+      "testings": [
+        "cmd/internal/config_test.go"
+      ],
+      "test_server": [
+        "cmd/internal/config_test.go",
+        "internal/sources/http/http_test.go"
+      ],
+      "your_company.looker.com": [
+        "cmd/internal/config_test.go"
+      ],
+      "nodejs.org": [
+        "docs/ALLOYDBADMIN_README.md",
+        "docs/ALLOYDBPG_README.md",
+        "docs/BIGQUERY_README.md",
+        "docs/CLOUDSQLMSSQLADMIN_README.md",
+        "docs/CLOUDSQLMSSQL_README.md"
+      ],
+      "learn.microsoft.com": [
+        "docs/ALLOYDBADMIN_README.md",
+        "docs/ALLOYDBPG_README.md",
+        "docs/BIGQUERY_README.md",
+        "docs/CLOUDSQLMSSQLADMIN_README.md",
+        "docs/CLOUDSQLMSSQL_README.md"
+      ],
+      "docs.cloud.google.com": [
+        "docs/ALLOYDBPG_README.md",
+        "docs/LOOKER_README.md",
+        "docs/SPANNER_README.md",
+        "docs/en/documentation/configuration/embedding-models/gemini.md",
+        "docs/en/documentation/configuration/toolbox_mcp_auth.md"
+      ],
+      "looker.example.com": [
+        "docs/LOOKER_README.md",
+        "docs/en/documentation/connect-to/ides/looker_mcp.md",
+        "docs/en/integrations/looker/samples/looker_claude_oauth/_index.md",
+        "docs/en/integrations/looker/samples/looker_gemini.md",
+        "docs/en/integrations/looker/samples/looker_gemini_oauth/_index.md"
+      ],
+      "your.looker.instance.com": [
+        "docs/LOOKER_README.md"
+      ],
+      "accounts.google.com": [
+        "docs/en/documentation/configuration/authentication/generic.md",
+        "docs/en/documentation/configuration/toolbox_mcp_auth.md",
+        "internal/server/static/tools.html",
+        "internal/server/static/toolsets.html",
+        "tests/auth/auth_integration_test.go"
+      ],
+      "toolbox-service-123456789-uc.a.run.app": [
+        "docs/en/documentation/configuration/toolbox_mcp_auth.md"
+      ],
+      "your-auth-server.example.com": [
+        "docs/en/documentation/configuration/toolbox_mcp_auth.md"
+      ],
+      "your-idp.example.com": [
+        "docs/en/documentation/configuration/authentication/generic.md"
+      ],
+      "www.googleapis.com": [
+        "docs/en/documentation/configuration/authentication/generic.md",
+        "docs/en/documentation/connect-to/toolbox-sdks/python-sdk/adk/index.md",
+        "docs/en/integrations/bigquery/source.md",
+        "internal/sources/bigquery/bigquery.go",
+        "internal/sources/bigquery/bigquery_test.go"
+      ],
+      "your-subdomain.okta.com": [
+        "docs/en/documentation/configuration/authentication/generic.md"
+      ],
+      "developers.google.com": [
+        "docs/en/documentation/configuration/authentication/google.md",
+        "internal/server/static/js/toolDisplay.js"
+      ],
+      "openid.net": [
+        "docs/en/documentation/configuration/authentication/_index.md",
+        "docs/en/documentation/connect-to/toolbox-sdks/python-sdk/langchain/index.md",
+        "docs/en/documentation/connect-to/toolbox-sdks/python-sdk/llamaindex/index.md"
+      ],
+      "ai.google.dev": [
+        "docs/en/documentation/configuration/embedding-models/gemini.md"
+      ],
+      "aistudio.google.com": [
+        "docs/en/documentation/configuration/embedding-models/gemini.md"
+      ],
+      "google.github.io": [
+        "docs/en/documentation/configuration/pre-post-processing/go/_index.md",
+        "docs/en/documentation/configuration/pre-post-processing/js/_index.md",
+        "docs/en/documentation/configuration/pre-post-processing/python/_index.md",
+        "docs/en/documentation/getting-started/colab_quickstart.ipynb",
+        "docs/en/documentation/getting-started/local_quickstart.md"
+      ],
+      "docs.langchain.com": [
+        "docs/en/documentation/configuration/pre-post-processing/js/_index.md",
+        "docs/en/documentation/configuration/pre-post-processing/python/_index.md"
+      ],
+      "dotenvx.com": [
+        "docs/en/documentation/configuration/pre-post-processing/js/adk/package-lock.json",
+        "docs/en/documentation/getting-started/quickstart/js/adk/package-lock.json"
+      ],
+      "paypal.me": [
+        "docs/en/documentation/configuration/pre-post-processing/js/adk/package-lock.json",
+        "docs/en/documentation/configuration/pre-post-processing/js/langchain/package-lock.json",
+        "docs/en/documentation/getting-started/quickstart/js/adk/package-lock.json",
+        "docs/en/documentation/getting-started/quickstart/js/genAI/package-lock.json",
+        "docs/en/documentation/getting-started/quickstart/js/genkit/package-lock.json"
+      ],
+      "patreon.com": [
+        "docs/en/documentation/configuration/pre-post-processing/js/adk/package-lock.json",
+        "docs/en/documentation/getting-started/quickstart/js/adk/package-lock.json",
+        "docs/en/documentation/getting-started/quickstart/js/genkit/package-lock.json"
+      ],
+      "google-gemini.github.io": [
+        "docs/en/documentation/connect-to/gemini-cli/_index.md"
+      ],
+      "docs.anthropic.com": [
+        "docs/en/documentation/connect-to/ides/cloud_sql_mssql_admin_mcp.md",
+        "docs/en/documentation/connect-to/ides/cloud_sql_mysql_admin_mcp.md",
+        "docs/en/documentation/connect-to/ides/cloud_sql_pg_admin_mcp.md",
+        "docs/en/documentation/connect-to/ides/looker_mcp.md",
+        "docs/en/documentation/connect-to/ides/mssql_mcp.md"
+      ],
+      "www.cursor.com": [
+        "docs/en/documentation/connect-to/ides/cloud_sql_mssql_admin_mcp.md",
+        "docs/en/documentation/connect-to/ides/cloud_sql_mysql_admin_mcp.md",
+        "docs/en/documentation/connect-to/ides/cloud_sql_pg_admin_mcp.md",
+        "docs/en/documentation/connect-to/ides/looker_mcp.md",
+        "docs/en/documentation/connect-to/ides/mssql_mcp.md"
+      ],
+      "code.visualstudio.com": [
+        "docs/en/documentation/connect-to/ides/cloud_sql_mssql_admin_mcp.md",
+        "docs/en/documentation/connect-to/ides/cloud_sql_mysql_admin_mcp.md",
+        "docs/en/documentation/connect-to/ides/cloud_sql_pg_admin_mcp.md",
+        "docs/en/documentation/connect-to/ides/looker_mcp.md",
+        "docs/en/documentation/connect-to/ides/mssql_mcp.md"
+      ],
+      "docs.codeium.com": [
+        "docs/en/documentation/connect-to/ides/cloud_sql_mssql_admin_mcp.md",
+        "docs/en/documentation/connect-to/ides/cloud_sql_mysql_admin_mcp.md",
+        "docs/en/documentation/connect-to/ides/cloud_sql_pg_admin_mcp.md",
+        "docs/en/documentation/connect-to/ides/looker_mcp.md",
+        "docs/en/documentation/connect-to/ides/mssql_mcp.md"
+      ],
+      "marketplace.visualstudio.com": [
+        "docs/en/documentation/connect-to/ides/cloud_sql_mssql_admin_mcp.md",
+        "docs/en/documentation/connect-to/ides/cloud_sql_mysql_admin_mcp.md",
+        "docs/en/documentation/connect-to/ides/cloud_sql_pg_admin_mcp.md",
+        "docs/en/documentation/connect-to/ides/mssql_mcp.md",
+        "docs/en/documentation/connect-to/ides/mysql_mcp.md"
+      ],
+      "looker.example.com:19999": [
+        "docs/en/documentation/connect-to/ides/looker_mcp.md",
+        "docs/en/integrations/looker/source.md"
+      ],
+      "www.microsoft.com": [
+        "docs/en/documentation/connect-to/ides/mssql_mcp.md",
+        "docs/en/integrations/mssql/source.md"
+      ],
+      "neo4j.com": [
+        "docs/en/documentation/connect-to/ides/neo4j_mcp.md",
+        "docs/en/integrations/neo4j/source.md",
+        "docs/en/integrations/neo4j/tools/neo4j-cypher.md",
+        "docs/en/integrations/neo4j/tools/neo4j-execute-cypher.md"
+      ],
+      "www.postgresql.org": [
+        "docs/en/documentation/connect-to/ides/postgres_mcp.md",
+        "docs/en/documentation/getting-started/local_quickstart.md",
+        "docs/en/documentation/getting-started/local_quickstart_go.md",
+        "docs/en/documentation/getting-started/local_quickstart_js.md",
+        "docs/en/integrations/alloydb/samples/mcp_quickstart.md"
+      ],
+      "www.sqlite.org": [
+        "docs/en/documentation/connect-to/ides/sqlite_mcp.md"
+      ],
+      "docs.cursor.com": [
+        "docs/en/documentation/connect-to/mcp-client/_index.md"
+      ],
+      "docs.windsurf.com": [
+        "docs/en/documentation/connect-to/mcp-client/_index.md"
+      ],
+      "mvnrepository.com": [
+        "docs/en/documentation/connect-to/toolbox-sdks/java-sdk/_index.md",
+        "docs/en/documentation/connect-to/toolbox-sdks/java-sdk/core/index.md"
+      ],
+      "my-toolbox-service.a.run.app": [
+        "docs/en/documentation/connect-to/toolbox-sdks/java-sdk/core/index.md"
+      ],
+      "developer.mozilla.org": [
+        "docs/en/documentation/connect-to/toolbox-sdks/javascript-sdk/adk/index.md",
+        "docs/en/documentation/connect-to/toolbox-sdks/javascript-sdk/core/index.md"
+      ],
+      "js.langchain.com": [
+        "docs/en/documentation/connect-to/toolbox-sdks/javascript-sdk/core/index.md",
+        "docs/en/documentation/getting-started/local_quickstart_js.md"
+      ],
+      "ts.llamaindex.ai": [
+        "docs/en/documentation/connect-to/toolbox-sdks/javascript-sdk/core/index.md"
+      ],
+      "genkit.dev": [
+        "docs/en/documentation/connect-to/toolbox-sdks/javascript-sdk/core/index.md",
+        "docs/en/documentation/getting-started/local_quickstart_go.md",
+        "docs/en/documentation/getting-started/local_quickstart_js.md"
+      ],
+      "my-toolbox-service.run.app": [
+        "docs/en/documentation/connect-to/toolbox-sdks/python-sdk/adk/index.md"
+      ],
+      "docs.python.org": [
+        "docs/en/documentation/connect-to/toolbox-sdks/python-sdk/core/index.md",
+        "docs/en/documentation/connect-to/toolbox-sdks/python-sdk/langchain/index.md",
+        "docs/en/documentation/connect-to/toolbox-sdks/python-sdk/llamaindex/index.md"
+      ],
+      "python.langchain.com": [
+        "docs/en/documentation/connect-to/toolbox-sdks/python-sdk/core/index.md",
+        "docs/en/integrations/bigquery/samples/local_quickstart.md"
+      ],
+      "langchain-ai.github.io": [
+        "docs/en/documentation/connect-to/toolbox-sdks/python-sdk/core/index.md",
+        "docs/en/documentation/connect-to/toolbox-sdks/python-sdk/langchain/index.md",
+        "docs/en/documentation/getting-started/local_quickstart.md",
+        "docs/en/integrations/bigquery/samples/local_quickstart.md"
+      ],
+      "en.wikipedia.org": [
+        "docs/en/documentation/connect-to/toolbox-sdks/python-sdk/langchain/index.md",
+        "docs/en/documentation/connect-to/toolbox-sdks/python-sdk/llamaindex/index.md"
+      ],
+      "docs.llamaindex.ai": [
+        "docs/en/documentation/connect-to/toolbox-sdks/python-sdk/llamaindex/index.md",
+        "docs/en/documentation/getting-started/local_quickstart.md",
+        "docs/en/integrations/bigquery/samples/local_quickstart.md"
+      ],
+      "docs.docker.com": [
+        "docs/en/documentation/deploy-to/docker/_index.md"
+      ],
+      "hub.docker.com": [
+        "docs/en/documentation/deploy-to/docker/_index.md"
+      ],
+      "$your_url": [
+        "docs/en/documentation/deploy-to/docker/_index.md"
+      ],
+      "colab.research.google.com": [
+        "docs/en/documentation/getting-started/colab_quickstart.ipynb",
+        "docs/en/documentation/getting-started/local_quickstart.md",
+        "docs/en/integrations/alloydb/samples/ai-nl/alloydb_ai_nl.ipynb",
+        "docs/en/integrations/bigquery/samples/local_quickstart.md"
+      ],
+      "www.langchain.com": [
+        "docs/en/documentation/getting-started/colab_quickstart.ipynb",
+        "docs/en/documentation/getting-started/local_quickstart.md",
+        "docs/en/integrations/bigquery/samples/colab_quickstart_bigquery.ipynb"
+      ],
+      "www.llamaindex.ai": [
+        "docs/en/documentation/getting-started/colab_quickstart.ipynb",
+        "docs/en/documentation/getting-started/local_quickstart.md",
+        "docs/en/integrations/bigquery/samples/colab_quickstart_bigquery.ipynb"
+      ],
+      "services.google.com": [
+        "docs/en/documentation/getting-started/colab_quickstart.ipynb"
+      ],
+      "googleapis.github.io": [
+        "docs/en/documentation/getting-started/colab_quickstart.ipynb"
+      ],
+      "wiki.python.org": [
+        "docs/en/documentation/getting-started/local_quickstart.md",
+        "docs/en/integrations/bigquery/samples/local_quickstart.md"
+      ],
+      "pip.pypa.io": [
+        "docs/en/documentation/getting-started/local_quickstart.md",
+        "docs/en/integrations/bigquery/samples/local_quickstart.md"
+      ],
+      "packaging.python.org": [
+        "docs/en/documentation/getting-started/local_quickstart.md",
+        "docs/en/integrations/bigquery/samples/local_quickstart.md"
+      ],
+      "research.google.com": [
+        "docs/en/documentation/getting-started/local_quickstart.md",
+        "docs/en/integrations/bigquery/samples/local_quickstart.md"
+      ],
+      "tmc.github.io": [
+        "docs/en/documentation/getting-started/local_quickstart_go.md"
+      ],
+      "geraintluff.github.io": [
+        "docs/en/documentation/getting-started/quickstart/js/genkit/package-lock.json"
+      ],
+      "app.agnost.ai": [
+        "docs/en/documentation/monitoring/export_telemetry.md"
+      ],
+      "cassandra.apache.org": [
+        "docs/en/integrations/cassandra/source.md"
+      ],
+      "docs.datastax.com": [
+        "docs/en/integrations/cassandra/tools/cassandra-cql.md"
+      ],
+      "clickhouse.com": [
+        "docs/en/integrations/clickhouse/source.md"
+      ],
+      "clouddocs.devsite.corp.google.com": [
+        "docs/en/integrations/cloudgda/tools/cloud-gda-query.md"
+      ],
+      "www.cockroachlabs.com": [
+        "docs/en/integrations/cockroachdb/source.md",
+        "docs/en/integrations/cockroachdb/tools/cockroachdb-execute-sql.md",
+        "docs/en/integrations/cockroachdb/tools/cockroachdb-list-schemas.md",
+        "docs/en/integrations/cockroachdb/tools/cockroachdb-list-tables.md"
+      ],
+      "docs.couchbase.com": [
+        "docs/en/integrations/couchbase/source.md"
+      ],
+      "www.google.com": [
+        "docs/en/integrations/dataform/tools/dataform-compile-local.md"
+      ],
+      "xxxx.cloud.dgraph.io": [
+        "docs/en/integrations/dgraph/source.md"
+      ],
+      "www.elastic.co": [
+        "docs/en/integrations/elasticsearch/source.md",
+        "docs/en/integrations/elasticsearch/tools/elasticsearch-esql.md",
+        "docs/en/integrations/elasticsearch/tools/elasticsearch-execute-esql.md"
+      ],
+      "firebirdsql.org": [
+        "docs/en/integrations/firebird/source.md",
+        "docs/en/integrations/firebird/tools/firebird-sql.md"
+      ],
+      "www.firebirdsql.org": [
+        "docs/en/integrations/firebird/source.md"
+      ],
+      "firebase.google.com": [
+        "docs/en/integrations/firestore/tools/firestore-get-rules.md",
+        "docs/en/integrations/firestore/tools/firestore-list-collections.md",
+        "docs/en/integrations/firestore/tools/firestore-query.md"
+      ],
+      "api.example.com": [
+        "docs/en/integrations/http/source.md",
+        "docs/en/integrations/http/tools/http-tool.md"
+      ],
+      "looker-mcp-toolbox.example.com": [
+        "docs/en/integrations/looker/samples/looker_claude_oauth/_index.md"
+      ],
+      "toolbox.example.com": [
+        "docs/en/integrations/looker/samples/looker_gemini_oauth/_index.md"
+      ],
+      "mariadb.com": [
+        "docs/en/integrations/mariadb/source.md"
+      ],
+      "docs.mindsdb.com": [
+        "docs/en/integrations/mindsdb/source.md"
+      ],
+      "www.mongodb.com": [
+        "docs/en/integrations/mongodb/source.md"
+      ],
+      "www.mysql.com": [
+        "docs/en/integrations/mysql/source.md"
+      ],
+      "www.oracle.com": [
+        "docs/en/integrations/oracle/source.md"
+      ],
+      "docs.oracle.com": [
+        "docs/en/integrations/oracle/source.md",
+        "docs/en/integrations/oracle/tools/oracle-list-tables.md",
+        "docs/en/integrations/oracle/tools/oracle-sql.md",
+        "tests/oracle/oracle_integration_test.go"
+      ],
+      "redis.io": [
+        "docs/en/integrations/redis/source.md"
+      ],
+      "docs.singlestore.com": [
+        "docs/en/integrations/singlestore/source.md"
+      ],
+      "docs.snowflake.com": [
+        "docs/en/integrations/snowflake/samples/sample.md",
+        "docs/en/integrations/snowflake/source.md"
+      ],
+      "signup.snowflake.com": [
+        "docs/en/integrations/snowflake/samples/sample.md"
+      ],
+      "sqlite.org": [
+        "docs/en/integrations/sqlite/source.md"
+      ],
+      "docs.pingcap.com": [
+        "docs/en/integrations/tidb/source.md",
+        "docs/en/integrations/tidb/tools/tidb-sql.md"
+      ],
+      "trino.io": [
+        "docs/en/integrations/trino/source.md",
+        "docs/en/integrations/trino/tools/trino-sql.md"
+      ],
+      "valkey.io": [
+        "docs/en/integrations/valkey/source.md"
+      ],
+      "www.yugabyte.com": [
+        "docs/en/integrations/yuagbytedb/source.md"
+      ],
+      "my-mcp-ui.internal.com": [
+        "docs/en/reference/cli.md"
+      ],
+      "your-toolbox-service-xyz.a.run.app": [
+        "docs/en/samples/deploy_adk_agent.md"
+      ],
+      "server_host": [
+        "internal/auth/generic/generic_test.go"
+      ],
+      "wrong-issuer.com": [
+        "internal/auth/generic/generic_test.go"
+      ],
+      "datatracker.ietf.org": [
+        "internal/server/prm.go"
+      ],
+      "evil.com": [
+        "internal/server/server_test.go",
+        "internal/tools/http/http_url_test.go"
+      ],
+      "trusted.com": [
+        "internal/server/server_test.go"
+      ],
+      "%s%s": [
+        "internal/server/server_test.go"
+      ],
+      "%s": [
+        "internal/server/server_test.go"
+      ],
+      "my-toolbox.example.com": [
+        "internal/server/server_test.go"
+      ],
+      "%s:%d": [
+        "internal/server/server_test.go"
+      ],
+      "override.example.com": [
+        "internal/server/server_test.go"
+      ],
+      "auth.example.com": [
+        "internal/server/server_test.go"
+      ],
+      "oauth2.googleapis.com": [
+        "internal/sources/util.go"
+      ],
+      "alloydb.googleapis.com": [
+        "internal/sources/alloydbadmin/alloydbadmin.go",
+        "tests/alloydb/alloydb_integration_test.go",
+        "tests/alloydb/alloydb_mcp_test.go",
+        "tests/alloydb/alloydb_wait_for_operation_test.go"
+      ],
+      "monitoring.googleapis.com": [
+        "internal/sources/cloudmonitoring/cloud_monitoring.go"
+      ],
+      "sqladmin.googleapis.com": [
+        "internal/sources/cloudsqladmin/cloud_sql_admin.go",
+        "tests/cloudsql/cloud_sql_clone_instance_test.go",
+        "tests/cloudsql/cloud_sql_create_backup_test.go",
+        "tests/cloudsql/cloud_sql_create_database_test.go",
+        "tests/cloudsql/cloud_sql_create_users_test.go"
+      ],
+      "example.looker.com": [
+        "internal/sources/looker/looker_test.go"
+      ],
+      "testuser@localhost:8080": [
+        "internal/sources/trino/trino_test.go"
+      ],
+      "testuser@localhost:8443": [
+        "internal/sources/trino/trino_test.go"
+      ],
+      "testuser:testpass@localhost:8080": [
+        "internal/sources/trino/trino_test.go"
+      ],
+      "geminidataanalytics.googleapis.com": [
+        "internal/tools/bigquery/bigqueryconversationalanalytics/bigqueryconversationalanalytics.go",
+        "internal/tools/conversationalanalytics/conversationalanalyticsaskdataagent/conversationalanalyticsaskdataagent.go",
+        "internal/tools/conversationalanalytics/conversationalanalyticsgetdataagentinfo/conversationalanalyticsgetdataagentinfo.go",
+        "internal/tools/conversationalanalytics/conversationalanalyticslistaccessibledataagents/conversationalanalyticslistaccessibledataagents.go",
+        "internal/tools/looker/lookerconversationalanalytics/lookerconversationalanalytics.go"
+      ],
+      "www.acmecorp.com": [
+        "internal/tools/firestore/util/converter_test.go"
+      ],
+      "api.good.com": [
+        "internal/tools/http/http_url_test.go"
+      ],
+      "%s:%s@%s:%s": [
+        "tests/clickhouse/clickhouse_integration_test.go"
+      ],
+      "hospital.org": [
+        "tests/cloudhealthcare/cloud_healthcare_integration_test.go"
+      ],
+      "loinc.org": [
+        "tests/cloudhealthcare/cloud_healthcare_integration_test.go"
+      ],
+      "unitsofmeasure.org": [
+        "tests/cloudhealthcare/cloud_healthcare_integration_test.go"
+      ],
+      "%s:%s": [
+        "tests/elasticsearch/elasticsearch_integration_test.go"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\googleapis__mcp-toolbox\\gitleaks.json",
+      "exit_code": 1,
+      "output_path": "_logs/scan/googleapis__mcp-toolbox/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/googleapis__mcp-toolbox/osv.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "gitleaks: 2 test-path secret(s)",
+  "files_scanned": 1578,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

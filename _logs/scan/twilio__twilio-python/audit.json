@@ -1,0 +1,632 @@
+{
+  "source_url": "https://github.com/twilio/twilio-python",
+  "proposed_slot": "both.comms.twilio-py",
+  "scanned_at": "2026-05-14T05:53:58.144294+00:00",
+  "clone_ok": true,
+  "commit_pinned": "82adf8fd99a82492982e4cb6b770829f86d378bf",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner",
+    "pip-audit"
+  ],
+  "findings": {
+    "secrets": [
+      {
+        "file": "twilio/rest/accounts/v1/credential/aws.py",
+        "label": "aws access key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/accounts/v1/credential/aws.py",
+        "label": "aws access key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/accounts/v1/credential/aws.py",
+        "label": "aws access key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/accounts/v1/credential/aws.py",
+        "label": "aws access key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/chat/v1/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/chat/v1/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/chat/v1/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/chat/v1/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/chat/v1/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/chat/v1/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/chat/v1/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/chat/v1/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/chat/v1/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/chat/v1/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/chat/v1/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/chat/v1/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/chat/v2/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/chat/v2/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/chat/v2/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/chat/v2/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/chat/v2/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/chat/v2/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/chat/v2/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/chat/v2/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/chat/v2/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/chat/v2/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/chat/v2/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/chat/v2/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/conversations/v1/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/conversations/v1/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/conversations/v1/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/conversations/v1/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/conversations/v1/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/conversations/v1/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/conversations/v1/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/conversations/v1/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/conversations/v1/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/conversations/v1/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/conversations/v1/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/conversations/v1/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/notify/v1/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/notify/v1/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/notify/v1/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/notify/v1/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/notify/v1/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/notify/v1/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/notify/v1/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/notify/v1/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/notify/v1/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "twilio/rest/notify/v1/credential.py",
+        "label": "private key",
+        "match_redacted": true
+      }
+    ],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "github.com": [
+        "CHANGES.md",
+        "CONTRIBUTING.md",
+        "PULL_REQUEST_TEMPLATE.md",
+        "README.md",
+        "UPGRADE.md"
+      ],
+      "twilio.github.io": [
+        "CHANGES.md",
+        "README.md"
+      ],
+      "www.twilio.com": [
+        ".github/ISSUE_TEMPLATE/config.yml",
+        "CHANGES.md",
+        "CONTRIBUTING.md",
+        "LICENSE",
+        "README.md"
+      ],
+      "www.contributor-covenant.org": [
+        "CODE_OF_CONDUCT.md"
+      ],
+      "twilio.com": [
+        ".github/ISSUE_TEMPLATE/config.yml",
+        "PULL_REQUEST_TEMPLATE.md",
+        "README.md",
+        "twilio/rest/api/v2010/account/message/__init__.py"
+      ],
+      "img.shields.io": [
+        "README.md"
+      ],
+      "semver.org": [
+        "README.md",
+        "VERSIONS.md"
+      ],
+      "pip.pypa.io": [
+        "README.md"
+      ],
+      "docs.microsoft.com": [
+        "README.md"
+      ],
+      "bootstrap.pypa.io": [
+        "README.md"
+      ],
+      "console.twilio.com": [
+        "README.md",
+        "advanced-examples/custom-http-client.md"
+      ],
+      "twimlets.com": [
+        "README.md"
+      ],
+      "support.twilio.com": [
+        "README.md",
+        "twilio/rest/api/v2010/account/conference/participant.py",
+        "twilio/rest/api/v2010/account/message/__init__.py",
+        "twilio/rest/taskrouter/v1/workspace/task/reservation.py",
+        "twilio/rest/taskrouter/v1/workspace/worker/reservation.py"
+      ],
+      "pypi.python.org": [
+        "setup.py"
+      ],
+      "stackoverflow.com": [
+        ".github/ISSUE_TEMPLATE/config.yml"
+      ],
+      "docs.python-requests.org": [
+        "advanced-examples/custom-http-client.md"
+      ],
+      "www.sphinx-doc.org": [
+        "docs/conf.py"
+      ],
+      "docs.python.org": [
+        "docs/conf.py"
+      ],
+      "pypi.org": [
+        "docs/source/_templates/sidebarintro.html"
+      ],
+      "mycompany.com": [
+        "tests/unit/test_request_validator.py"
+      ],
+      "api.twilio.com": [
+        "tests/unit/base/test_token_pagination.py",
+        "tests/unit/base/test_version.py",
+        "tests/unit/http/test_async_http_client.py",
+        "tests/unit/http/test_http_client.py",
+        "tests/unit/http/test_validation_client.py"
+      ],
+      "messaging.twilio.com": [
+        "tests/unit/base/test_version.py",
+        "twilio/rest/messaging/MessagingBase.py"
+      ],
+      "mock.twilio.com": [
+        "tests/unit/http/test_async_http_client.py",
+        "tests/unit/rest/test_client.py"
+      ],
+      "proxy.twilio.com": [
+        "tests/unit/http/test_http_client.py",
+        "twilio/rest/proxy/ProxyBase.py"
+      ],
+      "000.us-east-1.playback.live-video.net": [
+        "tests/unit/jwt/test_access_token.py"
+      ],
+      "event-bridge.twilio.com": [
+        "tests/unit/jwt/test_task_router.py",
+        "twilio/jwt/taskrouter/__init__.py"
+      ],
+      "taskrouter.twilio.com": [
+        "tests/unit/jwt/test_task_router.py",
+        "twilio/jwt/taskrouter/__init__.py",
+        "twilio/rest/taskrouter/TaskrouterBase.py"
+      ],
+      "api.edge.us1.twilio.com": [
+        "tests/unit/rest/test_client.py"
+      ],
+      "api.us1.twilio.com": [
+        "tests/unit/rest/test_client.py"
+      ],
+      "api.edge.region.twilio.com": [
+        "tests/unit/rest/test_client.py"
+      ],
+      "api.region.twilio.com": [
+        "tests/unit/rest/test_client.py"
+      ],
+      "api.edge.uriregion.twilio.com": [
+        "tests/unit/rest/test_client.py"
+      ],
+      "api.uriedge.region.twilio.com": [
+        "tests/unit/rest/test_client.py"
+      ],
+      "hellomonkey.mp3": [
+        "tests/unit/twiml/test_voice_response.py"
+      ],
+      "www.rfc-editor.org": [
+        "twilio/base/exceptions.py",
+        "twilio/rest/api/v2010/account/call/transcription.py"
+      ],
+      "tls-test.twilio.com:443": [
+        "twilio/http/validation_client.py"
+      ],
+      "openapi-generator.tech": [
+        "twilio/rest/__init__.py",
+        "twilio/rest/accounts/AccountsBase.py",
+        "twilio/rest/accounts/v1/__init__.py",
+        "twilio/rest/accounts/v1/auth_token_promotion.py",
+        "twilio/rest/accounts/v1/bulk_consents.py"
+      ],
+      "accounts.twilio.com": [
+        "twilio/rest/accounts/AccountsBase.py",
+        "twilio/rest/accounts/v1/auth_token_promotion.py",
+        "twilio/rest/accounts/v1/credential/aws.py",
+        "twilio/rest/accounts/v1/credential/public_key.py",
+        "twilio/rest/accounts/v1/secondary_auth_token.py"
+      ],
+      "en.wikipedia.org": [
+        "twilio/rest/accounts/v1/auth_token_promotion.py",
+        "twilio/rest/accounts/v1/secondary_auth_token.py",
+        "twilio/rest/api/v2010/account/available_phone_number_country/__init__.py",
+        "twilio/rest/api/v2010/account/available_phone_number_country/local.py",
+        "twilio/rest/api/v2010/account/available_phone_number_country/machine_to_machine.py"
+      ],
+      "www.ietf.org": [
+        "twilio/rest/accounts/v1/credential/aws.py",
+        "twilio/rest/accounts/v1/credential/public_key.py",
+        "twilio/rest/api/v2010/account/address/__init__.py",
+        "twilio/rest/api/v2010/account/address/dependent_phone_number.py",
+        "twilio/rest/api/v2010/account/application.py"
+      ],
+      "www.iso.org": [
+        "twilio/rest/api/v2010/account/call/__init__.py",
+        "twilio/rest/api/v2010/account/call/payment.py",
+        "twilio/rest/api/v2010/account/message/__init__.py",
+        "twilio/rest/api/v2010/account/recording/transcription.py",
+        "twilio/rest/api/v2010/account/transcription.py"
+      ],
+      "www.php.net": [
+        "twilio/rest/api/v2010/account/call/__init__.py",
+        "twilio/rest/api/v2010/account/call/recording.py",
+        "twilio/rest/api/v2010/account/conference/recording.py",
+        "twilio/rest/api/v2010/account/recording/__init__.py",
+        "twilio/rest/api/v2010/account/sip/credential_list/__init__.py"
+      ],
+      "wwnw.twilio.com": [
+        "twilio/rest/api/v2010/account/call/__init__.py"
+      ],
+      "datatracker.ietf.org": [
+        "twilio/rest/api/v2010/account/message/__init__.py"
+      ],
+      "assistants.twilio.com": [
+        "twilio/rest/assistants/AssistantsBase.py"
+      ],
+      "bulkexports.twilio.com": [
+        "twilio/rest/bulkexports/BulkexportsBase.py"
+      ],
+      "chat.twilio.com": [
+        "twilio/rest/chat/ChatBase.py"
+      ],
+      "content.twilio.com": [
+        "twilio/rest/content/ContentBase.py",
+        "twilio/rest/content/v1/content/__init__.py",
+        "twilio/rest/content/v1/content/approval_fetch.py",
+        "twilio/rest/content/v1/legacy_content.py",
+        "twilio/rest/content/v2/content.py"
+      ],
+      "conversations.twilio.com": [
+        "twilio/rest/conversations/ConversationsBase.py"
+      ],
+      "events.twilio.com": [
+        "twilio/rest/events/EventsBase.py"
+      ],
+      "flex-api.twilio.com": [
+        "twilio/rest/flex_api/FlexApiBase.py"
+      ],
+      "frontline-api.twilio.com": [
+        "twilio/rest/frontline_api/FrontlineApiBase.py"
+      ],
+      "iam.twilio.com": [
+        "twilio/rest/iam/IamBase.py"
+      ],
+      "insights.twilio.com": [
+        "twilio/rest/insights/InsightsBase.py"
+      ],
+      "intelligence.twilio.com": [
+        "twilio/rest/intelligence/IntelligenceBase.py"
+      ],
+      "json-schema.org": [
+        "twilio/rest/intelligence/v2/operator_type.py",
+        "twilio/rest/verify/v2/form.py"
+      ],
+      "platform.openai.com": [
+        "twilio/rest/intelligence/v3/operator.py",
+        "twilio/rest/intelligence/v3/version.py"
+      ],
+      "ip-messaging.twilio.com": [
+        "twilio/rest/ip_messaging/IpMessagingBase.py"
+      ],
+      "knowledge.twilio.com": [
+        "twilio/rest/knowledge/KnowledgeBase.py"
+      ],
+      "lookups.twilio.com": [
+        "twilio/rest/lookups/LookupsBase.py"
+      ],
+      "marketplace.twilio.com": [
+        "twilio/rest/marketplace/MarketplaceBase.py"
+      ],
+      "memory.twilio.com": [
+        "twilio/rest/memory/MemoryBase.py"
+      ],
+      "www.facebook.com": [
+        "twilio/rest/messaging/v2/channels_sender.py"
+      ],
+      "monitor.twilio.com": [
+        "twilio/rest/monitor/MonitorBase.py"
+      ],
+      "notify.twilio.com": [
+        "twilio/rest/notify/NotifyBase.py"
+      ],
+      "firebase.google.com": [
+        "twilio/rest/notify/v1/service/notification.py"
+      ],
+      "developer.apple.com": [
+        "twilio/rest/notify/v1/service/notification.py"
+      ],
+      "numbers.twilio.com": [
+        "twilio/rest/numbers/NumbersBase.py"
+      ],
+      "oauth.twilio.com": [
+        "twilio/rest/oauth/OauthBase.py"
+      ],
+      "preview.twilio.com": [
+        "twilio/rest/preview/PreviewBase.py"
+      ],
+      "preview-iam.twilio.com": [
+        "twilio/rest/preview_iam/PreviewIamBase.py"
+      ],
+      "pricing.twilio.com": [
+        "twilio/rest/pricing/PricingBase.py"
+      ],
+      "routes.twilio.com": [
+        "twilio/rest/routes/RoutesBase.py"
+      ],
+      "serverless.twilio.com": [
+        "twilio/rest/serverless/ServerlessBase.py"
+      ],
+      "studio.twilio.com": [
+        "twilio/rest/studio/StudioBase.py"
+      ],
+      "supersim.twilio.com": [
+        "twilio/rest/supersim/SupersimBase.py"
+      ],
+      "sync.twilio.com": [
+        "twilio/rest/sync/SyncBase.py"
+      ],
+      "developer.mozilla.org": [
+        "twilio/rest/sync/v1/service/sync_list/sync_list_item.py",
+        "twilio/rest/sync/v1/service/sync_map/sync_map_item.py",
+        "twilio/rest/taskrouter/v1/workspace/task/__init__.py",
+        "twilio/rest/verify/v2/service/approve_challenge.py"
+      ],
+      "trunking.twilio.com": [
+        "twilio/rest/trunking/TrunkingBase.py"
+      ],
+      "trusthub.twilio.com": [
+        "twilio/rest/trusthub/TrusthubBase.py"
+      ],
+      "verify.twilio.com": [
+        "twilio/rest/verify/VerifyBase.py"
+      ],
+      "base64.guru": [
+        "twilio/rest/verify/v2/service/approve_challenge.py",
+        "twilio/rest/verify/v2/service/new_verify_factor.py"
+      ],
+      "developers.google.com": [
+        "twilio/rest/verify/v2/service/verification.py"
+      ],
+      "video.twilio.com": [
+        "twilio/rest/video/VideoBase.py"
+      ],
+      "documentation-example-twilio-bucket": [
+        "twilio/rest/video/v1/composition_settings.py",
+        "twilio/rest/video/v1/recording_settings.py"
+      ],
+      "tools.ietf.org": [
+        "twilio/rest/video/v1/composition_settings.py",
+        "twilio/rest/video/v1/recording_settings.py",
+        "twilio/rest/video/v1/room/__init__.py",
+        "twilio/rest/voice/v1/ip_record.py"
+      ],
+      "voice.twilio.com": [
+        "twilio/rest/voice/VoiceBase.py"
+      ],
+      "www.itu.int": [
+        "twilio/rest/voice/v1/dialing_permissions/country/__init__.py"
+      ],
+      "wireless.twilio.com": [
+        "twilio/rest/wireless/WirelessBase.py"
+      ],
+      "mcc-mnc.com": [
+        "twilio/rest/wireless/v1/sim/data_session.py"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\twilio__twilio-python\\gitleaks.json",
+      "exit_code": 1,
+      "output_path": "_logs/scan/twilio__twilio-python/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/twilio__twilio-python/osv.json"
+    },
+    "pip_audit": {
+      "exit_code": 1,
+      "output_path": "_logs/scan/twilio__twilio-python/pip-audit.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "trusted-vendor: 50 pattern-scan secret hit(s) downgraded to notes (likely docstring/example values); trusted-vendor: 24 gitleaks finding(s) downgraded to notes (likely SDK docs/example values)",
+  "files_scanned": 810,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

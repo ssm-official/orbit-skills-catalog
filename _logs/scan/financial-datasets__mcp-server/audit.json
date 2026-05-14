@@ -69,5 +69,7 @@
   "verdict": "pass",
   "verdict_reason": "no findings of concern in static scan",
   "files_scanned": 8,
-  "files_skipped": 0
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
 }

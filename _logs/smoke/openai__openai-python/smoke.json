@@ -1,0 +1,32 @@
+{
+  "source_url": "https://github.com/openai/openai-python",
+  "proposed_slot": "both.creative.openai-py",
+  "smoked_at": "2026-05-14T06:08:05.440753+00:00",
+  "platform": "windows",
+  "sandbox": "fresh venv / fresh node_modules (Docker unavailable on host)",
+  "network_monitoring": "Get-NetTCPConnection deltas (weaker than netns isolation)",
+  "package": "openai",
+  "language": "python",
+  "kind": "python",
+  "steps": [
+    {
+      "step": "uv_dryrun",
+      "rc": 0,
+      "stderr": ""
+    },
+    {
+      "step": "uv_run_import",
+      "rc": 0,
+      "stdout": "OK ['APIConnectionError', 'APIError', 'APIResponse', 'APIResponseValidationError', 'APIStatusError', 'APITimeoutError', 'AssistantEventHandler', 'AsyncAPIResponse', 'AsyncAssistantEventHandler', 'AsyncAzureOpenAI', 'AsyncClient', 'AsyncOpenAI', 'AsyncStream', 'Audio', 'AuthenticationError', 'AzureOpenAI', 'BadRequestError', 'BaseModel', 'ChatCompletion', 'Client']\n",
+      "stderr": "ython-3.9.18-windows-x86_64-none (download) (36.4MiB)\n Downloaded cpython-3.9.18-windows-x86_64-none (download)\n   Building openai @ file:///C:/Users/ssmca/orbit-skills-catalog/candidates/openai__openai-python\nDownloading pydantic-core (2.0MiB)\n Downloaded pydantic-core\n      Built openai @ file:///C:/Users/ssmca/orbit-skills-catalog/candidates/openai__openai-python\nInstalled 18 packages in 408ms\n",
+      "new_outbound_connections": [
+        {
+          "host": "104.18.35.227",
+          "port": 443
+        }
+      ]
+    }
+  ],
+  "verdict": "pass",
+  "reason": "uv install + import OK"
+}

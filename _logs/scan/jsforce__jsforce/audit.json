@@ -1,0 +1,308 @@
+{
+  "source_url": "https://github.com/jsforce/jsforce",
+  "proposed_slot": "merchant.crm.salesforce-jsforce",
+  "scanned_at": "2026-05-14T05:53:39.918465+00:00",
+  "clone_ok": true,
+  "commit_pinned": "8ab4831540d7242bc3f653542e2cff0ad7e863a2",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner"
+  ],
+  "findings": {
+    "secrets": [
+      {
+        "file": "scripts/org-setup.mjs",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "test/jwt-util.test.ts",
+        "label": "jwt-like",
+        "match_redacted": true
+      }
+    ],
+    "suspicious": [
+      {
+        "file": "scripts/jsforce-node.ts",
+        "label": "exec-call",
+        "snippet": "tringify(pjson));     shelljs.exec('npx prettier --write package."
+      },
+      {
+        "file": "scripts/jsforce-node.ts",
+        "label": "exec-call",
+        "snippet": "f', 'src/schema');    shelljs.exec('npx prettier --write package."
+      },
+      {
+        "file": "scripts/jsforce-node.ts",
+        "label": "exec-call",
+        "snippet": "ng `npm install`');   shelljs.exec('npm install'); })(); "
+      },
+      {
+        "file": "src/record-stream.ts",
+        "label": "exec-call",
+        "snippet": "    const m = /^\\$\\{(\\w+)\\}$/.exec(value);     if (m) {       ret"
+      },
+      {
+        "file": "src/transport.ts",
+        "label": "exec-call",
+        "snippet": "ual\\.force|salesforce)\\.com$/.exec(apiHost);   if (m) {     retur"
+      },
+      {
+        "file": "src/browser/client.ts",
+        "label": "cookie-write",
+        "snippet": "efix + '_id', params.id);     document.cookie = this._prefix + '_loggedin=tru"
+      },
+      {
+        "file": "src/browser/client.ts",
+        "label": "cookie-write",
+        "snippet": "em(this._prefix + '_id');     document.cookie = this._prefix + '_loggedin='; "
+      },
+      {
+        "file": "src/registry/sfdx.ts",
+        "label": "exec-call",
+        "snippet": "((resolve, reject) => {       exec(cmd, (err, ret) => {         i"
+      },
+      {
+        "file": "test/sobject.test.ts",
+        "label": "exec-call",
+        "snippet": "ort('CloseDate', 'desc')     .exec();   assert.ok(Array.isArray(r"
+      },
+      {
+        "file": "test/sobject.test.ts",
+        "label": "exec-call",
+        "snippet": "ccount.Name -CloseDate')     .exec();   assert.ok(Array.isArray(r"
+      },
+      {
+        "file": "test/sobject.test.ts",
+        "label": "exec-call",
+        "snippet": "te: -1 })     .limit(10)     .exec();   assert.ok(Array.isArray(r"
+      },
+      {
+        "file": "test/sobject.test.ts",
+        "label": "exec-call",
+        "snippet": "oseDate')     .limit(10)     .exec();   assert.ok(Array.isArray(r"
+      },
+      {
+        "file": "test/sobject.test.ts",
+        "label": "exec-call",
+        "snippet": "t('*, Account.*, Owner.Name').exec();   assert.ok(Array.isArray(r"
+      },
+      {
+        "file": "test/sobject.test.ts",
+        "label": "exec-call",
+        "snippet": "   .end()     .limit(10)     .exec();   assert.ok(Array.isArray(r"
+      }
+    ],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "jestjs.io": [
+        "DEVELOPING.md",
+        "babel.config.js"
+      ],
+      "github.com": [
+        ".github/workflows/externalNut.yml",
+        ".github/workflows/tests.yml",
+        "CHANGELOG.md",
+        "DEVELOPING.md",
+        "MIGRATING_V2-V3.md"
+      ],
+      "developer.salesforce.com": [
+        "DEVELOPING.md",
+        "src/api/bulk2.ts",
+        "src/connection.ts",
+        "src/csv.ts",
+        "src/http-api.ts"
+      ],
+      "karma-runner.github.io": [
+        "DEVELOPING.md"
+      ],
+      "npmjs.org": [
+        "karma.conf.js"
+      ],
+      "browsersl.ist": [
+        "MIGRATING_V1-V3.md",
+        "MIGRATING_V2-V3.md"
+      ],
+      "jsforce.github.io": [
+        "MIGRATING_V1-V3.md",
+        "README.md",
+        "src/cli/cli.ts"
+      ],
+      "registry.npmjs.org": [
+        ".github/workflows/onRelease.yml",
+        "package-lock.json"
+      ],
+      "opencollective.com": [
+        "package-lock.json"
+      ],
+      "www.patreon.com": [
+        "package-lock.json"
+      ],
+      "feross.org": [
+        "package-lock.json"
+      ],
+      "tidelift.com": [
+        "package-lock.json"
+      ],
+      "paulmillr.com": [
+        "package-lock.json"
+      ],
+      "paypal.me": [
+        "package-lock.json"
+      ],
+      "v8.dev": [
+        "package-lock.json"
+      ],
+      "help.salesforce.com": [
+        "README.md",
+        "src/connection.ts",
+        "src/oauth2.ts",
+        "src/types/common.ts",
+        "test/connection-session.test.ts"
+      ],
+      "nodejs.org": [
+        "scripts/org-setup.mjs"
+      ],
+      "login.salesforce.com": [
+        "src/cli/cli.ts",
+        "src/connection.ts",
+        "src/oauth2.ts",
+        "src/registry/base.ts",
+        "test/bin/org-setup"
+      ],
+      "schemas.xmlsoap.org": [
+        "src/api/metadata/wsdl.xml",
+        "src/api/soap/wsdl.xml",
+        "src/connection.ts",
+        "src/soap.ts",
+        "test/http-api.test.ts"
+      ],
+      "na1.salesforce.com": [
+        "src/connection.ts"
+      ],
+      "www.salesforce.com": [
+        "src/date.ts"
+      ],
+      "toolsn.ietf.org": [
+        "src/oauth2.ts"
+      ],
+      "promises-aplus.github.io": [
+        "src/api/chatter.ts",
+        "src/api/metadata.ts",
+        "src/process.ts",
+        "src/query.ts"
+      ],
+      "www.w3.org": [
+        "src/api/metadata/wsdl.xml",
+        "src/api/soap/wsdl.xml",
+        "src/soap.ts",
+        "test/http-api.test.ts"
+      ],
+      "$": [
+        "src/transport.ts"
+      ],
+      "www.force.com": [
+        "src/api/bulk.ts"
+      ],
+      "soap.sforce.com": [
+        "src/api/metadata.ts",
+        "src/api/metadata/wsdl.xml",
+        "test/http-api.test.ts",
+        "test/package/JSforceTestSuite/approvalProcesses/Account.JSforceApprovalProcess1.approvalProcess",
+        "test/package/JSforceTestSuite/classes/JSforceTestApexRest.cls-meta.xml"
+      ],
+      "releasenotes.docs.salesforce.com": [
+        "src/api/streaming.ts",
+        "src/api/streaming/extension.ts"
+      ],
+      "faye.jcoglan.com": [
+        "src/api/streaming.ts",
+        "src/api/streaming/extension.ts"
+      ],
+      "test.salesforce.com": [
+        "src/api/metadata/wsdl.xml",
+        "src/api/soap/wsdl.xml",
+        "src/cli/cli.ts"
+      ],
+      "www.google.com": [
+        "test/apex.test.ts"
+      ],
+      "heaven-party-2429-dev-ed.scratch.my.salesforce.com": [
+        "test/http-api.test.ts"
+      ],
+      "innovation-momentum-8840-dev-ed.scratch.my.salesforce.com": [
+        "test/oauth2.test.ts"
+      ],
+      "www.uos.com,4437,energy,,24000,public,uos": [
+        "test/data/Account_bulk1_test.csv",
+        "test/data/Account_bulk2_test.csv"
+      ],
+      "www.uos.com,4437,energy,,3000,public,uos": [
+        "test/data/Account_bulk1_test.csv",
+        "test/data/Account_bulk2_test.csv"
+      ],
+      "edgecomm.com,6576,electronics,1.39e+08,1000,public,edge": [
+        "test/data/Account_bulk1_test.csv",
+        "test/data/Account_bulk2_test.csv"
+      ],
+      "www.uos.com,4437,energy,5.60e+09,145000,public,uos": [
+        "test/data/Account_bulk1_test.csv",
+        "test/data/Account_bulk2_test.csv"
+      ],
+      "www.accountupsert0.com": [
+        "test/data/Account_bulk2_test_backquote.csv"
+      ],
+      "www.accountupsert1.com": [
+        "test/data/Account_bulk2_test_backquote.csv"
+      ],
+      "www.accountupsert2.com": [
+        "test/data/Account_bulk2_test_backquote.csv"
+      ],
+      "www.accountupsert3.com": [
+        "test/data/Account_bulk2_test_backquote.csv"
+      ],
+      "www.accountupsert4.com": [
+        "test/data/Account_bulk2_test_backquote.csv"
+      ],
+      "www.accountupsert5.com": [
+        "test/data/Account_bulk2_test_backquote.csv"
+      ],
+      "www.accountupsert6.com": [
+        "test/data/Account_bulk2_test_backquote.csv"
+      ],
+      "www.accountupsert7.com": [
+        "test/data/Account_bulk2_test_backquote.csv"
+      ],
+      "www.accountupsert8.com": [
+        "test/data/Account_bulk2_test_backquote.csv"
+      ],
+      "www.accountupsert9.com": [
+        "test/data/Account_bulk2_test_backquote.csv"
+      ],
+      "www.apache.org": [
+        "test/karma/karma-failed-tests-reporter.js"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\jsforce__jsforce\\gitleaks.json",
+      "exit_code": 1,
+      "output_path": "_logs/scan/jsforce__jsforce/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/jsforce__jsforce/osv.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "test-path secret findings (2); exec-call in scripts/jsforce-node.ts; exec-call in scripts/jsforce-node.ts; exec-call in scripts/jsforce-node.ts; exec-call in src/record-stream.ts; exec-call in src/transport.ts; cookie-write in src/browser/client.ts; cookie-write in src/browser/client.ts; exec-call in src/registry/sfdx.ts; exec-call in test/sobject.test.ts; exec-call in test/sobject.test.ts; exec-call in test/sobject.test.ts; exec-call in test/sobject.test.ts; exec-call in test/sobject.test.ts; exec-call in test/sobject.test.ts; gitleaks: 1 test-path secret(s)",
+  "files_scanned": 188,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

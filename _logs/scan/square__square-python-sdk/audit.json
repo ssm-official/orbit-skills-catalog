@@ -1,0 +1,227 @@
+{
+  "source_url": "https://github.com/square/square-python-sdk",
+  "proposed_slot": "merchant.finance.square-py",
+  "scanned_at": "2026-05-14T05:54:37.120887+00:00",
+  "clone_ok": true,
+  "commit_pinned": "813313da9098aacfa234225449b0c67cf4a6284c",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner",
+    "pip-audit"
+  ],
+  "findings": {
+    "secrets": [
+      {
+        "file": "reference.md",
+        "label": "slack token",
+        "match_redacted": true
+      },
+      {
+        "file": "src/square/labor/client.py",
+        "label": "slack token",
+        "match_redacted": true
+      },
+      {
+        "file": "src/square/labor/client.py",
+        "label": "slack token",
+        "match_redacted": true
+      }
+    ],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "github.com": [
+        "legacy/README.md",
+        "pyproject.toml",
+        "src/square/core/file.py",
+        "src/square/core/jsonable_encoder.py",
+        "src/square/core/unchecked_base_model.py"
+      ],
+      "img.shields.io": [
+        "README.md",
+        "legacy/README.md"
+      ],
+      "developer.mozilla.org": [
+        "README.md"
+      ],
+      "my.test.proxy.example.com": [
+        "README.md"
+      ],
+      "developer.squareup.com": [
+        ".github/ISSUE_TEMPLATE/bug_report.md",
+        ".github/ISSUE_TEMPLATE/config.yml",
+        ".github/pull_request_template.md",
+        "legacy/README.md",
+        "legacy/doc/api/apple-pay.md"
+      ],
+      "app.squareup.com": [
+        "legacy/doc/api/apple-pay.md",
+        "legacy/src/square_legacy/api/apple_pay_api.py",
+        "reference.md",
+        "src/square/apple_pay/client.py",
+        "src/square/apple_pay/raw_client.py"
+      ],
+      "merchant.website.com": [
+        "legacy/doc/api/checkout.md",
+        "legacy/doc/models/create-checkout-request.md",
+        "legacy/doc/models/create-checkout-response.md",
+        "reference.md",
+        "src/square/locations/client.py"
+      ],
+      "www.example.com": [
+        "legacy/doc/models/checkout.md",
+        "legacy/doc/models/create-checkout-request.md",
+        "reference.md",
+        "src/square/locations/client.py",
+        "src/square/locations/raw_client.py"
+      ],
+      "en.wikipedia.org": [
+        "legacy/doc/models/create-subscription-request.md",
+        "legacy/doc/models/error-category.md",
+        "reference.md",
+        "src/square/subscriptions/client.py",
+        "src/square/subscriptions/raw_client.py"
+      ],
+      "developer-production-s.squarecdn.com": [
+        "reference.md",
+        "src/square/customers/custom_attribute_definitions/client.py",
+        "src/square/locations/custom_attribute_definitions/client.py",
+        "src/square/merchants/custom_attribute_definitions/client.py",
+        "src/square/orders/custom_attribute_definitions/client.py"
+      ],
+      "example-webhook-url.com": [
+        "legacy/doc/api/webhook-subscriptions.md",
+        "legacy/doc/models/create-webhook-subscription-request.md",
+        "legacy/doc/models/create-webhook-subscription-response.md",
+        "legacy/doc/models/list-webhook-subscriptions-response.md",
+        "legacy/doc/models/retrieve-webhook-subscription-response.md"
+      ],
+      "discord.com": [
+        ".github/ISSUE_TEMPLATE/bug_report.md",
+        ".github/ISSUE_TEMPLATE/config.yml",
+        ".github/pull_request_template.md"
+      ],
+      "squareup.com": [
+        ".github/ISSUE_TEMPLATE/bug_report.md",
+        ".github/ISSUE_TEMPLATE/config.yml",
+        ".github/pull_request_template.md",
+        "legacy/README.md",
+        "legacy/doc/models/complete-payment-response.md"
+      ],
+      "install.python-poetry.org": [
+        ".github/workflows/ci.yml",
+        ".github/workflows/legacy.yml"
+      ],
+      "upload.pypi.org": [
+        ".github/workflows/ci.yml",
+        ".github/workflows/legacy.yml"
+      ],
+      "badge.fury.io": [
+        "legacy/README.md"
+      ],
+      "docs.connect.squareup.com": [
+        "legacy/README.md"
+      ],
+      "connect.squareup.com": [
+        "legacy/doc/client.md",
+        "legacy/doc/models/create-card-request.md",
+        "legacy/doc/models/create-checkout-response.md",
+        "legacy/doc/models/list-cards-request.md",
+        "legacy/src/square_legacy/client.py"
+      ],
+      "www.iso.org": [
+        "legacy/doc/models/address.md",
+        "legacy/doc/models/bank-account.md",
+        "legacy/doc/models/country.md",
+        "legacy/doc/models/customer-address-filter.md",
+        "legacy/doc/models/location.md"
+      ],
+      "wikipedia.org": [
+        "legacy/doc/models/bank-account.md",
+        "legacy/doc/models/currency.md",
+        "legacy/doc/models/location.md",
+        "legacy/doc/models/merchant.md",
+        "legacy/doc/models/money.md"
+      ],
+      "tools.ietf.org": [
+        "legacy/doc/models/catalog-time-period.md",
+        "legacy/doc/models/create-mobile-authorization-code-response.md",
+        "legacy/doc/models/location.md",
+        "legacy/doc/models/loyalty-promotion-available-time-data.md",
+        "legacy/doc/models/merchant.md"
+      ],
+      "square.link": [
+        "legacy/doc/models/list-payment-links-response.md",
+        "legacy/doc/models/retrieve-payment-link-response.md",
+        "legacy/doc/models/update-payment-link-response.md"
+      ],
+      "www.iana.org": [
+        "legacy/doc/models/location.md",
+        "src/square/requests/location.py",
+        "src/square/types/location.py"
+      ],
+      "www.facebook.com": [
+        "legacy/doc/models/location.md",
+        "src/square/requests/location.py",
+        "src/square/types/location.py"
+      ],
+      "square.site": [
+        "legacy/doc/models/retrieve-location-booking-profile-response.md"
+      ],
+      "checkout.square.site": [
+        "legacy/doc/models/retrieve-payment-link-response.md",
+        "legacy/doc/models/update-payment-link-response.md"
+      ],
+      "connect.squareupsandbox.com": [
+        "legacy/src/square_legacy/configuration.py",
+        "src/square/environment.py"
+      ],
+      "webhook.site": [
+        "legacy/tests/utilities/test_webhooks_helper.py",
+        "tests/integration/test_webhooks_helper.py"
+      ],
+      "cloud.example.com": [
+        "src/square/core/http_client.py",
+        "tests/utils/test_http_client.py"
+      ],
+      "html.spec.whatwg.org": [
+        "src/square/core/http_sse/_decoders.py"
+      ],
+      "developer.squareupstaging.com": [
+        "src/square/requests/device_checkout_options.py",
+        "src/square/types/device_checkout_options.py"
+      ],
+      "docs.pytest.org": [
+        "tests/custom/test_client.py"
+      ],
+      "api.example.com": [
+        "tests/utils/test_http_client.py"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\square__square-python-sdk\\gitleaks.json",
+      "exit_code": 1,
+      "output_path": "_logs/scan/square__square-python-sdk/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/square__square-python-sdk/osv.json"
+    },
+    "pip_audit": {
+      "exit_code": 0,
+      "output_path": "_logs/scan/square__square-python-sdk/pip-audit.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "trusted-vendor: 2 pattern-scan secret hit(s) downgraded to notes (likely docstring/example values); test-path secret findings (1); trusted-vendor: 86 gitleaks finding(s) downgraded to notes (likely SDK docs/example values); gitleaks: 179 test-path secret(s)",
+  "files_scanned": 4034,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

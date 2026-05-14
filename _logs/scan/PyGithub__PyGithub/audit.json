@@ -1,0 +1,1267 @@
+{
+  "source_url": "https://github.com/PyGithub/PyGithub",
+  "proposed_slot": "merchant.devops.pygithub",
+  "scanned_at": "2026-05-14T05:54:24.976269+00:00",
+  "clone_ok": true,
+  "commit_pinned": "7806e7dcc813735413798a45fac2e073b4b30924",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner",
+    "pip-audit"
+  ],
+  "findings": {
+    "secrets": [
+      {
+        "file": "tests/Framework.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "tests/GithubIntegration.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "tests/Migration.py",
+        "label": "aws access key",
+        "match_redacted": true
+      },
+      {
+        "file": "tests/ReplayData/Migration.testGetArchiveUrlWhenExported.txt",
+        "label": "aws access key",
+        "match_redacted": true
+      },
+      {
+        "file": "tests/ReplayData/Migration.testGetArchiveUrlWhenExported.txt",
+        "label": "aws access key",
+        "match_redacted": true
+      },
+      {
+        "file": "tests/ReplayData/PublicReleaseAsset.testDownload.txt",
+        "label": "jwt-like",
+        "match_redacted": true
+      },
+      {
+        "file": "tests/ReplayData/PublicReleaseAsset.testDownload.txt",
+        "label": "jwt-like",
+        "match_redacted": true
+      }
+    ],
+    "suspicious": [
+      {
+        "file": "tests/Connection.py",
+        "label": "eval-call",
+        "snippet": "ecording_lines[:5]     assert eval(file_value_lines[5]) == eval(e"
+      },
+      {
+        "file": "tests/Connection.py",
+        "label": "eval-call",
+        "snippet": " eval(file_value_lines[5]) == eval(expected_recording_lines[5])  "
+      },
+      {
+        "file": "tests/Framework.py",
+        "label": "eval-call",
+        "snippet": "rt request.request_headers == eval(self.__file.readline()), self."
+      },
+      {
+        "file": "tests/Framework.py",
+        "label": "eval-call",
+        "snippet": "headers = CaseInsensitiveDict(eval(self.__file.readline()))      "
+      }
+    ],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "pygithub.readthedocs.io": [
+        ".gitignore",
+        "CONTRIBUTING.md",
+        "README.md",
+        "doc/.gitignore",
+        "doc/changes.rst"
+      ],
+      "www.gnu.org": [
+        ".gitignore",
+        "COPYING",
+        "doc/.gitignore",
+        "doc/conf.py",
+        "doc/github_objects/.gitignore"
+      ],
+      "github.com": [
+        ".pre-commit-config.yaml",
+        "DEPLOY.md",
+        "README.md",
+        "doc/changes.rst",
+        "doc/examples/Webhook.rst"
+      ],
+      "docs.readthedocs.io": [
+        ".readthedocs.yml"
+      ],
+      "sscce.org": [
+        "CONTRIBUTING.md"
+      ],
+      "fsf.org": [
+        "COPYING",
+        "COPYING.LESSER"
+      ],
+      "pypi.org": [
+        "DEPLOY.md",
+        "doc/development.rst",
+        "pyproject.toml",
+        "tests/ReplayData/GraphQl.testPaginationAndRestIntegration.txt",
+        "tests/ReplayData/Repository.testCompareCommitPagination.txt"
+      ],
+      "img.shields.io": [
+        "README.md",
+        "tests/GitReleaseAsset.py"
+      ],
+      "www.codetriage.com": [
+        "README.md"
+      ],
+      "codecov.io": [
+        "README.md"
+      ],
+      "docs.github.com": [
+        ".github/workflows/codeql.yml",
+        "README.md",
+        "doc/changes.rst",
+        "doc/examples/Authentication.rst",
+        "doc/graphql.rst"
+      ],
+      "gh.io": [
+        ".github/workflows/codeql.yml"
+      ],
+      "urllib3.readthedocs.io": [
+        "doc/changes.rst"
+      ],
+      "developer.github.com": [
+        "doc/changes.rst",
+        "doc/examples/Webhook.rst",
+        "doc/introduction.rst",
+        "github/Consts.py",
+        "github/ProjectCard.py"
+      ],
+      "jacquev6.github.com": [
+        "doc/changes.rst",
+        "tests/ReplayData/AuthenticatedUser.testGetIssuesWithAllArguments.txt",
+        "tests/ReplayData/AuthenticatedUser.testGetUserIssues.txt",
+        "tests/ReplayData/AuthenticatedUser.testGetUserIssuesWithAllArguments.txt",
+        "tests/ReplayData/ConditionalRequestUpdate.setUp.txt"
+      ],
+      "travis-ci.org": [
+        "doc/changes.rst",
+        "tests/ReplayData/Issue134.testGetAuthorizationsSucceedsWhenAutenticatedThroughLoginPassword.txt",
+        "tests/ReplayData/PaginatedList.testGetThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testIntIndexingInThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testInterruptedIteration.txt"
+      ],
+      "www.freshports.org": [
+        "doc/changes.rst"
+      ],
+      "semver.org": [
+        "doc/changes.rst"
+      ],
+      "www.python.org": [
+        "doc/changes.rst"
+      ],
+      "pre-commit.com": [
+        "doc/getting-started.rst"
+      ],
+      "pypi.python.org": [
+        "doc/introduction.rst",
+        "tests/ReplayData/AuthenticatedUser.testGetIssues.txt",
+        "tests/ReplayData/Issue.testGetComments.txt",
+        "tests/ReplayData/Issue.testGetCommentsSince.txt",
+        "tests/ReplayData/Repository.testGetIssues.txt"
+      ],
+      "danielpocock.com": [
+        "doc/introduction.rst"
+      ],
+      "devassistant.org": [
+        "doc/introduction.rst"
+      ],
+      "upverter.com": [
+        "doc/introduction.rst",
+        "tests/ReplayData/AuthenticatedUser.testGetIssuesWithAllArguments.txt",
+        "tests/ReplayData/AuthenticatedUser.testGetUserIssuesWithAllArguments.txt",
+        "tests/ReplayData/Issue134.testGetAuthorizationsSucceedsWhenAutenticatedThroughLoginPassword.txt"
+      ],
+      "n.tkte.ch": [
+        "doc/introduction.rst"
+      ],
+      "gist.github.com": [
+        "doc/introduction.rst",
+        "tests/Gist.py",
+        "tests/ReplayData/AuthenticatedUser.testCreateGist.txt",
+        "tests/ReplayData/AuthenticatedUser.testCreateGistWithoutDescription.txt",
+        "tests/ReplayData/AuthenticatedUser.testGetGists.txt"
+      ],
+      "stackoverflow.com": [
+        "doc/introduction.rst",
+        "github/Environment.py",
+        "tests/ReplayData/PaginatedList.testIntIndexingInThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testInterruptedIteration.txt",
+        "tests/ReplayData/PaginatedList.testSliceIndexingUntilFourthPage.txt"
+      ],
+      "www.freebsd.org": [
+        "doc/introduction.rst"
+      ],
+      "bugzilla.redhat.com": [
+        "doc/introduction.rst",
+        "tests/ReplayData/OrganizationDependabotAlert.testGetAlertsWithAllArguments.txt",
+        "tests/ReplayData/OrganizationDependabotAlert.testMultipleAlerts.txt",
+        "tests/ReplayData/OrganizationDependabotAlert.testRepr.txt"
+      ],
+      "jqlang.github.io": [
+        "doc/openapi.rst",
+        "doc/scripts.rst"
+      ],
+      "api.github.com": [
+        "doc/examples/Branch.rst",
+        "github/Consts.py",
+        "tests/AuthenticatedUser.py",
+        "tests/Authorization.py",
+        "tests/Branch.py"
+      ],
+      "fooci.com": [
+        "doc/examples/Commit.rst"
+      ],
+      "beeceptor.com": [
+        "doc/examples/Webhook.rst"
+      ],
+      "www.postb.in": [
+        "doc/examples/Webhook.rst"
+      ],
+      "status.github.com": [
+        "github/Consts.py",
+        "tests/ReplayData/ExposeAllAttributes.testAllClasses.txt",
+        "tests/Requester.py"
+      ],
+      "python.readthedocs.io": [
+        "github/MainClass.py"
+      ],
+      "platform.github.community": [
+        "github/ProjectCard.py"
+      ],
+      "my.enterprise.com": [
+        "tests/ApplicationOAuth.py",
+        "tests/Enterprise.py",
+        "tests/GraphQl.py",
+        "tests/Issue80.py",
+        "tests/Logging_.py"
+      ],
+      "myapp.com": [
+        "tests/ApplicationOAuth.py",
+        "tests/ReplayData/Repository.testCompareCommitPagination.txt"
+      ],
+      "my.enterprise.com:443": [
+        "tests/ApplicationOAuth.py"
+      ],
+      "secure.gravatar.com": [
+        "tests/AuthenticatedUser.py",
+        "tests/Logging_.py",
+        "tests/NamedUser.py",
+        "tests/RawData.py",
+        "tests/ReplayData/AuthenticatedUser.testAttributes.txt"
+      ],
+      "vincent-jacques.net": [
+        "tests/AuthenticatedUser.py",
+        "tests/Authorization.py",
+        "tests/Logging_.py",
+        "tests/NamedUser.py",
+        "tests/Organization.py"
+      ],
+      "foobar.com": [
+        "tests/AuthenticatedUser.py",
+        "tests/Hook.py",
+        "tests/Organization.py",
+        "tests/ReplayData/AuthenticatedUser.testCreateRepositoryWithAllArguments.txt",
+        "tests/ReplayData/AuthenticatedUser.testGetRepos.txt"
+      ],
+      "base.net": [
+        "tests/Authentication.py"
+      ],
+      "www.example.com": [
+        "tests/CheckRun.py",
+        "tests/Organization.py",
+        "tests/ReplayData/CheckRun.testCreateCheckRunInProgress.txt",
+        "tests/ReplayData/CheckSuite.testGetCheckRuns.txt",
+        "tests/ReplayData/CheckSuite.testGetCheckRunsFilterByFilter.txt"
+      ],
+      "www.example-url.com": [
+        "tests/CheckRun.py",
+        "tests/ReplayData/CheckRun.testUpdateCheckRunAll.txt",
+        "tests/ReplayData/CheckSuite.testGetCheckRuns.txt",
+        "tests/ReplayData/CheckSuite.testGetCheckRunsFilterByFilter.txt",
+        "tests/ReplayData/CheckSuite.testGetCheckRunsFilterByStatus.txt"
+      ],
+      "build.testeng.edx.org": [
+        "tests/CommitCombinedStatus.py",
+        "tests/ReplayData/CommitCombinedStatus.setUp.txt"
+      ],
+      "raw.githubusercontent.com": [
+        "tests/ContentFile.py",
+        "tests/ReplayData/ContentFile.setUp.txt",
+        "tests/ReplayData/Issue174.testGetDirContentsWithHttpRedirect.txt",
+        "tests/ReplayData/Repository.testCreateFile.txt",
+        "tests/ReplayData/Repository.testGetContentsDir.txt"
+      ],
+      "nvd.nist.gov": [
+        "tests/DependabotAlert.py",
+        "tests/GlobalAdvisory.py",
+        "tests/ReplayData/DependabotAlert.testAttributes.txt",
+        "tests/ReplayData/DependabotAlert.testGetAlertsWithAllArguments.txt",
+        "tests/ReplayData/DependabotAlert.testMultipleAlerts.txt"
+      ],
+      "my.enterprise.com:8080": [
+        "tests/Enterprise.py",
+        "tests/GraphQl.py",
+        "tests/ReplayData/GraphQl.testOtherPort.txt"
+      ],
+      "gist.githubusercontent.com": [
+        "tests/Gist.py",
+        "tests/ReplayData/Gist.testAttributes.txt",
+        "tests/ReplayData/Github.testGetGistsWithSince.txt"
+      ],
+      "help.github.com": [
+        "tests/GithubApp.py",
+        "tests/ReplayData/AuthenticatedUser.testCreateRepoFromTemplate.txt",
+        "tests/ReplayData/AuthenticatedUser.testCreateRepoFromTemplateWithAllArguments.txt",
+        "tests/ReplayData/CheckRun.setUp.txt",
+        "tests/ReplayData/CheckRun.testAttributes.txt"
+      ],
+      "datatracker.ietf.org": [
+        "tests/GithubObject.py"
+      ],
+      "github.global.ssl.fastly.net": [
+        "tests/Github_.py",
+        "tests/ReplayData/Github.testGetEmojis.txt"
+      ],
+      "www.example-webhook.com": [
+        "tests/Github_.py",
+        "tests/Organization.py",
+        "tests/ReplayData/Github.testGetHookDeliveries.txt",
+        "tests/ReplayData/Github.testGetHookDelivery.txt",
+        "tests/ReplayData/Organization.testGetHookDeliveries.txt"
+      ],
+      "uploads.github.com": [
+        "tests/GitRelease.py",
+        "tests/ReplayData/GitRelease.setUp.txt",
+        "tests/ReplayData/GitRelease.testCreateGitTagAndRelease.txt",
+        "tests/ReplayData/GitRelease.testDelete.txt",
+        "tests/ReplayData/GitRelease.testGetLatestRelease.txt"
+      ],
+      "avatars.githubusercontent.com": [
+        "tests/GraphQl.py",
+        "tests/NamedUser.py",
+        "tests/Organization.py",
+        "tests/PullRequest.py",
+        "tests/ReplayData/Artifact.setUp.txt"
+      ],
+      "my.enterprise.com:1234": [
+        "tests/Issue80.py",
+        "tests/ReplayData/Issue80.testIgnoreHttpsFromGithubEnterpriseWithPort.txt"
+      ],
+      "choosealicense.com": [
+        "tests/License.py",
+        "tests/ReplayData/Github.testGetLicense.txt",
+        "tests/ReplayData/License.setUp.txt"
+      ],
+      "github-cloud.s3.amazonaws.com": [
+        "tests/Migration.py",
+        "tests/ReplayData/Migration.testGetArchiveUrlWhenExported.txt"
+      ],
+      "test.ing": [
+        "tests/NamedUser.py",
+        "tests/Repository.py"
+      ],
+      "nvie.com": [
+        "tests/NamedUser.py",
+        "tests/ReplayData/AuthenticatedUser.testCreateFork.txt",
+        "tests/ReplayData/AuthenticatedUser.testFollowing.txt",
+        "tests/ReplayData/AuthenticatedUser.testStarring.txt",
+        "tests/ReplayData/AuthenticatedUser.testSubscriptions.txt"
+      ],
+      "barfoo.com": [
+        "tests/Organization.py",
+        "tests/ReplayData/Organization.testEditHookWithAllParameters.txt",
+        "tests/ReplayData/Organization.testEditHookWithMinimalParameters.txt"
+      ],
+      "bitbucket.org": [
+        "tests/ReplayData/Repository.testCreateSourceImport.txt",
+        "tests/ReplayData/Repository.testGetSourceImport.txt",
+        "tests/ReplayData/SourceImport.setUp.txt",
+        "tests/ReplayData/SourceImport.testUpdate.txt",
+        "tests/Repository.py"
+      ],
+      "nodeload.github.com": [
+        "tests/ReplayData/Repository.testGetArchiveLink.txt",
+        "tests/Repository.py"
+      ],
+      "requestb.in": [
+        "tests/ReplayData/Repository.testBadSubscribePubSubHubbub.txt",
+        "tests/ReplayData/Repository.testSubscribePubSubHubbub.txt",
+        "tests/ReplayData/Repository.testUnsubscribePubSubHubbub.txt",
+        "tests/Repository.py"
+      ],
+      "base.url": [
+        "tests/Requester.py"
+      ],
+      "www.github.com": [
+        "tests/Requester.py"
+      ],
+      "api.github.com:443": [
+        "tests/ReplayData/GraphQl.testPaginationAndRestIntegration.txt",
+        "tests/ReplayData/Requester.testBaseUrlPortRedirection.txt",
+        "tests/Requester.py"
+      ],
+      "githubusercontent.com": [
+        "tests/Requester.py"
+      ],
+      "objects.githubusercontent.com": [
+        "tests/ReplayData/GitReleaseAsset.testDownloadAssetFile.txt",
+        "tests/ReplayData/GitReleaseAsset.testDownloadAssetStream.txt",
+        "tests/Requester.py"
+      ],
+      "release-assets.githubusercontent.com": [
+        "tests/ReplayData/PublicReleaseAsset.testDownload.txt",
+        "tests/Requester.py"
+      ],
+      "prod.ghe.local": [
+        "tests/Requester.py"
+      ],
+      "api.prod.ghe.local": [
+        "tests/Requester.py"
+      ],
+      "uploads.prod.ghe.local": [
+        "tests/Requester.py"
+      ],
+      "status.prod.ghe.local": [
+        "tests/Requester.py"
+      ],
+      "ghe.local": [
+        "tests/Requester.py"
+      ],
+      "api.enterprise.ghe.com": [
+        "tests/Requester.py"
+      ],
+      "pipelines.actions.githubusercontent.com": [
+        "tests/ReplayData/WorkflowJob.testAttributes.txt",
+        "tests/WorkflowJob.py"
+      ],
+      "avatars2.githubusercontent.com": [
+        "tests/ReplayData/AuthenticatedUser.testCreateMigration.txt",
+        "tests/ReplayData/AuthenticatedUser.testCreateProject.txt",
+        "tests/ReplayData/AuthenticatedUser.testCreateRepoFromTemplate.txt",
+        "tests/ReplayData/AuthenticatedUser.testCreateRepoFromTemplateWithAllArguments.txt",
+        "tests/ReplayData/AuthenticatedUser.testGetMigrations.txt"
+      ],
+      "avatars1.githubusercontent.com": [
+        "tests/ReplayData/AuthenticatedUser.testCreateRepoFromTemplate.txt",
+        "tests/ReplayData/AuthenticatedUser.testCreateRepoFromTemplateWithAllArguments.txt",
+        "tests/ReplayData/AuthenticatedUser.testInstallations.txt",
+        "tests/ReplayData/CheckRun.testCheckRunOutputAttributes.txt",
+        "tests/ReplayData/CheckRun.testGetCheckRunsForRef.txt"
+      ],
+      "atdt.github.com": [
+        "tests/ReplayData/AuthenticatedUser.testGetEvents.txt"
+      ],
+      "perlbal.org": [
+        "tests/ReplayData/AuthenticatedUser.testGetEvents.txt"
+      ],
+      "pcgen.svn.sourceforge.net": [
+        "tests/ReplayData/AuthenticatedUser.testGetEvents.txt"
+      ],
+      "avatars3.githubusercontent.com": [
+        "tests/ReplayData/AuthenticatedUser.testGetInvitations.txt",
+        "tests/ReplayData/CheckSuite.setUp.txt",
+        "tests/ReplayData/Commit.testGetPulls.txt",
+        "tests/ReplayData/Deployment.setUp.txt",
+        "tests/ReplayData/DeploymentStatus.setUp.txt"
+      ],
+      "docs.python.org": [
+        "tests/ReplayData/AuthenticatedUser.testGetIssuesWithAllArguments.txt",
+        "tests/ReplayData/AuthenticatedUser.testGetUserIssuesWithAllArguments.txt",
+        "tests/ReplayData/ExposeAllAttributes.testAllClasses.txt",
+        "tests/ReplayData/Repository.testGetIssuesComments.txt"
+      ],
+      "www.djangoproject.com": [
+        "tests/ReplayData/AuthenticatedUser.testGetRepos.txt",
+        "tests/ReplayData/AuthenticatedUser.testGetReposWithArguments.txt",
+        "tests/ReplayData/AuthenticatedUser.testStarring.txt",
+        "tests/ReplayData/AuthenticatedUser.testSubscriptions.txt",
+        "tests/ReplayData/AuthenticatedUser.testWatching.txt"
+      ],
+      "coderwall.com": [
+        "tests/ReplayData/AuthenticatedUser.testGetTeams.txt",
+        "tests/ReplayData/Issue134.testGetAuthorizationsSucceedsWhenAutenticatedThroughLoginPassword.txt"
+      ],
+      "xkcd.com": [
+        "tests/ReplayData/AuthenticatedUser.testGetUserIssues.txt",
+        "tests/ReplayData/AuthenticatedUser.testSubscriptions.txt",
+        "tests/ReplayData/NamedUser.testGetReposWithAllArgs.txt",
+        "tests/ReplayData/NamedUser.testGetSubscriptions.txt"
+      ],
+      "capify.org": [
+        "tests/ReplayData/AuthenticatedUser.testStarring.txt",
+        "tests/ReplayData/AuthenticatedUser.testWatching.txt",
+        "tests/ReplayData/NamedUser.testGetStarred.txt",
+        "tests/ReplayData/NamedUser.testGetWatched.txt"
+      ],
+      "offbytwo.github.com": [
+        "tests/ReplayData/AuthenticatedUser.testStarring.txt",
+        "tests/ReplayData/AuthenticatedUser.testWatching.txt",
+        "tests/ReplayData/NamedUser.testGetStarred.txt",
+        "tests/ReplayData/NamedUser.testGetWatched.txt"
+      ],
+      "mxcl.github.com": [
+        "tests/ReplayData/AuthenticatedUser.testStarring.txt",
+        "tests/ReplayData/AuthenticatedUser.testWatching.txt",
+        "tests/ReplayData/NamedUser.testGetPublicReceivedEvents.txt",
+        "tests/ReplayData/NamedUser.testGetReceivedEvents.txt",
+        "tests/ReplayData/NamedUser.testGetStarred.txt"
+      ],
+      "krondo.com": [
+        "tests/ReplayData/AuthenticatedUser.testStarring.txt",
+        "tests/ReplayData/AuthenticatedUser.testWatching.txt",
+        "tests/ReplayData/NamedUser.testGetStarred.txt",
+        "tests/ReplayData/NamedUser.testGetWatched.txt"
+      ],
+      "defunkt.io": [
+        "tests/ReplayData/AuthenticatedUser.testStarring.txt",
+        "tests/ReplayData/AuthenticatedUser.testWatching.txt",
+        "tests/ReplayData/NamedUser.testGetStarred.txt",
+        "tests/ReplayData/NamedUser.testGetWatched.txt"
+      ],
+      "twitter.com": [
+        "tests/ReplayData/AuthenticatedUser.testStarring.txt",
+        "tests/ReplayData/AuthenticatedUser.testWatching.txt",
+        "tests/ReplayData/NamedUser.testGetStarred.txt",
+        "tests/ReplayData/NamedUser.testGetWatched.txt",
+        "tests/ReplayData/RepositoryAdvisory.testGetAdvisories.txt"
+      ],
+      "docs.pythonboto.org": [
+        "tests/ReplayData/AuthenticatedUser.testStarring.txt",
+        "tests/ReplayData/AuthenticatedUser.testWatching.txt",
+        "tests/ReplayData/NamedUser.testGetStarred.txt",
+        "tests/ReplayData/NamedUser.testGetWatched.txt"
+      ],
+      "market.android.com": [
+        "tests/ReplayData/AuthenticatedUser.testStarring.txt",
+        "tests/ReplayData/AuthenticatedUser.testWatching.txt",
+        "tests/ReplayData/NamedUser.testGetStarred.txt",
+        "tests/ReplayData/NamedUser.testGetWatched.txt"
+      ],
+      "d3js.org": [
+        "tests/ReplayData/AuthenticatedUser.testStarring.txt",
+        "tests/ReplayData/AuthenticatedUser.testWatching.txt",
+        "tests/ReplayData/NamedUser.testGetPublicReceivedEvents.txt",
+        "tests/ReplayData/NamedUser.testGetReceivedEvents.txt",
+        "tests/ReplayData/NamedUser.testGetStarred.txt"
+      ],
+      "scrumblr.ca": [
+        "tests/ReplayData/AuthenticatedUser.testStarring.txt",
+        "tests/ReplayData/AuthenticatedUser.testWatching.txt",
+        "tests/ReplayData/NamedUser.testGetStarred.txt",
+        "tests/ReplayData/NamedUser.testGetWatched.txt"
+      ],
+      "twitter.github.com": [
+        "tests/ReplayData/AuthenticatedUser.testStarring.txt",
+        "tests/ReplayData/AuthenticatedUser.testWatching.txt",
+        "tests/ReplayData/Issue140.setUp.txt",
+        "tests/ReplayData/NamedUser.testGetPublicReceivedEvents.txt",
+        "tests/ReplayData/NamedUser.testGetReceivedEvents.txt"
+      ],
+      "drawnby.jupo.org": [
+        "tests/ReplayData/AuthenticatedUser.testStarring.txt",
+        "tests/ReplayData/AuthenticatedUser.testWatching.txt",
+        "tests/ReplayData/NamedUser.testGetStarred.txt",
+        "tests/ReplayData/NamedUser.testGetWatched.txt"
+      ],
+      "www.acmesystems.it": [
+        "tests/ReplayData/AuthenticatedUser.testStarring.txt",
+        "tests/ReplayData/AuthenticatedUser.testWatching.txt",
+        "tests/ReplayData/NamedUser.testGetStarred.txt",
+        "tests/ReplayData/NamedUser.testGetWatched.txt"
+      ],
+      "allthingshadoop.com": [
+        "tests/ReplayData/AuthenticatedUser.testStarring.txt",
+        "tests/ReplayData/NamedUser.testGetStarred.txt"
+      ],
+      "groups.google.com": [
+        "tests/ReplayData/AuthenticatedUser.testStarring.txt",
+        "tests/ReplayData/NamedUser.testGetStarred.txt"
+      ],
+      "www.linkedin.com": [
+        "tests/ReplayData/Autolink.setUp.txt"
+      ],
+      "1.gravatar.com": [
+        "tests/ReplayData/BadAttributes.testBadAttributeTransformation.txt",
+        "tests/ReplayData/BadAttributes.testBadTransformedAttribute.txt",
+        "tests/ReplayData/BadAttributes.testBadTransformedAttributeInDict.txt",
+        "tests/ReplayData/BadAttributes.testBadTransformedAttributeInList.txt",
+        "tests/ReplayData/ConditionalRequestUpdate.setUp.txt"
+      ],
+      "2.gravatar.com": [
+        "tests/ReplayData/BadAttributes.testBadSimpleAttribute.txt",
+        "tests/ReplayData/Equality.testBranchEquality.txt",
+        "tests/ReplayData/Equality.testUserDifference.txt",
+        "tests/ReplayData/ExposeAllAttributes.testAllClasses.txt",
+        "tests/ReplayData/Gist.testFork.txt"
+      ],
+      "khornberg.github.io": [
+        "tests/ReplayData/Branch.testProtectedAttributes.txt"
+      ],
+      "jacquev6.github.io": [
+        "tests/ReplayData/Branch.testProtectedAttributes.txt",
+        "tests/ReplayData/LazyRepository.testGetIssues.txt",
+        "tests/ReplayData/LazyRepository.testOwner.txt",
+        "tests/ReplayData/NamedUser.testGetReposWithAllArgs.txt",
+        "tests/ReplayData/ReleaseAsset.setUp.txt"
+      ],
+      "avatars0.githubusercontent.com": [
+        "tests/ReplayData/CheckRun.testCheckRunAnnotationAttributes.txt",
+        "tests/ReplayData/CheckRun.testCreateCheckRunCompleted.txt",
+        "tests/ReplayData/CheckRun.testCreateCheckRunInProgress.txt",
+        "tests/ReplayData/CheckRun.testListCheckRunAnnotations.txt",
+        "tests/ReplayData/CheckRun.testUpdateCheckRunAll.txt"
+      ],
+      "probot.github.io": [
+        "tests/ReplayData/CheckSuite.testCheckSuiteRerequest.txt",
+        "tests/ReplayData/CheckSuite.testGetCheckSuitesForRef.txt",
+        "tests/ReplayData/CheckSuite.testGetCheckSuitesForRefFilterByCheckName.txt"
+      ],
+      "user-images.githubusercontent.com": [
+        "tests/ReplayData/CheckSuite.testCheckSuiteRerequest.txt",
+        "tests/ReplayData/CheckSuite.testGetCheckSuitesForRef.txt",
+        "tests/ReplayData/CheckSuite.testGetCheckSuitesForRefFilterByCheckName.txt",
+        "tests/ReplayData/Commit.testGetPulls.txt"
+      ],
+      "blog.github.com": [
+        "tests/ReplayData/CheckSuite.testCheckSuiteRerequest.txt",
+        "tests/ReplayData/CheckSuite.testGetCheckSuitesForRef.txt",
+        "tests/ReplayData/CheckSuite.testGetCheckSuitesForRefFilterByCheckName.txt",
+        "tests/ReplayData/Organization.testOutsideCollaborators.txt"
+      ],
+      "dependabot-api.githubapp.com": [
+        "tests/ReplayData/CheckSuite.testGetCheckSuitesForRef.txt",
+        "tests/ReplayData/CheckSuite.testGetCheckSuitesForRefFilterByAppId.txt"
+      ],
+      "ahhda.github.io": [
+        "tests/ReplayData/Commit.testGetPulls.txt",
+        "tests/ReplayData/NamedUser1430.setUp.txt"
+      ],
+      "redirect.github.com": [
+        "tests/ReplayData/CompletableGithubObjectWithPaginatedProperty.testPullCommitsFiles.txt",
+        "tests/ReplayData/CompletableGithubObjectWithPaginatedProperty.testPullCommitsFilesDefault.txt",
+        "tests/ReplayData/CompletableGithubObjectWithPaginatedProperty.testPullCommitsGetFiles.txt",
+        "tests/ReplayData/CompletableGithubObjectWithPaginatedProperty.testPullCommitsGetFilesDefault.txt",
+        "tests/ReplayData/CompletableGithubObjectWithPaginatedProperty.testPullCommitsGetFilesWithPerPage.txt"
+      ],
+      "dependabot-badges.githubapp.com": [
+        "tests/ReplayData/CompletableGithubObjectWithPaginatedProperty.testPullCommitsFiles.txt",
+        "tests/ReplayData/CompletableGithubObjectWithPaginatedProperty.testPullCommitsFilesDefault.txt",
+        "tests/ReplayData/CompletableGithubObjectWithPaginatedProperty.testPullCommitsGetFiles.txt",
+        "tests/ReplayData/CompletableGithubObjectWithPaginatedProperty.testPullCommitsGetFilesDefault.txt",
+        "tests/ReplayData/CompletableGithubObjectWithPaginatedProperty.testPullCommitsGetFilesWithPerPage.txt"
+      ],
+      "host": [
+        "tests/ReplayData/CompletableGithubObjectWithPaginatedProperty.testRepoComparisonCommitsFilesReversedWithPerPage.txt"
+      ],
+      "0.gravatar.com": [
+        "tests/ReplayData/ConditionalRequestUpdate.setUp.txt",
+        "tests/ReplayData/ConditionalRequestUpdate.testDidUpdate.txt",
+        "tests/ReplayData/Equality.testBranchEquality.txt",
+        "tests/ReplayData/Equality.testUserDifference.txt",
+        "tests/ReplayData/Equality.testUserEquality.txt"
+      ],
+      "pascalhofmann.de": [
+        "tests/ReplayData/Deployment.setUp.txt",
+        "tests/ReplayData/DeploymentStatus.setUp.txt"
+      ],
+      "www.heraldonline.com": [
+        "tests/ReplayData/ExposeAllAttributes.testAllClasses.txt"
+      ],
+      "posttrib.suntimes.com": [
+        "tests/ReplayData/ExposeAllAttributes.testAllClasses.txt"
+      ],
+      "www.healthdatamanagement.com": [
+        "tests/ReplayData/ExposeAllAttributes.testAllClasses.txt"
+      ],
+      "my-github-app.com": [
+        "tests/ReplayData/Gist.testAttributes.txt",
+        "tests/ReplayData/Gist.testFork.txt"
+      ],
+      "optional": [
+        "tests/ReplayData/Gist.testAttributes.txt",
+        "tests/ReplayData/Gist.testFork.txt"
+      ],
+      "richard.warburton.it": [
+        "tests/ReplayData/Gist.testAttributes.txt",
+        "tests/ReplayData/Gist.testFork.txt"
+      ],
+      "covid19-japan-web-api-f3fxtl4lq.now.sh": [
+        "tests/ReplayData/Github.testGetEvents.txt"
+      ],
+      "covid19-japan-web-api.now.sh": [
+        "tests/ReplayData/Github.testGetEvents.txt"
+      ],
+      "covid19-japan-web-api.ryo-ma.now.sh": [
+        "tests/ReplayData/Github.testGetEvents.txt"
+      ],
+      "covid19-japan-web-api-git-master.ryo-ma.now.sh": [
+        "tests/ReplayData/Github.testGetEvents.txt"
+      ],
+      "www.symfonycentral.com": [
+        "tests/ReplayData/Github.testGetGists.txt"
+      ],
+      "abhishiv.tumblr.com": [
+        "tests/ReplayData/Github.testGetGists.txt"
+      ],
+      "serverfault.com": [
+        "tests/ReplayData/Github.testGetGists.txt"
+      ],
+      "osv.dev": [
+        "tests/ReplayData/Github.testGetGlobalAdvisories.txt",
+        "tests/ReplayData/Github.testGetGlobalAdvisoriesByGHSA.txt"
+      ],
+      "pub.dev": [
+        "tests/ReplayData/Github.testGetGlobalAdvisories.txt"
+      ],
+      "code.google.com": [
+        "tests/ReplayData/Github.testGetRepos.txt",
+        "tests/ReplayData/Search.testSearchIssues.txt"
+      ],
+      "opencalais.com": [
+        "tests/ReplayData/Github.testGetRepos.txt"
+      ],
+      "peepcode.com": [
+        "tests/ReplayData/Github.testGetRepos.txt"
+      ],
+      "www.humanized.com": [
+        "tests/ReplayData/Github.testGetReposSince.txt"
+      ],
+      "identicons.github.com": [
+        "tests/ReplayData/Github.testGetReposSince.txt",
+        "tests/ReplayData/Repository.testStatisticsContributors.txt"
+      ],
+      "github.blog": [
+        "tests/ReplayData/Github.testGetUserById.txt",
+        "tests/ReplayData/PaginatedList.testTotalCountWithDeprecationLink.txt",
+        "tests/ReplayData/Repository.testGetIssuesWithTypeArgument.txt",
+        "tests/ReplayData/Repository.testGetIssuesWithTypeWildcard.txt"
+      ],
+      "pengwynn.github.com": [
+        "tests/ReplayData/Github.testSearchRepos.txt"
+      ],
+      "peter-murach.github.com": [
+        "tests/ReplayData/Github.testSearchRepos.txt"
+      ],
+      "edwardhotchkiss.com": [
+        "tests/ReplayData/Github.testSearchRepos.txt"
+      ],
+      "metacpan.org": [
+        "tests/ReplayData/Github.testSearchRepos.txt"
+      ],
+      "rdoc.info": [
+        "tests/ReplayData/Github.testSearchRepos.txt"
+      ],
+      "wiki.developer.factual.com": [
+        "tests/ReplayData/Github.testSearchRepos.txt"
+      ],
+      "www.gitpilot.com": [
+        "tests/ReplayData/Github.testSearchRepos.txt"
+      ],
+      "jeffremer.com": [
+        "tests/ReplayData/Github.testSearchRepos.txt"
+      ],
+      "mklabs.github.com": [
+        "tests/ReplayData/Github.testSearchRepos.txt"
+      ],
+      "git.io": [
+        "tests/ReplayData/Github.testSearchUsers.txt"
+      ],
+      "reproducible-builds.org": [
+        "tests/ReplayData/GraphQl.testPaginationAndRestIntegration.txt"
+      ],
+      "b.github.com": [
+        "tests/ReplayData/GraphQl.testPaginationAndRestIntegration.txt"
+      ],
+      "www.openmicroscopy.org": [
+        "tests/ReplayData/Issue131.setUp.txt"
+      ],
+      "openmicroscopy.org": [
+        "tests/ReplayData/Issue131.setUp.txt",
+        "tests/ReplayData/Issue131.testGetPullWithOrgHeadUser.txt",
+        "tests/ReplayData/Issue131.testGetPullsWithOrgHeadUser.txt"
+      ],
+      "hudson.openmicroscopy.org.uk": [
+        "tests/ReplayData/Issue131.testGetPullsWithOrgHeadUser.txt"
+      ],
+      "docs.google.com": [
+        "tests/ReplayData/Issue131.testGetPullsWithOrgHeadUser.txt",
+        "tests/ReplayData/Search.testSearchIssues.txt"
+      ],
+      "geekli.st": [
+        "tests/ReplayData/Issue134.testGetAuthorizationsSucceedsWhenAutenticatedThroughLoginPassword.txt"
+      ],
+      "getbootstrap.com": [
+        "tests/ReplayData/Issue174.setUp.txt"
+      ],
+      "gravatar.com": [
+        "tests/ReplayData/Issue214.setUp.txt",
+        "tests/ReplayData/Issue214.testCreateIssue.txt",
+        "tests/ReplayData/Issue214.testEditIssue.txt",
+        "tests/ReplayData/Issue214.testGetIssues.txt",
+        "tests/ReplayData/Search.testUrlquotingOfQualifiers.txt"
+      ],
+      "openframeworks.cc": [
+        "tests/ReplayData/Issue216.setUp.txt",
+        "tests/ReplayData/Issue278.setUp.txt",
+        "tests/ReplayData/Issue33.setUp.txt",
+        "tests/ReplayData/Issue945.setUp.txt",
+        "tests/ReplayData/Issue945.testReservedPaginatedListAttributePreservation.txt"
+      ],
+      "p-society.herokuapp.com": [
+        "tests/ReplayData/Issue823.setUp.txt"
+      ],
+      "forum.openframeworks.cc": [
+        "tests/ReplayData/Issue945.testReservedPaginatedListAttributePreservation.txt",
+        "tests/ReplayData/PaginatedList.testGetFirstPage.txt",
+        "tests/ReplayData/PaginatedList.testGetThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testIntIndexingInThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testInterruptedIteration.txt"
+      ],
+      "nickhardeman.com": [
+        "tests/ReplayData/Issue945.testReservedPaginatedListAttributePreservation.txt"
+      ],
+      "www.freetype.org": [
+        "tests/ReplayData/Issue945.testReservedPaginatedListAttributePreservation.txt"
+      ],
+      "korfuri.fr": [
+        "tests/ReplayData/LazyRepository.testGetUser.txt"
+      ],
+      "support.enterprise.github.com": [
+        "tests/ReplayData/NamedUser.testGetEvents.txt"
+      ],
+      "texy.info": [
+        "tests/ReplayData/NamedUser.testGetPublicReceivedEvents.txt",
+        "tests/ReplayData/NamedUser.testGetReceivedEvents.txt"
+      ],
+      "jsfiddle.net": [
+        "tests/ReplayData/NamedUser.testGetPublicReceivedEvents.txt",
+        "tests/ReplayData/NamedUser.testGetReceivedEvents.txt"
+      ],
+      "papermashup.com": [
+        "tests/ReplayData/NamedUser.testGetPublicReceivedEvents.txt",
+        "tests/ReplayData/NamedUser.testGetReceivedEvents.txt"
+      ],
+      "testcode.olvani.net": [
+        "tests/ReplayData/NamedUser.testGetPublicReceivedEvents.txt",
+        "tests/ReplayData/NamedUser.testGetReceivedEvents.txt"
+      ],
+      "boto.readthedocs.org": [
+        "tests/ReplayData/NamedUser.testGetPublicReceivedEvents.txt",
+        "tests/ReplayData/NamedUser.testGetReceivedEvents.txt"
+      ],
+      "pythonhosted.org": [
+        "tests/ReplayData/NamedUser.testGetReposWithAllArgs.txt"
+      ],
+      "youtu.be": [
+        "tests/ReplayData/NamedUser.testGetReposWithAllArgs.txt"
+      ],
+      "security.snyk.io": [
+        "tests/ReplayData/Organization.testGetDependabotAlerts.txt",
+        "tests/ReplayData/RepositoryAdvisory.testGetAdvisories.txt"
+      ],
+      "babeljs.io": [
+        "tests/ReplayData/Organization.testGetDependabotAlerts.txt"
+      ],
+      "www.debian.org": [
+        "tests/ReplayData/Organization.testGetDependabotAlerts.txt"
+      ],
+      "lists.debian.org": [
+        "tests/ReplayData/Organization.testGetDependabotAlerts.txt"
+      ],
+      "www.w3.org": [
+        "tests/ReplayData/Organization.testGetDependabotAlerts.txt",
+        "tests/ReplayData/Search.testSearchIssues.txt"
+      ],
+      "access.redhat.com": [
+        "tests/ReplayData/OrganizationDependabotAlert.testGetAlertsWithAllArguments.txt",
+        "tests/ReplayData/OrganizationDependabotAlert.testMultipleAlerts.txt",
+        "tests/ReplayData/OrganizationDependabotAlert.testRepr.txt",
+        "tests/ReplayData/RepositoryAdvisory.testGetAdvisories.txt"
+      ],
+      "usn.ubuntu.com": [
+        "tests/ReplayData/OrganizationDependabotAlert.testMultipleAlerts.txt",
+        "tests/ReplayData/OrganizationDependabotAlert.testRepr.txt"
+      ],
+      "www.securitytracker.com": [
+        "tests/ReplayData/OrganizationDependabotAlert.testMultipleAlerts.txt",
+        "tests/ReplayData/OrganizationDependabotAlert.testRepr.txt"
+      ],
+      "alambic.github.com": [
+        "tests/ReplayData/OrganizationSecretScanAlert.testGetAlertsWithAllArguments.txt",
+        "tests/ReplayData/OrganizationSecretScanAlert.testMultipleAlerts.txt",
+        "tests/ReplayData/OrganizationSecretScanAlert.testRepr.txt",
+        "tests/ReplayData/SecretScanAlert.testGetAlertsWithAllArguments.txt",
+        "tests/ReplayData/SecretScanAlert.testMultipleAlerts.txt"
+      ],
+      "goo.gl": [
+        "tests/ReplayData/PaginatedList.testGetFirstPage.txt",
+        "tests/ReplayData/PaginatedList.testIntIndexingInThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testInterruptedIteration.txt",
+        "tests/ReplayData/PaginatedList.testReversedIterationWithMultiplePages.txt",
+        "tests/ReplayData/PaginatedList.testReversedIterationWithSinglePage.txt"
+      ],
+      "www.openframeworks.cc": [
+        "tests/ReplayData/PaginatedList.testGetFirstPage.txt",
+        "tests/ReplayData/PaginatedList.testIntIndexingInThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testInterruptedIteration.txt",
+        "tests/ReplayData/PaginatedList.testReversedIterationWithMultiplePages.txt",
+        "tests/ReplayData/PaginatedList.testReversedIterationWithSinglePage.txt"
+      ],
+      "processing.org": [
+        "tests/ReplayData/PaginatedList.testGetThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testIntIndexingInThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testInterruptedIteration.txt",
+        "tests/ReplayData/PaginatedList.testSliceIndexingUntilFourthPage.txt"
+      ],
+      "secure.travis-ci.org": [
+        "tests/ReplayData/PaginatedList.testGetThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testIntIndexingInThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testInterruptedIteration.txt",
+        "tests/ReplayData/PaginatedList.testSliceIndexingUntilFourthPage.txt"
+      ],
+      "www.squidoo.com": [
+        "tests/ReplayData/PaginatedList.testGetThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testIntIndexingInThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testInterruptedIteration.txt",
+        "tests/ReplayData/PaginatedList.testSliceIndexingUntilFourthPage.txt"
+      ],
+      "sourceforge.net": [
+        "tests/ReplayData/PaginatedList.testGetThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testIntIndexingInThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testInterruptedIteration.txt",
+        "tests/ReplayData/PaginatedList.testSliceIndexingUntilFourthPage.txt"
+      ],
+      "gamesfromwithin.com": [
+        "tests/ReplayData/PaginatedList.testGetThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testIntIndexingInThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testInterruptedIteration.txt",
+        "tests/ReplayData/PaginatedList.testSliceIndexingUntilFourthPage.txt"
+      ],
+      "gembundler.com": [
+        "tests/ReplayData/PaginatedList.testGetThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testIntIndexingInThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testInterruptedIteration.txt",
+        "tests/ReplayData/PaginatedList.testSliceIndexingUntilFourthPage.txt"
+      ],
+      "npmjs.org": [
+        "tests/ReplayData/PaginatedList.testGetThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testIntIndexingInThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testInterruptedIteration.txt",
+        "tests/ReplayData/PaginatedList.testSliceIndexingUntilFourthPage.txt"
+      ],
+      "jsoncpp.sourceforge.net": [
+        "tests/ReplayData/PaginatedList.testGetThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testIntIndexingInThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testInterruptedIteration.txt",
+        "tests/ReplayData/PaginatedList.testSliceIndexingUntilFourthPage.txt"
+      ],
+      "jsoncpp.svn.sourceforge.net": [
+        "tests/ReplayData/PaginatedList.testGetThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testIntIndexingInThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testInterruptedIteration.txt",
+        "tests/ReplayData/PaginatedList.testSliceIndexingUntilFourthPage.txt"
+      ],
+      "www.mitsuba-renderer.org": [
+        "tests/ReplayData/PaginatedList.testGetThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testIntIndexingInThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testInterruptedIteration.txt",
+        "tests/ReplayData/PaginatedList.testSliceIndexingUntilFourthPage.txt"
+      ],
+      "research.microsoft.com": [
+        "tests/ReplayData/PaginatedList.testIntIndexingInThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testInterruptedIteration.txt",
+        "tests/ReplayData/PaginatedList.testSliceIndexingUntilFourthPage.txt"
+      ],
+      "jausoft.com": [
+        "tests/ReplayData/PaginatedList.testIntIndexingInThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testInterruptedIteration.txt",
+        "tests/ReplayData/PaginatedList.testSliceIndexingUntilFourthPage.txt"
+      ],
+      "ramisantina.com": [
+        "tests/ReplayData/PaginatedList.testIntIndexingInThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testInterruptedIteration.txt",
+        "tests/ReplayData/PaginatedList.testSliceIndexingUntilFourthPage.txt"
+      ],
+      "vimeo.com": [
+        "tests/ReplayData/PaginatedList.testIntIndexingInThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testInterruptedIteration.txt",
+        "tests/ReplayData/PaginatedList.testSliceIndexingUntilFourthPage.txt"
+      ],
+      "jogamp.org": [
+        "tests/ReplayData/PaginatedList.testIntIndexingInThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testInterruptedIteration.txt",
+        "tests/ReplayData/PaginatedList.testSliceIndexingUntilFourthPage.txt"
+      ],
+      "www.mdk.org.pl": [
+        "tests/ReplayData/PaginatedList.testIntIndexingInThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testInterruptedIteration.txt",
+        "tests/ReplayData/PaginatedList.testSliceIndexingUntilFourthPage.txt"
+      ],
+      "ivanleben.blogspot.com.es": [
+        "tests/ReplayData/PaginatedList.testIntIndexingInThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testInterruptedIteration.txt",
+        "tests/ReplayData/PaginatedList.testSliceIndexingUntilFourthPage.txt"
+      ],
+      "www.youtube.com": [
+        "tests/ReplayData/PaginatedList.testIntIndexingInThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testInterruptedIteration.txt",
+        "tests/ReplayData/PaginatedList.testSliceIndexingUntilFourthPage.txt"
+      ],
+      "andrejas-atelier.com": [
+        "tests/ReplayData/PaginatedList.testIntIndexingInThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testInterruptedIteration.txt",
+        "tests/ReplayData/PaginatedList.testSliceIndexingUntilFourthPage.txt"
+      ],
+      "developer.nvidia.com": [
+        "tests/ReplayData/PaginatedList.testIntIndexingInThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testInterruptedIteration.txt",
+        "tests/ReplayData/PaginatedList.testSliceIndexingUntilFourthPage.txt"
+      ],
+      "zrusin.blogspot.com.es": [
+        "tests/ReplayData/PaginatedList.testIntIndexingInThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testInterruptedIteration.txt",
+        "tests/ReplayData/PaginatedList.testSliceIndexingUntilFourthPage.txt"
+      ],
+      "pastebin.com": [
+        "tests/ReplayData/PaginatedList.testIntIndexingInThirdPage.txt",
+        "tests/ReplayData/PaginatedList.testInterruptedIteration.txt",
+        "tests/ReplayData/PaginatedList.testSliceIndexingUntilFourthPage.txt"
+      ],
+      "img191.imageshack.us": [
+        "tests/ReplayData/PaginatedList.testReversedIterationWithMultiplePages.txt"
+      ],
+      "knu.free.fr": [
+        "tests/ReplayData/PaginatedList.testReversedIterationWithMultiplePages.txt"
+      ],
+      "www.glfw.org": [
+        "tests/ReplayData/PaginatedList.testReversedIterationWithMultiplePages.txt"
+      ],
+      "pygithubtestorg.com": [
+        "tests/ReplayData/Project.testGetOrganizationProjects.txt"
+      ],
+      "jzelinskie.com": [
+        "tests/ReplayData/PullRequest.testAddAndRemoveAssignees.txt"
+      ],
+      "mailman.common-lisp.net": [
+        "tests/ReplayData/PullRequest1169.setUp.txt"
+      ],
+      "www2.cs.uh.edu": [
+        "tests/ReplayData/PullRequest1682.test_object_parameters.txt"
+      ],
+      "catx.me": [
+        "tests/ReplayData/Repository.testGetCommitsWithAuthor.txt"
+      ],
+      "raw.github.com": [
+        "tests/ReplayData/Repository.testGetIssuesComments.txt"
+      ],
+      "higgsproject.org": [
+        "tests/ReplayData/Repository.testGetRepositoryWith301Redirect.txt"
+      ],
+      "danvk.org": [
+        "tests/ReplayData/Repository.testGetStargazersWithDates.txt"
+      ],
+      "aka.ms": [
+        "tests/ReplayData/RepositoryAdvisory.testGetAdvisories.txt"
+      ],
+      "www.microsoft.com": [
+        "tests/ReplayData/RepositoryAdvisory.testGetAdvisories.txt"
+      ],
+      "issues.apache.org": [
+        "tests/ReplayData/RepositoryAdvisory.testGetAdvisories.txt"
+      ],
+      "nifi.apache.org": [
+        "tests/ReplayData/RepositoryAdvisory.testGetAdvisories.txt"
+      ],
+      "owasp.org": [
+        "tests/ReplayData/RepositoryAdvisory.testGetAdvisories.txt"
+      ],
+      "blog.jetbrains.com": [
+        "tests/ReplayData/RepositoryAdvisory.testGetAdvisories.txt"
+      ],
+      "lgtm.com": [
+        "tests/ReplayData/RepositoryAdvisory.testGetAdvisories.txt"
+      ],
+      "www.glop.org": [
+        "tests/ReplayData/RepositoryKey.setUp.txt"
+      ],
+      "google.fr": [
+        "tests/ReplayData/Search.testSearchHighlightingCode.txt"
+      ],
+      "f.cloud.github.com": [
+        "tests/ReplayData/Search.testSearchIssues.txt"
+      ],
+      "en.wikipedia.org": [
+        "tests/ReplayData/Search.testSearchIssues.txt"
+      ],
+      "www.mail-archive.com": [
+        "tests/ReplayData/Search.testSearchIssues.txt"
+      ],
+      "crosswalk-project.org": [
+        "tests/ReplayData/Search.testSearchIssues.txt"
+      ],
+      "paste2.org": [
+        "tests/ReplayData/Search.testSearchIssues.txt"
+      ],
+      "www-wales.ch.cam.ac.uk": [
+        "tests/ReplayData/Search.testSearchIssues.txt"
+      ],
+      "www.git-legit.org": [
+        "tests/ReplayData/Search.testSearchRepos.txt"
+      ],
+      "learningwebgl.com": [
+        "tests/ReplayData/Search.testSearchRepos.txt"
+      ],
+      "aasen.in": [
+        "tests/ReplayData/Search.testSearchRepos.txt"
+      ],
+      "www.hilarymason.com": [
+        "tests/ReplayData/Search.testSearchRepos.txt"
+      ],
+      "drydrop.binaryage.com": [
+        "tests/ReplayData/Search.testSearchRepos.txt"
+      ],
+      "www.mdevan.org": [
+        "tests/ReplayData/Search.testSearchRepos.txt"
+      ],
+      "packages.python.org": [
+        "tests/ReplayData/Search.testSearchRepos.txt"
+      ],
+      "tabo.pe": [
+        "tests/ReplayData/Search.testSearchRepos.txt"
+      ],
+      "dbr.lighthouseapp.com": [
+        "tests/ReplayData/Search.testSearchRepos.txt"
+      ],
+      "wiki.github.com": [
+        "tests/ReplayData/Search.testSearchRepos.txt"
+      ],
+      "py2neo.org": [
+        "tests/ReplayData/Search.testSearchRepos.txt"
+      ],
+      "github3py.readthedocs.org": [
+        "tests/ReplayData/Search.testSearchRepos.txt"
+      ],
+      "github-cli.readthedocs.org": [
+        "tests/ReplayData/Search.testSearchRepos.txt"
+      ],
+      "amccloud.com": [
+        "tests/ReplayData/Search.testSearchRepos.txt"
+      ],
+      "bubbles.databrewery.org": [
+        "tests/ReplayData/Search.testSearchRepos.txt"
+      ],
+      "webpy.org": [
+        "tests/ReplayData/Search.testSearchRepos.txt"
+      ],
+      "dustin.github.com": [
+        "tests/ReplayData/Search.testSearchRepos.txt"
+      ],
+      "logsol.github.com": [
+        "tests/ReplayData/Search.testSearchRepos.txt"
+      ],
+      "githubbadge.appspot.com": [
+        "tests/ReplayData/Search.testSearchRepos.txt"
+      ],
+      "www.azavea.com": [
+        "tests/ReplayData/Search.testSearchRepos.txt"
+      ],
+      "wallix.github.com": [
+        "tests/ReplayData/Search.testSearchRepos.txt"
+      ],
+      "www.wallix.org": [
+        "tests/ReplayData/Search.testSearchRepos.txt"
+      ],
+      "www.splitbrain.org": [
+        "tests/ReplayData/Search.testSearchRepos.txt"
+      ],
+      "api.appcelerator.net": [
+        "tests/ReplayData/Search.testSearchRepos.txt"
+      ],
+      "gitweb.torproject.org": [
+        "tests/ReplayData/Search.testSearchRepos.txt"
+      ],
+      "ooni.torproject.org": [
+        "tests/ReplayData/Search.testSearchRepos.txt"
+      ],
+      "repos.io": [
+        "tests/ReplayData/Search.testSearchRepos.txt"
+      ],
+      "snipt.net": [
+        "tests/ReplayData/Search.testSearchRepos.txt"
+      ],
+      "code.djangoproject.com": [
+        "tests/ReplayData/Search.testSearchRepos.txt"
+      ],
+      "dinoboff.github.com": [
+        "tests/ReplayData/Search.testSearchRepos.txt"
+      ],
+      "coyotebush.github.io": [
+        "tests/ReplayData/Search.testSearchRepos.txt"
+      ],
+      "gun.io": [
+        "tests/ReplayData/Search.testSearchRepos.txt"
+      ],
+      "tahoe-lafs.org": [
+        "tests/ReplayData/Search.testSearchRepos.txt"
+      ],
+      "dryan.github.io": [
+        "tests/ReplayData/Search.testSearchRepos.txt"
+      ],
+      "docs.cherrypy.org": [
+        "tests/ReplayData/Search.testUrlquotingOfQualifiers.txt",
+        "tests/ReplayData/Search.testUrlquotingOfQuery.txt"
+      ],
+      "192.168.1.159:8000": [
+        "tests/ReplayData/Search.testUrlquotingOfQualifiers.txt",
+        "tests/ReplayData/Search.testUrlquotingOfQuery.txt"
+      ],
+      "hashids.org": [
+        "tests/ReplayData/SpecificExceptions.testAuthenticatedRateLimitExceeded.txt"
+      ],
+      "www.beaversoftware.com": [
+        "tests/ReplayData/Team.setUp.txt"
+      ],
+      "sfdye.com": [
+        "tests/ReplayData/Workflow.testGetRunsWithObjects.txt"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\PyGithub__PyGithub\\gitleaks.json",
+      "exit_code": 1,
+      "output_path": "_logs/scan/PyGithub__PyGithub/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/PyGithub__PyGithub/osv.json"
+    },
+    "pip_audit": {
+      "exit_code": 0,
+      "output_path": "_logs/scan/PyGithub__PyGithub/pip-audit.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "test-path secret findings (7); eval-call in tests/Connection.py; eval-call in tests/Connection.py; eval-call in tests/Framework.py; eval-call in tests/Framework.py; gitleaks: 56 test-path secret(s)",
+  "files_scanned": 1403,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

@@ -1,0 +1,79 @@
+{
+  "source_url": "https://github.com/resend/resend-node",
+  "proposed_slot": "both.marketing.resend-node",
+  "scanned_at": "2026-05-14T05:53:54.503236+00:00",
+  "clone_ok": true,
+  "commit_pinned": "6cf8c669b725b26c99180c04edc2415efada1e2b",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "github.com": [
+        ".github/ISSUE_TEMPLATE/config.yml",
+        ".github/workflows/update-docs.yml",
+        "package.json",
+        "readme.md",
+        "src/batch/interfaces/create-batch-options.interface.ts"
+      ],
+      "resend.com": [
+        "readme.md",
+        "src/batch/interfaces/create-batch-options.interface.ts",
+        "src/broadcasts/interfaces/create-broadcast-options.interface.ts",
+        "src/broadcasts/interfaces/send-broadcast-options.interface.ts",
+        "src/contacts/interfaces/contact.ts"
+      ],
+      "docs.renovatebot.com": [
+        "renovate.json"
+      ],
+      "docs.github.com": [
+        ".github/ISSUE_TEMPLATE/1.bug_report.yml"
+      ],
+      "api.mintlify.com": [
+        ".github/workflows/update-docs.yml"
+      ],
+      "help.github.com": [
+        "e2e/nextjs/.gitignore"
+      ],
+      "api.resend.com": [
+        "src/api-keys/__recordings__/API-Keys-Integration-Tests-create-allows-creating-an-API-key-with-an-empty-name_1578522646/recording.har",
+        "src/api-keys/__recordings__/API-Keys-Integration-Tests-create-creates-an-API-key-with-full-access_2925126786/recording.har",
+        "src/api-keys/__recordings__/API-Keys-Integration-Tests-create-creates-an-API-key-with-sending-access_198781637/recording.har",
+        "src/api-keys/__recordings__/API-Keys-Integration-Tests-remove-removes-an-API-key_2317016229/recording.har",
+        "src/api-keys/__recordings__/API-Keys-Integration-Tests-remove-returns-error-for-non-existent-API-key_2163054369/recording.har"
+      ],
+      "invalidurl.noturl": [
+        "src/broadcasts/broadcasts.spec.ts",
+        "src/emails/emails.spec.ts"
+      ],
+      "new.com": [
+        "src/webhooks/webhooks.spec.ts"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\resend__resend-node\\gitleaks.json",
+      "exit_code": 1,
+      "output_path": "_logs/scan/resend__resend-node/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/resend__resend-node/osv.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "gitleaks: 8 test-path secret(s)",
+  "files_scanned": 271,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

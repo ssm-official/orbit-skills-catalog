@@ -1,0 +1,248 @@
+{
+  "source_url": "https://github.com/square/square-nodejs-sdk",
+  "proposed_slot": "merchant.finance.square-node",
+  "scanned_at": "2026-05-14T05:54:15.315363+00:00",
+  "clone_ok": true,
+  "commit_pinned": "5566d34adedb1ff2d8d9add4889da2996ecdb244",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner"
+  ],
+  "findings": {
+    "secrets": [
+      {
+        "file": "reference.md",
+        "label": "slack token",
+        "match_redacted": true
+      },
+      {
+        "file": "src/api/resources/labor/client/Client.ts",
+        "label": "slack token",
+        "match_redacted": true
+      },
+      {
+        "file": "src/api/resources/labor/client/requests/SearchScheduledShiftsRequest.ts",
+        "label": "slack token",
+        "match_redacted": true
+      },
+      {
+        "file": "tests/wire/labor.test.ts",
+        "label": "slack token",
+        "match_redacted": true
+      },
+      {
+        "file": "tests/wire/labor.test.ts",
+        "label": "slack token",
+        "match_redacted": true
+      },
+      {
+        "file": "tests/wire/labor.test.ts",
+        "label": "slack token",
+        "match_redacted": true
+      },
+      {
+        "file": "tests/wire/labor.test.ts",
+        "label": "slack token",
+        "match_redacted": true
+      }
+    ],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "biomejs.dev": [
+        "biome.json"
+      ],
+      "buildwithfern.com": [
+        "CONTRIBUTING.md"
+      ],
+      "github.com": [
+        "CONTRIBUTING.md",
+        "README.md",
+        "legacy/CHANGELOG.md",
+        "package.json",
+        "src/core/runtime/runtime.ts"
+      ],
+      "developer.squareup.com": [
+        ".fern/metadata.json",
+        "legacy/CHANGELOG.md",
+        "legacy/README.md",
+        "legacy/doc/api/apple-pay.md",
+        "legacy/doc/api/bank-accounts.md"
+      ],
+      "img.shields.io": [
+        "README.md"
+      ],
+      "developer.mozilla.org": [
+        "README.md",
+        "src/core/fetcher/BinaryResponse.ts"
+      ],
+      "app.squareup.com": [
+        "legacy/doc/api/apple-pay.md",
+        "reference.md",
+        "src/api/resources/applePay/client/Client.ts"
+      ],
+      "merchant.website.com": [
+        "legacy/doc/api/checkout.md",
+        "legacy/doc/models/create-checkout-request.md",
+        "legacy/doc/models/create-checkout-response.md",
+        "reference.md",
+        "src/api/resources/locations/client/Client.ts"
+      ],
+      "developer-production-s.squarecdn.com": [
+        "reference.md",
+        "src/api/resources/customers/resources/customAttributeDefinitions/client/Client.ts",
+        "src/api/resources/customers/resources/customAttributeDefinitions/client/requests/CreateCustomerCustomAttributeDefinitionRequest.ts",
+        "src/api/resources/locations/resources/customAttributeDefinitions/client/Client.ts",
+        "src/api/resources/locations/resources/customAttributeDefinitions/client/requests/CreateLocationCustomAttributeDefinitionRequest.ts"
+      ],
+      "example-webhook-url.com": [
+        "legacy/doc/api/webhook-subscriptions.md",
+        "legacy/doc/models/create-webhook-subscription-request.md",
+        "legacy/doc/models/create-webhook-subscription-response.md",
+        "legacy/doc/models/list-webhook-subscriptions-response.md",
+        "legacy/doc/models/retrieve-webhook-subscription-response.md"
+      ],
+      "registry.yarnpkg.com": [
+        "yarn.lock"
+      ],
+      "squareup.com": [
+        "legacy/CHANGELOG.md",
+        "legacy/README.md",
+        "legacy/doc/models/complete-payment-response.md",
+        "legacy/doc/models/create-payment-response.md",
+        "legacy/doc/models/dispute-reason.md"
+      ],
+      "connect.squareup.com": [
+        "legacy/CHANGELOG.md",
+        "legacy/doc/client.md",
+        "legacy/doc/models/create-card-request.md",
+        "legacy/doc/models/create-checkout-response.md",
+        "legacy/doc/models/list-cards-request.md"
+      ],
+      "connect.squareupsandbox.com": [
+        "legacy/CHANGELOG.md",
+        "src/environments.ts"
+      ],
+      "nodejs.org": [
+        "legacy/README.md"
+      ],
+      "www.iso.org": [
+        "legacy/doc/models/address.md",
+        "legacy/doc/models/bank-account.md",
+        "legacy/doc/models/country.md",
+        "legacy/doc/models/customer-address-filter.md",
+        "legacy/doc/models/location.md"
+      ],
+      "wikipedia.org": [
+        "legacy/doc/models/bank-account.md",
+        "legacy/doc/models/currency.md",
+        "legacy/doc/models/location.md",
+        "legacy/doc/models/merchant.md",
+        "legacy/doc/models/money.md"
+      ],
+      "tools.ietf.org": [
+        "legacy/doc/models/catalog-time-period.md",
+        "legacy/doc/models/create-mobile-authorization-code-response.md",
+        "legacy/doc/models/location.md",
+        "legacy/doc/models/loyalty-promotion-available-time-data.md",
+        "legacy/doc/models/merchant.md"
+      ],
+      "www.example.com": [
+        "legacy/doc/models/checkout.md",
+        "legacy/doc/models/create-checkout-request.md",
+        "src/api/resources/locations/client/requests/CreateCheckoutRequest.ts",
+        "src/api/types/Checkout.ts"
+      ],
+      "en.wikipedia.org": [
+        "legacy/doc/models/create-subscription-request.md",
+        "legacy/doc/models/error-category.md",
+        "src/api/resources/subscriptions/client/requests/CreateSubscriptionRequest.ts"
+      ],
+      "square.link": [
+        "legacy/doc/models/list-payment-links-response.md",
+        "legacy/doc/models/retrieve-payment-link-response.md",
+        "legacy/doc/models/update-payment-link-response.md",
+        "tests/wire/checkout/paymentLinks.test.ts"
+      ],
+      "www.iana.org": [
+        "legacy/doc/models/location.md",
+        "src/api/types/Location.ts"
+      ],
+      "www.facebook.com": [
+        "legacy/doc/models/location.md",
+        "src/api/types/Location.ts"
+      ],
+      "square.site": [
+        "legacy/doc/models/retrieve-location-booking-profile-response.md",
+        "tests/wire/bookings.test.ts"
+      ],
+      "checkout.square.site": [
+        "legacy/doc/models/retrieve-payment-link-response.md",
+        "legacy/doc/models/update-payment-link-response.md",
+        "tests/wire/checkout/paymentLinks.test.ts"
+      ],
+      "developer.squareupstaging.com": [
+        "src/api/types/DeviceCheckoutOptions.ts"
+      ],
+      "developers.cloudflare.com": [
+        "src/core/runtime/runtime.ts"
+      ],
+      "vercel.com": [
+        "src/core/runtime/runtime.ts"
+      ],
+      "deno.land": [
+        "src/core/runtime/runtime.ts"
+      ],
+      "stackoverflow.com": [
+        "src/core/schemas/builders/date/date.ts"
+      ],
+      "lodash.com": [
+        "src/core/utils/setObjectProperty.ts"
+      ],
+      "webhook.site": [
+        "tests/integration/webhooks.test.ts"
+      ],
+      "$": [
+        "tests/mock-server/randomBaseUrl.ts"
+      ],
+      "api.example.com": [
+        "tests/unit/fetcher/createRequestUrl.test.ts",
+        "tests/unit/url/join.test.ts"
+      ],
+      "httpbin.org": [
+        "tests/unit/fetcher/Fetcher.test.ts",
+        "tests/unit/fetcher/makeRequest.test.ts"
+      ],
+      "user:password@example.com": [
+        "tests/unit/fetcher/redacting.test.ts"
+      ],
+      "user:pass@example.com": [
+        "tests/unit/fetcher/redacting.test.ts"
+      ],
+      "user@example.com:pass@host.com": [
+        "tests/unit/fetcher/redacting.test.ts"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\square__square-nodejs-sdk\\gitleaks.json",
+      "exit_code": 1,
+      "output_path": "_logs/scan/square__square-nodejs-sdk/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/square__square-nodejs-sdk/osv.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "trusted-vendor: 2 pattern-scan secret hit(s) downgraded to notes (likely docstring/example values); test-path secret findings (5); trusted-vendor: 83 gitleaks finding(s) downgraded to notes (likely SDK docs/example values); gitleaks: 289 test-path secret(s)",
+  "files_scanned": 5217,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

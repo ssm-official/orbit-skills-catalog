@@ -1,0 +1,434 @@
+{
+  "source_url": "https://github.com/stripe/agent-toolkit",
+  "proposed_slot": "merchant.finance.stripe-agent-toolkit",
+  "scanned_at": "2026-05-14T05:54:51.926121+00:00",
+  "clone_ok": true,
+  "commit_pinned": "ec93d4c4b9ffdbc994ac45ce692d4ec1cdb755f0",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [
+      {
+        "file": "benchmarks/furever/environment/app/contexts/settings/SettingsProvider.tsx",
+        "label": "exec-call",
+        "snippet": "})([a-f\\d]{2})([a-f\\d]{2})$/i.exec(hex);     return result       "
+      },
+      {
+        "file": "benchmarks/furever/environment/app/models/salon.ts",
+        "label": "exec-call",
+        "snippet": "       Salon.findOne({email}).exec((err, salon) => {         // H"
+      }
+    ],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "python-poetry.org": [
+        ".gitignore"
+      ],
+      "pdm.fming.dev": [
+        ".gitignore"
+      ],
+      "github.com": [
+        ".gitignore",
+        "CONTRIBUTING.md",
+        "README.md",
+        "benchmarks/furever/Dockerfile",
+        "benchmarks/furever/README.md"
+      ],
+      "www.contributor-covenant.org": [
+        "CODE_OF_CONDUCT.md"
+      ],
+      "help.github.com": [
+        "CONTRIBUTING.md",
+        "benchmarks/furever/environment/.gitignore"
+      ],
+      "en.wikipedia.org": [
+        "CONTRIBUTING.md"
+      ],
+      "user-images.githubusercontent.com": [
+        "CONTRIBUTING.md"
+      ],
+      "mcp.stripe.com": [
+        "README.md",
+        "gemini-extension.json",
+        "providers/claude/plugin/.mcp.json",
+        "providers/cursor/plugin/mcp.json",
+        "providers/kiro/get-started-kiro.md"
+      ],
+      "stripe.dev": [
+        "README.md"
+      ],
+      "npm.im": [
+        "README.md"
+      ],
+      "ai-sdk.dev": [
+        "README.md"
+      ],
+      "docs.stripe.com": [
+        "README.md",
+        "benchmarks/checkout-gym/environment/server/evaluations.rb",
+        "benchmarks/furever/README.md",
+        "benchmarks/furever/environment/README.md",
+        "benchmarks/furever/environment/app/(auth)/business/form.tsx"
+      ],
+      "modelcontextprotocol.com": [
+        "README.md",
+        "tools/README.md",
+        "tools/modelcontextprotocol/README.md",
+        "tools/typescript/README.md"
+      ],
+      "dashboard.stripe.com": [
+        "README.md",
+        "benchmarks/checkout-gym/.env.example",
+        "benchmarks/checkout-gym/environment/server/.env.example",
+        "benchmarks/furever/environment/README.md",
+        "benchmarks/galtee-basic/environment/server/.env.example"
+      ],
+      "stripe.com": [
+        ".github/ISSUE_TEMPLATE/bug_report.yml",
+        "SECURITY.md",
+        "benchmarks/card-element-to-checkout/environment/server/server.py",
+        "benchmarks/card-element-to-checkout/solution/server/server.py",
+        "benchmarks/checkout-gym/.env.example"
+      ],
+      "support.stripe.com": [
+        ".github/ISSUE_TEMPLATE/config.yml",
+        "llm/ai-sdk/provider/tests/stripe-language-model-v3.test.ts",
+        "llm/ai-sdk/provider/tests/stripe-language-model.test.ts",
+        "providers/claude/plugin/skills/stripe-best-practices/references/security.md",
+        "providers/cursor/plugin/skills/stripe-best-practices/references/security.md"
+      ],
+      "registry.npmjs.org": [
+        ".github/workflows/npm_release_shared.yml",
+        "benchmarks/furever/environment/package-lock.json",
+        "benchmarks/galtee-basic/environment/server/package-lock.json",
+        "benchmarks/galtee-invoicing/environment/server/package-lock.json",
+        "tools/modelcontextprotocol/package-lock.json"
+      ],
+      "x-access-token:$": [
+        ".github/workflows/sync-skills.yml"
+      ],
+      "go.microsoft.com": [
+        ".vscode/launch.json"
+      ],
+      "js.stripe.com": [
+        "benchmarks/card-element-to-checkout/environment/client/index.html",
+        "benchmarks/card-element-to-checkout/solution/client/index.html",
+        "benchmarks/checkout-gym/environment/client/checkout.html",
+        "benchmarks/checkout-gym/environment/client/index.html",
+        "benchmarks/galtee-basic/environment/client/checkout.html"
+      ],
+      "www.w3.org": [
+        "benchmarks/card-element-to-checkout/environment/client/css/global.css",
+        "benchmarks/card-element-to-checkout/solution/client/css/global.css",
+        "benchmarks/furever/environment/public/brand-settings.svg",
+        "benchmarks/furever/environment/public/pose_light.svg",
+        "benchmarks/furever/environment/public/pose_red.svg"
+      ],
+      "pypi.org": [
+        "benchmarks/card-element-to-checkout/environment/server/uv.lock"
+      ],
+      "files.pythonhosted.org": [
+        "benchmarks/card-element-to-checkout/environment/server/uv.lock"
+      ],
+      "rubygems.org": [
+        "benchmarks/checkout-gym/Dockerfile",
+        "benchmarks/checkout-gym/environment/server/Gemfile",
+        "benchmarks/checkout-gym/grader/Gemfile",
+        "benchmarks/galtee-basic/Gemfile",
+        "benchmarks/galtee-basic/Gemfile.lock"
+      ],
+      "cdn.jsdelivr.net": [
+        "benchmarks/checkout-gym/environment/client/checkout.html"
+      ],
+      "sinatrarb.com": [
+        "benchmarks/checkout-gym/environment/server/README.md",
+        "benchmarks/subscription-gym/environment/server/README.md"
+      ],
+      "deb.nodesource.com": [
+        "benchmarks/furever/Dockerfile",
+        "benchmarks/saas-starter-embedded-checkout/Dockerfile",
+        "benchmarks/saas-starter-partial-payments/Dockerfile"
+      ],
+      "www.mongodb.org": [
+        "benchmarks/furever/Dockerfile"
+      ],
+      "repo.mongodb.org": [
+        "benchmarks/furever/Dockerfile"
+      ],
+      "ui.shadcn.com": [
+        "benchmarks/furever/environment/README.md",
+        "benchmarks/furever/environment/components.json",
+        "benchmarks/saas-starter-embedded-checkout/environment/README.md",
+        "benchmarks/saas-starter-embedded-checkout/environment/components.json",
+        "benchmarks/saas-starter-partial-payments/environment/README.md"
+      ],
+      "opencollective.com": [
+        "benchmarks/furever/environment/package-lock.json",
+        "benchmarks/galtee-basic/environment/server/package-lock.json",
+        "benchmarks/galtee-invoicing/environment/server/package-lock.json",
+        "tools/modelcontextprotocol/package-lock.json"
+      ],
+      "tidelift.com": [
+        "benchmarks/furever/environment/package-lock.json",
+        "tools/modelcontextprotocol/package-lock.json"
+      ],
+      "www.patreon.com": [
+        "benchmarks/furever/environment/package-lock.json",
+        "benchmarks/galtee-basic/environment/server/package-lock.json",
+        "benchmarks/galtee-invoicing/environment/server/package-lock.json"
+      ],
+      "feross.org": [
+        "benchmarks/furever/environment/package-lock.json",
+        "benchmarks/galtee-basic/environment/server/package-lock.json",
+        "benchmarks/galtee-invoicing/environment/server/package-lock.json"
+      ],
+      "paulmillr.com": [
+        "benchmarks/furever/environment/package-lock.json"
+      ],
+      "joebell.co.uk": [
+        "benchmarks/furever/environment/package-lock.json"
+      ],
+      "eslint.org": [
+        "benchmarks/furever/environment/package-lock.json",
+        "tools/modelcontextprotocol/package-lock.json"
+      ],
+      "furever.dev).**": [
+        "benchmarks/furever/environment/README.md"
+      ],
+      "nextjs.org": [
+        "benchmarks/furever/environment/README.md",
+        "benchmarks/saas-starter-embedded-checkout/environment/README.md",
+        "benchmarks/saas-starter-partial-payments/environment/README.md",
+        "tools/typescript/.gitignore"
+      ],
+      "tailwindcss.com": [
+        "benchmarks/furever/environment/README.md"
+      ],
+      "www.mongodb.com": [
+        "benchmarks/furever/environment/README.md"
+      ],
+      "lucide.dev": [
+        "benchmarks/furever/environment/app/components/debug/DebugMenu.tsx"
+      ],
+      "www.klim.co.nzstripe": [
+        "benchmarks/furever/environment/public/fonts/Sohne-Buch.otf",
+        "benchmarks/furever/environment/public/fonts/Sohne-Halbfett.otf",
+        "benchmarks/furever/environment/public/fonts/Sohne-Kraftig.otf"
+      ],
+      "www.klim.co.nz": [
+        "benchmarks/furever/environment/public/fonts/Sohne-Buch.otf",
+        "benchmarks/furever/environment/public/fonts/Sohne-Halbfett.otf",
+        "benchmarks/furever/environment/public/fonts/Sohne-Kraftig.otf"
+      ],
+      "accessible.stripe.com": [
+        "benchmarks/furever/environment/scripts/setup-accounts.py"
+      ],
+      "pose.dev": [
+        "benchmarks/furever/environment/scripts/setup-accounts.py"
+      ],
+      "inaccessible.stripe.com": [
+        "benchmarks/furever/environment/scripts/setup-accounts.py"
+      ],
+      "hubble.corp.stripe.com": [
+        "benchmarks/furever/environment/scripts/setup-accounts.py"
+      ],
+      "admin.corp.stripe.com": [
+        "benchmarks/furever/environment/scripts/setup-accounts.py"
+      ],
+      "docs.google.com": [
+        "benchmarks/furever/environment/types/settings.ts"
+      ],
+      "rubydoc.info": [
+        "benchmarks/galtee-basic/environment/test/spec_helper.rb",
+        "benchmarks/galtee-basic/grader/spec/spec_helper.rb",
+        "benchmarks/galtee-invoicing/environment/test/spec_helper.rb",
+        "benchmarks/galtee-invoicing/grader/spec/spec_helper.rb",
+        "benchmarks/subscription-gym/grader/spec_helper.rb"
+      ],
+      "rspec.info": [
+        "benchmarks/galtee-basic/environment/test/spec_helper.rb",
+        "benchmarks/galtee-basic/grader/spec/spec_helper.rb",
+        "benchmarks/galtee-invoicing/environment/test/spec_helper.rb",
+        "benchmarks/galtee-invoicing/grader/spec/spec_helper.rb",
+        "benchmarks/subscription-gym/grader/spec_helper.rb"
+      ],
+      "www.teaisaweso.me": [
+        "benchmarks/galtee-basic/environment/test/spec_helper.rb",
+        "benchmarks/galtee-basic/grader/spec/spec_helper.rb",
+        "benchmarks/galtee-invoicing/environment/test/spec_helper.rb",
+        "benchmarks/galtee-invoicing/grader/spec/spec_helper.rb",
+        "benchmarks/subscription-gym/grader/spec_helper.rb"
+      ],
+      "next-saas-start.vercel.app": [
+        "benchmarks/saas-starter-embedded-checkout/environment/README.md",
+        "benchmarks/saas-starter-partial-payments/environment/README.md"
+      ],
+      "www.postgresql.org": [
+        "benchmarks/saas-starter-embedded-checkout/environment/README.md",
+        "benchmarks/saas-starter-partial-payments/environment/README.md"
+      ],
+      "orm.drizzle.team": [
+        "benchmarks/saas-starter-embedded-checkout/environment/README.md",
+        "benchmarks/saas-starter-partial-payments/environment/README.md"
+      ],
+      "yourdomain.com": [
+        "benchmarks/saas-starter-embedded-checkout/environment/README.md",
+        "benchmarks/saas-starter-partial-payments/environment/README.md"
+      ],
+      "vercel.com": [
+        "benchmarks/saas-starter-embedded-checkout/environment/README.md",
+        "benchmarks/saas-starter-embedded-checkout/environment/app/(dashboard)/page.tsx",
+        "benchmarks/saas-starter-partial-payments/environment/README.md",
+        "benchmarks/saas-starter-partial-payments/environment/app/(dashboard)/page.tsx"
+      ],
+      "achromatic.dev": [
+        "benchmarks/saas-starter-partial-payments/environment/README.md"
+      ],
+      "shipfa.st": [
+        "benchmarks/saas-starter-partial-payments/environment/README.md"
+      ],
+      "makerkit.dev": [
+        "benchmarks/saas-starter-partial-payments/environment/README.md"
+      ],
+      "zerotoshipped.com": [
+        "benchmarks/saas-starter-partial-payments/environment/README.md"
+      ],
+      "turbostarter.dev": [
+        "benchmarks/saas-starter-partial-payments/environment/README.md"
+      ],
+      "api.stripe.com": [
+        "benchmarks/saas-starter-partial-payments/solution/SOLUTION_NOTES.md",
+        "benchmarks/subscription-gym/environment/server/challenges.rb",
+        "benchmarks/subscription-gym/grader/cancel_subscription_without_proration_spec.rb",
+        "benchmarks/subscription-gym/grader/create_subscription_only_spec.rb",
+        "benchmarks/subscription-gym/grader/create_subscription_schedule_only_spec.rb"
+      ],
+      "packages.microsoft.com": [
+        "benchmarks/sdk-upgrades-dotnet/Dockerfile"
+      ],
+      "maven.apache.org": [
+        "benchmarks/sdk-upgrades-java/Dockerfile",
+        "benchmarks/sdk-upgrades-java/environment/charges-on-payment-intent/server/pom.xml",
+        "benchmarks/sdk-upgrades-java/environment/invoice-partial-payments/server/pom.xml",
+        "benchmarks/sdk-upgrades-java/environment/subscription-billing-migration/server/pom.xml",
+        "benchmarks/sdk-upgrades-java/solution/charges-on-payment-intent/server/pom.xml"
+      ],
+      "sdk.vercel.ai": [
+        "llm/README.md",
+        "llm/ai-sdk/README.md",
+        "llm/ai-sdk/meter/README.md",
+        "llm/ai-sdk/meter/examples/README.md",
+        "llm/ai-sdk/provider/README.md"
+      ],
+      "json.schemastore.org": [
+        "llm/ai-sdk/meter/tsconfig.json",
+        "llm/ai-sdk/provider/tsconfig.build.json",
+        "llm/ai-sdk/provider/tsconfig.json",
+        "llm/ai-sdk/tsconfig.json",
+        "llm/token-meter/tsconfig.build.json"
+      ],
+      "api.together.xyz": [
+        "llm/ai-sdk/meter/tests/ai-sdk-billing-wrapper-other-providers.test.ts"
+      ],
+      "custom-ai.example.com": [
+        "llm/ai-sdk/meter/tests/ai-sdk-billing-wrapper-other-providers.test.ts"
+      ],
+      "llm.stripe.com": [
+        "llm/ai-sdk/provider/README.md",
+        "llm/ai-sdk/provider/examples/README.md",
+        "llm/ai-sdk/provider/stripe-provider.ts",
+        "llm/ai-sdk/provider/tests/stripe-language-model-v3.test.ts",
+        "llm/ai-sdk/provider/tests/stripe-language-model.test.ts"
+      ],
+      "custom.stripe.com": [
+        "llm/ai-sdk/provider/tests/stripe-provider-v3.test.ts",
+        "llm/ai-sdk/provider/tests/stripe-provider.test.ts"
+      ],
+      "platform.openai.com": [
+        "llm/token-meter/README.md",
+        "tools/python/examples/openai/file_search/README.md"
+      ],
+      "docs.anthropic.com": [
+        "llm/token-meter/README.md"
+      ],
+      "ai.google.dev": [
+        "llm/token-meter/README.md"
+      ],
+      "projects.dev": [
+        "providers/claude/plugin/skills/stripe-projects/SKILL.md",
+        "providers/cursor/plugin/skills/stripe-projects/SKILL.md",
+        "skills/stripe-projects/SKILL.md"
+      ],
+      "packages.stripe.dev": [
+        "providers/claude/plugin/skills/stripe-projects/SKILL.md",
+        "providers/cursor/plugin/skills/stripe-projects/SKILL.md",
+        "skills/stripe-projects/SKILL.md"
+      ],
+      "agentskills.io": [
+        "skills/README.md"
+      ],
+      "modelcontextprotocol.io": [
+        "tools/modelcontextprotocol/README.md"
+      ],
+      "google-gemini.github.io": [
+        "tools/modelcontextprotocol/README.md"
+      ],
+      "static.modelcontextprotocol.io": [
+        "tools/modelcontextprotocol/server.json"
+      ],
+      "editorconfig.org": [
+        "tools/python/.editorconfig"
+      ],
+      "support.google.com": [
+        "tools/python/examples/openai/customer_support/.env.template",
+        "tools/python/examples/openai/customer_support/README.md"
+      ],
+      "astral.sh": [
+        "tools/python/examples/openai/customer_support/README.md"
+      ],
+      "standupjack.com": [
+        "tools/python/examples/openai/customer_support/README.md",
+        "tools/python/examples/openai/customer_support/support_agent.py"
+      ],
+      "nodejs.org": [
+        "tools/typescript/.gitignore"
+      ],
+      "gruntjs.com": [
+        "tools/typescript/.gitignore"
+      ],
+      "bower.io": [
+        "tools/typescript/.gitignore"
+      ],
+      "snowpack.dev": [
+        "tools/typescript/.gitignore"
+      ],
+      "parceljs.org": [
+        "tools/typescript/.gitignore"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\stripe__agent-toolkit\\gitleaks.json",
+      "exit_code": 1,
+      "output_path": "_logs/scan/stripe__agent-toolkit/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/stripe__agent-toolkit/osv.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "exec-call in benchmarks/furever/environment/app/contexts/settings/SettingsProvider.tsx; exec-call in benchmarks/furever/environment/app/models/salon.ts; gitleaks: 1 test-path secret(s)",
+  "files_scanned": 807,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

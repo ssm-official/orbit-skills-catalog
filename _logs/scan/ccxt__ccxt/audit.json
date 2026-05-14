@@ -1,0 +1,6084 @@
+{
+  "source_url": "https://github.com/ccxt/ccxt",
+  "proposed_slot": "personal.finance.crypto-ccxt",
+  "scanned_at": "2026-05-14T05:49:05.990019+00:00",
+  "clone_ok": true,
+  "commit_pinned": "77fb7959b4974fd0d4f26c0c16886a7347a6c4f9",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner",
+    "pip-audit"
+  ],
+  "findings": {
+    "secrets": [
+      {
+        "file": "cs/ccxt/base/Exchange.Crypto.cs",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "cs/ccxt/exchanges/lbank.cs",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "cs/ccxt/exchanges/wavesexchange.cs",
+        "label": "jwt-like",
+        "match_redacted": true
+      },
+      {
+        "file": "cs/ccxt/exchanges/wavesexchange.cs",
+        "label": "jwt-like",
+        "match_redacted": true
+      },
+      {
+        "file": "cs/tests/Generated/Base/test.cryptography.cs",
+        "label": "jwt-like",
+        "match_redacted": true
+      },
+      {
+        "file": "cs/tests/Generated/Base/test.cryptography.cs",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "examples/js/coinbase-fetch-all-balances.js",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "go/tests/base/test.cryptography.go",
+        "label": "jwt-like",
+        "match_redacted": true
+      },
+      {
+        "file": "go/tests/base/test.cryptography.go",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "go/v4/exchange_crypto.go",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "go/v4/lbank.go",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "go/v4/wavesexchange.go",
+        "label": "jwt-like",
+        "match_redacted": true
+      },
+      {
+        "file": "go/v4/wavesexchange.go",
+        "label": "jwt-like",
+        "match_redacted": true
+      },
+      {
+        "file": "js/src/lbank.js",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "js/src/wavesexchange.js",
+        "label": "jwt-like",
+        "match_redacted": true
+      },
+      {
+        "file": "js/src/wavesexchange.js",
+        "label": "jwt-like",
+        "match_redacted": true
+      },
+      {
+        "file": "js/src/base/functions/crypto.js",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "js/src/static_dependencies/jsencrypt/JSEncryptRSAKey.js",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "js/src/static_dependencies/jsencrypt/lib/jsrsasign/asn1-1.0.js",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "js/src/test/base/test.cryptography.js",
+        "label": "jwt-like",
+        "match_redacted": true
+      },
+      {
+        "file": "js/src/test/base/test.cryptography.js",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "php/Exchange.php",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "php/Exchange.php",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "php/lbank.php",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "php/wavesexchange.php",
+        "label": "jwt-like",
+        "match_redacted": true
+      },
+      {
+        "file": "php/wavesexchange.php",
+        "label": "jwt-like",
+        "match_redacted": true
+      },
+      {
+        "file": "php/async/lbank.php",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "php/async/wavesexchange.php",
+        "label": "jwt-like",
+        "match_redacted": true
+      },
+      {
+        "file": "php/async/wavesexchange.php",
+        "label": "jwt-like",
+        "match_redacted": true
+      },
+      {
+        "file": "php/test/base/test_cryptography.php",
+        "label": "jwt-like",
+        "match_redacted": true
+      },
+      {
+        "file": "php/test/base/test_cryptography.php",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "python/ccxt/lbank.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "python/ccxt/wavesexchange.py",
+        "label": "jwt-like",
+        "match_redacted": true
+      },
+      {
+        "file": "python/ccxt/wavesexchange.py",
+        "label": "jwt-like",
+        "match_redacted": true
+      },
+      {
+        "file": "python/ccxt/async_support/lbank.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "python/ccxt/async_support/wavesexchange.py",
+        "label": "jwt-like",
+        "match_redacted": true
+      },
+      {
+        "file": "python/ccxt/async_support/wavesexchange.py",
+        "label": "jwt-like",
+        "match_redacted": true
+      },
+      {
+        "file": "python/ccxt/base/exchange.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "python/ccxt/base/exchange.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "python/ccxt/base/exchange.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "python/ccxt/static_dependencies/ecdsa/keys.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "python/ccxt/test/base/test_cryptography.py",
+        "label": "jwt-like",
+        "match_redacted": true
+      },
+      {
+        "file": "python/ccxt/test/base/test_cryptography.py",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "ts/src/lbank.ts",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "ts/src/wavesexchange.ts",
+        "label": "jwt-like",
+        "match_redacted": true
+      },
+      {
+        "file": "ts/src/wavesexchange.ts",
+        "label": "jwt-like",
+        "match_redacted": true
+      },
+      {
+        "file": "ts/src/base/functions/crypto.ts",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "ts/src/static_dependencies/jsencrypt/JSEncryptRSAKey.ts",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "ts/src/static_dependencies/jsencrypt/lib/jsrsasign/asn1-1.0.ts",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "ts/src/test/base/test.cryptography.ts",
+        "label": "jwt-like",
+        "match_redacted": true
+      }
+    ],
+    "suspicious": [
+      {
+        "file": "run-tests.js",
+        "label": "exec-call",
+        "snippet": "while ((matchInfo = infoRegex.exec (output))) {                   "
+      },
+      {
+        "file": "run-tests.js",
+        "label": "exec-call",
+        "snippet": "(matchWarnings = warningRegex.exec (stderr)) {                    "
+      },
+      {
+        "file": "run-tests.js",
+        "label": "exec-call",
+        "snippet": "> Object.assign (test, await  exec (...test.exec)));     const fai"
+      },
+      {
+        "file": "cli/ts/helpers.ts",
+        "label": "eval-call",
+        "snippet": " try {                 return eval ('(() => (' + s + ')) ()');    "
+      },
+      {
+        "file": "cli/ts/helpers.ts",
+        "label": "exec-call",
+        "snippet": "        while ((match = regex.exec (input)) !== null) {           "
+      },
+      {
+        "file": "cs/ccxt/static/StarkSharp/StarkSharp.Base/StarkSharp.ABI/V1/parser.cs",
+        "label": "Function-constructor",
+        "snippet": "s = abi.Functions.Select(f => new Function(f.Name, ConvertParameters(f.In"
+      },
+      {
+        "file": "js/src/base/functions/misc.js",
+        "label": "exec-call",
+        "snippet": "ches = [];     let match = re.exec(string);     while (match) {  "
+      },
+      {
+        "file": "js/src/base/functions/misc.js",
+        "label": "exec-call",
+        "snippet": "match[1]);         match = re.exec(string);     }     return matc"
+      },
+      {
+        "file": "js/src/static_dependencies/jsencrypt/lib/asn1js/asn1.js",
+        "label": "exec-call",
+        "snippet": "hortYear ? reTimeS : reTimeL).exec(s);         if (!m) {         "
+      },
+      {
+        "file": "js/src/static_dependencies/jsencrypt/lib/asn1js/base64.js",
+        "label": "exec-call",
+        "snippet": "{         const m = Base64.re.exec(a);         if (m) {          "
+      },
+      {
+        "file": "js/src/static_dependencies/qs/parse.js",
+        "label": "exec-call",
+        "snippet": "nt     var segment = brackets.exec(key);     var parent = segment"
+      },
+      {
+        "file": "js/src/static_dependencies/qs/parse.js",
+        "label": "exec-call",
+        "snippet": ";     while ((segment = child.exec(key)) !== null && i < options."
+      },
+      {
+        "file": "js/src/static_dependencies/scure-bip32/index.js",
+        "label": "exec-call",
+        "snippet": "      const m = /^(\\d+)('?)$/.exec(c);             const m1 = m &"
+      },
+      {
+        "file": "js/src/static_dependencies/zklink/zklink-sdk-web.js",
+        "label": "exec-call",
+        "snippet": "tches = /\\[object ([^\\]]+)\\]/.exec(toString.call(val));     let c"
+      },
+      {
+        "file": "js/src/static_dependencies/zklink/zklink-sdk-web.js",
+        "label": "Function-constructor",
+        "snippet": ", arg1) {         const ret = new Function(getStringFromWasm0(arg0, arg1)"
+      },
+      {
+        "file": "python/ccxt/static_dependencies/lark/grammars/python.lark",
+        "label": "eval-call",
+        "snippet": "al_input is the input for the eval() functions. // NB: compound_s"
+      },
+      {
+        "file": "python/ccxt/static_dependencies/sympy/external/importtools.py",
+        "label": "eval-call",
+        "snippet": "ue', 'False'):         return eval(debug_str)     else:         r"
+      },
+      {
+        "file": "ts/src/base/functions/misc.ts",
+        "label": "exec-call",
+        "snippet": "ches = [];     let match = re.exec (string);     while (match) {  "
+      },
+      {
+        "file": "ts/src/base/functions/misc.ts",
+        "label": "exec-call",
+        "snippet": "match[1]);         match = re.exec (string);     }     return matc"
+      },
+      {
+        "file": "ts/src/static_dependencies/jsencrypt/lib/asn1js/asn1.ts",
+        "label": "exec-call",
+        "snippet": "hortYear ? reTimeS : reTimeL).exec(s);         if (!m) {         "
+      },
+      {
+        "file": "ts/src/static_dependencies/jsencrypt/lib/asn1js/base64.ts",
+        "label": "exec-call",
+        "snippet": "{         const m = Base64.re.exec(a);         if (m) {          "
+      },
+      {
+        "file": "ts/src/static_dependencies/qs/parse.js",
+        "label": "exec-call",
+        "snippet": "t      var segment = brackets.exec(key);     var parent = segment"
+      },
+      {
+        "file": "ts/src/static_dependencies/qs/parse.js",
+        "label": "exec-call",
+        "snippet": ";     while ((segment = child.exec(key)) !== null && i < options."
+      },
+      {
+        "file": "ts/src/static_dependencies/scure-bip32/index.ts",
+        "label": "exec-call",
+        "snippet": "      const m = /^(\\d+)('?)$/.exec(c);       const m1 = m && m[1]"
+      },
+      {
+        "file": "ts/src/static_dependencies/zklink/zklink-sdk-web.js",
+        "label": "exec-call",
+        "snippet": "tches = /\\[object ([^\\]]+)\\]/.exec(toString.call(val));   let cla"
+      },
+      {
+        "file": "ts/src/static_dependencies/zklink/zklink-sdk-web.js",
+        "label": "Function-constructor",
+        "snippet": "arg0, arg1) {     const ret = new Function(getStringFromWasm0(arg0, arg1)"
+      }
+    ],
+    "install_hooks": [
+      {
+        "file": "package.json",
+        "hook": "postinstall",
+        "command": "node postinstall.js",
+        "dangerous": false
+      },
+      {
+        "file": "python/package.json",
+        "hook": "postinstall",
+        "command": "node postinstall.js",
+        "dangerous": false
+      }
+    ],
+    "py_build_hooks": [],
+    "urls_found": {
+      "github.com": [
+        ".claude/skills/README.md",
+        ".claude/skills/ccxt-csharp/SKILL.md",
+        ".claude/skills/ccxt-go/SKILL.md",
+        ".claude/skills/ccxt-php/SKILL.md",
+        ".claude/skills/ccxt-python/SKILL.md"
+      ],
+      "docs.ccxt.com": [
+        ".claude/skills/README.md",
+        ".claude/skills/ccxt-csharp/SKILL.md",
+        ".claude/skills/ccxt-go/SKILL.md",
+        ".claude/skills/ccxt-php/SKILL.md",
+        ".claude/skills/ccxt-python/SKILL.md"
+      ],
+      "docs": [
+        ".claude/skills/new-exchange/SKILL.md",
+        "CLAUDE.md"
+      ],
+      "api": [
+        ".claude/skills/new-exchange/SKILL.md",
+        "CLAUDE.md",
+        "cs/ccxt/exchanges/alpaca.cs",
+        "cs/ccxt/exchanges/binance.cs",
+        "cs/ccxt/exchanges/bitbank.cs"
+      ],
+      "testnet": [
+        ".claude/skills/new-exchange/SKILL.md",
+        "CLAUDE.md",
+        "cs/ccxt/exchanges/lighter.cs",
+        "go/v4/lighter.go",
+        "js/src/lighter.js"
+      ],
+      "getcomposer.org": [
+        "composer-install.sh",
+        "composer.lock"
+      ],
+      "composer.github.io": [
+        "composer-install.sh"
+      ],
+      "api.github.com": [
+        "composer.lock",
+        "postinstall.js"
+      ],
+      "packagist.org": [
+        "README.md",
+        "composer.lock",
+        "doc/readme.rst",
+        "python/README.md",
+        "python/README.rst"
+      ],
+      "www.php-fig.org": [
+        "composer.lock",
+        "php/static_dependencies/ringcentral-psr7/README.md"
+      ],
+      "sagikazarmark.hu": [
+        "composer.lock"
+      ],
+      "tidelift.com": [
+        "composer.lock",
+        "examples/ts/nextjs-page-router/package-lock.json",
+        "package-lock.json"
+      ],
+      "pear.php.net": [
+        "composer.lock",
+        "examples/php/arbitrage-pairs.php",
+        "wiki/examples/php/arbitrage-pairs.md"
+      ],
+      "clue.engineering": [
+        "composer.lock"
+      ],
+      "wyrihaximus.net": [
+        "composer.lock"
+      ],
+      "sorgalla.com": [
+        "composer.lock"
+      ],
+      "cboden.dev": [
+        "composer.lock"
+      ],
+      "opencollective.com": [
+        "CONTRIBUTING.md",
+        "README.md",
+        "composer.lock",
+        "doc/readme.rst",
+        "examples/ts/nextjs-page-router/package-lock.json"
+      ],
+      "symfony.com": [
+        "composer.lock"
+      ],
+      "context7.com": [
+        "context7.json"
+      ],
+      "nodejs.org": [
+        "CONTRIBUTING.md",
+        "examples/.gitignore",
+        "js/src/base/Exchange.js",
+        "ts/src/base/Exchange.ts",
+        "ts/src/static_dependencies/proxies/agent-base/README.md"
+      ],
+      "www.python.org": [
+        "CONTRIBUTING.md"
+      ],
+      "docs.aiohttp.org": [
+        "CONTRIBUTING.md"
+      ],
+      "docs.astral.sh": [
+        "CONTRIBUTING.md"
+      ],
+      "tox.readthedocs.io": [
+        "CONTRIBUTING.md"
+      ],
+      "brew.sh": [
+        "CONTRIBUTING.md"
+      ],
+      "secure.php.net": [
+        "CONTRIBUTING.md"
+      ],
+      "dotnet.microsoft.com": [
+        "CONTRIBUTING.md"
+      ],
+      "0.30000000000000004.com": [
+        "CONTRIBUTING.md"
+      ],
+      "www.google.com": [
+        "CONTRIBUTING.md",
+        "php/static_dependencies/ringcentral-psr7/README.md",
+        "wiki/Manual.md"
+      ],
+      "api.example.com": [
+        "CONTRIBUTING.md",
+        "doc/manual.rst",
+        "wiki/Manual.md"
+      ],
+      "www.example.com": [
+        "CONTRIBUTING.md",
+        "doc/manual.rst",
+        "wiki/Manual.md"
+      ],
+      "app.travis-ci.com": [
+        "CONTRIBUTING.md",
+        "cs/ccxt/exchanges/pro/mexc.cs",
+        "go/v4/pro/mexc.go",
+        "js/src/pro/mexc.js",
+        "php/pro/mexc.php"
+      ],
+      "ci.appveyor.com": [
+        "CONTRIBUTING.md"
+      ],
+      "deb.nodesource.com": [
+        "Dockerfile"
+      ],
+      "packages.microsoft.com": [
+        "Dockerfile"
+      ],
+      "www.w3.org": [
+        "doc/_static/javascript/binance-portal.min.js",
+        "doc/manual.rst",
+        "index.html",
+        "php/static_dependencies/ratchet/pawl/phpunit.xml.dist",
+        "php/static_dependencies/ratchet/pawl/phpunit.xml.legacy"
+      ],
+      "raw.githubusercontent.com": [
+        ".claude/settings.json",
+        "README.md",
+        "install-skills.sh",
+        "llms.txt",
+        "python/README.md"
+      ],
+      "your-proxy-host:port": [
+        ".claude/skills/ccxt-csharp/SKILL.md",
+        ".claude/skills/ccxt-go/SKILL.md",
+        ".claude/skills/ccxt-php/SKILL.md",
+        ".claude/skills/ccxt-python/SKILL.md",
+        ".claude/skills/ccxt-typescript/SKILL.md"
+      ],
+      "user:pass@proxy-host:port": [
+        ".claude/skills/ccxt-csharp/SKILL.md",
+        ".claude/skills/ccxt-go/SKILL.md",
+        ".claude/skills/ccxt-php/SKILL.md",
+        ".claude/skills/ccxt-python/SKILL.md",
+        ".claude/skills/ccxt-typescript/SKILL.md"
+      ],
+      "registry.npmjs.org": [
+        ".github/workflows/release-js-only.yml",
+        ".github/workflows/release.yml",
+        "cli/package-lock.json",
+        "examples/ts/fetch-futures/package-lock.json",
+        "examples/ts/fetch-tickers/package-lock.json"
+      ],
+      "www.patreon.com": [
+        "examples/ts/nextjs-page-router/package-lock.json",
+        "package-lock.json"
+      ],
+      "feross.org": [
+        "examples/ts/nextjs-page-router/package-lock.json",
+        "package-lock.json"
+      ],
+      "eslint.org": [
+        "package-lock.json"
+      ],
+      "www.npmjs.com": [
+        "README.md",
+        "cs/ccxt/exchanges/zaif.cs",
+        "doc/readme.rst",
+        "go/v4/zaif.go",
+        "js/src/zaif.js"
+      ],
+      "ccxt.com": [
+        "cli/package.json",
+        "doc/ccxt.pro.manual.rst",
+        "doc/conf.py",
+        "package.json",
+        "python/package.json"
+      ],
+      "img.shields.io": [
+        "README.md",
+        "cli/README.md",
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst"
+      ],
+      "pkg.go.dev": [
+        "README.md",
+        "python/README.md"
+      ],
+      "user-images.githubusercontent.com": [
+        "README.md",
+        "cs/ccxt/exchanges/bittrade.cs",
+        "cs/ccxt/exchanges/cex.cs",
+        "cs/ccxt/exchanges/coinbase.cs",
+        "cs/ccxt/exchanges/coincheck.cs"
+      ],
+      "www.freqtrade.io)**": [
+        "README.md",
+        "python/README.md"
+      ],
+      "www.octobot.online)**": [
+        "README.md",
+        "python/README.md"
+      ],
+      "tokenbot.com": [
+        "README.md",
+        "doc/readme.rst",
+        "python/README.md"
+      ],
+      "accounts.binance.com": [
+        "README.md",
+        "cs/ccxt/exchanges/binance.cs",
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst"
+      ],
+      "www.bybit.com": [
+        "README.md",
+        "cs/ccxt/exchanges/bybit.cs",
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst"
+      ],
+      "www.okx.com": [
+        "README.md",
+        "cs/ccxt/exchanges/okx.cs",
+        "cs/ccxt/exchanges/pro/okx.cs",
+        "cs/ccxt/exchanges/pro/oxfun.cs",
+        "cs/ccxt/exchanges/pro/wrappers/okx.cs"
+      ],
+      "www.gate.com": [
+        "README.md",
+        "cs/ccxt/exchanges/gate.cs",
+        "cs/ccxt/exchanges/pro/gate.cs",
+        "cs/ccxt/exchanges/pro/wrappers/gate.cs",
+        "cs/ccxt/wrappers/gate.cs"
+      ],
+      "www.kucoin.com": [
+        "README.md",
+        "cs/ccxt/exchanges/kucoin.cs",
+        "cs/ccxt/exchanges/pro/kucoin.cs",
+        "cs/ccxt/exchanges/pro/wrappers/kucoin.cs",
+        "cs/ccxt/wrappers/kucoin.cs"
+      ],
+      "futures.kucoin.com": [
+        "README.md",
+        "cs/ccxt/exchanges/kucoinfutures.cs",
+        "cs/ccxt/exchanges/pro/kucoinfutures.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst"
+      ],
+      "www.bitget.com": [
+        "README.md",
+        "cs/ccxt/exchanges/bitget.cs",
+        "cs/ccxt/exchanges/pro/bitget.cs",
+        "cs/ccxt/exchanges/pro/wrappers/bitget.cs",
+        "cs/ccxt/wrappers/bitget.cs"
+      ],
+      "app.hyperliquid.xyz": [
+        "README.md",
+        "cs/ccxt/exchanges/hyperliquid.cs",
+        "go/v4/hyperliquid.go",
+        "js/src/hyperliquid.js",
+        "php/async/hyperliquid.php"
+      ],
+      "www.bitmex.com": [
+        "README.md",
+        "cs/ccxt/exchanges/bitmex.cs",
+        "cs/ccxt/exchanges/pro/bitmex.cs",
+        "cs/ccxt/exchanges/pro/wrappers/bitmex.cs",
+        "cs/ccxt/wrappers/bitmex.cs"
+      ],
+      "github-production-user-asset-6210df.s3.amazonaws.com": [
+        "README.md",
+        "cs/ccxt/exchanges/bingx.cs",
+        "go/v4/bingx.go",
+        "js/src/bingx.js",
+        "php/async/bingx.php"
+      ],
+      "bingx.com": [
+        "README.md",
+        "cs/ccxt/exchanges/bingx.cs",
+        "go/v4/bingx.go",
+        "js/src/bingx.js",
+        "php/async/bingx.php"
+      ],
+      "www.htx.com.vc": [
+        "README.md",
+        "cs/ccxt/exchanges/htx.cs",
+        "go/v4/htx.go",
+        "js/src/htx.js",
+        "php/async/htx.php"
+      ],
+      "www.mexc.com": [
+        "README.md",
+        "cs/ccxt/exchanges/mexc.cs",
+        "cs/ccxt/exchanges/pro/mexc.cs",
+        "cs/ccxt/exchanges/pro/wrappers/mexc.cs",
+        "cs/ccxt/wrappers/mexc.cs"
+      ],
+      "www.bitmart.com": [
+        "README.md",
+        "cs/ccxt/exchanges/bitmart.cs",
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst"
+      ],
+      "crypto.com": [
+        "README.md",
+        "cs/ccxt/exchanges/cryptocom.cs",
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst"
+      ],
+      "www.coinex.com": [
+        "README.md",
+        "cs/ccxt/exchanges/coinex.cs",
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst"
+      ],
+      "global.hashkey.com": [
+        "README.md",
+        "cs/ccxt/exchanges/hashkey.cs",
+        "go/v4/hashkey.go",
+        "js/src/hashkey.js",
+        "php/async/hashkey.php"
+      ],
+      "woox.io": [
+        "README.md",
+        "cs/ccxt/exchanges/woo.cs",
+        "go/v4/woo.go",
+        "js/src/woo.js",
+        "php/async/woo.php"
+      ],
+      "dex.woo.org": [
+        "README.md",
+        "cs/ccxt/exchanges/woofipro.cs",
+        "go/v4/woofipro.go",
+        "js/src/woofipro.js",
+        "php/async/woofipro.php"
+      ],
+      "alpaca.markets": [
+        "README.md",
+        "cs/ccxt/exchanges/alpaca.cs",
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst"
+      ],
+      "omni.apex.exchange": [
+        "README.md",
+        "cs/ccxt/exchanges/apex.cs",
+        "cs/ccxt/exchanges/pro/apex.cs",
+        "go/v4/apex.go",
+        "go/v4/pro/apex.go"
+      ],
+      "arkm.com": [
+        "README.md",
+        "cs/ccxt/exchanges/arkham.cs",
+        "cs/ccxt/exchanges/pro/arkham.cs",
+        "cs/ccxt/exchanges/pro/wrappers/arkham.cs",
+        "cs/ccxt/wrappers/arkham.cs"
+      ],
+      "ascendex.com": [
+        "README.md",
+        "cs/ccxt/exchanges/ascendex.cs",
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst"
+      ],
+      "www.asterdex.com": [
+        "README.md",
+        "cs/ccxt/exchanges/aster.cs",
+        "go/v4/aster.go",
+        "js/src/aster.js",
+        "php/aster.php"
+      ],
+      "backpack.exchange": [
+        "README.md",
+        "cs/ccxt/exchanges/backpack.cs",
+        "go/v4/backpack.go",
+        "js/src/backpack.js",
+        "php/async/backpack.php"
+      ],
+      "bequant.io": [
+        "README.md",
+        "cs/ccxt/exchanges/bequant.cs",
+        "cs/ccxt/exchanges/pro/bequant.cs",
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst"
+      ],
+      "b1.run": [
+        "README.md",
+        "cs/ccxt/exchanges/bigone.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "www.binance.us": [
+        "README.md",
+        "cs/ccxt/exchanges/binanceus.cs",
+        "cs/ccxt/exchanges/pro/binanceus.cs",
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst"
+      ],
+      "bit2c.co.il": [
+        "README.md",
+        "cs/ccxt/exchanges/bit2c.cs",
+        "cs/ccxt/wrappers/bit2c.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst"
+      ],
+      "bitbank.cc": [
+        "README.md",
+        "cs/ccxt/exchanges/bitbank.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "ref.bitbns.com": [
+        "README.md",
+        "cs/ccxt/exchanges/bitbns.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "www.bitfinex.com": [
+        "README.md",
+        "cs/ccxt/exchanges/bitfinex.cs",
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst"
+      ],
+      "bitflyer.com": [
+        "README.md",
+        "cs/ccxt/exchanges/bitflyer.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "www.bithumb.com": [
+        "README.md",
+        "cs/ccxt/exchanges/bithumb.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "www.bitopro.com": [
+        "README.md",
+        "cs/ccxt/exchanges/bitopro.cs",
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst"
+      ],
+      "www.bitrue.com": [
+        "README.md",
+        "cs/ccxt/exchanges/bitrue.cs",
+        "cs/ccxt/wrappers/bitrue.cs",
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst"
+      ],
+      "bitso.com": [
+        "README.md",
+        "cs/ccxt/exchanges/bitso.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "www.bitstamp.net": [
+        "README.md",
+        "cs/ccxt/exchanges/bitstamp.cs",
+        "cs/ccxt/exchanges/pro/bitstamp.cs",
+        "cs/ccxt/wrappers/bitstamp.cs",
+        "doc/ccxt.pro.manual.rst"
+      ],
+      "bit.team": [
+        "README.md",
+        "cs/ccxt/exchanges/bitteam.cs",
+        "cs/ccxt/wrappers/bitteam.cs",
+        "go/v4/bitteam.go",
+        "go/v4/bitteam_wrapper.go"
+      ],
+      "www.bittrade.co.jp": [
+        "README.md",
+        "cs/ccxt/exchanges/bittrade.cs",
+        "go/v4/bittrade.go",
+        "js/src/bittrade.js",
+        "php/async/bittrade.php"
+      ],
+      "bitvavo.com": [
+        "README.md",
+        "cs/ccxt/exchanges/bitvavo.cs",
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst"
+      ],
+      "blockchain.com": [
+        "README.md",
+        "cs/ccxt/exchanges/blockchaincom.cs",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "blofin.com": [
+        "README.md",
+        "cs/ccxt/exchanges/blofin.cs",
+        "cs/ccxt/wrappers/blofin.cs",
+        "go/v4/blofin.go",
+        "go/v4/blofin_wrapper.go"
+      ],
+      "www.btcbox.co.jp": [
+        "README.md",
+        "cs/ccxt/exchanges/btcbox.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "btcmarkets.net": [
+        "README.md",
+        "cs/ccxt/exchanges/btcmarkets.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "www.btcturk.com": [
+        "README.md",
+        "cs/ccxt/exchanges/btcturk.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "bullish.com": [
+        "README.md",
+        "cs/ccxt/exchanges/bullish.cs",
+        "go/v4/bullish.go",
+        "js/src/bullish.js",
+        "php/async/bullish.php"
+      ],
+      "partner.bydfi.com": [
+        "README.md",
+        "cs/ccxt/exchanges/bydfi.cs",
+        "go/v4/bydfi.go",
+        "js/src/bydfi.js",
+        "php/async/bydfi.php"
+      ],
+      "cex.io": [
+        "README.md",
+        "cs/ccxt/exchanges/cex.cs",
+        "cs/ccxt/exchanges/pro/cex.cs",
+        "cs/ccxt/exchanges/pro/wrappers/cex.cs",
+        "doc/ccxt.pro.manual.rst"
+      ],
+      "www.coinbase.com": [
+        "README.md",
+        "cs/ccxt/exchanges/coinbase.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "coinbase.com": [
+        "README.md",
+        "cs/ccxt/exchanges/coinbaseexchange.cs",
+        "go/v4/coinbaseexchange.go",
+        "js/src/coinbaseexchange.js",
+        "php/async/coinbaseexchange.php"
+      ],
+      "international.coinbase.com": [
+        "README.md",
+        "cs/ccxt/exchanges/coinbaseinternational.cs",
+        "go/v4/coinbaseinternational.go",
+        "js/src/coinbaseinternational.js",
+        "php/async/coinbaseinternational.php"
+      ],
+      "coincheck.com": [
+        "README.md",
+        "cs/ccxt/exchanges/coincheck.cs",
+        "cs/ccxt/exchanges/pro/coincheck.cs",
+        "cs/ccxt/exchanges/pro/wrappers/coincheck.cs",
+        "cs/ccxt/wrappers/coincheck.cs"
+      ],
+      "coinmate.io": [
+        "README.md",
+        "cs/ccxt/exchanges/coinmate.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "go.coinmetro.com": [
+        "README.md",
+        "cs/ccxt/exchanges/coinmetro.cs",
+        "go/v4/coinmetro.go",
+        "js/src/coinmetro.js",
+        "php/async/coinmetro.php"
+      ],
+      "coinone.co.kr": [
+        "README.md",
+        "cs/ccxt/exchanges/coinone.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "www.coins.ph": [
+        "README.md",
+        "cs/ccxt/exchanges/coinsph.cs",
+        "go/v4/coinsph.go",
+        "js/src/coinsph.js",
+        "php/async/coinsph.php"
+      ],
+      "www.coinspot.com.au": [
+        "README.md",
+        "cs/ccxt/exchanges/coinspot.cs",
+        "cs/ccxt/wrappers/coinspot.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst"
+      ],
+      "app.cryptomus.com": [
+        "README.md",
+        "cs/ccxt/exchanges/cryptomus.cs",
+        "go/v4/cryptomus.go",
+        "js/src/cryptomus.js",
+        "php/async/cryptomus.php"
+      ],
+      "s.deepcoin.com": [
+        "README.md",
+        "cs/ccxt/exchanges/deepcoin.cs",
+        "go/v4/deepcoin.go",
+        "js/src/deepcoin.js",
+        "php/async/deepcoin.php"
+      ],
+      "www.delta.exchange": [
+        "README.md",
+        "cs/ccxt/exchanges/delta.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "www.deribit.com": [
+        "README.md",
+        "cs/ccxt/exchanges/deribit.cs",
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst"
+      ],
+      "www.derive.xyz": [
+        "README.md",
+        "cs/ccxt/exchanges/derive.cs",
+        "go/v4/derive.go",
+        "js/src/derive.js",
+        "php/async/derive.php"
+      ],
+      "www.digifinex.com": [
+        "README.md",
+        "cs/ccxt/exchanges/digifinex.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "exmo.me": [
+        "README.md",
+        "cs/ccxt/exchanges/exmo.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "fmfw.io": [
+        "README.md",
+        "cs/ccxt/exchanges/fmfwio.cs",
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst"
+      ],
+      "app.foxbit.com.br": [
+        "README.md",
+        "cs/ccxt/exchanges/foxbit.cs",
+        "go/v4/foxbit.go",
+        "js/src/foxbit.js",
+        "php/async/foxbit.php"
+      ],
+      "gemini.com": [
+        "README.md",
+        "cs/ccxt/exchanges/gemini.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "grvt.io": [
+        "README.md",
+        "cs/ccxt/exchanges/grvt.cs",
+        "go/v4/grvt.go",
+        "js/src/grvt.js",
+        "php/async/grvt.php"
+      ],
+      "hitbtc.com": [
+        "README.md",
+        "cs/ccxt/exchanges/hitbtc.cs",
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst"
+      ],
+      "pro.hollaex.com": [
+        "README.md",
+        "cs/ccxt/exchanges/hollaex.cs",
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst"
+      ],
+      "www.independentreserve.com": [
+        "README.md",
+        "cs/ccxt/exchanges/independentreserve.cs",
+        "cs/ccxt/wrappers/independentreserve.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst"
+      ],
+      "indodax.com": [
+        "README.md",
+        "cs/ccxt/exchanges/indodax.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "www.kraken.com": [
+        "README.md",
+        "cs/ccxt/exchanges/kraken.cs",
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst"
+      ],
+      "futures.kraken.com": [
+        "README.md",
+        "cs/ccxt/exchanges/krakenfutures.cs",
+        "go/v4/krakenfutures.go",
+        "js/src/krakenfutures.js",
+        "php/async/krakenfutures.php"
+      ],
+      "latoken.com": [
+        "README.md",
+        "cs/ccxt/exchanges/latoken.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "www.lbank.com": [
+        "README.md",
+        "cs/ccxt/exchanges/lbank.cs",
+        "cs/ccxt/exchanges/pro/lbank.cs",
+        "cs/ccxt/exchanges/pro/wrappers/lbank.cs",
+        "cs/ccxt/wrappers/lbank.cs"
+      ],
+      "www.luno.com": [
+        "README.md",
+        "cs/ccxt/exchanges/luno.cs",
+        "cs/ccxt/exchanges/pro/luno.cs",
+        "cs/ccxt/exchanges/pro/wrappers/luno.cs",
+        "cs/ccxt/wrappers/luno.cs"
+      ],
+      "www.mercadobitcoin.com.br": [
+        "README.md",
+        "cs/ccxt/exchanges/mercado.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "trade.mode.network": [
+        "README.md",
+        "cs/ccxt/exchanges/modetrade.cs",
+        "go/v4/modetrade.go",
+        "js/src/modetrade.js",
+        "php/async/modetrade.php"
+      ],
+      "www.my.okx.com": [
+        "README.md",
+        "cs/ccxt/exchanges/myokx.cs",
+        "cs/ccxt/exchanges/pro/myokx.cs",
+        "go/v4/myokx.go",
+        "go/v4/pro/myokx.go"
+      ],
+      "one.ndax.io": [
+        "README.md",
+        "cs/ccxt/exchanges/ndax.cs",
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst"
+      ],
+      "www.novadax.com.br": [
+        "README.md",
+        "cs/ccxt/exchanges/novadax.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "www.app.okx.com": [
+        "README.md",
+        "cs/ccxt/exchanges/okxus.cs",
+        "cs/ccxt/exchanges/pro/okxus.cs",
+        "go/v4/okxus.go",
+        "go/v4/pro/okxus.go"
+      ],
+      "onetrading.com": [
+        "README.md",
+        "cs/ccxt/exchanges/onetrading.cs",
+        "go/v4/onetrading.go",
+        "js/src/onetrading.js",
+        "php/async/onetrading.php"
+      ],
+      "ox.fun": [
+        "README.md",
+        "cs/ccxt/exchanges/oxfun.cs",
+        "go/v4/oxfun.go",
+        "js/src/oxfun.js",
+        "php/async/oxfun.php"
+      ],
+      "p2pb2b.com": [
+        "README.md",
+        "cs/ccxt/exchanges/p2b.cs",
+        "go/v4/p2b.go",
+        "js/src/p2b.js",
+        "php/async/p2b.php"
+      ],
+      "app.pacifica.fi": [
+        "README.md",
+        "cs/ccxt/exchanges/pacifica.cs",
+        "go/v4/pacifica.go",
+        "js/src/pacifica.js",
+        "php/async/pacifica.php"
+      ],
+      "app.paradex.trade": [
+        "README.md",
+        "cs/ccxt/exchanges/paradex.cs",
+        "go/v4/paradex.go",
+        "js/src/paradex.js",
+        "php/async/paradex.php"
+      ],
+      "www.paymium.com": [
+        "README.md",
+        "cs/ccxt/exchanges/paymium.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "phemex.com": [
+        "README.md",
+        "cs/ccxt/exchanges/phemex.cs",
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst"
+      ],
+      "poloniex.com": [
+        "README.md",
+        "cs/ccxt/exchanges/poloniex.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "tokocrypto.com": [
+        "README.md",
+        "cs/ccxt/exchanges/tokocrypto.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "www.toobit.com": [
+        "README.md",
+        "cs/ccxt/exchanges/toobit.cs",
+        "go/v4/toobit.go",
+        "js/src/toobit.js",
+        "php/async/toobit.php"
+      ],
+      "upbit.com": [
+        "README.md",
+        "cs/ccxt/exchanges/upbit.cs",
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst"
+      ],
+      "wx.network": [
+        "README.md",
+        "cs/ccxt/exchanges/wavesexchange.cs",
+        "go/v4/wavesexchange.go",
+        "js/src/wavesexchange.js",
+        "php/async/wavesexchange.php"
+      ],
+      "www.weex.com": [
+        "README.md",
+        "cs/ccxt/exchanges/pro/weex.cs",
+        "cs/ccxt/exchanges/pro/wrappers/weex.cs",
+        "cs/ccxt/exchanges/weex.cs",
+        "cs/ccxt/wrappers/weex.cs"
+      ],
+      "whitebit.com": [
+        "README.md",
+        "cs/ccxt/exchanges/whitebit.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "www.xt.com": [
+        "README.md",
+        "cs/ccxt/exchanges/xt.cs",
+        "go/v4/xt.go",
+        "js/src/xt.js",
+        "php/async/xt.php"
+      ],
+      "www.yobit.net": [
+        "README.md",
+        "cs/ccxt/exchanges/yobit.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "zaif.jp": [
+        "README.md",
+        "cs/ccxt/exchanges/zaif.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "www.zebpay.com": [
+        "README.md",
+        "cs/ccxt/exchanges/zebpay.cs",
+        "go/v4/zebpay.go",
+        "js/src/zebpay.js",
+        "php/async/zebpay.php"
+      ],
+      "pypi.python.org": [
+        "README.md",
+        "doc/readme.rst",
+        "python/README.md",
+        "python/README.rst",
+        "wiki/Install.md"
+      ],
+      "www.nuget.org": [
+        "README.md",
+        "python/README.md",
+        "wiki/Install.md"
+      ],
+      "cdn.jsdelivr.net": [
+        ".claude/skills/ccxt-typescript/SKILL.md",
+        "README.md",
+        "doc/readme.rst",
+        "python/README.md",
+        "python/README.rst"
+      ],
+      "unpkg.com": [
+        "README.md",
+        "cli/ts/charts/ohlcv.ts",
+        "doc/readme.rst",
+        "examples/ccxt.pro/html/watchTicker.html",
+        "examples/html/basic-cors-proxy.html"
+      ],
+      "reactphp.org": [
+        "README.md",
+        "doc/ccxt.pro.manual.rst",
+        "doc/manual.rst",
+        "doc/readme.rst",
+        "python/README.md"
+      ],
+      "api.star-history.com": [
+        "README.md",
+        "python/README.md"
+      ],
+      "188.245.226.105:8911": [
+        "examples/js/proxy-usage.js",
+        "examples/php/proxy-usage.php",
+        "examples/py/proxy-usage.py",
+        "examples/ts/proxy-usage.ts",
+        "skip-tests.json"
+      ],
+      "forum.hollaex.com": [
+        "skip-tests.json"
+      ],
+      "api.kucoin.com": [
+        "cs/ccxt/exchanges/kucoin.cs",
+        "go/v4/kucoin.go",
+        "js/src/kucoin.js",
+        "php/async/kucoin.php",
+        "php/kucoin.php"
+      ],
+      "aka.ms": [
+        "tsconfig.json"
+      ],
+      "proxy:8080": [
+        ".claude/skills/ccxt-csharp/SKILL.md",
+        ".claude/skills/ccxt-go/SKILL.md",
+        ".claude/skills/ccxt-php/SKILL.md",
+        ".claude/skills/ccxt-python/SKILL.md",
+        ".claude/skills/ccxt-typescript/SKILL.md"
+      ],
+      "discord.gg": [
+        ".github/ISSUE_TEMPLATE/config.yml",
+        "doc/readme.rst",
+        "python/README.rst",
+        "python/setup.py"
+      ],
+      "www.binance.com": [
+        ".github/ISSUE_TEMPLATE/NEW_EXCHANGE.yml",
+        "cs/ccxt/base/Exchange.BaseMethods.cs",
+        "cs/ccxt/exchanges/binance.cs",
+        "cs/ccxt/exchanges/pro/binance.cs",
+        "doc/_static/javascript/index.js"
+      ],
+      "binance-docs.github.io": [
+        ".github/ISSUE_TEMPLATE/NEW_EXCHANGE.yml",
+        "cs/ccxt/exchanges/binancecoinm.cs",
+        "cs/ccxt/exchanges/binanceusdm.cs",
+        "cs/ccxt/exchanges/pro/binance.cs",
+        "cs/ccxt/exchanges/tokocrypto.cs"
+      ],
+      "$": [
+        ".github/workflows/cs.yml",
+        ".github/workflows/go-app.yml",
+        ".github/workflows/js.yml",
+        ".github/workflows/php.yml",
+        ".github/workflows/python.yml"
+      ],
+      "api.ipify.org": [
+        ".github/workflows/js.yml",
+        "cs/tests/Generated/Exchange/test.proxies.cs",
+        "examples/cs/examples/proxy-usage.cs",
+        "examples/js/proxy-usage.js",
+        "examples/php/proxy-usage.php"
+      ],
+      "cors-anywhere.herokuapp.com": [
+        "cli/ts/helpers.ts",
+        "doc/manual.rst",
+        "examples/html/basic-cors-proxy.html",
+        "examples/html/binance-cors-proxy.html",
+        "examples/js/arbitrage-pairs.js"
+      ],
+      "api.nuget.org": [
+        "cs/deploy.sh"
+      ],
+      "gist.github.com": [
+        "cs/ccxt/base/Exchange.Crypto.cs",
+        "cs/ccxt/static/MiniMessagePack/README.md",
+        "examples/py/sample-local-proxy-server-with-cors.py",
+        "js/src/static_dependencies/fflake/browser.js",
+        "js/src/static_dependencies/messagepack/msgpack.js"
+      ],
+      "nzpcmad.blogspot.com": [
+        "cs/ccxt/base/Exchange.cs"
+      ],
+      "stackoverflow.com": [
+        "cs/ccxt/base/Exchange.Number.cs",
+        "cs/ccxt/static/Nethereum/Nethereum.ABI/ABIDeserialisation/ABIStringSignatureDeserialiser.cs",
+        "cs/ccxt/static/Nethereum/Nethereum.Util/BigDecimal.cs",
+        "cs/ccxt/static/Nethereum/Nethereum.Util/TaskExtensions.cs",
+        "examples/php/sample-local-proxy-server-with-cors.php"
+      ],
+      "aftermath.finance": [
+        "cs/ccxt/exchanges/aftermath.cs",
+        "go/v4/aftermath.go",
+        "js/src/aftermath.js",
+        "php/aftermath.php",
+        "php/async/aftermath.php"
+      ],
+      "testnet.aftermath.finance": [
+        "cs/ccxt/exchanges/aftermath.cs",
+        "cs/ccxt/exchanges/pro/aftermath.cs",
+        "cs/ccxt/exchanges/pro/wrappers/aftermath.cs",
+        "cs/ccxt/wrappers/aftermath.cs",
+        "go/v4/aftermath.go"
+      ],
+      "docs.aftermath.finance": [
+        "cs/ccxt/exchanges/aftermath.cs",
+        "go/v4/aftermath.go",
+        "js/src/aftermath.js",
+        "php/aftermath.php",
+        "php/async/aftermath.php"
+      ],
+      "broker-api": [
+        "cs/ccxt/exchanges/alpaca.cs",
+        "go/v4/alpaca.go",
+        "js/src/alpaca.js",
+        "php/alpaca.php",
+        "php/async/alpaca.php"
+      ],
+      "data": [
+        "cs/ccxt/exchanges/alpaca.cs",
+        "go/v4/alpaca.go",
+        "js/src/alpaca.js",
+        "php/alpaca.php",
+        "php/async/alpaca.php"
+      ],
+      "broker-api.sandbox": [
+        "cs/ccxt/exchanges/alpaca.cs",
+        "go/v4/alpaca.go",
+        "js/src/alpaca.js",
+        "php/alpaca.php",
+        "php/async/alpaca.php"
+      ],
+      "paper-api": [
+        "cs/ccxt/exchanges/alpaca.cs",
+        "go/v4/alpaca.go",
+        "js/src/alpaca.js",
+        "php/alpaca.php",
+        "php/async/alpaca.php"
+      ],
+      "docs.alpaca.markets": [
+        "cs/ccxt/exchanges/alpaca.cs",
+        "cs/ccxt/exchanges/pro/alpaca.cs",
+        "cs/ccxt/exchanges/pro/wrappers/alpaca.cs",
+        "cs/ccxt/wrappers/alpaca.cs",
+        "go/v4/alpaca.go"
+      ],
+      "testnet.omni.apex.exchange": [
+        "cs/ccxt/exchanges/apex.cs",
+        "go/v4/apex.go",
+        "js/src/apex.js",
+        "php/apex.php",
+        "php/async/apex.php"
+      ],
+      "apex.exchange": [
+        "cs/ccxt/exchanges/apex.cs",
+        "cs/ccxt/exchanges/pro/apex.cs",
+        "go/v4/apex.go",
+        "go/v4/pro/apex.go",
+        "js/src/apex.js"
+      ],
+      "api-docs.pro.apex.exchange": [
+        "cs/ccxt/exchanges/apex.cs",
+        "cs/ccxt/exchanges/pro/apex.cs",
+        "cs/ccxt/exchanges/pro/wrappers/apex.cs",
+        "cs/ccxt/wrappers/apex.cs",
+        "go/v4/apex.go"
+      ],
+      "apex-pro.gitbook.io": [
+        "cs/ccxt/exchanges/apex.cs",
+        "cs/ccxt/exchanges/pro/apex.cs",
+        "go/v4/apex.go",
+        "go/v4/pro/apex.go",
+        "js/src/apex.js"
+      ],
+      "static-pro.apex.exchange": [
+        "cs/ccxt/exchanges/apex.cs",
+        "go/v4/apex.go",
+        "js/src/apex.js",
+        "php/apex.php",
+        "php/async/apex.php"
+      ],
+      "arb.pro.apex.exchange": [
+        "cs/ccxt/exchanges/apex.cs",
+        "go/v4/apex.go",
+        "js/src/apex.js",
+        "php/apex.php",
+        "php/async/apex.php"
+      ],
+      "arbiscan.io": [
+        "cs/ccxt/exchanges/apex.cs",
+        "go/v4/apex.go",
+        "js/src/apex.js",
+        "php/apex.php",
+        "php/async/apex.php"
+      ],
+      "arb-mainnet.g.alchemy.com": [
+        "cs/ccxt/exchanges/apex.cs",
+        "go/v4/apex.go",
+        "js/src/apex.js",
+        "php/apex.php",
+        "php/async/apex.php"
+      ],
+      "info.arkm.com": [
+        "cs/ccxt/exchanges/arkham.cs",
+        "go/v4/arkham.go",
+        "js/src/arkham.js",
+        "php/arkham.php",
+        "php/async/arkham.php"
+      ],
+      "static.arkhamintelligence.com": [
+        "cs/ccxt/exchanges/arkham.cs",
+        "go/v4/arkham.go",
+        "js/src/arkham.js",
+        "php/arkham.php",
+        "php/async/arkham.php"
+      ],
+      "api-test.ascendex-sandbox.com": [
+        "cs/ccxt/exchanges/ascendex.cs",
+        "go/v4/ascendex.go",
+        "js/src/ascendex.js",
+        "php/ascendex.php",
+        "php/async/ascendex.php"
+      ],
+      "ascendex.github.io": [
+        "cs/ccxt/exchanges/ascendex.cs",
+        "cs/ccxt/exchanges/pro/ascendex.cs",
+        "cs/ccxt/exchanges/pro/wrappers/ascendex.cs",
+        "cs/ccxt/wrappers/ascendex.cs",
+        "doc/ccxt.pro.manual.rst"
+      ],
+      "fapi.asterdex.com": [
+        "cs/ccxt/exchanges/aster.cs",
+        "go/v4/aster.go",
+        "js/src/aster.js",
+        "php/aster.php",
+        "php/async/aster.php"
+      ],
+      "sapi.asterdex.com": [
+        "cs/ccxt/exchanges/aster.cs",
+        "go/v4/aster.go",
+        "js/src/aster.js",
+        "php/aster.php",
+        "php/async/aster.php"
+      ],
+      "docs.asterdex.com": [
+        "cs/ccxt/exchanges/aster.cs",
+        "go/v4/aster.go",
+        "js/src/aster.js",
+        "php/aster.php",
+        "php/async/aster.php"
+      ],
+      "asterdex.github.io": [
+        "cs/ccxt/exchanges/aster.cs",
+        "cs/ccxt/exchanges/pro/aster.cs",
+        "cs/ccxt/exchanges/pro/wrappers/aster.cs",
+        "cs/ccxt/wrappers/aster.cs",
+        "go/v4/aster.go"
+      ],
+      "api.backpack.exchange": [
+        "cs/ccxt/exchanges/backpack.cs",
+        "go/v4/backpack.go",
+        "js/src/backpack.js",
+        "php/async/backpack.php",
+        "php/backpack.php"
+      ],
+      "docs.backpack.exchange": [
+        "cs/ccxt/exchanges/backpack.cs",
+        "cs/ccxt/exchanges/grvt.cs",
+        "cs/ccxt/exchanges/pro/backpack.cs",
+        "cs/ccxt/exchanges/pro/deepcoin.cs",
+        "cs/ccxt/exchanges/pro/grvt.cs"
+      ],
+      "developer-pro.bitmart.com": [
+        "cs/ccxt/exchanges/backpack.cs",
+        "cs/ccxt/exchanges/bitmart.cs",
+        "cs/ccxt/exchanges/pro/bitmart.cs",
+        "cs/ccxt/exchanges/pro/wrappers/bitmart.cs",
+        "cs/ccxt/wrappers/backpack.cs"
+      ],
+      "api.bequant.io": [
+        "cs/ccxt/exchanges/bequant.cs",
+        "cs/ccxt/exchanges/pro/bequant.cs",
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst"
+      ],
+      "big.one": [
+        "cs/ccxt/exchanges/bigone.cs",
+        "go/v4/bigone.go",
+        "js/src/bigone.js",
+        "php/async/bigone.php",
+        "php/bigone.php"
+      ],
+      "open.big.one": [
+        "cs/ccxt/exchanges/bigone.cs",
+        "cs/ccxt/exchanges/oxfun.cs",
+        "cs/ccxt/exchanges/toobit.cs",
+        "cs/ccxt/wrappers/bigone.cs",
+        "cs/ccxt/wrappers/oxfun.cs"
+      ],
+      "bigone.zendesk.com": [
+        "cs/ccxt/exchanges/bigone.cs",
+        "go/v4/bigone.go",
+        "js/src/bigone.js",
+        "php/async/bigone.php",
+        "php/bigone.php"
+      ],
+      "testnet.binancefuture.com": [
+        "cs/ccxt/exchanges/binance.cs",
+        "go/v4/binance.go",
+        "js/src/binance.js",
+        "php/async/binance.php",
+        "php/binance.php"
+      ],
+      "testnet.binance.vision": [
+        "cs/ccxt/exchanges/binance.cs",
+        "go/v4/binance.go",
+        "js/src/binance.js",
+        "php/async/binance.php",
+        "php/binance.php"
+      ],
+      "demo-dapi.binance.com": [
+        "cs/ccxt/exchanges/binance.cs",
+        "go/v4/binance.go",
+        "js/src/binance.js",
+        "php/async/binance.php",
+        "php/binance.php"
+      ],
+      "demo-fapi.binance.com": [
+        "cs/ccxt/exchanges/binance.cs",
+        "go/v4/binance.go",
+        "js/src/binance.js",
+        "php/async/binance.php",
+        "php/binance.php"
+      ],
+      "demo-api.binance.com": [
+        "cs/ccxt/exchanges/binance.cs",
+        "go/v4/binance.go",
+        "js/src/binance.js",
+        "php/async/binance.php",
+        "php/binance.php"
+      ],
+      "api.binance.com": [
+        "cs/ccxt/exchanges/binance.cs",
+        "cs/ccxt/exchanges/tokocrypto.cs",
+        "cs/tests/Generated/TestMethods.cs",
+        "go/tests/base/tests.go",
+        "go/v4/binance.go"
+      ],
+      "dapi.binance.com": [
+        "cs/ccxt/exchanges/binance.cs",
+        "go/v4/binance.go",
+        "js/src/binance.js",
+        "php/async/binance.php",
+        "php/binance.php"
+      ],
+      "eapi.binance.com": [
+        "cs/ccxt/exchanges/binance.cs",
+        "go/v4/binance.go",
+        "js/src/binance.js",
+        "php/async/binance.php",
+        "php/binance.php"
+      ],
+      "fapi.binance.com": [
+        "cs/ccxt/exchanges/binance.cs",
+        "cs/ccxt/exchanges/pro/binance.cs",
+        "go/v4/binance.go",
+        "go/v4/pro/binance.go",
+        "js/src/binance.js"
+      ],
+      "papi.binance.com": [
+        "cs/ccxt/exchanges/binance.cs",
+        "go/v4/binance.go",
+        "js/src/binance.js",
+        "php/async/binance.php",
+        "php/binance.php"
+      ],
+      "developers.binance.com": [
+        "cs/ccxt/exchanges/binance.cs",
+        "cs/ccxt/exchanges/binancecoinm.cs",
+        "cs/ccxt/exchanges/binanceusdm.cs",
+        "cs/ccxt/exchanges/hashkey.cs",
+        "cs/ccxt/exchanges/pro/binance.cs"
+      ],
+      "demo.binance.com": [
+        "cs/ccxt/exchanges/binance.cs",
+        "go/v4/binance.go",
+        "js/src/binance.d.ts",
+        "js/src/binance.js",
+        "php/async/binance.php"
+      ],
+      "etherscan.io": [
+        "cs/ccxt/exchanges/binance.cs",
+        "cs/ccxt/exchanges/bitget.cs",
+        "cs/ccxt/exchanges/bitteam.cs",
+        "cs/ccxt/exchanges/coinbaseexchange.cs",
+        "cs/ccxt/exchanges/hitbtc.cs"
+      ],
+      "t.me": [
+        "cs/ccxt/exchanges/binance.cs",
+        "cs/ccxt/exchanges/grvt.cs",
+        "doc/readme.rst",
+        "go/v4/binance.go",
+        "go/v4/grvt.go"
+      ],
+      "bithomp.com": [
+        "cs/ccxt/exchanges/binance.cs",
+        "go/v4/binance.go",
+        "js/src/binance.js",
+        "php/async/binance.php",
+        "php/binance.php"
+      ],
+      "bscscan.com": [
+        "cs/ccxt/exchanges/binance.cs",
+        "cs/ccxt/exchanges/bitteam.cs",
+        "go/v4/binance.go",
+        "go/v4/bitteam.go",
+        "js/src/binance.js"
+      ],
+      "demo-api": [
+        "cs/ccxt/exchanges/binance.cs",
+        "go/v4/binance.go",
+        "js/src/binance.js",
+        "php/async/binance.php",
+        "php/binance.php"
+      ],
+      "dapi": [
+        "cs/ccxt/exchanges/binance.cs",
+        "go/v4/binance.go",
+        "js/src/binance.js",
+        "php/async/binance.php",
+        "php/binance.php"
+      ],
+      "demo-dapi": [
+        "cs/ccxt/exchanges/binance.cs",
+        "go/v4/binance.go",
+        "js/src/binance.js",
+        "php/async/binance.php",
+        "php/binance.php"
+      ],
+      "fapi": [
+        "cs/ccxt/exchanges/binance.cs",
+        "go/v4/binance.go",
+        "js/src/binance.js",
+        "php/async/binance.php",
+        "php/binance.php"
+      ],
+      "demo-fapi": [
+        "cs/ccxt/exchanges/binance.cs",
+        "go/v4/binance.go",
+        "js/src/binance.js",
+        "php/async/binance.php",
+        "php/binance.php"
+      ],
+      "eapi": [
+        "cs/ccxt/exchanges/binance.cs",
+        "go/v4/binance.go",
+        "js/src/binance.js",
+        "php/async/binance.php",
+        "php/binance.php"
+      ],
+      "papi": [
+        "cs/ccxt/exchanges/binance.cs",
+        "go/v4/binance.go",
+        "js/src/binance.js",
+        "php/async/binance.php",
+        "php/binance.php"
+      ],
+      "api.binance.us": [
+        "cs/ccxt/exchanges/binanceus.cs",
+        "cs/ccxt/exchanges/pro/binanceus.cs",
+        "cs/tests/Generated/TestMethods.cs",
+        "go/tests/base/tests.go",
+        "go/v4/binanceus.go"
+      ],
+      "open-api": [
+        "cs/ccxt/exchanges/bingx.cs",
+        "go/v4/bingx.go",
+        "js/src/bingx.js",
+        "php/async/bingx.php",
+        "php/bingx.php"
+      ],
+      "open-api-vst": [
+        "cs/ccxt/exchanges/bingx.cs",
+        "go/v4/bingx.go",
+        "js/src/bingx.js",
+        "php/async/bingx.php",
+        "php/bingx.php"
+      ],
+      "bingx-api.github.io": [
+        "cs/ccxt/exchanges/bingx.cs",
+        "cs/ccxt/exchanges/pro/bingx.cs",
+        "cs/ccxt/exchanges/pro/wrappers/bingx.cs",
+        "cs/ccxt/wrappers/bingx.cs",
+        "go/v4/bingx.go"
+      ],
+      "www.bit2c.co.il": [
+        "cs/ccxt/exchanges/bit2c.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "public": [
+        "cs/ccxt/exchanges/bitbank.cs",
+        "go/v4/bitbank.go",
+        "js/src/bitbank.js",
+        "php/async/bitbank.php",
+        "php/bitbank.php"
+      ],
+      "docs.bitbank.cc": [
+        "cs/ccxt/exchanges/bitbank.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "public.bitbank.cc": [
+        "cs/ccxt/exchanges/bitbank.cs",
+        "go/v4/bitbank.go",
+        "js/src/bitbank.js",
+        "php/async/bitbank.php",
+        "php/bitbank.php"
+      ],
+      "bitbns.com": [
+        "cs/ccxt/exchanges/bitbns.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "docs.bitbns.com": [
+        "cs/ccxt/exchanges/bitbns.cs",
+        "cs/ccxt/wrappers/bitbns.cs",
+        "go/v4/bitbns.go",
+        "go/v4/bitbns_wrapper.go",
+        "js/src/bitbns.d.ts"
+      ],
+      "api.bitfinex.com": [
+        "cs/ccxt/exchanges/bitfinex.cs",
+        "go/v4/bitfinex.go",
+        "js/src/bitfinex.js",
+        "php/async/bitfinex.php",
+        "php/bitfinex.php"
+      ],
+      "api-pub.bitfinex.com": [
+        "cs/ccxt/exchanges/bitfinex.cs",
+        "go/v4/bitfinex.go",
+        "js/src/bitfinex.js",
+        "php/async/bitfinex.php",
+        "php/bitfinex.php"
+      ],
+      "docs.bitfinex.com": [
+        "cs/ccxt/exchanges/bitfinex.cs",
+        "cs/ccxt/wrappers/bitfinex.cs",
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst"
+      ],
+      "mainnet.aion.network": [
+        "cs/ccxt/exchanges/bitfinex.cs",
+        "go/v4/bitfinex.go",
+        "js/src/bitfinex.js",
+        "php/async/bitfinex.php",
+        "php/bitfinex.php"
+      ],
+      "lightning.bitflyer.com": [
+        "cs/ccxt/exchanges/bitflyer.cs",
+        "cs/ccxt/wrappers/bitflyer.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "bitgetlimited.github.io": [
+        "cs/ccxt/exchanges/bitget.cs",
+        "cs/ccxt/wrappers/bitget.cs",
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst"
+      ],
+      "www.bitget.cc": [
+        "cs/ccxt/exchanges/bitget.cs",
+        "go/v4/bitget.go",
+        "js/src/bitget.js",
+        "php/async/bitget.php",
+        "php/bitget.php"
+      ],
+      "blockchair.com": [
+        "cs/ccxt/exchanges/bitget.cs",
+        "cs/ccxt/exchanges/hollaex.cs",
+        "go/v4/bitget.go",
+        "go/v4/hollaex.go",
+        "js/src/bitget.js"
+      ],
+      "apidocs.bithumb.com": [
+        "cs/ccxt/exchanges/bithumb.cs",
+        "cs/ccxt/exchanges/pro/bithumb.cs",
+        "cs/ccxt/exchanges/pro/wrappers/bithumb.cs",
+        "cs/ccxt/wrappers/bithumb.cs",
+        "doc/exchange-markets-by-country.rst"
+      ],
+      "en.bithumb.com": [
+        "cs/ccxt/exchanges/bithumb.cs",
+        "go/v4/bithumb.go",
+        "js/src/bithumb.js",
+        "php/async/bithumb.php",
+        "php/bithumb.php"
+      ],
+      "api-cloud": [
+        "cs/ccxt/exchanges/bitmart.cs",
+        "go/v4/bitmart.go",
+        "js/src/bitmart.js",
+        "php/async/bitmart.php",
+        "php/bitmart.php"
+      ],
+      "api-cloud-v2": [
+        "cs/ccxt/exchanges/bitmart.cs",
+        "go/v4/bitmart.go",
+        "js/src/bitmart.js",
+        "php/async/bitmart.php",
+        "php/bitmart.php"
+      ],
+      "testnet.bitmex.com": [
+        "cs/ccxt/exchanges/bitmex.cs",
+        "go/v4/bitmex.go",
+        "js/src/bitmex.js",
+        "php/async/bitmex.php",
+        "php/bitmex.php"
+      ],
+      "docs.bitmex.com": [
+        "cs/ccxt/exchanges/bitmex.cs",
+        "cs/ccxt/wrappers/bitmex.cs",
+        "go/v4/bitmex.go",
+        "go/v4/bitmex_wrapper.go",
+        "js/src/bitmex.d.ts"
+      ],
+      "api.bitopro.com": [
+        "cs/ccxt/exchanges/bitopro.cs",
+        "go/v4/bitopro.go",
+        "js/src/bitopro.js",
+        "php/async/bitopro.php",
+        "php/bitopro.php"
+      ],
+      "fapi.bitrue.com": [
+        "cs/ccxt/exchanges/bitrue.cs",
+        "go/v4/bitrue.go",
+        "js/src/bitrue.js",
+        "php/async/bitrue.php",
+        "php/bitrue.php"
+      ],
+      "bitrue.zendesk.com": [
+        "cs/ccxt/exchanges/bitrue.cs",
+        "go/v4/bitrue.go",
+        "js/src/bitrue.js",
+        "php/async/bitrue.php",
+        "php/bitrue.php"
+      ],
+      "stage.bitso.com": [
+        "cs/ccxt/exchanges/bitso.cs",
+        "go/v4/bitso.go",
+        "js/src/bitso.js",
+        "php/async/bitso.php",
+        "php/bitso.php"
+      ],
+      "docs.bitso.com": [
+        "cs/ccxt/exchanges/bitso.cs",
+        "cs/ccxt/wrappers/bitso.cs",
+        "go/v4/bitso.go",
+        "go/v4/bitso_wrapper.go",
+        "js/src/bitso.d.ts"
+      ],
+      "history.bit.team": [
+        "cs/ccxt/exchanges/bitteam.cs",
+        "go/v4/bitteam.go",
+        "js/src/bitteam.js",
+        "php/async/bitteam.php",
+        "php/bitteam.php"
+      ],
+      "ethereum.org": [
+        "cs/ccxt/exchanges/bitteam.cs",
+        "go/v4/bitteam.go",
+        "js/src/bitteam.js",
+        "php/async/bitteam.php",
+        "php/bitteam.php"
+      ],
+      "cryptologos.cc": [
+        "cs/ccxt/exchanges/bitteam.cs",
+        "go/v4/bitteam.go",
+        "js/src/bitteam.js",
+        "php/async/bitteam.php",
+        "php/bitteam.php"
+      ],
+      "tether.to": [
+        "cs/ccxt/exchanges/bitteam.cs",
+        "cs/ccxt/exchanges/hollaex.cs",
+        "go/v4/bitteam.go",
+        "go/v4/hollaex.go",
+        "js/src/bitteam.js"
+      ],
+      "tronscan.org": [
+        "cs/ccxt/exchanges/bitteam.cs",
+        "cs/ccxt/exchanges/coinex.cs",
+        "cs/ccxt/exchanges/weex.cs",
+        "go/v4/bitteam.go",
+        "go/v4/coinex.go"
+      ],
+      "api-doc.bittrade.co.jp": [
+        "cs/ccxt/exchanges/bittrade.cs",
+        "go/v4/bittrade.go",
+        "js/src/bittrade.js",
+        "php/async/bittrade.php",
+        "php/bittrade.php"
+      ],
+      "api.bitvavo.com": [
+        "cs/ccxt/exchanges/bitvavo.cs",
+        "go/v4/bitvavo.go",
+        "js/src/bitvavo.js",
+        "php/async/bitvavo.php",
+        "php/bitvavo.php"
+      ],
+      "docs.bitvavo.com": [
+        "cs/ccxt/exchanges/bitvavo.cs",
+        "cs/ccxt/exchanges/pro/bitvavo.cs",
+        "cs/ccxt/exchanges/pro/wrappers/bitvavo.cs",
+        "cs/ccxt/wrappers/bitvavo.cs",
+        "doc/ccxt.pro.manual.rst"
+      ],
+      "testnet-api.delta.exchange": [
+        "cs/ccxt/exchanges/blockchaincom.cs",
+        "cs/ccxt/exchanges/delta.cs",
+        "go/v4/blockchaincom.go",
+        "go/v4/delta.go",
+        "js/src/blockchaincom.js"
+      ],
+      "api.blockchain.com": [
+        "cs/ccxt/exchanges/blockchaincom.cs",
+        "cs/ccxt/wrappers/blockchaincom.cs",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "exchange.blockchain.com": [
+        "cs/ccxt/exchanges/blockchaincom.cs",
+        "cs/ccxt/exchanges/pro/blockchaincom.cs",
+        "cs/ccxt/exchanges/pro/wrappers/blockchaincom.cs",
+        "go/v4/blockchaincom.go",
+        "go/v4/pro/blockchaincom.go"
+      ],
+      "openapi.blofin.com": [
+        "cs/ccxt/exchanges/blofin.cs",
+        "go/v4/blofin.go",
+        "js/src/blofin.js",
+        "php/async/blofin.php",
+        "php/blofin.php"
+      ],
+      "demo-trading-openapi.blofin.com": [
+        "cs/ccxt/exchanges/blofin.cs",
+        "go/v4/blofin.go",
+        "js/src/blofin.js",
+        "php/async/blofin.php",
+        "php/blofin.php"
+      ],
+      "www.blofin.com": [
+        "cs/ccxt/exchanges/blofin.cs",
+        "go/v4/blofin.go",
+        "js/src/blofin.js",
+        "php/async/blofin.php",
+        "php/blofin.php"
+      ],
+      "docs.blofin.com": [
+        "cs/ccxt/exchanges/blofin.cs",
+        "cs/ccxt/exchanges/pro/blofin.cs",
+        "cs/ccxt/exchanges/pro/wrappers/blofin.cs",
+        "cs/ccxt/wrappers/blofin.cs",
+        "go/v4/blofin.go"
+      ],
+      "blog.btcbox.jp": [
+        "cs/ccxt/exchanges/btcbox.cs",
+        "cs/ccxt/wrappers/btcbox.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "support.btcbox.co.jp": [
+        "cs/ccxt/exchanges/btcbox.cs",
+        "go/v4/btcbox.go",
+        "js/src/btcbox.js",
+        "php/async/btcbox.php",
+        "php/btcbox.php"
+      ],
+      "api.btcmarkets.net": [
+        "cs/ccxt/exchanges/btcmarkets.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "docs.btcmarkets.net": [
+        "cs/ccxt/exchanges/btcmarkets.cs",
+        "cs/ccxt/wrappers/btcmarkets.cs",
+        "go/v4/btcmarkets.go",
+        "go/v4/btcmarkets_wrapper.go",
+        "js/src/btcmarkets.d.ts"
+      ],
+      "api.btcturk.com": [
+        "cs/ccxt/exchanges/btcturk.cs",
+        "go/v4/btcturk.go",
+        "js/src/btcturk.js",
+        "php/async/btcturk.php",
+        "php/btcturk.php"
+      ],
+      "graph-api.btcturk.com": [
+        "cs/ccxt/exchanges/btcturk.cs",
+        "go/v4/btcturk.go",
+        "js/src/btcturk.js",
+        "php/async/btcturk.php",
+        "php/btcturk.php"
+      ],
+      "docs.btcturk.com": [
+        "cs/ccxt/exchanges/btcturk.cs",
+        "cs/ccxt/wrappers/btcturk.cs",
+        "go/v4/btcturk.go",
+        "go/v4/btcturk_wrapper.go",
+        "js/src/btcturk.d.ts"
+      ],
+      "api.exchange.bullish.com": [
+        "cs/ccxt/exchanges/bullish.cs",
+        "cs/ccxt/exchanges/pro/bullish.cs",
+        "cs/ccxt/exchanges/pro/wrappers/bullish.cs",
+        "cs/ccxt/wrappers/bullish.cs",
+        "go/v4/bullish.go"
+      ],
+      "api.simnext.bullish-test.com": [
+        "cs/ccxt/exchanges/bullish.cs",
+        "go/v4/bullish.go",
+        "js/src/bullish.js",
+        "php/async/bullish.php",
+        "php/bullish.php"
+      ],
+      "api-testnet": [
+        "cs/ccxt/exchanges/bybit.cs",
+        "go/v4/bybit.go",
+        "js/src/bybit.js",
+        "php/async/bybit.php",
+        "php/bybit.php"
+      ],
+      "api-demo": [
+        "cs/ccxt/exchanges/bybit.cs",
+        "go/v4/bybit.go",
+        "js/src/bybit.js",
+        "php/async/bybit.php",
+        "php/bybit.php"
+      ],
+      "bybit-exchange.github.io": [
+        "cs/ccxt/exchanges/bybit.cs",
+        "cs/ccxt/exchanges/pro/bybit.cs",
+        "cs/ccxt/exchanges/pro/wrappers/bybit.cs",
+        "cs/ccxt/wrappers/bybit.cs",
+        "doc/ccxt.pro.manual.rst"
+      ],
+      "help.bybit.com": [
+        "cs/ccxt/exchanges/bybit.cs",
+        "go/v4/bybit.go",
+        "js/src/bybit.js",
+        "php/async/bybit.php",
+        "php/bybit.php"
+      ],
+      "s1.bycsi.com": [
+        "cs/ccxt/exchanges/bybit.cs",
+        "go/v4/bybit.go",
+        "js/src/bybit.js",
+        "php/async/bybit.php",
+        "php/bybit.php"
+      ],
+      "t1.bycsi.com": [
+        "cs/ccxt/exchanges/bybit.cs",
+        "go/v4/bybit.go",
+        "js/src/bybit.js",
+        "php/async/bybit.php",
+        "php/bybit.php"
+      ],
+      "api.bybit.com": [
+        "cs/ccxt/exchanges/bybit.cs",
+        "go/v4/bybit.go",
+        "js/src/bybit.js",
+        "php/async/bybit.php",
+        "php/bybit.php"
+      ],
+      "api.bydfi.com": [
+        "cs/ccxt/exchanges/bydfi.cs",
+        "go/v4/bydfi.go",
+        "js/src/bydfi.js",
+        "php/async/bydfi.php",
+        "php/bydfi.php"
+      ],
+      "bydfi.com": [
+        "cs/ccxt/exchanges/bydfi.cs",
+        "go/v4/bydfi.go",
+        "js/src/bydfi.js",
+        "php/async/bydfi.php",
+        "php/bydfi.php"
+      ],
+      "developers.bydfi.com": [
+        "cs/ccxt/exchanges/bydfi.cs",
+        "cs/ccxt/exchanges/pro/bydfi.cs",
+        "cs/ccxt/exchanges/pro/wrappers/bydfi.cs",
+        "cs/ccxt/wrappers/bydfi.cs",
+        "go/v4/bydfi.go"
+      ],
+      "trade.cex.io": [
+        "cs/ccxt/exchanges/cex.cs",
+        "cs/ccxt/wrappers/cex.cs",
+        "go/v4/cex.go",
+        "go/v4/cex_wrapper.go",
+        "js/src/cex.d.ts"
+      ],
+      "api.coinbase.com": [
+        "cs/ccxt/exchanges/coinbase.cs",
+        "go/v4/coinbase.go",
+        "js/src/coinbase.js",
+        "php/async/coinbase.php",
+        "php/coinbase.php"
+      ],
+      "developers.coinbase.com": [
+        "cs/ccxt/exchanges/coinbase.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "docs.cloud.coinbase.com": [
+        "cs/ccxt/exchanges/coinbase.cs",
+        "cs/ccxt/exchanges/coinbaseexchange.cs",
+        "cs/ccxt/exchanges/coinbaseinternational.cs",
+        "cs/ccxt/exchanges/pro/coinbase.cs",
+        "cs/ccxt/exchanges/pro/coinbaseinternational.cs"
+      ],
+      "support.coinbase.com": [
+        "cs/ccxt/exchanges/coinbase.cs",
+        "go/v4/coinbase.go",
+        "js/src/coinbase.js",
+        "php/async/coinbase.php",
+        "php/coinbase.php"
+      ],
+      "dynamic-assets.coinbase.com": [
+        "cs/ccxt/exchanges/coinbase.cs",
+        "go/v4/coinbase.go",
+        "js/src/coinbase.js",
+        "php/async/coinbase.php",
+        "php/coinbase.php"
+      ],
+      "docs.cdp.coinbase.com": [
+        "cs/ccxt/exchanges/coinbase.cs",
+        "cs/ccxt/exchanges/coinbaseinternational.cs",
+        "cs/ccxt/exchanges/pro/coinbaseinternational.cs",
+        "cs/ccxt/exchanges/pro/wrappers/coinbaseinternational.cs",
+        "cs/ccxt/wrappers/coinbase.cs"
+      ],
+      "discord.com": [
+        "cs/ccxt/exchanges/coinbase.cs",
+        "cs/tests/Generated/Exchange/Base/test.orderBook.cs",
+        "cs/tests/Generated/Exchange/Base/test.ticker.cs",
+        "examples/py/async-fetch-ohlcv-indicators-discord-webhook.py",
+        "go/tests/base/test.orderBook.go"
+      ],
+      "bch.btc.com": [
+        "cs/ccxt/exchanges/coinbase.cs",
+        "go/v4/coinbase.go",
+        "js/src/coinbase.js",
+        "php/async/coinbase.php",
+        "php/coinbase.php"
+      ],
+      "blockchain.info": [
+        "cs/ccxt/exchanges/coinbase.cs",
+        "go/v4/coinbase.go",
+        "js/src/coinbase.js",
+        "php/async/coinbase.php",
+        "php/coinbase.php"
+      ],
+      "static-assets.coinbase.com": [
+        "cs/ccxt/exchanges/coinbase.cs",
+        "go/v4/coinbase.go",
+        "js/src/coinbase.js",
+        "php/async/coinbase.php",
+        "php/coinbase.php"
+      ],
+      "coinbase-migration.mintlify.app": [
+        "cs/ccxt/exchanges/coinbase.cs",
+        "cs/ccxt/wrappers/coinbase.cs",
+        "go/v4/coinbase.go",
+        "go/v4/coinbase_wrapper.go",
+        "js/src/coinbase.d.ts"
+      ],
+      "api-public.sandbox.exchange.coinbase.com": [
+        "cs/ccxt/exchanges/coinbaseexchange.cs",
+        "go/v4/coinbaseexchange.go",
+        "js/src/coinbaseexchange.js",
+        "php/async/coinbaseexchange.php",
+        "php/coinbaseexchange.php"
+      ],
+      "docs.pro.coinbase.com": [
+        "cs/ccxt/exchanges/coinbaseexchange.cs",
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "support.pro.coinbase.com": [
+        "cs/ccxt/exchanges/coinbaseexchange.cs",
+        "go/v4/coinbaseexchange.go",
+        "js/src/coinbaseexchange.js",
+        "php/async/coinbaseexchange.php",
+        "php/coinbaseexchange.php"
+      ],
+      "api.international.coinbase.com": [
+        "cs/ccxt/exchanges/coinbaseinternational.cs",
+        "go/v4/coinbaseinternational.go",
+        "js/src/coinbaseinternational.js",
+        "php/async/coinbaseinternational.php",
+        "php/coinbaseinternational.php"
+      ],
+      "api-n5e1.coinbase.com": [
+        "cs/ccxt/exchanges/coinbaseinternational.cs",
+        "go/v4/coinbaseinternational.go",
+        "js/src/coinbaseinternational.js",
+        "php/async/coinbaseinternational.php",
+        "php/coinbaseinternational.php"
+      ],
+      "help.coinbase.com": [
+        "cs/ccxt/exchanges/coinbaseinternational.cs",
+        "go/v4/coinbaseinternational.go",
+        "js/src/coinbaseinternational.js",
+        "php/async/coinbaseinternational.php",
+        "php/coinbaseinternational.php"
+      ],
+      "api.coinex.com": [
+        "cs/ccxt/exchanges/coinex.cs",
+        "go/v4/coinex.go",
+        "js/src/coinex.js",
+        "php/async/coinex.php",
+        "php/coinex.php"
+      ],
+      "docs.coinex.com": [
+        "cs/ccxt/exchanges/coinex.cs",
+        "cs/ccxt/exchanges/pro/coinex.cs",
+        "cs/ccxt/exchanges/pro/wrappers/coinex.cs",
+        "cs/ccxt/wrappers/coinex.cs",
+        "go/v4/coinex.go"
+      ],
+      "viabtc.github.io": [
+        "cs/ccxt/exchanges/coinex.cs",
+        "cs/ccxt/wrappers/coinex.cs",
+        "go/v4/coinex.go",
+        "go/v4/coinex_wrapper.go",
+        "js/src/coinex.d.ts"
+      ],
+      "coinmate.docs.apiary.io": [
+        "cs/ccxt/exchanges/coinmate.cs",
+        "cs/ccxt/wrappers/coinmate.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "api.coinmetro.com": [
+        "cs/ccxt/exchanges/coinmetro.cs",
+        "go/v4/coinmetro.go",
+        "js/src/coinmetro.js",
+        "php/async/coinmetro.php",
+        "php/coinmetro.php"
+      ],
+      "coinmetro.com": [
+        "cs/ccxt/exchanges/coinmetro.cs",
+        "go/v4/coinmetro.go",
+        "js/src/coinmetro.js",
+        "php/async/coinmetro.php",
+        "php/coinmetro.php"
+      ],
+      "documenter.getpostman.com": [
+        "cs/ccxt/exchanges/coinmetro.cs",
+        "cs/ccxt/exchanges/exmo.cs",
+        "cs/ccxt/exchanges/pro/exmo.cs",
+        "cs/ccxt/exchanges/pro/wrappers/exmo.cs",
+        "cs/ccxt/wrappers/coinmetro.cs"
+      ],
+      "help.coinmetro.com": [
+        "cs/ccxt/exchanges/coinmetro.cs",
+        "go/v4/coinmetro.go",
+        "js/src/coinmetro.js",
+        "php/async/coinmetro.php",
+        "php/coinmetro.php"
+      ],
+      "api.coinone.co.kr": [
+        "cs/ccxt/exchanges/coinone.cs",
+        "go/v4/coinone.go",
+        "js/src/coinone.js",
+        "php/async/coinone.php",
+        "php/coinone.php"
+      ],
+      "doc.coinone.co.kr": [
+        "cs/ccxt/exchanges/coinone.cs",
+        "cs/ccxt/wrappers/coinone.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "docs.coinone.co.kr": [
+        "cs/ccxt/exchanges/coinone.cs",
+        "cs/ccxt/exchanges/pro/coinone.cs",
+        "cs/ccxt/exchanges/pro/wrappers/coinone.cs",
+        "cs/ccxt/wrappers/coinone.cs",
+        "go/v4/coinone.go"
+      ],
+      "api.pro.coins.ph": [
+        "cs/ccxt/exchanges/coinsph.cs",
+        "go/v4/coinsph.go",
+        "js/src/coinsph.js",
+        "php/async/coinsph.php",
+        "php/coinsph.php"
+      ],
+      "coins.ph": [
+        "cs/ccxt/exchanges/coinsph.cs",
+        "go/v4/coinsph.go",
+        "js/src/coinsph.js",
+        "php/async/coinsph.php",
+        "php/coinsph.php"
+      ],
+      "coins-docs.github.io": [
+        "cs/ccxt/exchanges/coinsph.cs",
+        "cs/ccxt/wrappers/coinsph.cs",
+        "go/v4/coinsph.go",
+        "go/v4/coinsph_wrapper.go",
+        "js/src/coinsph.d.ts"
+      ],
+      "support.coins.ph": [
+        "cs/ccxt/exchanges/coinsph.cs",
+        "go/v4/coinsph.go",
+        "js/src/coinsph.js",
+        "php/async/coinsph.php",
+        "php/coinsph.php"
+      ],
+      "docs.coins.ph": [
+        "cs/ccxt/exchanges/coinsph.cs",
+        "go/v4/coinsph.go",
+        "go/v4/coinsph_wrapper.go",
+        "js/src/coinsph.d.ts",
+        "js/src/coinsph.js"
+      ],
+      "uat-api.3ona.co": [
+        "cs/ccxt/exchanges/cryptocom.cs",
+        "go/v4/cryptocom.go",
+        "js/src/cryptocom.js",
+        "php/async/cryptocom.php",
+        "php/cryptocom.php"
+      ],
+      "api.crypto.com": [
+        "cs/ccxt/exchanges/cryptocom.cs",
+        "go/v4/cryptocom.go",
+        "js/src/cryptocom.js",
+        "php/async/cryptocom.php",
+        "php/cryptocom.php"
+      ],
+      "deriv-api.crypto.com": [
+        "cs/ccxt/exchanges/cryptocom.cs",
+        "go/v4/cryptocom.go",
+        "js/src/cryptocom.js",
+        "php/async/cryptocom.php",
+        "php/cryptocom.php"
+      ],
+      "exchange-docs.crypto.com": [
+        "cs/ccxt/exchanges/cryptocom.cs",
+        "cs/ccxt/exchanges/pro/cryptocom.cs",
+        "cs/ccxt/exchanges/pro/wrappers/cryptocom.cs",
+        "cs/ccxt/wrappers/cryptocom.cs",
+        "doc/ccxt.pro.manual.rst"
+      ],
+      "api.cryptomus.com": [
+        "cs/ccxt/exchanges/cryptomus.cs",
+        "go/v4/cryptomus.go",
+        "js/src/cryptomus.js",
+        "php/async/cryptomus.php",
+        "php/cryptomus.php"
+      ],
+      "cryptomus.com": [
+        "cs/ccxt/exchanges/cryptomus.cs",
+        "go/v4/cryptomus.go",
+        "js/src/cryptomus.js",
+        "php/async/cryptomus.php",
+        "php/cryptomus.php"
+      ],
+      "doc.cryptomus.com": [
+        "cs/ccxt/exchanges/cryptomus.cs",
+        "cs/ccxt/wrappers/cryptomus.cs",
+        "go/v4/cryptomus.go",
+        "go/v4/cryptomus_wrapper.go",
+        "js/src/cryptomus.d.ts"
+      ],
+      "trade-docs.coinlist.co": [
+        "cs/ccxt/exchanges/cryptomus.cs",
+        "cs/ccxt/wrappers/cryptomus.cs",
+        "go/v4/cryptomus.go",
+        "go/v4/cryptomus_wrapper.go",
+        "js/src/cryptomus.d.ts"
+      ],
+      "api.deepcoin.com": [
+        "cs/ccxt/exchanges/deepcoin.cs",
+        "go/v4/deepcoin.go",
+        "js/src/deepcoin.js",
+        "php/async/deepcoin.php",
+        "php/deepcoin.php"
+      ],
+      "www.deepcoin.com": [
+        "cs/ccxt/exchanges/deepcoin.cs",
+        "cs/ccxt/exchanges/pro/deepcoin.cs",
+        "cs/ccxt/exchanges/pro/wrappers/deepcoin.cs",
+        "cs/ccxt/wrappers/deepcoin.cs",
+        "go/v4/deepcoin.go"
+      ],
+      "api.delta.exchange": [
+        "cs/ccxt/exchanges/delta.cs",
+        "go/v4/delta.go",
+        "js/src/delta.js",
+        "php/async/delta.php",
+        "php/delta.php"
+      ],
+      "docs.delta.exchange": [
+        "cs/ccxt/exchanges/delta.cs",
+        "cs/ccxt/wrappers/delta.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "test.deribit.com": [
+        "cs/ccxt/exchanges/deribit.cs",
+        "go/v4/deribit.go",
+        "js/src/deribit.js",
+        "php/async/deribit.php",
+        "php/deribit.php"
+      ],
+      "docs.deribit.com": [
+        "cs/ccxt/exchanges/deribit.cs",
+        "cs/ccxt/exchanges/pro/deribit.cs",
+        "cs/ccxt/exchanges/pro/wrappers/deribit.cs",
+        "cs/ccxt/wrappers/deribit.cs",
+        "doc/ccxt.pro.manual.rst"
+      ],
+      "api.lyra.finance": [
+        "cs/ccxt/exchanges/derive.cs",
+        "go/v4/derive.go",
+        "js/src/derive.js",
+        "php/async/derive.php",
+        "php/derive.php"
+      ],
+      "api-demo.lyra.finance": [
+        "cs/ccxt/exchanges/derive.cs",
+        "go/v4/derive.go",
+        "js/src/derive.js",
+        "php/async/derive.php",
+        "php/derive.php"
+      ],
+      "docs.derive.xyz": [
+        "cs/ccxt/exchanges/derive.cs",
+        "cs/ccxt/exchanges/pro/derive.cs",
+        "cs/ccxt/exchanges/pro/wrappers/derive.cs",
+        "cs/ccxt/wrappers/derive.cs",
+        "go/v4/derive.go"
+      ],
+      "openapi.digifinex.com": [
+        "cs/ccxt/exchanges/digifinex.cs",
+        "go/v4/digifinex.go",
+        "js/src/digifinex.js",
+        "php/async/digifinex.php",
+        "php/digifinex.php"
+      ],
+      "docs.digifinex.com": [
+        "cs/ccxt/exchanges/digifinex.cs",
+        "cs/ccxt/wrappers/digifinex.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "digifinex.zendesk.com": [
+        "cs/ccxt/exchanges/digifinex.cs",
+        "go/v4/digifinex.go",
+        "js/src/digifinex.js",
+        "php/async/digifinex.php",
+        "php/digifinex.php"
+      ],
+      "docs.digifinex.vip": [
+        "cs/ccxt/exchanges/digifinex.cs",
+        "go/v4/digifinex.go",
+        "js/src/digifinex.js",
+        "php/async/digifinex.php",
+        "php/digifinex.php"
+      ],
+      "indexer.dydx.trade": [
+        "cs/ccxt/exchanges/dydx.cs",
+        "go/v4/dydx.go",
+        "js/src/dydx.js",
+        "php/async/dydx.php",
+        "php/dydx.php"
+      ],
+      "dydx-ops-rpc.kingnodes.com": [
+        "cs/ccxt/exchanges/dydx.cs",
+        "go/v4/dydx.go",
+        "js/src/dydx.js",
+        "php/async/dydx.php",
+        "php/dydx.php"
+      ],
+      "dydx-rest.publicnode.com": [
+        "cs/ccxt/exchanges/dydx.cs",
+        "go/v4/dydx.go",
+        "js/src/dydx.js",
+        "php/async/dydx.php",
+        "php/dydx.php"
+      ],
+      "indexer.v4testnet.dydx.exchange": [
+        "cs/ccxt/exchanges/dydx.cs",
+        "go/v4/dydx.go",
+        "js/src/dydx.js",
+        "php/async/dydx.php",
+        "php/dydx.php"
+      ],
+      "test-dydx-rpc.kingnodes.com": [
+        "cs/ccxt/exchanges/dydx.cs",
+        "go/v4/dydx.go",
+        "js/src/dydx.js",
+        "php/async/dydx.php",
+        "php/dydx.php"
+      ],
+      "test-dydx-rest.kingnodes.com": [
+        "cs/ccxt/exchanges/dydx.cs",
+        "go/v4/dydx.go",
+        "js/src/dydx.js",
+        "php/async/dydx.php",
+        "php/dydx.php"
+      ],
+      "www.dydx.xyz": [
+        "cs/ccxt/exchanges/dydx.cs",
+        "go/v4/dydx.go",
+        "js/src/dydx.js",
+        "php/async/dydx.php",
+        "php/dydx.php"
+      ],
+      "docs.dydx.xyz": [
+        "cs/ccxt/exchanges/dydx.cs",
+        "cs/ccxt/exchanges/pro/dydx.cs",
+        "cs/ccxt/exchanges/pro/wrappers/dydx.cs",
+        "cs/ccxt/wrappers/dydx.cs",
+        "go/v4/dydx.go"
+      ],
+      "docs.dydx.exchange": [
+        "cs/ccxt/exchanges/dydx.cs",
+        "go/v4/dydx.go",
+        "js/src/dydx.js",
+        "php/async/dydx.php",
+        "php/dydx.php"
+      ],
+      "developer.woox.io": [
+        "cs/ccxt/exchanges/dydx.cs",
+        "cs/ccxt/exchanges/woo.cs",
+        "cs/ccxt/wrappers/dydx.cs",
+        "cs/ccxt/wrappers/woo.cs",
+        "go/v4/dydx.go"
+      ],
+      "api.exmo.com": [
+        "cs/ccxt/exchanges/exmo.cs",
+        "go/v4/exmo.go",
+        "js/src/exmo.js",
+        "php/async/exmo.php",
+        "php/exmo.php"
+      ],
+      "exmo.com": [
+        "cs/ccxt/exchanges/exmo.cs",
+        "go/v4/exmo.go",
+        "js/src/exmo.js",
+        "php/async/exmo.php",
+        "php/exmo.php"
+      ],
+      "api.fmfw.io": [
+        "cs/ccxt/exchanges/fmfwio.cs",
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "api.foxbit.com.br": [
+        "cs/ccxt/exchanges/foxbit.cs",
+        "go/v4/foxbit.go",
+        "js/src/foxbit.js",
+        "php/async/foxbit.php",
+        "php/foxbit.php"
+      ],
+      "metadata-v2.foxbit.com.br": [
+        "cs/ccxt/exchanges/foxbit.cs",
+        "go/v4/foxbit.go",
+        "js/src/foxbit.js",
+        "php/async/foxbit.php",
+        "php/foxbit.php"
+      ],
+      "docs.foxbit.com.br": [
+        "cs/ccxt/exchanges/foxbit.cs",
+        "cs/ccxt/wrappers/foxbit.cs",
+        "go/v4/foxbit.go",
+        "go/v4/foxbit_wrapper.go",
+        "js/src/foxbit.d.ts"
+      ],
+      "status.foxbit.com": [
+        "cs/ccxt/exchanges/foxbit.cs",
+        "cs/ccxt/wrappers/foxbit.cs",
+        "go/v4/foxbit.go",
+        "go/v4/foxbit_wrapper.go",
+        "js/src/foxbit.d.ts"
+      ],
+      "gate.com": [
+        "cs/ccxt/exchanges/gate.cs",
+        "go/v4/gate.go",
+        "js/src/gate.js",
+        "php/async/gate.php",
+        "php/gate.php"
+      ],
+      "api.gateio.ws": [
+        "cs/ccxt/exchanges/gate.cs",
+        "cs/tests/Generated/TestMethods.cs",
+        "go/tests/base/tests.go",
+        "go/v4/gate.go",
+        "js/src/gate.js"
+      ],
+      "api-testnet.gateapi.io": [
+        "cs/ccxt/exchanges/gate.cs",
+        "go/v4/gate.go",
+        "js/src/gate.js",
+        "php/async/gate.php",
+        "php/gate.php"
+      ],
+      "i.imgur.com": [
+        "cs/ccxt/exchanges/gate.cs",
+        "go/v4/gate.go",
+        "js/src/gate.js",
+        "php/async/gate.php",
+        "php/gate.php"
+      ],
+      "api.gemini.com": [
+        "cs/ccxt/exchanges/gemini.cs",
+        "go/v4/gemini.go",
+        "js/src/gemini.js",
+        "php/async/gemini.php",
+        "php/gemini.php"
+      ],
+      "docs.gemini.com": [
+        "cs/ccxt/exchanges/gemini.cs",
+        "cs/ccxt/exchanges/pro/gemini.cs",
+        "cs/ccxt/exchanges/pro/wrappers/gemini.cs",
+        "cs/ccxt/wrappers/gemini.cs",
+        "doc/exchange-markets-by-country.rst"
+      ],
+      "exchange.gemini.com": [
+        "cs/ccxt/exchanges/gemini.cs",
+        "go/v4/gemini.go",
+        "js/src/gemini.js",
+        "php/async/gemini.php",
+        "php/gemini.php"
+      ],
+      "docs.sandbox.gemini.com": [
+        "cs/ccxt/exchanges/gemini.cs",
+        "go/v4/gemini.go",
+        "js/src/gemini.js",
+        "php/async/gemini.php",
+        "php/gemini.php"
+      ],
+      "api.sandbox.gemini.com": [
+        "cs/ccxt/exchanges/gemini.cs",
+        "go/v4/gemini.go",
+        "js/src/gemini.js",
+        "php/async/gemini.php",
+        "php/gemini.php"
+      ],
+      "edge.grvt.io": [
+        "cs/ccxt/exchanges/grvt.cs",
+        "go/v4/grvt.go",
+        "js/src/grvt.js",
+        "php/async/grvt.php",
+        "php/grvt.php"
+      ],
+      "trades.grvt.io": [
+        "cs/ccxt/exchanges/grvt.cs",
+        "go/v4/grvt.go",
+        "js/src/grvt.js",
+        "php/async/grvt.php",
+        "php/grvt.php"
+      ],
+      "market-data.grvt.io": [
+        "cs/ccxt/exchanges/grvt.cs",
+        "go/v4/grvt.go",
+        "js/src/grvt.js",
+        "php/async/grvt.php",
+        "php/grvt.php"
+      ],
+      "edge.testnet.grvt.io": [
+        "cs/ccxt/exchanges/grvt.cs",
+        "go/v4/grvt.go",
+        "js/src/grvt.js",
+        "php/async/grvt.php",
+        "php/grvt.php"
+      ],
+      "trades.testnet.grvt.io": [
+        "cs/ccxt/exchanges/grvt.cs",
+        "go/v4/grvt.go",
+        "js/src/grvt.js",
+        "php/async/grvt.php",
+        "php/grvt.php"
+      ],
+      "market-data.testnet.grvt.io": [
+        "cs/ccxt/exchanges/grvt.cs",
+        "go/v4/grvt.go",
+        "js/src/grvt.js",
+        "php/async/grvt.php",
+        "php/grvt.php"
+      ],
+      "api-docs.grvt.io": [
+        "cs/ccxt/exchanges/grvt.cs",
+        "cs/ccxt/exchanges/pro/grvt.cs",
+        "cs/ccxt/exchanges/pro/wrappers/grvt.cs",
+        "cs/ccxt/wrappers/grvt.cs",
+        "go/v4/grvt.go"
+      ],
+      "help.grvt.io": [
+        "cs/ccxt/exchanges/grvt.cs",
+        "go/v4/grvt.go",
+        "js/src/grvt.js",
+        "php/async/grvt.php",
+        "php/grvt.php"
+      ],
+      "api-glb.hashkey.com": [
+        "cs/ccxt/exchanges/hashkey.cs",
+        "go/v4/hashkey.go",
+        "js/src/hashkey.js",
+        "php/async/hashkey.php",
+        "php/hashkey.php"
+      ],
+      "api-glb.sim.hashkeydev.com": [
+        "cs/ccxt/exchanges/hashkey.cs",
+        "go/v4/hashkey.go",
+        "js/src/hashkey.js",
+        "php/async/hashkey.php",
+        "php/hashkey.php"
+      ],
+      "hashkeyglobal-apidoc.readme.io": [
+        "cs/ccxt/exchanges/hashkey.cs",
+        "cs/ccxt/exchanges/pro/hashkey.cs",
+        "cs/ccxt/exchanges/pro/wrappers/hashkey.cs",
+        "cs/ccxt/wrappers/hashkey.cs",
+        "go/v4/hashkey.go"
+      ],
+      "support.global.hashkey.com": [
+        "cs/ccxt/exchanges/hashkey.cs",
+        "go/v4/hashkey.go",
+        "js/src/hashkey.js",
+        "php/async/hashkey.php",
+        "php/hashkey.php"
+      ],
+      "data-api.hibachi.xyz": [
+        "cs/ccxt/exchanges/hibachi.cs",
+        "go/v4/hibachi.go",
+        "js/src/hibachi.js",
+        "php/async/hibachi.php",
+        "php/hibachi.php"
+      ],
+      "api.hibachi.xyz": [
+        "cs/ccxt/exchanges/hibachi.cs",
+        "go/v4/hibachi.go",
+        "js/src/hibachi.js",
+        "php/async/hibachi.php",
+        "php/hibachi.php"
+      ],
+      "www.hibachi.xyz": [
+        "cs/ccxt/exchanges/hibachi.cs",
+        "go/v4/hibachi.go",
+        "js/src/hibachi.js",
+        "php/async/hibachi.php",
+        "php/hibachi.php"
+      ],
+      "api-doc.hibachi.xyz": [
+        "cs/ccxt/exchanges/hibachi.cs",
+        "cs/ccxt/wrappers/hibachi.cs",
+        "go/v4/hibachi.go",
+        "go/v4/hibachi_wrapper.go",
+        "js/src/hibachi.d.ts"
+      ],
+      "api.demo.hitbtc.com": [
+        "cs/ccxt/exchanges/hitbtc.cs",
+        "go/v4/hitbtc.go",
+        "js/src/hitbtc.js",
+        "php/async/hitbtc.php",
+        "php/hitbtc.php"
+      ],
+      "api.hitbtc.com": [
+        "cs/ccxt/exchanges/hitbtc.cs",
+        "cs/ccxt/exchanges/pro/hitbtc.cs",
+        "cs/ccxt/exchanges/pro/wrappers/hitbtc.cs",
+        "cs/ccxt/wrappers/hitbtc.cs",
+        "doc/ccxt.pro.manual.rst"
+      ],
+      "support.hitbtc.com": [
+        "cs/ccxt/exchanges/hitbtc.cs",
+        "go/v4/hitbtc.go",
+        "js/src/hitbtc.js",
+        "php/async/hitbtc.php",
+        "php/hitbtc.php"
+      ],
+      "api.sandbox.hollaex.com": [
+        "cs/ccxt/exchanges/hollaex.cs",
+        "go/v4/hollaex.go",
+        "js/src/hollaex.js",
+        "php/async/hollaex.php",
+        "php/hollaex.php"
+      ],
+      "api.hollaex.com": [
+        "cs/ccxt/exchanges/hollaex.cs",
+        "go/v4/hollaex.go",
+        "js/src/hollaex.js",
+        "php/async/hollaex.php",
+        "php/hollaex.php"
+      ],
+      "hollaex.com": [
+        "cs/ccxt/exchanges/hollaex.cs",
+        "go/v4/hollaex.go",
+        "js/src/hollaex.js",
+        "php/async/hollaex.php",
+        "php/hollaex.php"
+      ],
+      "apidocs.hollaex.com": [
+        "cs/ccxt/exchanges/hollaex.cs",
+        "cs/ccxt/exchanges/pro/hollaex.cs",
+        "cs/ccxt/exchanges/pro/wrappers/hollaex.cs",
+        "cs/ccxt/wrappers/hollaex.cs",
+        "doc/ccxt.pro.manual.rst"
+      ],
+      "hollaex-resources.s3.ap-southeast-1.amazonaws.com": [
+        "cs/ccxt/exchanges/hollaex.cs",
+        "go/v4/hollaex.go",
+        "js/src/hollaex.js",
+        "php/async/hollaex.php",
+        "php/hollaex.php"
+      ],
+      "api.hollaex.network": [
+        "cs/ccxt/exchanges/hollaex.cs",
+        "go/v4/hollaex.go",
+        "js/src/hollaex.js",
+        "php/async/hollaex.php",
+        "php/hollaex.php"
+      ],
+      "bitholla.s3.ap-northeast-2.amazonaws.com": [
+        "cs/ccxt/exchanges/hollaex.cs",
+        "go/v4/hollaex.go",
+        "js/src/hollaex.js",
+        "php/async/hollaex.php",
+        "php/hollaex.php"
+      ],
+      "www.huobi.com": [
+        "cs/ccxt/exchanges/htx.cs",
+        "cs/ccxt/exchanges/pro/htx.cs",
+        "cs/ccxt/exchanges/pro/wrappers/htx.cs",
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst"
+      ],
+      "huobiapi.github.io": [
+        "cs/ccxt/exchanges/htx.cs",
+        "cs/ccxt/exchanges/pro/htx.cs",
+        "cs/ccxt/exchanges/pro/wrappers/htx.cs",
+        "cs/ccxt/wrappers/htx.cs",
+        "doc/ccxt.pro.manual.rst"
+      ],
+      "status-linear-swap.huobigroup.com": [
+        "cs/ccxt/exchanges/htx.cs",
+        "go/v4/htx.go",
+        "js/src/htx.js",
+        "php/async/htx.php",
+        "php/htx.php"
+      ],
+      "stspg.io": [
+        "cs/ccxt/exchanges/htx.cs",
+        "go/v4/htx.go",
+        "js/src/htx.js",
+        "php/async/htx.php",
+        "php/htx.php"
+      ],
+      "www.htx.com": [
+        "cs/ccxt/exchanges/htx.cs",
+        "cs/ccxt/exchanges/pro/htx.cs",
+        "cs/ccxt/exchanges/pro/wrappers/htx.cs",
+        "cs/ccxt/wrappers/htx.cs",
+        "go/v4/htx.go"
+      ],
+      "api.hyperliquid-testnet.xyz": [
+        "cs/ccxt/exchanges/hyperliquid.cs",
+        "go/v4/hyperliquid.go",
+        "js/src/hyperliquid.js",
+        "php/async/hyperliquid.php",
+        "php/hyperliquid.php"
+      ],
+      "hyperliquid.xyz": [
+        "cs/ccxt/exchanges/hyperliquid.cs",
+        "go/v4/hyperliquid.go",
+        "js/src/hyperliquid.js",
+        "php/async/hyperliquid.php",
+        "php/hyperliquid.php"
+      ],
+      "hyperliquid.gitbook.io": [
+        "cs/ccxt/exchanges/hyperliquid.cs",
+        "cs/ccxt/exchanges/pro/hyperliquid.cs",
+        "cs/ccxt/exchanges/pro/wrappers/hyperliquid.cs",
+        "cs/ccxt/wrappers/hyperliquid.cs",
+        "go/v4/hyperliquid.go"
+      ],
+      "api.independentreserve.com": [
+        "cs/ccxt/exchanges/independentreserve.cs",
+        "go/v4/independentreserve.go",
+        "js/src/independentreserve.js",
+        "php/async/independentreserve.php",
+        "php/independentreserve.php"
+      ],
+      "www.indodax.com": [
+        "cs/ccxt/exchanges/indodax.cs",
+        "go/v4/indodax.go",
+        "js/src/indodax.js",
+        "php/async/indodax.php",
+        "php/indodax.php"
+      ],
+      "api.kraken.com": [
+        "cs/ccxt/exchanges/kraken.cs",
+        "go/v4/kraken.go",
+        "js/src/kraken.js",
+        "php/async/kraken.php",
+        "php/kraken.php"
+      ],
+      "kraken.zendesk.com": [
+        "cs/ccxt/exchanges/kraken.cs",
+        "go/v4/kraken.go",
+        "js/src/kraken.js",
+        "php/async/kraken.php",
+        "php/kraken.php"
+      ],
+      "docs.kraken.com": [
+        "cs/ccxt/exchanges/kraken.cs",
+        "cs/ccxt/exchanges/krakenfutures.cs",
+        "cs/ccxt/exchanges/pro/kraken.cs",
+        "cs/ccxt/exchanges/pro/wrappers/kraken.cs",
+        "cs/ccxt/wrappers/kraken.cs"
+      ],
+      "support.kraken.com": [
+        "cs/ccxt/exchanges/kraken.cs",
+        "cs/ccxt/exchanges/krakenfutures.cs",
+        "go/v4/kraken.go",
+        "go/v4/krakenfutures.go",
+        "js/src/kraken.js"
+      ],
+      "demo-futures.kraken.com": [
+        "cs/ccxt/exchanges/krakenfutures.cs",
+        "go/v4/krakenfutures.go",
+        "js/src/krakenfutures.js",
+        "php/async/krakenfutures.php",
+        "php/krakenfutures.php"
+      ],
+      "docs.futures.kraken.com": [
+        "cs/ccxt/exchanges/krakenfutures.cs",
+        "cs/ccxt/exchanges/pro/krakenfutures.cs",
+        "cs/ccxt/exchanges/pro/wrappers/krakenfutures.cs",
+        "cs/ccxt/wrappers/krakenfutures.cs",
+        "go/v4/krakenfutures.go"
+      ],
+      "api-futures.kucoin.com": [
+        "cs/ccxt/exchanges/kucoin.cs",
+        "go/v4/kucoin.go",
+        "js/src/kucoin.js",
+        "php/async/kucoin.php",
+        "php/kucoin.php"
+      ],
+      "kucoin.com": [
+        "cs/ccxt/exchanges/kucoin.cs",
+        "go/v4/kucoin.go",
+        "js/src/kucoin.js",
+        "php/async/kucoin.php",
+        "php/kucoin.php"
+      ],
+      "api-broker.kucoin.com": [
+        "cs/ccxt/exchanges/kucoin.cs",
+        "go/v4/kucoin.go",
+        "js/src/kucoin.js",
+        "php/async/kucoin.php",
+        "php/kucoin.php"
+      ],
+      "docs.kucoin.com": [
+        "cs/ccxt/exchanges/kucoin.cs",
+        "cs/ccxt/exchanges/pro/kucoin.cs",
+        "cs/ccxt/wrappers/kucoin.cs",
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst"
+      ],
+      "openapi-v2.kucoin.com": [
+        "cs/ccxt/exchanges/kucoin.cs",
+        "go/v4/kucoin.go",
+        "js/src/kucoin.js",
+        "php/async/kucoin.php",
+        "php/kucoin.php"
+      ],
+      "api.latoken.com": [
+        "cs/ccxt/exchanges/latoken.cs",
+        "cs/ccxt/wrappers/latoken.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "api.lbank.info": [
+        "cs/ccxt/exchanges/lbank.cs",
+        "go/v4/lbank.go",
+        "js/src/lbank.js",
+        "php/async/lbank.php",
+        "php/lbank.php"
+      ],
+      "lbkperp.lbank.com": [
+        "cs/ccxt/exchanges/lbank.cs",
+        "go/v4/lbank.go",
+        "js/src/lbank.js",
+        "php/async/lbank.php",
+        "php/lbank.php"
+      ],
+      "api.lbkex.com": [
+        "cs/ccxt/exchanges/lbank.cs",
+        "go/v4/lbank.go",
+        "js/src/lbank.js",
+        "php/async/lbank.php",
+        "php/lbank.php"
+      ],
+      "support.lbank.site": [
+        "cs/ccxt/exchanges/lbank.cs",
+        "go/v4/lbank.go",
+        "js/src/lbank.js",
+        "php/async/lbank.php",
+        "php/lbank.php"
+      ],
+      "mainnet": [
+        "cs/ccxt/exchanges/lighter.cs",
+        "go/v4/lighter.go",
+        "js/src/lighter.js",
+        "php/async/lighter.php",
+        "php/lighter.php"
+      ],
+      "lighter.xyz": [
+        "cs/ccxt/exchanges/lighter.cs",
+        "go/v4/lighter.go",
+        "js/src/lighter.js",
+        "php/async/lighter.php",
+        "php/lighter.php"
+      ],
+      "apidocs.lighter.xyz": [
+        "cs/ccxt/exchanges/lighter.cs",
+        "cs/ccxt/exchanges/pro/lighter.cs",
+        "cs/ccxt/exchanges/pro/wrappers/lighter.cs",
+        "cs/ccxt/wrappers/lighter.cs",
+        "go/v4/lighter.go"
+      ],
+      "docs.lighter.xyz": [
+        "cs/ccxt/exchanges/lighter.cs",
+        "go/v4/lighter.go",
+        "js/src/lighter.js",
+        "php/async/lighter.php",
+        "php/lighter.php"
+      ],
+      "api.luno.com": [
+        "cs/ccxt/exchanges/luno.cs",
+        "go/v4/luno.go",
+        "js/src/luno.js",
+        "php/async/luno.php",
+        "php/luno.php"
+      ],
+      "npmjs.org": [
+        "cs/ccxt/exchanges/luno.cs",
+        "go/v4/luno.go",
+        "js/src/luno.js",
+        "php/async/luno.php",
+        "php/luno.php"
+      ],
+      "www.mercadobitcoin.net": [
+        "cs/ccxt/exchanges/mercado.cs",
+        "go/v4/mercado.go",
+        "js/src/mercado.js",
+        "php/async/mercado.php",
+        "php/mercado.php"
+      ],
+      "api.mercadobitcoin.net": [
+        "cs/ccxt/exchanges/mercado.cs",
+        "go/v4/mercado.go",
+        "js/src/mercado.js",
+        "php/async/mercado.php",
+        "php/mercado.php"
+      ],
+      "api.mexc.com": [
+        "cs/ccxt/exchanges/mexc.cs",
+        "go/v4/mexc.go",
+        "js/src/mexc.js",
+        "php/async/mexc.php",
+        "php/mexc.php"
+      ],
+      "mexcdevelop.github.io": [
+        "cs/ccxt/exchanges/mexc.cs",
+        "cs/ccxt/exchanges/pro/mexc.cs",
+        "cs/ccxt/exchanges/pro/wrappers/mexc.cs",
+        "cs/ccxt/wrappers/mexc.cs",
+        "go/v4/mexc.go"
+      ],
+      "dev.binance.vision": [
+        "cs/ccxt/exchanges/mexc.cs",
+        "go/v4/mexc.go",
+        "js/src/mexc.js",
+        "php/async/mexc.php",
+        "php/mexc.php"
+      ],
+      "api-evm.orderly.org": [
+        "cs/ccxt/exchanges/modetrade.cs",
+        "cs/ccxt/exchanges/woofipro.cs",
+        "go/v4/modetrade.go",
+        "go/v4/woofipro.go",
+        "js/src/modetrade.js"
+      ],
+      "testnet-api-evm.orderly.org": [
+        "cs/ccxt/exchanges/modetrade.cs",
+        "cs/ccxt/exchanges/woofipro.cs",
+        "go/v4/modetrade.go",
+        "go/v4/woofipro.go",
+        "js/src/modetrade.js"
+      ],
+      "orderly.network": [
+        "cs/ccxt/exchanges/modetrade.cs",
+        "cs/ccxt/exchanges/pro/modetrade.cs",
+        "cs/ccxt/exchanges/pro/woofipro.cs",
+        "cs/ccxt/exchanges/pro/wrappers/modetrade.cs",
+        "cs/ccxt/exchanges/pro/wrappers/woofipro.cs"
+      ],
+      "my.okx.com": [
+        "cs/ccxt/exchanges/myokx.cs",
+        "cs/ccxt/exchanges/pro/myokx.cs",
+        "go/v4/myokx.go",
+        "go/v4/pro/myokx.go",
+        "js/src/myokx.js"
+      ],
+      "ndaxmarginstaging.cdnhop.net:8443": [
+        "cs/ccxt/exchanges/ndax.cs",
+        "go/v4/ndax.go",
+        "js/src/ndax.js",
+        "php/async/ndax.php",
+        "php/ndax.php"
+      ],
+      "api.ndax.io:8443": [
+        "cs/ccxt/exchanges/ndax.cs",
+        "go/v4/ndax.go",
+        "js/src/ndax.js",
+        "php/async/ndax.php",
+        "php/ndax.php"
+      ],
+      "ndax.io": [
+        "cs/ccxt/exchanges/ndax.cs",
+        "go/v4/ndax.go",
+        "js/src/ndax.js",
+        "php/async/ndax.php",
+        "php/ndax.php"
+      ],
+      "apidoc.ndax.io": [
+        "cs/ccxt/exchanges/ndax.cs",
+        "cs/ccxt/exchanges/pro/ndax.cs",
+        "cs/ccxt/exchanges/pro/wrappers/ndax.cs",
+        "cs/ccxt/wrappers/ndax.cs",
+        "doc/ccxt.pro.manual.rst"
+      ],
+      "api.novadax.com": [
+        "cs/ccxt/exchanges/novadax.cs",
+        "go/v4/novadax.go",
+        "js/src/novadax.js",
+        "php/async/novadax.php",
+        "php/novadax.php"
+      ],
+      "doc.novadax.com": [
+        "cs/ccxt/exchanges/novadax.cs",
+        "cs/ccxt/wrappers/novadax.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "static.coinall.ltd": [
+        "cs/ccxt/exchanges/okx.cs",
+        "go/v4/okx.go",
+        "js/src/okx.js",
+        "php/async/okx.php",
+        "php/okx.php"
+      ],
+      "app.okx.com": [
+        "cs/ccxt/exchanges/okxus.cs",
+        "cs/ccxt/exchanges/pro/okxus.cs",
+        "go/v4/okxus.go",
+        "go/v4/pro/okxus.go",
+        "js/src/okxus.js"
+      ],
+      "api.onetrading.com": [
+        "cs/ccxt/exchanges/onetrading.cs",
+        "go/v4/onetrading.go",
+        "js/src/onetrading.js",
+        "php/async/onetrading.php",
+        "php/onetrading.php"
+      ],
+      "docs.onetrading.com": [
+        "cs/ccxt/exchanges/onetrading.cs",
+        "cs/ccxt/wrappers/onetrading.cs",
+        "go/v4/onetrading.go",
+        "go/v4/onetrading_wrapper.go",
+        "js/src/onetrading.d.ts"
+      ],
+      "api.ox.fun": [
+        "cs/ccxt/exchanges/oxfun.cs",
+        "go/v4/oxfun.go",
+        "js/src/oxfun.js",
+        "php/async/oxfun.php",
+        "php/oxfun.php"
+      ],
+      "stgapi.ox.fun": [
+        "cs/ccxt/exchanges/oxfun.cs",
+        "go/v4/oxfun.go",
+        "js/src/oxfun.js",
+        "php/async/oxfun.php",
+        "php/oxfun.php"
+      ],
+      "docs.ox.fun": [
+        "cs/ccxt/exchanges/oxfun.cs",
+        "cs/ccxt/exchanges/pro/oxfun.cs",
+        "cs/ccxt/exchanges/pro/wrappers/oxfun.cs",
+        "cs/ccxt/wrappers/oxfun.cs",
+        "go/v4/oxfun.go"
+      ],
+      "support.ox.fun": [
+        "cs/ccxt/exchanges/oxfun.cs",
+        "go/v4/oxfun.go",
+        "js/src/oxfun.js",
+        "php/async/oxfun.php",
+        "php/oxfun.php"
+      ],
+      "api.p2pb2b.com": [
+        "cs/ccxt/exchanges/p2b.cs",
+        "go/v4/p2b.go",
+        "js/src/p2b.js",
+        "php/async/p2b.php",
+        "php/p2b.php"
+      ],
+      "futures-docs.poloniex.com": [
+        "cs/ccxt/exchanges/p2b.cs",
+        "cs/ccxt/wrappers/p2b.cs",
+        "go/v4/p2b.go",
+        "go/v4/p2b_wrapper.go",
+        "js/src/p2b.d.ts"
+      ],
+      "test-api": [
+        "cs/ccxt/exchanges/pacifica.cs",
+        "go/v4/pacifica.go",
+        "js/src/pacifica.js",
+        "php/async/pacifica.php",
+        "php/pacifica.php"
+      ],
+      "www.pacifica.fi": [
+        "cs/ccxt/exchanges/pacifica.cs",
+        "go/v4/pacifica.go",
+        "js/src/pacifica.js",
+        "php/async/pacifica.php",
+        "php/pacifica.php"
+      ],
+      "docs.pacifica.fi": [
+        "cs/ccxt/exchanges/pacifica.cs",
+        "cs/ccxt/exchanges/pro/pacifica.cs",
+        "cs/ccxt/exchanges/pro/wrappers/pacifica.cs",
+        "cs/ccxt/wrappers/pacifica.cs",
+        "go/v4/pacifica.go"
+      ],
+      "api.prod": [
+        "cs/ccxt/exchanges/paradex.cs",
+        "go/v4/paradex.go",
+        "js/src/paradex.js",
+        "php/async/paradex.php",
+        "php/paradex.php"
+      ],
+      "api.testnet": [
+        "cs/ccxt/exchanges/paradex.cs",
+        "go/v4/paradex.go",
+        "js/src/paradex.js",
+        "php/async/paradex.php",
+        "php/paradex.php"
+      ],
+      "www.paradex.trade": [
+        "cs/ccxt/exchanges/paradex.cs",
+        "cs/ccxt/exchanges/pro/paradex.cs",
+        "go/v4/paradex.go",
+        "go/v4/pro/paradex.go",
+        "js/src/paradex.js"
+      ],
+      "docs.api.testnet.paradex.trade": [
+        "cs/ccxt/exchanges/paradex.cs",
+        "cs/ccxt/exchanges/pro/paradex.cs",
+        "go/v4/paradex.go",
+        "go/v4/pro/paradex.go",
+        "js/src/paradex.js"
+      ],
+      "docs.paradex.trade": [
+        "cs/ccxt/exchanges/paradex.cs",
+        "cs/ccxt/exchanges/pro/paradex.cs",
+        "cs/ccxt/exchanges/pro/wrappers/paradex.cs",
+        "cs/ccxt/wrappers/paradex.cs",
+        "go/v4/paradex.go"
+      ],
+      "potc-testnet-sepolia.starknet.io": [
+        "cs/ccxt/exchanges/paradex.cs",
+        "cs/tests/Generated/TestMethods.cs",
+        "go/tests/base/tests.go",
+        "go/v4/paradex.go",
+        "js/src/paradex.js"
+      ],
+      "pathfinder.api.testnet.paradex.trade": [
+        "cs/ccxt/exchanges/paradex.cs",
+        "cs/tests/Generated/TestMethods.cs",
+        "go/tests/base/tests.go",
+        "go/v4/paradex.go",
+        "js/src/paradex.js"
+      ],
+      "voyager.testnet.paradex.trade": [
+        "cs/ccxt/exchanges/paradex.cs",
+        "cs/tests/Generated/TestMethods.cs",
+        "go/tests/base/tests.go",
+        "go/v4/paradex.go",
+        "js/src/paradex.js"
+      ],
+      "paymium.com": [
+        "cs/ccxt/exchanges/paymium.cs",
+        "go/v4/paymium.go",
+        "js/src/paymium.js",
+        "php/async/paymium.php",
+        "php/paymium.php"
+      ],
+      "paymium.github.io": [
+        "cs/ccxt/exchanges/paymium.cs",
+        "cs/ccxt/wrappers/paymium.cs",
+        "go/v4/paymium.go",
+        "go/v4/paymium_wrapper.go",
+        "js/src/paymium.d.ts"
+      ],
+      "testnet-api.phemex.com": [
+        "cs/ccxt/exchanges/phemex.cs",
+        "go/v4/phemex.go",
+        "js/src/phemex.js",
+        "php/async/phemex.php",
+        "php/phemex.php"
+      ],
+      "phemex-docs.github.io": [
+        "cs/ccxt/exchanges/phemex.cs",
+        "cs/ccxt/wrappers/phemex.cs",
+        "go/v4/phemex.go",
+        "go/v4/phemex_wrapper.go",
+        "js/src/phemex.d.ts"
+      ],
+      "api.poloniex.com": [
+        "cs/ccxt/exchanges/poloniex.cs",
+        "go/v4/poloniex.go",
+        "js/src/poloniex.js",
+        "php/async/poloniex.php",
+        "php/poloniex.php"
+      ],
+      "sand-spot-api-gateway.poloniex.com": [
+        "cs/ccxt/exchanges/poloniex.cs",
+        "go/v4/poloniex.go",
+        "js/src/poloniex.js",
+        "php/async/poloniex.php",
+        "php/poloniex.php"
+      ],
+      "www.poloniex.com": [
+        "cs/ccxt/exchanges/poloniex.cs",
+        "go/v4/poloniex.go",
+        "js/src/poloniex.js",
+        "php/async/poloniex.php",
+        "php/poloniex.php"
+      ],
+      "api-docs.poloniex.com": [
+        "cs/ccxt/exchanges/poloniex.cs",
+        "cs/ccxt/exchanges/pro/poloniex.cs",
+        "cs/ccxt/exchanges/pro/wrappers/poloniex.cs",
+        "cs/ccxt/wrappers/poloniex.cs",
+        "go/v4/poloniex.go"
+      ],
+      "www.tokocrypto.com": [
+        "cs/ccxt/exchanges/tokocrypto.cs",
+        "cs/ccxt/wrappers/tokocrypto.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "api.toobit.com": [
+        "cs/ccxt/exchanges/toobit.cs",
+        "go/v4/toobit.go",
+        "js/src/toobit.js",
+        "php/async/toobit.php",
+        "php/toobit.php"
+      ],
+      "toobit-docs.github.io": [
+        "cs/ccxt/exchanges/pro/toobit.cs",
+        "cs/ccxt/exchanges/pro/wrappers/toobit.cs",
+        "cs/ccxt/exchanges/toobit.cs",
+        "cs/ccxt/wrappers/toobit.cs",
+        "go/v4/pro/toobit.go"
+      ],
+      "docs.upbit.com": [
+        "cs/ccxt/exchanges/pro/upbit.cs",
+        "cs/ccxt/exchanges/pro/wrappers/upbit.cs",
+        "cs/ccxt/exchanges/upbit.cs",
+        "cs/ccxt/wrappers/upbit.cs",
+        "doc/ccxt.pro.manual.rst"
+      ],
+      "global-docs.upbit.com": [
+        "cs/ccxt/exchanges/pro/upbit.cs",
+        "cs/ccxt/exchanges/pro/wrappers/upbit.cs",
+        "cs/ccxt/exchanges/upbit.cs",
+        "cs/ccxt/wrappers/upbit.cs",
+        "go/v4/pro/upbit.go"
+      ],
+      "matcher-testnet.wx.network": [
+        "cs/ccxt/exchanges/wavesexchange.cs",
+        "go/v4/wavesexchange.go",
+        "js/src/wavesexchange.js",
+        "php/async/wavesexchange.php",
+        "php/wavesexchange.php"
+      ],
+      "nodes-testnet.wavesnodes.com": [
+        "cs/ccxt/exchanges/wavesexchange.cs",
+        "go/v4/wavesexchange.go",
+        "js/src/wavesexchange.js",
+        "php/async/wavesexchange.php",
+        "php/wavesexchange.php"
+      ],
+      "api-testnet.wavesplatform.com": [
+        "cs/ccxt/exchanges/wavesexchange.cs",
+        "go/v4/wavesexchange.go",
+        "js/src/wavesexchange.js",
+        "php/async/wavesexchange.php",
+        "php/wavesexchange.php"
+      ],
+      "api-testnet.wx.network": [
+        "cs/ccxt/exchanges/wavesexchange.cs",
+        "go/v4/wavesexchange.go",
+        "js/src/wavesexchange.js",
+        "php/async/wavesexchange.php",
+        "php/wavesexchange.php"
+      ],
+      "testnet.wx.network": [
+        "cs/ccxt/exchanges/wavesexchange.cs",
+        "go/v4/wavesexchange.go",
+        "js/src/wavesexchange.js",
+        "php/async/wavesexchange.php",
+        "php/wavesexchange.php"
+      ],
+      "matcher.wx.network": [
+        "cs/ccxt/exchanges/wavesexchange.cs",
+        "go/v4/wavesexchange.go",
+        "js/src/wavesexchange.js",
+        "php/async/wavesexchange.php",
+        "php/wavesexchange.php"
+      ],
+      "nodes.wx.network": [
+        "cs/ccxt/exchanges/wavesexchange.cs",
+        "go/v4/wavesexchange.go",
+        "js/src/wavesexchange.js",
+        "php/async/wavesexchange.php",
+        "php/wavesexchange.php"
+      ],
+      "api.wavesplatform.com": [
+        "cs/ccxt/exchanges/wavesexchange.cs",
+        "cs/ccxt/wrappers/wavesexchange.cs",
+        "go/v4/wavesexchange.go",
+        "go/v4/wavesexchange_wrapper.go",
+        "js/src/wavesexchange.d.ts"
+      ],
+      "api.wx.network": [
+        "cs/ccxt/exchanges/wavesexchange.cs",
+        "go/v4/wavesexchange.go",
+        "js/src/wavesexchange.js",
+        "php/async/wavesexchange.php",
+        "php/wavesexchange.php"
+      ],
+      "docs.wx.network": [
+        "cs/ccxt/exchanges/wavesexchange.cs",
+        "cs/ccxt/wrappers/wavesexchange.cs",
+        "go/v4/wavesexchange.go",
+        "go/v4/wavesexchange_wrapper.go",
+        "js/src/wavesexchange.d.ts"
+      ],
+      "docs.waves.tech": [
+        "cs/ccxt/exchanges/wavesexchange.cs",
+        "go/v4/wavesexchange.go",
+        "js/src/wavesexchange.js",
+        "php/async/wavesexchange.php",
+        "php/wavesexchange.php"
+      ],
+      "nodes.wavesnodes.com": [
+        "cs/ccxt/exchanges/wavesexchange.cs",
+        "go/v4/wavesexchange.go",
+        "js/src/wavesexchange.js",
+        "php/async/wavesexchange.php",
+        "php/wavesexchange.php"
+      ],
+      "matcher.waves.exchange": [
+        "cs/ccxt/exchanges/wavesexchange.cs",
+        "cs/ccxt/wrappers/wavesexchange.cs",
+        "go/v4/wavesexchange.go",
+        "go/v4/wavesexchange_wrapper.go",
+        "js/src/wavesexchange.d.ts"
+      ],
+      "api-spot.weex.com": [
+        "cs/ccxt/exchanges/weex.cs",
+        "go/v4/weex.go",
+        "js/src/weex.js",
+        "php/async/weex.php",
+        "php/weex.php"
+      ],
+      "api-contract.weex.com": [
+        "cs/ccxt/exchanges/weex.cs",
+        "go/v4/weex.go",
+        "js/src/weex.js",
+        "php/async/weex.php",
+        "php/weex.php"
+      ],
+      "www.blockchain.com": [
+        "cs/ccxt/exchanges/weex.cs",
+        "go/v4/weex.go",
+        "js/src/weex.js",
+        "php/async/weex.php",
+        "php/weex.php"
+      ],
+      "avascan.info": [
+        "cs/ccxt/exchanges/weex.cs",
+        "go/v4/weex.go",
+        "js/src/weex.js",
+        "php/async/weex.php",
+        "php/weex.php"
+      ],
+      "www.whitebit.com": [
+        "cs/ccxt/exchanges/whitebit.cs",
+        "go/v4/whitebit.go",
+        "js/src/whitebit.js",
+        "php/async/whitebit.php",
+        "php/whitebit.php"
+      ],
+      "docs.whitebit.com": [
+        "cs/ccxt/exchanges/pro/whitebit.cs",
+        "cs/ccxt/exchanges/pro/wrappers/whitebit.cs",
+        "cs/ccxt/exchanges/whitebit.cs",
+        "cs/ccxt/wrappers/whitebit.cs",
+        "go/v4/pro/whitebit.go"
+      ],
+      "someaddress.com": [
+        "cs/ccxt/exchanges/whitebit.cs",
+        "go/v4/whitebit.go",
+        "js/src/whitebit.js",
+        "php/async/whitebit.php",
+        "php/whitebit.php"
+      ],
+      "api-pub.woox.io": [
+        "cs/ccxt/exchanges/woo.cs",
+        "go/v4/woo.go",
+        "js/src/woo.js",
+        "php/async/woo.php",
+        "php/woo.php"
+      ],
+      "api-pub.staging.woox.io": [
+        "cs/ccxt/exchanges/woo.cs",
+        "go/v4/woo.go",
+        "js/src/woo.js",
+        "php/async/woo.php",
+        "php/woo.php"
+      ],
+      "api.staging.woox.io": [
+        "cs/ccxt/exchanges/woo.cs",
+        "go/v4/woo.go",
+        "js/src/woo.js",
+        "php/async/woo.php",
+        "php/woo.php"
+      ],
+      "docs.woox.io": [
+        "cs/ccxt/exchanges/pro/woo.cs",
+        "cs/ccxt/exchanges/pro/wrappers/woo.cs",
+        "cs/ccxt/exchanges/woo.cs",
+        "cs/ccxt/wrappers/woo.cs",
+        "go/v4/pro/woo.go"
+      ],
+      "support.woox.io": [
+        "cs/ccxt/exchanges/woo.cs",
+        "go/v4/woo.go",
+        "js/src/woo.js",
+        "php/async/woo.php",
+        "php/woo.php"
+      ],
+      "sapi.xt.com": [
+        "cs/ccxt/exchanges/xt.cs",
+        "go/v4/xt.go",
+        "js/src/xt.js",
+        "php/async/xt.php",
+        "php/xt.php"
+      ],
+      "fapi.xt.com": [
+        "cs/ccxt/exchanges/xt.cs",
+        "go/v4/xt.go",
+        "js/src/xt.js",
+        "php/async/xt.php",
+        "php/xt.php"
+      ],
+      "dapi.xt.com": [
+        "cs/ccxt/exchanges/xt.cs",
+        "go/v4/xt.go",
+        "js/src/xt.js",
+        "php/async/xt.php",
+        "php/xt.php"
+      ],
+      "api.xt.com": [
+        "cs/ccxt/exchanges/xt.cs",
+        "go/v4/xt.go",
+        "js/src/xt.js",
+        "php/async/xt.php",
+        "php/xt.php"
+      ],
+      "xt.com": [
+        "cs/ccxt/exchanges/xt.cs",
+        "go/v4/xt.go",
+        "js/src/xt.js",
+        "php/async/xt.php",
+        "php/xt.php"
+      ],
+      "doc.xt.com": [
+        "cs/ccxt/exchanges/pro/wrappers/xt.cs",
+        "cs/ccxt/exchanges/pro/xt.cs",
+        "cs/ccxt/exchanges/xt.cs",
+        "cs/ccxt/wrappers/xt.cs",
+        "go/v4/pro/xt.go"
+      ],
+      "a.static-global.com": [
+        "cs/ccxt/exchanges/xt.cs",
+        "go/v4/xt.go",
+        "js/src/xt.js",
+        "php/async/xt.php",
+        "php/xt.php"
+      ],
+      "coinmarketcap.com": [
+        "cs/ccxt/exchanges/xt.cs",
+        "doc/manual.rst",
+        "go/v4/xt.go",
+        "js/src/bittrade.js",
+        "js/src/htx.js"
+      ],
+      "yobit.net": [
+        "cs/ccxt/exchanges/yobit.cs",
+        "cs/ccxt/wrappers/yobit.cs",
+        "doc/manual.rst",
+        "go/v4/yobit.go",
+        "go/v4/yobit_wrapper.go"
+      ],
+      "api.zaif.jp": [
+        "cs/ccxt/exchanges/zaif.cs",
+        "go/v4/zaif.go",
+        "js/src/zaif.js",
+        "php/async/zaif.php",
+        "php/zaif.php"
+      ],
+      "techbureau-api-document.readthedocs.io": [
+        "cs/ccxt/exchanges/zaif.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "corp.zaif.jp": [
+        "cs/ccxt/exchanges/zaif.cs",
+        "go/v4/zaif.go",
+        "js/src/zaif.js",
+        "php/async/zaif.php",
+        "php/zaif.php"
+      ],
+      "zaif-api-document.readthedocs.io": [
+        "cs/ccxt/exchanges/zaif.cs",
+        "cs/ccxt/wrappers/zaif.cs",
+        "go/v4/zaif.go",
+        "go/v4/zaif_wrapper.go",
+        "js/src/zaif.d.ts"
+      ],
+      "sapi.zebpay.com": [
+        "cs/ccxt/exchanges/zebpay.cs",
+        "go/v4/zebpay.go",
+        "js/src/zebpay.js",
+        "php/async/zebpay.php",
+        "php/zebpay.php"
+      ],
+      "futuresbe.zebpay.com": [
+        "cs/ccxt/exchanges/zebpay.cs",
+        "go/v4/zebpay.go",
+        "js/src/zebpay.js",
+        "php/async/zebpay.php",
+        "php/zebpay.php"
+      ],
+      "www.zebstage.com": [
+        "cs/ccxt/exchanges/zebpay.cs",
+        "go/v4/zebpay.go",
+        "js/src/zebpay.js",
+        "php/async/zebpay.php",
+        "php/zebpay.php"
+      ],
+      "dev-futuresbe.zebstage.com": [
+        "cs/ccxt/exchanges/zebpay.cs",
+        "go/v4/zebpay.go",
+        "js/src/zebpay.js",
+        "php/async/zebpay.php",
+        "php/zebpay.php"
+      ],
+      "zebpay.com": [
+        "cs/ccxt/exchanges/zebpay.cs",
+        "go/v4/zebpay.go",
+        "js/src/zebpay.js",
+        "php/async/zebpay.php",
+        "php/zebpay.php"
+      ],
+      "open.bitrue.com": [
+        "cs/ccxt/exchanges/pro/bitrue.cs",
+        "go/v4/pro/bitrue.go",
+        "js/src/pro/bitrue.js",
+        "php/pro/bitrue.php",
+        "python/ccxt/pro/bitrue.py"
+      ],
+      "docs.cex.io": [
+        "cs/ccxt/exchanges/pro/cex.cs",
+        "cs/ccxt/exchanges/pro/wrappers/cex.cs",
+        "go/v4/pro/cex.go",
+        "go/v4/pro/cex_wrapper.go",
+        "js/src/pro/cex.d.ts"
+      ],
+      "www.gate.io": [
+        "cs/ccxt/exchanges/pro/gate.cs",
+        "cs/ccxt/exchanges/pro/wrappers/gate.cs",
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst"
+      ],
+      "okx-docs.github.io": [
+        "cs/ccxt/exchanges/pro/okx.cs",
+        "cs/ccxt/exchanges/pro/wrappers/okx.cs",
+        "go/v4/pro/okx.go",
+        "go/v4/pro/okx_wrapper.go",
+        "js/src/pro/okx.d.ts"
+      ],
+      "docs.okx.com": [
+        "cs/ccxt/exchanges/pro/okx.cs",
+        "cs/ccxt/exchanges/pro/wrappers/okx.cs",
+        "go/v4/pro/okx.go",
+        "go/v4/pro/okx_wrapper.go",
+        "js/src/pro/okx.d.ts"
+      ],
+      "developers.bitpanda.com": [
+        "cs/ccxt/exchanges/pro/onetrading.cs",
+        "cs/ccxt/exchanges/pro/wrappers/onetrading.cs",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst"
+      ],
+      "x.com": [
+        "cs/ccxt/exchanges/pro/paradex.cs",
+        "go/v4/pro/paradex.go",
+        "js/src/pro/paradex.js",
+        "php/pro/paradex.php",
+        "python/ccxt/pro/paradex.py"
+      ],
+      "cryptojedi.org": [
+        "cs/ccxt/static/Cryptography.ECDSA/Internal/Secp256K1/ECMultGen.cs"
+      ],
+      "www.tau.ac.il": [
+        "cs/ccxt/static/Cryptography.ECDSA/Internal/Secp256K1/ECMultGen.cs"
+      ],
+      "hyperelliptic.org": [
+        "cs/ccxt/static/Cryptography.ECDSA/Internal/Secp256K1/Group.cs",
+        "cs/ccxt/static/Portable.BouncyCastle/math/ec/rfc8032/Ed25519.cs",
+        "cs/ccxt/static/Portable.BouncyCastle/math/ec/rfc8032/Ed448.cs",
+        "js/src/static_dependencies/noble-curves/abstract/edwards.js",
+        "php/static_dependencies/elliptic-php/lib/Curve/MontCurve/Point.php"
+      ],
+      "travis-ci.org": [
+        "cs/ccxt/static/MiniMessagePack/README.md",
+        "php/static_dependencies/kornrunner/keccak/README.md",
+        "python/README.rst"
+      ],
+      "msgpack.org": [
+        "cs/ccxt/static/MiniMessagePack/MiniMessagePack/MiniMessagePacker.cs",
+        "cs/ccxt/static/MiniMessagePack/README.md"
+      ],
+      "schemas.microsoft.com": [
+        "cs/ccxt/static/MiniMessagePack/MiniMessagePack/MiniMessagePack.csproj"
+      ],
+      "eips.ethereum.org": [
+        "cs/ccxt/static/Nethereum/Nethereum.ABI/EIP712/EIP2612/EIP2612TypeFactory.cs",
+        "js/src/static_dependencies/dydx-v4-client/cosmos/tx/signing/v1beta1/signing.d.ts",
+        "js/src/static_dependencies/dydx-v4-client/cosmos/tx/signing/v1beta1/signing.js",
+        "python/ccxt/static_dependencies/ethereum/account/messages.py",
+        "ts/src/static_dependencies/dydx-v4-client/cosmos/tx/signing/v1beta1/signing.ts"
+      ],
+      "blogs.msdn.com": [
+        "cs/ccxt/static/Nethereum/Nethereum.Hex/HexConvertors/Extensions/HexByteConvertorExtensions.cs"
+      ],
+      "uberscraper.blogspot.co.uk": [
+        "cs/ccxt/static/Nethereum/Nethereum.Util/BigDecimal.cs"
+      ],
+      "www.albahari.com": [
+        "cs/ccxt/static/Nethereum/Nethereum.Util/PredicateBuilder.cs"
+      ],
+      "www.bouncycastle.org": [
+        "cs/ccxt/static/Portable.BouncyCastle/BouncyCastle.Crypto.csproj"
+      ],
+      "www.bsi.bund.de": [
+        "cs/ccxt/static/Portable.BouncyCastle/asn1/bsi/BsiObjectIdentifiers.cs"
+      ],
+      "tools.ietf.org": [
+        "cs/ccxt/static/Portable.BouncyCastle/asn1/pkcs/PKCSObjectIdentifiers.cs",
+        "doc/manual.rst",
+        "js/src/static_dependencies/fflake/browser.js",
+        "js/src/static_dependencies/jsencrypt/lib/jsbn/rsa.js",
+        "js/src/static_dependencies/node-fetch/utils/referrer.js"
+      ],
+      "www.faqs.org": [
+        "cs/ccxt/static/Portable.BouncyCastle/asn1/x509/PolicyMappings.cs"
+      ],
+      "keccak.noekeon.org": [
+        "cs/ccxt/static/Portable.BouncyCastle/crypto/digests/KeccakDigest.cs",
+        "cs/ccxt/static/Portable.BouncyCastle/crypto/digests/ShakeDigest.cs",
+        "python/ccxt/static_dependencies/keccak/keccak.py"
+      ],
+      "www.usenix.org": [
+        "cs/ccxt/static/Portable.BouncyCastle/crypto/generators/BCrypt.cs"
+      ],
+      "www.rfc-editor.org": [
+        "cs/ccxt/static/Portable.BouncyCastle/math/ec/rfc8032/Ed25519.cs",
+        "cs/ccxt/static/Portable.BouncyCastle/math/ec/rfc8032/Ed448.cs",
+        "js/src/static_dependencies/noble-curves/abstract/montgomery.js",
+        "js/src/static_dependencies/noble-curves/ed448.js",
+        "ts/src/static_dependencies/noble-curves/abstract/montgomery.ts"
+      ],
+      "ia.cr": [
+        "cs/ccxt/static/Portable.BouncyCastle/math/ec/rfc8032/Ed25519.cs",
+        "cs/ccxt/static/Portable.BouncyCastle/math/ec/rfc8032/Ed448.cs"
+      ],
+      "www.starkware.co": [
+        "cs/ccxt/static/StarkSharp/StarkSharp.Signer/StarkCurveSigner/pedersen_params.json",
+        "python/ccxt/static_dependencies/starkware/crypto/math_utils.py",
+        "python/ccxt/static_dependencies/starkware/crypto/signature.py"
+      ],
+      "en.wikipedia.org": [
+        "cs/ccxt/static/StarkSharp/StarkSharp.Signer/StarkCurveSigner/Utils/Math.cs",
+        "doc/ccxt.pro.manual.rst",
+        "doc/manual.rst",
+        "js/src/static_dependencies/ethers/address/address.js",
+        "js/src/static_dependencies/noble-curves/abstract/edwards.js"
+      ],
+      "learn.microsoft.com": [
+        "cs/ccxt/ws/Client.cs"
+      ],
+      "open-api.bingx.com": [
+        "cs/tests/Generated/TestMethods.cs",
+        "go/tests/base/tests.go",
+        "js/src/test/tests.js",
+        "php/test/tests_async.php",
+        "php/test/tests_sync.php"
+      ],
+      "fake:8080": [
+        "cs/tests/Generated/TestMethods.cs",
+        "go/tests/base/tests.go",
+        "js/src/test/tests.js",
+        "php/test/tests_async.php",
+        "php/test/tests_sync.php"
+      ],
+      "testnet.org": [
+        "cs/tests/Generated/Base/test.afterConstructor.cs",
+        "go/tests/base/test.afterConstructor.go",
+        "js/src/test/base/test.afterConstructor.js",
+        "php/test/base/test_after_constructor.php",
+        "python/ccxt/test/base/test_after_constructor.py"
+      ],
+      "ccxt.com&url=": [
+        "cs/tests/Generated/Exchange/test.proxies.cs",
+        "js/src/test/Exchange/test.proxies.js",
+        "php/test/exchange/async/test_proxies.php",
+        "php/test/exchange/sync/test_proxies.php",
+        "python/ccxt/test/exchange/async/test_proxies.py"
+      ],
+      "ccxt.pro": [
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst",
+        "python/README.rst"
+      ],
+      "bittrex.com": [
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "bittrex.github.io": [
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "exchange.coinbase.com": [
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "docs.exchange.coinbase.com": [
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "pro.coinbase.com": [
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "currency.com": [
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "www.flowbtc.com.br": [
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "www.huobi.co.jp": [
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "api-doc.huobi.co.jp": [
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "idex.io": [
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "docs.idex.io": [
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "m.mexc.com": [
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "mxcdevelop.github.io": [
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "www.okcoin.com": [
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "exchange.ripio.com": [
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "wazirx.com": [
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "docs.wazirx.com": [
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "referral.woo.org": [
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "docs.woo.org": [
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "www.zb.com": [
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "trade.zipmex.com": [
+        "doc/ccxt.pro.manual.rst",
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "docs.python.org": [
+        "doc/ccxt.pro.manual.rst",
+        "doc/conf.py",
+        "doc/manual.rst",
+        "python/ccxt/async_support/base/ws/cache.py",
+        "python/ccxt/static_dependencies/ecdsa/rfc6979.py"
+      ],
+      "signalr.exchange.com": [
+        "doc/ccxt.pro.manual.rst",
+        "wiki/ccxt.pro.manual.md"
+      ],
+      "socket.io": [
+        "doc/ccxt.pro.manual.rst",
+        "wiki/ccxt.pro.manual.md"
+      ],
+      "www.buda.com": [
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst",
+        "python/README.rst"
+      ],
+      "api.buda.com": [
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst",
+        "python/README.rst"
+      ],
+      "timex.io": [
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst",
+        "python/README.rst"
+      ],
+      "docs.timex.io": [
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst",
+        "python/README.rst"
+      ],
+      "www.bitpanda.com": [
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "oceanex.pro": [
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst",
+        "python/README.rst"
+      ],
+      "api.oceanex.pro": [
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst",
+        "python/README.rst"
+      ],
+      "www.btcex.com": [
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "docs.btcex.com": [
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "www.bitforex.com": [
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst",
+        "python/README.rst"
+      ],
+      "www.lbank.info": [
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "app.stex.com": [
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst",
+        "python/README.rst"
+      ],
+      "apidocs.stex.com": [
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "auth.zondaglobal.com": [
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst",
+        "python/README.md"
+      ],
+      "docs.zonda.exchange": [
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "therocktrading.com": [
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst",
+        "python/README.rst"
+      ],
+      "api.therocktrading.com": [
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst",
+        "python/README.rst"
+      ],
+      "bl3p.eu": [
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst",
+        "python/README.rst"
+      ],
+      "www.probit.com": [
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst",
+        "python/README.rst"
+      ],
+      "docs-en.probit.com": [
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst",
+        "python/README.rst"
+      ],
+      "waves.exchange": [
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "docs.waves.exchange": [
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "coinfalcon.com": [
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst",
+        "python/README.rst"
+      ],
+      "docs.coinfalcon.com": [
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst",
+        "python/README.rst"
+      ],
+      "www.lykke.com": [
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst",
+        "python/README.rst"
+      ],
+      "hft-apiv2.lykke.com": [
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "tidex.com": [
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst",
+        "python/README.rst"
+      ],
+      "btc-alpha.com": [
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst",
+        "python/README.rst"
+      ],
+      "btc-alpha.github.io": [
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst",
+        "python/README.rst"
+      ],
+      "www.itbit.com": [
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst",
+        "python/README.rst"
+      ],
+      "api.itbit.com": [
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst",
+        "python/README.rst"
+      ],
+      "docs.poloniex.com": [
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst",
+        "python/README.rst"
+      ],
+      "btc-trade.com.ua": [
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst",
+        "python/README.rst"
+      ],
+      "docs.google.com": [
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst",
+        "python/README.rst"
+      ],
+      "kuna.io": [
+        "doc/exchange-markets-by-country.rst",
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst",
+        "python/README.rst"
+      ],
+      "www.bkex.com": [
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "bkexapi.github.io": [
+        "doc/exchange-markets.rst",
+        "doc/manual.rst",
+        "doc/readme.rst"
+      ],
+      "sphinx-doc.org": [
+        "doc/make.bat"
+      ],
+      "php.net": [
+        "doc/manual.rst",
+        "php/static_dependencies/Sop/ASN1/Type/BaseTime.php",
+        "php/static_dependencies/Sop/ASN1/Type/Primitive/Real.php",
+        "php/static_dependencies/phpseclib/Math/BigInteger.php",
+        "php/static_dependencies/starknet.php/src/Utils.php"
+      ],
+      "docs.example.com": [
+        "doc/manual.rst",
+        "wiki/Manual.md"
+      ],
+      "www.cloudflare.com": [
+        "doc/manual.rst",
+        "wiki/Manual.md"
+      ],
+      "www.incapsula.com": [
+        "doc/manual.rst",
+        "wiki/Manual.md"
+      ],
+      "www.google.ru": [
+        "doc/manual.rst",
+        "wiki/Manual.md"
+      ],
+      "minergate.com": [
+        "doc/manual.rst",
+        "wiki/Manual.md"
+      ],
+      "hackernoon.com": [
+        "doc/manual.rst",
+        "wiki/Manual.md"
+      ],
+      "api.exchange.com": [
+        "doc/manual.rst",
+        "wiki/Manual.md"
+      ],
+      "developer.mozilla.org": [
+        "doc/manual.rst",
+        "js/src/static_dependencies/ethers/coders/abstract-coder.js",
+        "js/src/static_dependencies/node-fetch/utils/referrer.d.ts",
+        "js/src/static_dependencies/node-fetch/utils/referrer.js",
+        "ts/src/static_dependencies/ethers/coders/abstract-coder.ts"
+      ],
+      "aiohttp.readthedocs.io": [
+        "doc/manual.rst",
+        "wiki/Manual.md"
+      ],
+      "sergeyzhuk.me": [
+        "doc/manual.rst",
+        "wiki/Manual.md"
+      ],
+      "bitbay.net": [
+        "doc/manual.rst",
+        "python/README.rst",
+        "wiki/Manual.md"
+      ],
+      "bitlish.com": [
+        "doc/manual.rst",
+        "wiki/Manual.md"
+      ],
+      "www.bitmarket.net": [
+        "doc/manual.rst",
+        "wiki/Manual.md"
+      ],
+      "bitmex.com": [
+        "doc/manual.rst",
+        "wiki/Manual.md"
+      ],
+      "btc-x.is": [
+        "doc/manual.rst",
+        "wiki/Manual.md"
+      ],
+      "travis-ci.com": [
+        "doc/readme.rst"
+      ],
+      "npmjs.com": [
+        "doc/readme.rst",
+        "examples/README.md",
+        "examples/js/README.md",
+        "python/README.rst",
+        "wiki/Examples.md"
+      ],
+      "twitter.com": [
+        "doc/readme.rst",
+        "python/README.rst",
+        "python/setup.py"
+      ],
+      "tab-trader.com": [
+        "doc/readme.rst",
+        "python/README.rst"
+      ],
+      "play.google.com": [
+        "doc/readme.rst",
+        "python/README.rst"
+      ],
+      "itunes.apple.com": [
+        "doc/readme.rst",
+        "python/README.rst"
+      ],
+      "www.freqtrade.io": [
+        "doc/readme.rst",
+        "examples/README.md"
+      ],
+      "www.octobot.online": [
+        "doc/readme.rst"
+      ],
+      "medium.com": [
+        "doc/readme.rst",
+        "examples/README.md",
+        "python/README.rst",
+        "ts/src/test/static/currencies/binance.json",
+        "wiki/Awesome.md"
+      ],
+      "public.bnbstatic.com": [
+        "doc/_static/javascript/binance-portal.min.js"
+      ],
+      "jqueryui.com": [
+        "doc/_static/javascript/jquery-ui.min.js"
+      ],
+      "gruntjs.com": [
+        "examples/.gitignore"
+      ],
+      "bower.io": [
+        "examples/.gitignore"
+      ],
+      "parceljs.org": [
+        "examples/.gitignore"
+      ],
+      "peerj.com": [
+        "examples/README.md",
+        "wiki/Examples.md"
+      ],
+      "arxiv.org": [
+        "examples/README.md",
+        "wiki/Examples.md"
+      ],
+      "pmc.ncbi.nlm.nih.gov": [
+        "examples/README.md",
+        "wiki/Examples.md"
+      ],
+      "openreview.net": [
+        "examples/README.md",
+        "wiki/Examples.md"
+      ],
+      "discovery.ucl.ac.uk": [
+        "examples/README.md",
+        "wiki/Examples.md"
+      ],
+      "www.mdpi.com": [
+        "examples/README.md",
+        "wiki/Examples.md"
+      ],
+      "upcommons.upc.edu": [
+        "examples/README.md",
+        "wiki/Examples.md"
+      ],
+      "researchonline.lse.ac.uk": [
+        "examples/README.md",
+        "wiki/Examples.md"
+      ],
+      "joss.theoj.org": [
+        "examples/README.md",
+        "wiki/Examples.md"
+      ],
+      "capuana.ifi.uzh.ch": [
+        "examples/README.md",
+        "wiki/Examples.md"
+      ],
+      "oa.upm.es": [
+        "examples/README.md",
+        "wiki/Examples.md"
+      ],
+      "link.springer.com": [
+        "examples/README.md",
+        "wiki/Examples.md"
+      ],
+      "www.blockpit.io": [
+        "examples/README.md"
+      ],
+      "www.dcastack.com": [
+        "examples/README.md"
+      ],
+      "www.youtube.com": [
+        "examples/README.md",
+        "wiki/Awesome.md"
+      ],
+      "robottraders.io": [
+        "examples/README.md"
+      ],
+      "profitview.net": [
+        "examples/README.md"
+      ],
+      "www.hodlbot.io": [
+        "examples/README.md"
+      ],
+      "blog.enigma.co": [
+        "examples/README.md",
+        "wiki/Awesome.md"
+      ],
+      "elitwilliams.medium.com": [
+        "examples/README.md"
+      ],
+      "www.kleemans.ch": [
+        "examples/README.md"
+      ],
+      "www.linkedin.com": [
+        "examples/README.md",
+        "wiki/Awesome.md"
+      ],
+      "steemit.com": [
+        "examples/README.md",
+        "wiki/Awesome.md"
+      ],
+      "itnext.io": [
+        "examples/README.md"
+      ],
+      "juancisneros.com.ve": [
+        "examples/README.md"
+      ],
+      "www.naas.ai": [
+        "examples/README.md"
+      ],
+      "python.plainenglish.io": [
+        "examples/README.md"
+      ],
+      "wire.insiderfinance.io": [
+        "examples/README.md"
+      ],
+      "backtest-rookies.com": [
+        "examples/README.md",
+        "wiki/Awesome.md"
+      ],
+      "antilibrary.org": [
+        "examples/README.md"
+      ],
+      "coil.com": [
+        "examples/README.md"
+      ],
+      "codeburst.io": [
+        "examples/README.md",
+        "wiki/Awesome.md"
+      ],
+      "blog.goodaudience.com": [
+        "examples/README.md"
+      ],
+      "www.hackernoon.com": [
+        "examples/README.md"
+      ],
+      "towardsdatascience.com": [
+        "examples/README.md"
+      ],
+      "jonc.dev": [
+        "examples/README.md"
+      ],
+      "www.maxpython.com": [
+        "examples/README.md"
+      ],
+      "norman-lm-fung.medium.com": [
+        "examples/README.md"
+      ],
+      "nukewhales.com": [
+        "examples/README.md"
+      ],
+      "zetcode.com": [
+        "examples/README.md"
+      ],
+      "barbotine.medium.com": [
+        "examples/README.md"
+      ],
+      "j4nt4ncrypto.medium.com": [
+        "examples/README.md"
+      ],
+      "ryota-trade.com": [
+        "examples/README.md",
+        "wiki/Awesome.md"
+      ],
+      "note.mu": [
+        "examples/README.md",
+        "wiki/Awesome.md"
+      ],
+      "oretano.com": [
+        "examples/README.md"
+      ],
+      "www.chainside.info": [
+        "examples/README.md"
+      ],
+      "www.bilibili.com": [
+        "examples/README.md",
+        "wiki/Awesome.md"
+      ],
+      "www.stray-scrapbook.work": [
+        "examples/README.md",
+        "wiki/Awesome.md"
+      ],
+      "www.hacky.xyz": [
+        "examples/README.md",
+        "wiki/Awesome.md"
+      ],
+      "qiita.com": [
+        "examples/README.md",
+        "wiki/Awesome.md"
+      ],
+      "cryptojapan.ml": [
+        "examples/README.md",
+        "wiki/Awesome.md"
+      ],
+      "hk.saowen.com": [
+        "examples/README.md",
+        "wiki/Awesome.md"
+      ],
+      "bihu.com": [
+        "examples/README.md"
+      ],
+      "sky.pro": [
+        "examples/README.md"
+      ],
+      "habr.com": [
+        "examples/README.md"
+      ],
+      "www.tuicool.com": [
+        "examples/README.md"
+      ],
+      "awstip.com": [
+        "examples/README.md"
+      ],
+      "runkit.com": [
+        "examples/README.md",
+        "wiki/Awesome.md"
+      ],
+      "camo.githubusercontent.com": [
+        "examples/README.md"
+      ],
+      "cloud.githubusercontent.com": [
+        "examples/README.md"
+      ],
+      "www.okex.com": [
+        "examples/ccxt.pro/py/okex-create-swap-order.py",
+        "examples/js/okex-transfer.js",
+        "python/README.rst",
+        "wiki/examples/js/okex-transfer.md"
+      ],
+      "5.75.153.75:8090": [
+        "examples/cs/examples/proxy-usage.cs"
+      ],
+      "5.75.153.75:8002": [
+        "examples/cs/examples/proxy-usage.cs"
+      ],
+      "crossorigin.me": [
+        "examples/js/arbitrage-pairs.js",
+        "examples/js/bcc-vs-bch.js",
+        "examples/js/proxy-round-robin.js",
+        "examples/js/symbols.js",
+        "examples/php/arbitrage-pairs.php"
+      ],
+      "username:password@your-proxy.com": [
+        "examples/js/binance-https-proxy.js",
+        "examples/ts/binance-https-proxy.ts",
+        "wiki/examples/js/binance-https-proxy.md",
+        "wiki/examples/ts/binance-https-proxy.md"
+      ],
+      "1.2.3.4:5678": [
+        "examples/js/custom-proxy-agent-for-js.js",
+        "examples/ts/custom-proxy-agent-for-js.ts",
+        "wiki/examples/js/custom-proxy-agent-for-js.md",
+        "wiki/examples/ts/custom-proxy-agent-for-js.md"
+      ],
+      "188.245.226.105:8090": [
+        "examples/js/proxy-usage.js",
+        "examples/php/proxy-usage.php",
+        "examples/py/proxy-usage.py",
+        "examples/ts/proxy-usage.ts",
+        "wiki/examples/js/proxy-usage.md"
+      ],
+      "your_server.com": [
+        "examples/php/sample-local-proxy-server-with-cors.php",
+        "wiki/examples/php/sample-local-proxy-server-with-cors.md"
+      ],
+      "api-public.sandbox.gdax.com": [
+        "examples/py/async-balance-gdax.py",
+        "examples/py/balance-gdax.py",
+        "wiki/examples/py/async-balance-gdax.md",
+        "wiki/examples/py/balance-gdax.md"
+      ],
+      "help.github.com": [
+        "examples/ts/nextjs-page-router/.gitignore"
+      ],
+      "paulmillr.com": [
+        "examples/ts/nextjs-page-router/package-lock.json"
+      ],
+      "nextjs.org": [
+        "examples/ts/nextjs-page-router/README.md"
+      ],
+      "blog.devtrovert.com": [
+        "go/v4/exchange_helpers.go"
+      ],
+      "aster.markets": [
+        "js/src/aster.js",
+        "php/aster.php",
+        "php/async/aster.php",
+        "python/ccxt/aster.py",
+        "python/ccxt/async_support/aster.py"
+      ],
+      "blog.bitmex.com": [
+        "js/src/bitmex.js",
+        "php/async/bitmex.php",
+        "php/bitmex.php",
+        "python/ccxt/async_support/bitmex.py",
+        "python/ccxt/bitmex.py"
+      ],
+      "en.cryptonomist.ch": [
+        "js/src/bittrade.js",
+        "js/src/htx.js",
+        "php/async/bittrade.php",
+        "php/async/htx.php",
+        "php/bittrade.php"
+      ],
+      "trade-docs.coinmetro.co": [
+        "js/src/coinmetro.js",
+        "php/async/coinmetro.php",
+        "php/coinmetro.php",
+        "python/ccxt/async_support/coinmetro.py",
+        "python/ccxt/coinmetro.py"
+      ],
+      "status.crypto.com": [
+        "js/src/cryptocom.js",
+        "php/async/cryptocom.php",
+        "php/cryptocom.php",
+        "python/ccxt/async_support/cryptocom.py",
+        "python/ccxt/cryptocom.py"
+      ],
+      "api.rhino.fi": [
+        "js/src/grvt.js",
+        "php/async/grvt.php",
+        "php/grvt.php",
+        "python/ccxt/async_support/grvt.py",
+        "python/ccxt/grvt.py"
+      ],
+      "api.testnet.huobi.pro": [
+        "js/src/htx.js",
+        "php/async/htx.php",
+        "php/htx.php",
+        "python/ccxt/async_support/htx.py",
+        "python/ccxt/htx.py"
+      ],
+      "status.huobigroup.com": [
+        "js/src/htx.js",
+        "php/async/htx.php",
+        "php/htx.php",
+        "python/ccxt/async_support/htx.py",
+        "python/ccxt/htx.py"
+      ],
+      "status-dm.huobigroup.com": [
+        "js/src/htx.js",
+        "php/async/htx.php",
+        "php/htx.php",
+        "python/ccxt/async_support/htx.py",
+        "python/ccxt/htx.py"
+      ],
+      "status-swap.huobigroup.com": [
+        "js/src/htx.js",
+        "php/async/htx.php",
+        "php/htx.php",
+        "python/ccxt/async_support/htx.py",
+        "python/ccxt/htx.py"
+      ],
+      "kronosresearch.github.io": [
+        "js/src/modetrade.js",
+        "js/src/woofipro.js",
+        "php/async/modetrade.php",
+        "php/async/woofipro.php",
+        "php/modetrade.php"
+      ],
+      "docx.woo.io": [
+        "js/src/woo.js",
+        "php/async/woo.php",
+        "php/woo.php",
+        "python/ccxt/async_support/woo.py",
+        "python/ccxt/woo.py"
+      ],
+      "www.apache.org": [
+        "js/src/static_dependencies/dydx-v4-client/long/index.cjs",
+        "python/ccxt/static_dependencies/msgpack/pack.h",
+        "python/ccxt/static_dependencies/msgpack/pack_template.h",
+        "python/ccxt/static_dependencies/msgpack/sysdep.h",
+        "python/ccxt/static_dependencies/msgpack/unpack.h"
+      ],
+      "docs.soliditylang.org": [
+        "js/src/static_dependencies/ethers/abi-coder.js",
+        "js/src/static_dependencies/ethers/interface.js",
+        "ts/src/static_dependencies/ethers/abi-coder.ts",
+        "ts/src/static_dependencies/ethers/interface.ts"
+      ],
+      "ethereum.stackexchange.com": [
+        "js/src/static_dependencies/ethers/address/contract-address.js",
+        "ts/src/static_dependencies/ethers/address/contract-address.ts"
+      ],
+      "www.ietf.org": [
+        "js/src/static_dependencies/ethers/utils/uuid.d.ts",
+        "js/src/static_dependencies/ethers/utils/uuid.js",
+        "ts/src/static_dependencies/ethers/utils/uuid.ts"
+      ],
+      "reddit.com": [
+        "js/src/static_dependencies/fflake/browser.js",
+        "ts/src/static_dependencies/fflake/browser.js"
+      ],
+      "lapo.it": [
+        "js/src/static_dependencies/jsencrypt/JSEncryptRSAKey.d.ts",
+        "js/src/static_dependencies/jsencrypt/JSEncryptRSAKey.js",
+        "ts/src/static_dependencies/jsencrypt/JSEncryptRSAKey.ts"
+      ],
+      "www.cs.auckland.ac.nz": [
+        "js/src/static_dependencies/jsencrypt/lib/asn1js/oids.js",
+        "ts/src/static_dependencies/jsencrypt/lib/asn1js/oids.ts"
+      ],
+      "www.gnupg.org": [
+        "js/src/static_dependencies/jsencrypt/lib/asn1js/oids.js",
+        "ts/src/static_dependencies/jsencrypt/lib/asn1js/oids.ts"
+      ],
+      "kjur.github.io": [
+        "js/src/static_dependencies/jsencrypt/lib/jsrsasign/asn1-1.0.d.ts",
+        "js/src/static_dependencies/jsencrypt/lib/jsrsasign/asn1-1.0.js",
+        "ts/src/static_dependencies/jsencrypt/lib/jsrsasign/asn1-1.0.ts"
+      ],
+      "developer.yahoo.com": [
+        "js/src/static_dependencies/jsencrypt/lib/jsrsasign/yahoo.js",
+        "ts/src/static_dependencies/jsencrypt/lib/jsrsasign/yahoo.js"
+      ],
+      "datatracker.ietf.org": [
+        "js/src/static_dependencies/noble-curves/abstract/hash-to-curve.d.ts",
+        "js/src/static_dependencies/noble-curves/abstract/hash-to-curve.js",
+        "js/src/static_dependencies/noble-curves/ed25519.d.ts",
+        "js/src/static_dependencies/noble-curves/ed25519.js",
+        "js/src/static_dependencies/noble-curves/ed448.js"
+      ],
+      "ristretto.group": [
+        "js/src/static_dependencies/noble-curves/ed25519.d.ts",
+        "js/src/static_dependencies/noble-curves/ed25519.js",
+        "ts/src/static_dependencies/noble-curves/ed25519.ts"
+      ],
+      "neuromancer.sk": [
+        "js/src/static_dependencies/noble-curves/jubjub.d.ts",
+        "js/src/static_dependencies/noble-curves/jubjub.js",
+        "js/src/static_dependencies/noble-curves/p256.js",
+        "js/src/static_dependencies/noble-curves/p384.js",
+        "js/src/static_dependencies/noble-curves/p521.js"
+      ],
+      "www.secg.org": [
+        "js/src/static_dependencies/noble-curves/abstract/weierstrass.js",
+        "js/src/static_dependencies/noble-curves/p256.js",
+        "js/src/static_dependencies/noble-curves/p384.js",
+        "js/src/static_dependencies/noble-curves/p521.js",
+        "ts/src/static_dependencies/noble-curves/abstract/weierstrass.ts"
+      ],
+      "research.kudelskisecurity.com": [
+        "js/src/static_dependencies/noble-curves/abstract/modular.d.ts",
+        "js/src/static_dependencies/noble-curves/abstract/modular.js",
+        "ts/src/static_dependencies/noble-curves/abstract/modular.ts"
+      ],
+      "brilliant.org": [
+        "js/src/static_dependencies/noble-curves/abstract/modular.js",
+        "ts/src/static_dependencies/noble-curves/abstract/modular.ts"
+      ],
+      "eprint.iacr.org": [
+        "js/src/static_dependencies/noble-curves/abstract/modular.js",
+        "js/src/static_dependencies/noble-curves/abstract/poseidon.js",
+        "js/src/static_dependencies/noble-curves/abstract/weierstrass.js",
+        "js/src/static_dependencies/scure-starknet/index.js",
+        "ts/src/static_dependencies/noble-curves/abstract/modular.ts"
+      ],
+      "cr.yp.to": [
+        "js/src/static_dependencies/noble-curves/abstract/montgomery.js",
+        "js/src/static_dependencies/noble-hashes/scrypt.js",
+        "ts/src/static_dependencies/noble-curves/abstract/montgomery.ts",
+        "ts/src/static_dependencies/noble-hashes/scrypt.ts"
+      ],
+      "www.poseidon-hash.info": [
+        "js/src/static_dependencies/noble-curves/abstract/poseidon.js",
+        "ts/src/static_dependencies/noble-curves/abstract/poseidon.ts"
+      ],
+      "www.typescriptlang.org": [
+        "js/src/static_dependencies/noble-curves/abstract/weierstrass.d.ts",
+        "ts/src/static_dependencies/noble-curves/abstract/weierstrass.ts"
+      ],
+      "bitcoin.stackexchange.com": [
+        "js/src/static_dependencies/noble-curves/abstract/weierstrass.js",
+        "ts/src/static_dependencies/noble-curves/abstract/weierstrass.ts"
+      ],
+      "tches.iacr.org": [
+        "js/src/static_dependencies/noble-curves/abstract/weierstrass.js",
+        "ts/src/static_dependencies/noble-curves/abstract/weierstrass.ts"
+      ],
+      "soatok.blog": [
+        "js/src/static_dependencies/noble-hashes/hkdf.js",
+        "ts/src/static_dependencies/noble-hashes/hkdf.ts"
+      ],
+      "www.myersdaily.org": [
+        "js/src/static_dependencies/noble-hashes/md5.js",
+        "ts/src/static_dependencies/noble-hashes/md5.ts"
+      ],
+      "jsperf.com": [
+        "js/src/static_dependencies/noble-hashes/md5.js",
+        "ts/src/static_dependencies/noble-hashes/md5.ts"
+      ],
+      "connect.microsoft.com": [
+        "js/src/static_dependencies/noble-hashes/md5.js",
+        "ts/src/static_dependencies/noble-hashes/md5.ts"
+      ],
+      "homes.esat.kuleuven.be": [
+        "js/src/static_dependencies/noble-hashes/ripemd160.js",
+        "ts/src/static_dependencies/noble-hashes/ripemd160.ts"
+      ],
+      "nvlpubs.nist.gov": [
+        "js/src/static_dependencies/noble-hashes/sha256.js",
+        "ts/src/static_dependencies/noble-hashes/sha256.ts"
+      ],
+      "keccak.team": [
+        "js/src/static_dependencies/noble-hashes/sha3-addons.js",
+        "ts/src/static_dependencies/noble-hashes/sha3-addons.ts"
+      ],
+      "fetch.spec.whatwg.org": [
+        "js/src/static_dependencies/node-fetch/body.d.ts",
+        "js/src/static_dependencies/node-fetch/body.js",
+        "js/src/static_dependencies/node-fetch/index.js",
+        "js/src/static_dependencies/node-fetch/request.d.ts",
+        "js/src/static_dependencies/node-fetch/request.js"
+      ],
+      "foo.com": [
+        "js/src/static_dependencies/node-fetch/index.js",
+        "ts/src/static_dependencies/node-fetch/index.js"
+      ],
+      "w3c.github.io": [
+        "js/src/static_dependencies/node-fetch/utils/referrer.d.ts",
+        "js/src/static_dependencies/node-fetch/utils/referrer.js",
+        "ts/src/static_dependencies/node-fetch/utils/referrer.js"
+      ],
+      "hackerone.com": [
+        "js/src/static_dependencies/proxies/https-proxy-agent/index.js",
+        "ts/src/static_dependencies/proxies/https-proxy-agent/index.ts"
+      ],
+      "tonsky.me": [
+        "js/src/static_dependencies/scure-bip39/index.js",
+        "ts/src/static_dependencies/scure-bip39/index.ts"
+      ],
+      "docs.starkware.co": [
+        "js/src/static_dependencies/scure-starknet/index.js",
+        "ts/src/static_dependencies/scure-starknet/index.ts"
+      ],
+      "alpha-mainnet.starknet.io": [
+        "js/src/static_dependencies/starknet/constants.d.ts",
+        "js/src/static_dependencies/starknet/constants.js",
+        "ts/src/static_dependencies/starknet/constants.ts"
+      ],
+      "alpha-sepolia.starknet.io": [
+        "js/src/static_dependencies/starknet/constants.d.ts",
+        "js/src/static_dependencies/starknet/constants.js",
+        "ts/src/static_dependencies/starknet/constants.ts"
+      ],
+      "starknet-mainnet.public.blastapi.io": [
+        "js/src/static_dependencies/starknet/constants.js",
+        "ts/src/static_dependencies/starknet/constants.ts"
+      ],
+      "free-rpc.nethermind.io": [
+        "js/src/static_dependencies/starknet/constants.js",
+        "ts/src/static_dependencies/starknet/constants.ts"
+      ],
+      "starknet-sepolia.public.blastapi.io": [
+        "js/src/static_dependencies/starknet/constants.js",
+        "ts/src/static_dependencies/starknet/constants.ts"
+      ],
+      "starknetjs.com": [
+        "js/src/static_dependencies/starknet/utils/url.d.ts",
+        "js/src/static_dependencies/starknet/utils/url.js",
+        "ts/src/static_dependencies/starknet/utils/url.ts"
+      ],
+      "qa.omni.apex.exchange": [
+        "js/src/static_dependencies/zklink/zklink-sdk-web.js",
+        "ts/src/static_dependencies/zklink/zklink-sdk-web.js"
+      ],
+      "support.bitfinex.com": [
+        "php/async/bitfinex.php",
+        "php/bitfinex.php",
+        "python/ccxt/async_support/bitfinex.py",
+        "python/ccxt/bitfinex.py",
+        "ts/src/bitfinex.ts"
+      ],
+      "api-": [
+        "php/async/coinmetro.php",
+        "php/coinmetro.php"
+      ],
+      "status.gemini.com": [
+        "php/async/gemini.php",
+        "php/gemini.php",
+        "python/ccxt/async_support/gemini.py",
+        "python/ccxt/gemini.py",
+        "ts/src/gemini.ts"
+      ],
+      "pastebin(dot)com": [
+        "php/async/grvt.php",
+        "php/grvt.php",
+        "python/ccxt/async_support/grvt.py",
+        "python/ccxt/grvt.py",
+        "ts/src/grvt.ts"
+      ],
+      "www.php.net": [
+        "php/pro/BaseCache.php"
+      ],
+      "simplito.com": [
+        "php/static_dependencies/elliptic-php/composer.json"
+      ],
+      "git.io": [
+        "php/static_dependencies/elliptic-php/lib/EC.php",
+        "python/ccxt/static_dependencies/keccak/keccak.py"
+      ],
+      "coveralls.io": [
+        "php/static_dependencies/kornrunner/keccak/README.md"
+      ],
+      "www.cacr.math.uwaterloo.ca": [
+        "php/static_dependencies/phpseclib/Math/BigInteger.php"
+      ],
+      "math.libtomcrypt.com": [
+        "php/static_dependencies/phpseclib/Math/BigInteger.php"
+      ],
+      "www.opensource.org": [
+        "php/static_dependencies/phpseclib/Math/BigInteger.php"
+      ],
+      "islab.oregonstate.edu": [
+        "php/static_dependencies/phpseclib/Math/BigInteger.php"
+      ],
+      "www.cosic.esat.kuleuven.be": [
+        "php/static_dependencies/phpseclib/Math/BigInteger.php"
+      ],
+      "www-cs-students.stanford.edu": [
+        "php/static_dependencies/phpseclib/Math/BigInteger.php",
+        "ts/src/static_dependencies/jsencrypt/lib/jsbn/README.md"
+      ],
+      "groups.google.com": [
+        "php/static_dependencies/phpseclib/Math/BigInteger.php"
+      ],
+      "schema.phpunit.de": [
+        "php/static_dependencies/ratchet/pawl/phpunit.xml.dist",
+        "php/static_dependencies/ratchet/pawl/phpunit.xml.legacy"
+      ],
+      "socketo.me": [
+        "php/static_dependencies/ratchet/rfc6455/composer.json"
+      ],
+      "gitter.im": [
+        "php/static_dependencies/ratchet/rfc6455/composer.json"
+      ],
+      "bugs.php.net": [
+        "php/static_dependencies/ratchet/rfc6455/src/Handshake/ClientNegotiator.php",
+        "php/static_dependencies/ratchet/rfc6455/src/Handshake/ServerNegotiator.php",
+        "php/static_dependencies/ratchet/rfc6455/src/Messaging/MessageBuffer.php",
+        "php/static_dependencies/ringcentral-psr7/src/StreamDecoratorTrait.php"
+      ],
+      "svn.apache.org": [
+        "php/static_dependencies/ringcentral-psr7/src/functions.php"
+      ],
+      "registry.npmjs.com": [
+        "python/package.json"
+      ],
+      "quadency.com": [
+        "python/README.rst"
+      ],
+      "www.byte-trade.com": [
+        "python/README.rst"
+      ],
+      "www.eterbase.com": [
+        "python/README.rst"
+      ],
+      "developers.eterbase.exchange": [
+        "python/README.rst"
+      ],
+      "ftx.com": [
+        "python/README.rst"
+      ],
+      "idex.market": [
+        "python/README.rst"
+      ],
+      "docs.idex.market": [
+        "python/README.rst"
+      ],
+      "1btcxe.com": [
+        "python/README.rst"
+      ],
+      "acx.io": [
+        "python/README.rst"
+      ],
+      "anxpro.com": [
+        "python/README.rst"
+      ],
+      "anxv2.docs.apiary.io": [
+        "python/README.rst"
+      ],
+      "aofex.com": [
+        "python/README.rst"
+      ],
+      "aofex.zendesk.com": [
+        "python/README.rst"
+      ],
+      "www.bcex.top": [
+        "python/README.rst"
+      ],
+      "w2.bibox.com": [
+        "python/README.rst"
+      ],
+      "biboxcom.github.io": [
+        "python/README.rst"
+      ],
+      "www.binance.je": [
+        "python/README.rst"
+      ],
+      "auth.bitbay.net": [
+        "python/README.rst"
+      ],
+      "bitflyer.jp": [
+        "python/README.rst"
+      ],
+      "www.bitkk.com": [
+        "python/README.rst"
+      ],
+      "bitmax.io": [
+        "python/README.rst"
+      ],
+      "bitmax-exchange.github.io": [
+        "python/README.rst"
+      ],
+      "u.bitz.com": [
+        "python/README.rst"
+      ],
+      "apidoc.bitz.com": [
+        "python/README.rst"
+      ],
+      "bleutrade.com": [
+        "python/README.rst"
+      ],
+      "app.swaggerhub.com": [
+        "python/README.rst"
+      ],
+      "braziliex.com": [
+        "python/README.rst"
+      ],
+      "m.baobi.com": [
+        "python/README.rst"
+      ],
+      "www.btctrade.im": [
+        "python/README.rst"
+      ],
+      "www.bw.com": [
+        "python/README.rst"
+      ],
+      "chilebit.net": [
+        "python/README.rst"
+      ],
+      "blinktrade.com": [
+        "python/README.rst"
+      ],
+      "prime.coinbase.com": [
+        "python/README.rst"
+      ],
+      "docs.prime.coinbase.com": [
+        "python/README.rst"
+      ],
+      "www.coinegg.com": [
+        "python/README.rst"
+      ],
+      "www.coinfloor.co.uk": [
+        "python/README.rst"
+      ],
+      "www.coingi.com": [
+        "python/README.rst"
+      ],
+      "coingi.docs.apiary.io": [
+        "python/README.rst"
+      ],
+      "www.coolcoin.com": [
+        "python/README.rst"
+      ],
+      "www.coss.io": [
+        "python/README.rst"
+      ],
+      "api.coss.io": [
+        "python/README.rst"
+      ],
+      "crex24.com": [
+        "python/README.rst"
+      ],
+      "docs.crex24.com": [
+        "python/README.rst"
+      ],
+      "www.digifinex.vip": [
+        "python/README.rst"
+      ],
+      "dsxglobal.com": [
+        "python/README.rst"
+      ],
+      "www.exx.com": [
+        "python/README.rst"
+      ],
+      "www.fcoin.com": [
+        "python/README.rst"
+      ],
+      "developer.fcoin.com": [
+        "python/README.rst"
+      ],
+      "www.fcoinjp.com": [
+        "python/README.rst"
+      ],
+      "foxbit.com.br": [
+        "python/README.rst"
+      ],
+      "www.fybse.se": [
+        "python/README.rst"
+      ],
+      "fyb.docs.apiary.io": [
+        "python/README.rst"
+      ],
+      "gate.io": [
+        "python/README.rst"
+      ],
+      "www.hbtc.com": [
+        "python/README.rst"
+      ],
+      "www.huobi.co": [
+        "python/README.rst"
+      ],
+      "www.huobi.com.ru": [
+        "python/README.rst"
+      ],
+      "ice3x.com": [
+        "python/README.rst"
+      ],
+      "ice3x.co.za": [
+        "python/README.rst"
+      ],
+      "kkex.com": [
+        "python/README.rst"
+      ],
+      "www.lakebtc.com": [
+        "python/README.rst"
+      ],
+      "www.lbex.io": [
+        "python/README.rst"
+      ],
+      "www.liquid.com": [
+        "python/README.rst"
+      ],
+      "developers.liquid.com": [
+        "python/README.rst"
+      ],
+      "livecoin.net": [
+        "python/README.rst"
+      ],
+      "www.livecoin.net": [
+        "python/README.rst"
+      ],
+      "hft-api.lykke.com": [
+        "python/README.rst"
+      ],
+      "mixcoins.com": [
+        "python/README.rst"
+      ],
+      "qtrade.io": [
+        "python/README.rst"
+      ],
+      "qtrade-exchange.github.io": [
+        "python/README.rst"
+      ],
+      "www.rightbtc.com": [
+        "python/README.rst"
+      ],
+      "docs.rightbtc.com": [
+        "python/README.rst"
+      ],
+      "www.southxchange.com": [
+        "python/README.rst"
+      ],
+      "help.stex.com": [
+        "python/README.rst"
+      ],
+      "stronghold.co": [
+        "python/README.rst"
+      ],
+      "docs.stronghold.co": [
+        "python/README.rst"
+      ],
+      "surbitcoin.com": [
+        "python/README.rst"
+      ],
+      "theocean.trade": [
+        "python/README.rst"
+      ],
+      "docs.theocean.trade": [
+        "python/README.rst"
+      ],
+      "bit.ly": [
+        "python/README.rst"
+      ],
+      "www.tidebit.com": [
+        "python/README.rst"
+      ],
+      "www.vaultoro.com": [
+        "python/README.rst"
+      ],
+      "api.vaultoro.com": [
+        "python/README.rst"
+      ],
+      "vbtc.exchange": [
+        "python/README.rst"
+      ],
+      "xbtce.com": [
+        "python/README.rst"
+      ],
+      "www.xbtce.com": [
+        "python/README.rst"
+      ],
+      "solidity.readthedocs.io": [
+        "python/ccxt/static_dependencies/ethereum/abi/grammar.py"
+      ],
+      "www.cybertest.com": [
+        "python/ccxt/static_dependencies/keccak/keccak.py"
+      ],
+      "www.graphviz.org": [
+        "python/ccxt/static_dependencies/lark/tree.py"
+      ],
+      "www.sciencedirect.com": [
+        "python/ccxt/static_dependencies/lark/parsers/earley.py",
+        "python/ccxt/static_dependencies/lark/parsers/xearley.py"
+      ],
+      "lark-parser.readthedocs.io": [
+        "python/ccxt/static_dependencies/lark/parsers/earley.py"
+      ],
+      "web.archive.org": [
+        "python/ccxt/static_dependencies/lark/parsers/earley_forest.py"
+      ],
+      "lara.epfl.ch": [
+        "python/ccxt/static_dependencies/lark/parsers/grammar_analysis.py"
+      ],
+      "www.bramvandersanden.com": [
+        "python/ccxt/static_dependencies/lark/parsers/xearley.py"
+      ],
+      "mozilla.org": [
+        "python/ccxt/static_dependencies/lark/tools/standalone.py"
+      ],
+      "pyinstaller-sample-hook.readthedocs.io": [
+        "python/ccxt/static_dependencies/lark/__pyinstaller/__init__.py"
+      ],
+      "python.readthedocs.io": [
+        "python/ccxt/static_dependencies/marshmallow/fields.py"
+      ],
+      "tinyurl.com": [
+        "python/ccxt/static_dependencies/mnemonic/mnemonic.py"
+      ],
+      "mersenneforum.org": [
+        "python/ccxt/static_dependencies/sympy/external/ntheory.py"
+      ],
+      "doi.org": [
+        "python/ccxt/static_dependencies/sympy/external/ntheory.py"
+      ],
+      "mpqs.free.fr": [
+        "python/ccxt/static_dependencies/sympy/external/ntheory.py"
+      ],
+      "toolz.readthedocs.io": [
+        "python/ccxt/static_dependencies/toolz/functoolz.py"
+      ],
+      "yuilibrary.com": [
+        "ts/src/static_dependencies/jsencrypt/lib/jsrsasign/LICENSE.txt"
+      ],
+      "168.63.76.32:3128": [
+        "ts/src/static_dependencies/proxies/https-proxy-agent/README.md"
+      ],
+      "watchable.dev": [
+        "ts/src/static_dependencies/watchable/README.md"
+      ],
+      "bsc.pro.apex.exchange": [
+        "ts/src/test/static/currencies/apex.json"
+      ],
+      "binance.llamarpc.com": [
+        "ts/src/test/static/currencies/apex.json"
+      ],
+      "l2dex-image-static.dev.apexplus.exchange": [
+        "ts/src/test/static/currencies/apex.json"
+      ],
+      "eth.pro.apex.exchange": [
+        "ts/src/test/static/currencies/apex.json"
+      ],
+      "eth.llamarpc.com": [
+        "ts/src/test/static/currencies/apex.json"
+      ],
+      "base.pro.apex.exchange": [
+        "ts/src/test/static/currencies/apex.json"
+      ],
+      "basescan.org": [
+        "ts/src/test/static/currencies/apex.json",
+        "ts/src/test/static/currencies/binance.json",
+        "ts/src/test/static/currencies/bitget.json",
+        "ts/src/test/static/currencies/coinbaseexchange.json",
+        "ts/src/test/static/currencies/woofipro.json"
+      ],
+      "base-mainnet.g.alchemy.com": [
+        "ts/src/test/static/currencies/apex.json"
+      ],
+      "mantle.pro.apex.exchange": [
+        "ts/src/test/static/currencies/apex.json"
+      ],
+      "explorer.mantle.xyz": [
+        "ts/src/test/static/currencies/apex.json"
+      ],
+      "mantle-mainnet.g.alchemy.com": [
+        "ts/src/test/static/currencies/apex.json"
+      ],
+      "omniexplorer.info": [
+        "ts/src/test/static/currencies/bequant.json",
+        "ts/src/test/static/currencies/hitbtc.json",
+        "ts/src/test/static/response/hitbtc.json"
+      ],
+      "live.blockcypher.com": [
+        "ts/src/test/static/currencies/bequant.json",
+        "ts/src/test/static/currencies/coinbaseexchange.json",
+        "ts/src/test/static/currencies/hitbtc.json"
+      ],
+      "www.etherchain.org": [
+        "ts/src/test/static/currencies/bequant.json",
+        "ts/src/test/static/currencies/hitbtc.json"
+      ],
+      "cardanoexplorer.com": [
+        "ts/src/test/static/currencies/bequant.json",
+        "ts/src/test/static/currencies/hitbtc.json"
+      ],
+      "xrpcharts.ripple.com": [
+        "ts/src/test/static/currencies/bequant.json",
+        "ts/src/test/static/currencies/hitbtc.json"
+      ],
+      "assets.peatio.com": [
+        "ts/src/test/static/currencies/bigone.json"
+      ],
+      "nearblocks.io": [
+        "ts/src/test/static/currencies/binance.json",
+        "ts/src/test/static/response/binance.json"
+      ],
+      "snowtrace.io": [
+        "ts/src/test/static/currencies/binance.json",
+        "ts/src/test/static/currencies/bitget.json",
+        "ts/src/test/static/currencies/woofipro.json",
+        "ts/src/test/static/response/binance.json",
+        "ts/src/test/static/response/bitget.json"
+      ],
+      "explorer.aptoslabs.com": [
+        "ts/src/test/static/currencies/binance.json",
+        "ts/src/test/static/currencies/coinbaseexchange.json",
+        "ts/src/test/static/response/binance.json"
+      ],
+      "assethub-polkadot.subscan.io": [
+        "ts/src/test/static/currencies/binance.json",
+        "ts/src/test/static/currencies/bitget.json",
+        "ts/src/test/static/response/binance.json",
+        "ts/src/test/static/response/bitget.json"
+      ],
+      "celoscan.io": [
+        "ts/src/test/static/currencies/binance.json",
+        "ts/src/test/static/response/binance.json"
+      ],
+      "kavascan.com": [
+        "ts/src/test/static/currencies/binance.json",
+        "ts/src/test/static/response/binance.json"
+      ],
+      "www.kaiascan.io": [
+        "ts/src/test/static/currencies/binance.json",
+        "ts/src/test/static/response/binance.json"
+      ],
+      "optimistic.etherscan.io": [
+        "ts/src/test/static/currencies/binance.json",
+        "ts/src/test/static/currencies/bitget.json",
+        "ts/src/test/static/currencies/coinbaseexchange.json",
+        "ts/src/test/static/currencies/weex.json",
+        "ts/src/test/static/currencies/woofipro.json"
+      ],
+      "plasmascan.to": [
+        "ts/src/test/static/currencies/binance.json",
+        "ts/src/test/static/currencies/weex.json",
+        "ts/src/test/static/response/binance.json"
+      ],
+      "polygonscan.com": [
+        "ts/src/test/static/currencies/binance.json",
+        "ts/src/test/static/currencies/bitget.json",
+        "ts/src/test/static/currencies/coinbaseexchange.json",
+        "ts/src/test/static/currencies/weex.json",
+        "ts/src/test/static/currencies/woofipro.json"
+      ],
+      "scrollscan.com": [
+        "ts/src/test/static/currencies/binance.json",
+        "ts/src/test/static/currencies/bitget.json",
+        "ts/src/test/static/response/binance.json"
+      ],
+      "explorer.solana.com": [
+        "ts/src/test/static/currencies/binance.json",
+        "ts/src/test/static/currencies/coinbaseexchange.json",
+        "ts/src/test/static/currencies/woofipro.json",
+        "ts/src/test/static/response/binance.json"
+      ],
+      "tzkt.io": [
+        "ts/src/test/static/currencies/binance.json",
+        "ts/src/test/static/response/binance.json"
+      ],
+      "tonviewer.com": [
+        "ts/src/test/static/currencies/binance.json",
+        "ts/src/test/static/currencies/bitget.json",
+        "ts/src/test/static/currencies/weex.json",
+        "ts/src/test/static/response/binance.json",
+        "ts/src/test/static/response/bitget.json"
+      ],
+      "opbnbscan.com": [
+        "ts/src/test/static/currencies/binance.json",
+        "ts/src/test/static/response/binance.json"
+      ],
+      "bsctrace.com": [
+        "ts/src/test/static/currencies/binance.json"
+      ],
+      "pacific-explorer.manta.network": [
+        "ts/src/test/static/currencies/binance.json",
+        "ts/src/test/static/response/binance.json"
+      ],
+      "voyager.online": [
+        "ts/src/test/static/currencies/binance.json",
+        "ts/src/test/static/currencies/bitget.json",
+        "ts/src/test/static/response/binance.json"
+      ],
+      "explorer.zksync.io": [
+        "ts/src/test/static/currencies/binance.json",
+        "ts/src/test/static/currencies/bitget.json",
+        "ts/src/test/static/response/binance.json"
+      ],
+      "allo.info": [
+        "ts/src/test/static/currencies/binance.json",
+        "ts/src/test/static/currencies/coinbaseexchange.json"
+      ],
+      "explorer.roninchain.com": [
+        "ts/src/test/static/currencies/binance.json"
+      ],
+      "stellar.expert": [
+        "ts/src/test/static/currencies/binance.json"
+      ],
+      "suivision.xyz": [
+        "ts/src/test/static/currencies/binance.json"
+      ],
+      "chiliscan.com": [
+        "ts/src/test/static/currencies/binance.json"
+      ],
+      "explorer.chiliz.com": [
+        "ts/src/test/static/currencies/binance.json"
+      ],
+      "solscan.io": [
+        "ts/src/test/static/currencies/bitget.json",
+        "ts/src/test/static/currencies/coinex.json",
+        "ts/src/test/static/currencies/hitbtc.json",
+        "ts/src/test/static/currencies/weex.json",
+        "ts/src/test/static/response/bitget.json"
+      ],
+      "scope.klaytn.com": [
+        "ts/src/test/static/currencies/bitget.json"
+      ],
+      "explorer.kava.io": [
+        "ts/src/test/static/currencies/bitget.json",
+        "ts/src/test/static/response/bitget.json"
+      ],
+      "aptoscan.com": [
+        "ts/src/test/static/currencies/bitget.json",
+        "ts/src/test/static/currencies/weex.json",
+        "ts/src/test/static/response/bitget.json"
+      ],
+      "explorer.morphl2.io": [
+        "ts/src/test/static/currencies/bitget.json",
+        "ts/src/test/static/currencies/woofipro.json"
+      ],
+      "lineascan.build": [
+        "ts/src/test/static/currencies/bitget.json"
+      ],
+      "cardanoscan.io": [
+        "ts/src/test/static/currencies/bitget.json",
+        "ts/src/test/static/currencies/hollaex.json"
+      ],
+      "sonicscan.org": [
+        "ts/src/test/static/currencies/bitget.json",
+        "ts/src/test/static/currencies/woofipro.json"
+      ],
+      "www.mintscan.io": [
+        "ts/src/test/static/currencies/bitget.json",
+        "ts/src/test/static/currencies/coinbaseexchange.json"
+      ],
+      "dogechain.info": [
+        "ts/src/test/static/currencies/bitmart.json"
+      ],
+      "img2.freepng.ru": [
+        "ts/src/test/static/currencies/bitteam.json"
+      ],
+      "bitcoin.org": [
+        "ts/src/test/static/currencies/bitteam.json",
+        "ts/src/test/static/currencies/hollaex.json"
+      ],
+      "litecoin.org": [
+        "ts/src/test/static/currencies/bitteam.json",
+        "ts/src/test/static/currencies/hollaex.json"
+      ],
+      "explorer.decimalchain.com": [
+        "ts/src/test/static/currencies/bitteam.json"
+      ],
+      "unichain-d7a86fxp.blockscout.com": [
+        "ts/src/test/static/currencies/coinbaseexchange.json"
+      ],
+      "explorer.cardano.org": [
+        "ts/src/test/static/currencies/coinbaseexchange.json"
+      ],
+      "cchain.explorer.avax.network": [
+        "ts/src/test/static/currencies/coinbaseexchange.json"
+      ],
+      "explorer.sui.io": [
+        "ts/src/test/static/currencies/coinbaseexchange.json"
+      ],
+      "uniscan.xyz": [
+        "ts/src/test/static/currencies/coinbaseexchange.json"
+      ],
+      "blockstream.info": [
+        "ts/src/test/static/currencies/hollaex.json"
+      ],
+      "cardano.org": [
+        "ts/src/test/static/currencies/hollaex.json"
+      ],
+      "ripple.com": [
+        "ts/src/test/static/currencies/hollaex.json"
+      ],
+      "xrpscan.com": [
+        "ts/src/test/static/currencies/hollaex.json"
+      ],
+      "s2.coinmarketcap.com": [
+        "ts/src/test/static/currencies/latoken.json",
+        "ts/src/test/static/response/latoken.json"
+      ],
+      "st3.latoken.com": [
+        "ts/src/test/static/currencies/latoken.json"
+      ],
+      "mega.etherscan.io": [
+        "ts/src/test/static/currencies/weex.json"
+      ],
+      "arb1.arbitrum.io": [
+        "ts/src/test/static/currencies/woofipro.json"
+      ],
+      "optimism.publicnode.com": [
+        "ts/src/test/static/currencies/woofipro.json"
+      ],
+      "polygon-bor.publicnode.com": [
+        "ts/src/test/static/currencies/woofipro.json"
+      ],
+      "base-rpc.publicnode.com": [
+        "ts/src/test/static/currencies/woofipro.json"
+      ],
+      "rpc.mantle.xyz": [
+        "ts/src/test/static/currencies/woofipro.json"
+      ],
+      "mantlescan.xyz": [
+        "ts/src/test/static/currencies/woofipro.json"
+      ],
+      "ethereum-rpc.publicnode.com": [
+        "ts/src/test/static/currencies/woofipro.json"
+      ],
+      "evm-rpc.sei-apis.com": [
+        "ts/src/test/static/currencies/woofipro.json"
+      ],
+      "seitrace.com": [
+        "ts/src/test/static/currencies/woofipro.json"
+      ],
+      "avalanche-c-chain-rpc.publicnode.com": [
+        "ts/src/test/static/currencies/woofipro.json"
+      ],
+      "api.mainnet-beta.solana.co": [
+        "ts/src/test/static/currencies/woofipro.json"
+      ],
+      "rpc-quicknode.morphl2.io": [
+        "ts/src/test/static/currencies/woofipro.json"
+      ],
+      "sonic.drpc.org": [
+        "ts/src/test/static/currencies/woofipro.json"
+      ],
+      "rpc.berachain.com": [
+        "ts/src/test/static/currencies/woofipro.json"
+      ],
+      "berascan.com": [
+        "ts/src/test/static/currencies/woofipro.json"
+      ],
+      "mainnet.storyrpc.io": [
+        "ts/src/test/static/currencies/woofipro.json"
+      ],
+      "www.storyscan.xyz": [
+        "ts/src/test/static/currencies/woofipro.json"
+      ],
+      "mainnet.mode.network": [
+        "ts/src/test/static/currencies/woofipro.json"
+      ],
+      "modescan.io": [
+        "ts/src/test/static/currencies/woofipro.json"
+      ],
+      "phoenix-rpc.plumenetwork.xyz": [
+        "ts/src/test/static/currencies/woofipro.json"
+      ],
+      "phoenix-explorer.plumenetwork.xyz": [
+        "ts/src/test/static/currencies/woofipro.json"
+      ],
+      "api.mainnet.abs.xyz": [
+        "ts/src/test/static/currencies/woofipro.json"
+      ],
+      "abscan.org": [
+        "ts/src/test/static/currencies/woofipro.json"
+      ],
+      "public.mocortech.com": [
+        "ts/src/test/static/markets/mexc.json"
+      ],
+      "paper-api.alpaca.markets": [
+        "ts/src/test/static/request/alpaca.json"
+      ],
+      "data.alpaca.markets": [
+        "ts/src/test/static/request/alpaca.json"
+      ],
+      "api.alpaca.markets": [
+        "ts/src/test/static/request/alpaca.json"
+      ],
+      "api.bitbns.com": [
+        "ts/src/test/static/request/bitbns.json"
+      ],
+      "api.bitflyer.com": [
+        "ts/src/test/static/request/bitflyer.json"
+      ],
+      "api.bitget.com": [
+        "ts/src/test/static/request/bitget.json"
+      ],
+      "api.bithumb.com": [
+        "ts/src/test/static/request/bithumb.json"
+      ],
+      "api-cloud-v2.bitmart.com": [
+        "ts/src/test/static/request/bitmart.json"
+      ],
+      "api-cloud.bitmart.com": [
+        "ts/src/test/static/request/bitmart.json"
+      ],
+      "dapi.bitrue.com": [
+        "ts/src/test/static/request/bitrue.json"
+      ],
+      "api-cloud.bittrade.co.jp": [
+        "ts/src/test/static/request/bittrade.json"
+      ],
+      "api-testnet.bybit.com": [
+        "ts/src/test/static/request/bybit.json"
+      ],
+      "api.exchange.coinbase.com": [
+        "ts/src/test/static/request/coinbaseexchange.json"
+      ],
+      "api.pro.coinbase.com": [
+        "ts/src/test/static/request/coinbaseexchange.json"
+      ],
+      "api.foxbit-sandbox.com.br": [
+        "ts/src/test/static/request/foxbit.json"
+      ],
+      "api.hbdm.com": [
+        "ts/src/test/static/request/htx.json"
+      ],
+      "api.huobi.pro": [
+        "ts/src/test/static/request/htx.json"
+      ],
+      "api.hbdm.vn": [
+        "ts/src/test/static/request/htx.json"
+      ],
+      "api.hyperliquid.xyz": [
+        "ts/src/test/static/request/hyperliquid.json"
+      ],
+      "mainnet.zklighter.elliot.ai": [
+        "ts/src/test/static/request/lighter.json"
+      ],
+      "test-api.pacifica.fi": [
+        "ts/src/test/static/request/pacifica.json"
+      ],
+      "api.prod.paradex.trade": [
+        "ts/src/test/static/request/paradex.json"
+      ],
+      "api.testnet.paradex.trade": [
+        "ts/src/test/static/request/paradex.json"
+      ],
+      "api.phemex.com": [
+        "ts/src/test/static/request/phemex.json"
+      ],
+      "api.upbit.com": [
+        "ts/src/test/static/request/upbit.json"
+      ],
+      "sg-api.upbit.com": [
+        "ts/src/test/static/request/upbit.json"
+      ],
+      "api.woox.io": [
+        "ts/src/test/static/request/woo.json"
+      ],
+      "claude.ai": [
+        "wiki/AI-Skills.md"
+      ],
+      "opencode.dev": [
+        "wiki/AI-Skills.md"
+      ],
+      "cdn.rawgit.com": [
+        "wiki/Awesome.md"
+      ],
+      "home.privy.io": [
+        "wiki/FAQ.md"
+      ],
+      "support.privy.io)*": [
+        "wiki/FAQ.md"
+      ],
+      "www.googletagmanager.com": [
+        "wiki/index.html"
+      ],
+      "cdn.ccxt.com": [
+        "wiki/Install.md"
+      ],
+      "api64.ipify.org": [
+        "wiki/Manual.md"
+      ],
+      "your-proxy-url:8080": [
+        "wiki/Manual.md"
+      ],
+      "your-website.com": [
+        "wiki/Manual.md"
+      ],
+      "1.2.3.4:8080": [
+        "wiki/Manual.md"
+      ],
+      "1.2.3.4": [
+        "wiki/Manual.md"
+      ],
+      "alpcomdev.github.io": [
+        "wiki/exchanges/alp.md"
+      ],
+      "plasma-relay-backend.timex.io": [
+        "wiki/exchanges/timex.md"
+      ],
+      "docs.zondacrypto.exchange": [
+        "wiki/exchanges/zonda.md"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\ccxt__ccxt\\gitleaks.json",
+      "exit_code": 1,
+      "output_path": "_logs/scan/ccxt__ccxt/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/ccxt__ccxt/osv.json"
+    },
+    "pip_audit": {
+      "exit_code": 1,
+      "output_path": "_logs/scan/ccxt__ccxt/pip-audit.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "trusted-vendor: 38 pattern-scan secret hit(s) downgraded to notes (likely docstring/example values); test-path secret findings (12); exec-call in run-tests.js; exec-call in run-tests.js; exec-call in run-tests.js; eval-call in cli/ts/helpers.ts; exec-call in cli/ts/helpers.ts; Function-constructor in cs/ccxt/static/StarkSharp/StarkSharp.Base/StarkSharp.ABI/V1/parser.cs; exec-call in js/src/base/functions/misc.js; exec-call in js/src/base/functions/misc.js; exec-call in js/src/static_dependencies/jsencrypt/lib/asn1js/asn1.js; exec-call in js/src/static_dependencies/jsencrypt/lib/asn1js/base64.js; exec-call in js/src/static_dependencies/qs/parse.js; exec-call in js/src/static_dependencies/qs/parse.js; exec-call in js/src/static_dependencies/scure-bip32/index.js; exec-call in js/src/static_dependencies/zklink/zklink-sdk-web.js; Function-constructor in js/src/static_dependencies/zklink/zklink-sdk-web.js; eval-call in python/ccxt/static_dependencies/lark/grammars/python.lark; eval-call in python/ccxt/static_dependencies/sympy/external/importtools.py; exec-call in ts/src/base/functions/misc.ts; exec-call in ts/src/base/functions/misc.ts; exec-call in ts/src/static_dependencies/jsencrypt/lib/asn1js/asn1.ts; exec-call in ts/src/static_dependencies/jsencrypt/lib/asn1js/base64.ts; exec-call in ts/src/static_dependencies/qs/parse.js; exec-call in ts/src/static_dependencies/qs/parse.js; exec-call in ts/src/static_dependencies/scure-bip32/index.ts; exec-call in ts/src/static_dependencies/zklink/zklink-sdk-web.js; Function-constructor in ts/src/static_dependencies/zklink/zklink-sdk-web.js; trusted-vendor: 377 gitleaks finding(s) downgraded to notes (likely SDK docs/example values); gitleaks: 269 test-path secret(s)",
+  "files_scanned": 8323,
+  "files_skipped": 1,
+  "_reclassified": true,
+  "_sanitized": true
+}

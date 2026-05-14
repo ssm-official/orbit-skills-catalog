@@ -1,0 +1,117 @@
+{
+  "source_url": "https://github.com/browserbase/mcp-server-browserbase",
+  "proposed_slot": "merchant.devops.browserbase-mcp-server-browserbase",
+  "scanned_at": "2026-05-14T05:54:58.537537+00:00",
+  "clone_ok": true,
+  "commit_pinned": "1e196b3d3c4dc70944e0d19038dd9eb3608b207a",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "nodejs.org": [
+        ".gitignore"
+      ],
+      "gruntjs.com": [
+        ".gitignore"
+      ],
+      "bower.io": [
+        ".gitignore"
+      ],
+      "snowpack.dev": [
+        ".gitignore"
+      ],
+      "parceljs.org": [
+        ".gitignore"
+      ],
+      "nextjs.org": [
+        ".gitignore"
+      ],
+      "python-poetry.org": [
+        ".gitignore"
+      ],
+      "pdm.fming.dev": [
+        ".gitignore"
+      ],
+      "github.com": [
+        ".changeset/README.md",
+        ".github/workflows/publish-mcp.yml",
+        ".gitignore",
+        "README.md",
+        "package.json"
+      ],
+      "docs.browserbase.com": [
+        "README.md",
+        "config.d.ts"
+      ],
+      "www.apache.org": [
+        "LICENSE"
+      ],
+      "www.browserbase.com": [
+        "README.md",
+        "package.json",
+        "src/sessionManager.ts"
+      ],
+      "modelcontextprotocol.io": [
+        "README.md",
+        "src/context.ts",
+        "src/mcp/resources.ts",
+        "src/mcp/sampling.ts"
+      ],
+      "mcp.browserbase.com": [
+        "README.md"
+      ],
+      "www.stagehand.dev": [
+        "README.md"
+      ],
+      "docs.stagehand.dev": [
+        "README.md"
+      ],
+      "spec.modelcontextprotocol.io": [
+        "README.md"
+      ],
+      "static.modelcontextprotocol.io": [
+        "server.json"
+      ],
+      "registry.npmjs.org": [
+        ".github/workflows/release.yml",
+        "server.json"
+      ],
+      "unpkg.com": [
+        ".changeset/config.json"
+      ],
+      "httpbin.org": [
+        "evals/mcp-eval-basic.config.json",
+        "evals/mcp-eval.config.json"
+      ],
+      "$": [
+        "src/transport.ts"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\browserbase__mcp-server-browserbase\\gitleaks.json",
+      "exit_code": 0,
+      "output_path": "_logs/scan/browserbase__mcp-server-browserbase/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/browserbase__mcp-server-browserbase/osv.json"
+    }
+  },
+  "verdict": "pass",
+  "verdict_reason": "no findings of concern in static scan",
+  "files_scanned": 51,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

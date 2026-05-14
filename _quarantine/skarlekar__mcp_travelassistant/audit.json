@@ -1,0 +1,111 @@
+{
+  "source_url": "https://github.com/skarlekar/mcp_travelassistant",
+  "proposed_slot": "personal.travel.travelassistant-suite",
+  "scanned_at": "2026-05-14T05:48:29.544943+00:00",
+  "clone_ok": true,
+  "commit_pinned": "a144bb8b3a354eb0a8f3d476b6110731f3456e38",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "www.langchain.com": [
+        "BlogPost.html",
+        "BlogPost.md"
+      ],
+      "bit.ly": [
+        "BlogPost.html",
+        "BlogPost.md"
+      ],
+      "github.com": [
+        "BlogPost.html",
+        "BlogPost.md",
+        "servers/geocoder_server/README.md",
+        "servers/hotel_server/README.md",
+        "servers/weather_server/README.md"
+      ],
+      "serpapi.com": [
+        "BlogPost.html",
+        "BlogPost.md",
+        "README.md",
+        "servers/event_server/README.md",
+        "servers/event_server/event_server.py"
+      ],
+      "nominatim.openstreetmap.org": [
+        "BlogPost.html",
+        "BlogPost.md",
+        "servers/geocoder_server/README.md"
+      ],
+      "api.weather.gov": [
+        "BlogPost.html",
+        "BlogPost.md",
+        "servers/weather_server/README.md",
+        "servers/weather_server/weather_server.py"
+      ],
+      "modelcontextprotocol.io": [
+        "BlogPost.html",
+        "BlogPost.md",
+        "servers/weather_server/WeatherStack_README.md"
+      ],
+      "mseep.net": [
+        "README.md"
+      ],
+      "img.shields.io": [
+        "README.md",
+        "servers/geocoder_server/README.md"
+      ],
+      "docs.astral.sh": [
+        "README.md",
+        "servers/finance_server/README.md",
+        "servers/weather_server/README.md"
+      ],
+      "astral.sh": [
+        "servers/event_server/README.md"
+      ],
+      "www.iata.org": [
+        "servers/flight_server/flights_server_readme.md"
+      ],
+      "www.openstreetmap.org": [
+        "servers/geocoder_server/README.md"
+      ],
+      "spec.modelcontextprotocol.io": [
+        "servers/geocoder_server/README.md",
+        "servers/hotel_server/README.md"
+      ],
+      "www.weather.gov": [
+        "servers/weather_server/README.md"
+      ],
+      "weatherstack.com": [
+        "servers/weather_server/WeatherStack_README.md"
+      ],
+      "api.weatherstack.com": [
+        "servers/weather_server/WeatherStack_README.md",
+        "servers/weather_server/weatherstack_server.py"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\skarlekar__mcp_travelassistant\\gitleaks.json",
+      "exit_code": 1,
+      "output_path": "_logs/scan/skarlekar__mcp_travelassistant/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/skarlekar__mcp_travelassistant/osv.json"
+    }
+  },
+  "verdict": "quarantine",
+  "verdict_reason": "gitleaks: 1 non-test secret(s)",
+  "files_scanned": 45,
+  "files_skipped": 0,
+  "_reclassified": true
+}

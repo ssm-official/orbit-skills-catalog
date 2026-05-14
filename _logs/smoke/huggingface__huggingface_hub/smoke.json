@@ -1,0 +1,40 @@
+{
+  "source_url": "https://github.com/huggingface/huggingface_hub",
+  "proposed_slot": "both.creative.huggingface",
+  "smoked_at": "2026-05-14T06:08:04.164524+00:00",
+  "platform": "windows",
+  "sandbox": "fresh venv / fresh node_modules (Docker unavailable on host)",
+  "network_monitoring": "Get-NetTCPConnection deltas (weaker than netns isolation)",
+  "package": "huggingface_hub",
+  "language": "python",
+  "kind": "python",
+  "steps": [
+    {
+      "step": "uv_dryrun",
+      "rc": 0,
+      "stderr": ""
+    },
+    {
+      "step": "uv_run_import",
+      "rc": 0,
+      "stdout": "OK ['ASYNC_CLIENT_FACTORY_T', 'Agent', 'AsyncInferenceClient', 'AudioClassificationInput', 'AudioClassificationOutputElement', 'AudioClassificationOutputTransform', 'AudioClassificationParameters', 'AudioToAudioInput', 'AudioToAudioOutputElement', 'AutomaticSpeechRecognitionEarlyStoppingEnum', 'AutomaticSpeechRecognitionGenerationParameters', 'AutomaticSpeechRecognitionInput', 'AutomaticSpeechReco",
+      "stderr": "   Building huggingface-hub @ file:///C:/Users/ssmca/orbit-skills-catalog/candidates/huggingface__huggingface_hub\nDownloading pygments (1.2MiB)\nDownloading hf-xet (3.8MiB)\n Downloaded pygments\n Downloaded hf-xet\n      Built huggingface-hub @ file:///C:/Users/ssmca/orbit-skills-catalog/candidates/huggingface__huggingface_hub\nInstalled 23 packages in 205ms\n",
+      "new_outbound_connections": [
+        {
+          "host": "104.18.35.227",
+          "port": 443
+        },
+        {
+          "host": "151.101.0.223",
+          "port": 443
+        },
+        {
+          "host": "151.101.192.223",
+          "port": 443
+        }
+      ]
+    }
+  ],
+  "verdict": "pass",
+  "reason": "uv install + import OK"
+}

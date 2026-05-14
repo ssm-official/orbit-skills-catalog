@@ -1,0 +1,79 @@
+{
+  "source_url": "https://github.com/GeLi2001/shopify-mcp",
+  "proposed_slot": "merchant.ecommerce.shopify-mcp",
+  "scanned_at": "2026-05-14T05:54:09.917591+00:00",
+  "clone_ok": true,
+  "commit_pinned": "c90faaf434023bd22c1beb6bd59ff735bca18fac",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "shopify.dev": [
+        ".graphqlrc.ts",
+        "README.md",
+        "src/tools/updateOrder.ts"
+      ],
+      "registry.npmjs.org": [
+        "package-lock.json"
+      ],
+      "opencollective.com": [
+        "package-lock.json"
+      ],
+      "github.com": [
+        "package-lock.json",
+        "package.json"
+      ],
+      "tidelift.com": [
+        "package-lock.json"
+      ],
+      "dotenvx.com": [
+        "package-lock.json"
+      ],
+      "paypal.me": [
+        "package-lock.json"
+      ],
+      "www.patreon.com": [
+        "package-lock.json"
+      ],
+      "feross.org": [
+        "package-lock.json"
+      ],
+      "your-website.com": [
+        "package.json"
+      ],
+      "glama.ai": [
+        "README.md"
+      ],
+      "$": [
+        "src/index.ts",
+        "src/lib/shopifyAuth.ts"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\GeLi2001__shopify-mcp\\gitleaks.json",
+      "exit_code": 0,
+      "output_path": "_logs/scan/GeLi2001__shopify-mcp/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/GeLi2001__shopify-mcp/osv.json"
+    }
+  },
+  "verdict": "pass",
+  "verdict_reason": "no findings of concern in static scan",
+  "files_scanned": 60,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

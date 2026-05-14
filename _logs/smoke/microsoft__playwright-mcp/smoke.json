@@ -1,0 +1,29 @@
+{
+  "source_url": "https://github.com/microsoft/playwright-mcp",
+  "proposed_slot": "_uncategorized.from_aggregator",
+  "smoked_at": "2026-05-14T06:07:13.288540+00:00",
+  "platform": "windows",
+  "sandbox": "fresh venv / fresh node_modules (Docker unavailable on host)",
+  "network_monitoring": "Get-NetTCPConnection deltas (weaker than netns isolation)",
+  "package": "@playwright/mcp",
+  "language": "node",
+  "kind": "node",
+  "steps": [
+    {
+      "step": "npm_install",
+      "rc": 0,
+      "stderr": ""
+    },
+    {
+      "step": "node_require_relative",
+      "rc": 0,
+      "stdout": "OK\n",
+      "stderr": ""
+    },
+    {
+      "new_outbound_connections": []
+    }
+  ],
+  "verdict": "pass",
+  "reason": "install + relative-require OK"
+}

@@ -15,7 +15,7 @@
       {
         "file": "test/utils/tracing.test.ts",
         "label": "jwt-like",
-        "match_prefix": "eyJhbGciOiJIUzI1NiIsInR5"
+        "match_redacted": true
       }
     ],
     "suspicious": [],
@@ -235,5 +235,7 @@
   "verdict": "pass_with_notes",
   "verdict_reason": "test-path secret findings (1); gitleaks: 19 test-path secret(s)",
   "files_scanned": 261,
-  "files_skipped": 0
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
 }

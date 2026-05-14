@@ -72,7 +72,8 @@ def main():
                 if h.get("dangerous"):
                     memo.append(f"- `{h['file']}` — `{h['hook']}`: `{h['command']}`")
         memo.append(f"\n## Network endpoints found in source\n")
-        for host in sorted((a['findings']['urls'] or {}).keys()):
+        urls = a.get('findings', {}).get('urls_found') or a.get('findings', {}).get('urls') or {}
+        for host in sorted(urls.keys()):
             memo.append(f"- `{host}`")
         memo.append(f"\n## Audit log\n")
         memo.append(f"Full scan output: `_logs/scan/{owner_repo}/`\n")

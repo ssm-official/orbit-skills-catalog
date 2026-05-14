@@ -1,0 +1,34 @@
+{
+  "source_url": "https://github.com/pipedrive/client-nodejs",
+  "proposed_slot": "merchant.crm.pipedrive-node",
+  "smoked_at": "2026-05-14T06:08:49.803429+00:00",
+  "platform": "windows",
+  "sandbox": "fresh venv / fresh node_modules (Docker unavailable on host)",
+  "network_monitoring": "Get-NetTCPConnection deltas (weaker than netns isolation)",
+  "package": "pipedrive",
+  "language": "node",
+  "kind": "node",
+  "steps": [
+    {
+      "step": "npm_install",
+      "rc": 0,
+      "stderr": ""
+    },
+    {
+      "step": "node_require_relative",
+      "rc": 2,
+      "stdout": "",
+      "stderr": "IMPORT_ERR:Cannot find module 'C:\\Users\\ssmca\\orbit-skills-catalog\\candidates\\pipedrive__client-nodejs\\dist\\index.js'. Please verify that the package.json has a valid \"main\" entry\n"
+    },
+    {
+      "new_outbound_connections": [
+        {
+          "host": "74.125.130.95",
+          "port": 443
+        }
+      ]
+    }
+  ],
+  "verdict": "pass_with_notes",
+  "reason": "install OK; relative-require failed (likely TS-only / build required)"
+}

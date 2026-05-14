@@ -1,0 +1,32 @@
+{
+  "source_url": "https://github.com/HubSpot/hubspot-api-python",
+  "proposed_slot": "merchant.crm.hubspot-py",
+  "smoked_at": "2026-05-14T06:08:38.028571+00:00",
+  "platform": "windows",
+  "sandbox": "fresh venv / fresh node_modules (Docker unavailable on host)",
+  "network_monitoring": "Get-NetTCPConnection deltas (weaker than netns isolation)",
+  "package": "HubSpot__hubspot-api-python",
+  "language": "python",
+  "kind": "python",
+  "steps": [
+    {
+      "step": "uv_dryrun",
+      "rc": 0,
+      "stderr": ""
+    },
+    {
+      "step": "uv_run_import",
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Building hubspot-api-client @ file:///C:/Users/ssmca/orbit-skills-catalog/candidates/HubSpot__hubspot-api-python\n      Built hubspot-api-client @ file:///C:/Users/ssmca/orbit-skills-catalog/candidates/HubSpot__hubspot-api-python\nInstalled 8 packages in 877ms\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\nModuleNotFoundError: No module named 'HubSpot__hubspot_api_python'\n",
+      "new_outbound_connections": [
+        {
+          "host": "74.125.130.95",
+          "port": 443
+        }
+      ]
+    }
+  ],
+  "verdict": "pass_with_notes",
+  "reason": "installable but direct import HubSpot__hubspot_api_python failed (may use non-standard module name)"
+}

@@ -1,0 +1,188 @@
+{
+  "source_url": "https://github.com/googlemaps/google-maps-services-js",
+  "proposed_slot": "both.maps.google-maps",
+  "scanned_at": "2026-05-14T05:48:55.326407+00:00",
+  "clone_ok": true,
+  "commit_pinned": "9ef8a416e6f8feee0ce7b731629f7738fda66a58",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "gruntjs.com": [
+        ".gitignore"
+      ],
+      "nodejs.org": [
+        ".gitignore"
+      ],
+      "www.npmjs.org": [
+        ".gitignore"
+      ],
+      "github.com": [
+        ".github/stale.yml",
+        ".github/sync-repo-settings.yaml",
+        "CHANGELOG.md",
+        "README.md",
+        "SECURITY.md"
+      ],
+      "opensource.google": [
+        "CODE_OF_CONDUCT.md"
+      ],
+      "indieweb.org": [
+        "CODE_OF_CONDUCT.md"
+      ],
+      "cla.developers.google.com": [
+        "CONTRIBUTING.md"
+      ],
+      "www.apache.org": [
+        ".github/CODEOWNERS",
+        ".github/dependabot.yml",
+        ".github/stale.yml",
+        ".github/sync-repo-settings.yaml",
+        ".github/workflows/dependabot.yml"
+      ],
+      "registry.npmjs.org": [
+        "package-lock.json",
+        "yarn.lock"
+      ],
+      "opencollective.com": [
+        "package-lock.json"
+      ],
+      "tidelift.com": [
+        "package-lock.json"
+      ],
+      "www.patreon.com": [
+        "package-lock.json"
+      ],
+      "feross.org": [
+        "package-lock.json"
+      ],
+      "wombat-dressing-room.appspot.com": [
+        ".github/workflows/release-please.yml",
+        "package.json"
+      ],
+      "img.shields.io": [
+        "README.md"
+      ],
+      "codecov.io": [
+        "README.md"
+      ],
+      "developers.google.com": [
+        ".github/ISSUE_TEMPLATE/bug_report.md",
+        ".github/ISSUE_TEMPLATE/feature_request.md",
+        ".github/ISSUE_TEMPLATE/support_request.md",
+        "README.md",
+        "src/common.ts"
+      ],
+      "console.cloud.google.com": [
+        "README.md"
+      ],
+      "www.npmjs.com": [
+        "README.md"
+      ],
+      "npmjs.com": [
+        "README.md"
+      ],
+      "cloud.google.com": [
+        ".github/ISSUE_TEMPLATE/bug_report.md",
+        ".github/ISSUE_TEMPLATE/feature_request.md",
+        ".github/ISSUE_TEMPLATE/support_request.md",
+        "README.md"
+      ],
+      "googlemaps.github.io": [
+        "README.md"
+      ],
+      "discord.gg": [
+        "README.md"
+      ],
+      "semver.org": [
+        "README.md"
+      ],
+      "g.co": [
+        "SECURITY.md"
+      ],
+      "registry.yarnpkg.com": [
+        "yarn.lock"
+      ],
+      "help.github.com": [
+        ".github/CODEOWNERS"
+      ],
+      "stackoverflow.com": [
+        ".github/ISSUE_TEMPLATE/bug_report.md",
+        ".github/ISSUE_TEMPLATE/feature_request.md",
+        ".github/ISSUE_TEMPLATE/support_request.md"
+      ],
+      "maps.googleapis.com": [
+        "src/adapter.test.ts",
+        "src/directions.ts",
+        "src/distance.ts",
+        "src/elevation.ts",
+        "src/geocode/geocode.ts"
+      ],
+      "microformats.org": [
+        "src/common.ts"
+      ],
+      "en.wikipedia.org": [
+        "src/common.ts",
+        "src/distance.ts",
+        "src/geocode/geocode.ts"
+      ],
+      "plus.codes": [
+        "src/common.ts"
+      ],
+      "www.iana.org": [
+        "src/common.ts"
+      ],
+      "mapsplatform.google.com": [
+        "src/common.ts"
+      ],
+      "www.unicode.org": [
+        "src/common.ts"
+      ],
+      "www.googleapis.com": [
+        "src/geolocate.ts"
+      ],
+      "mock.url": [
+        "src/serialize.test.ts"
+      ],
+      "test.url": [
+        "src/serialize.test.ts"
+      ],
+      "cldr.unicode.org": [
+        "src/timezone.ts"
+      ],
+      "unicode.org": [
+        "src/timezone.ts"
+      ],
+      "roads.googleapis.com": [
+        "src/roads/nearestroads.ts",
+        "src/roads/snaptoroads.ts"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\googlemaps__google-maps-services-js\\gitleaks.json",
+      "exit_code": 0,
+      "output_path": "_logs/scan/googlemaps__google-maps-services-js/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/googlemaps__google-maps-services-js/osv.json"
+    }
+  },
+  "verdict": "pass",
+  "verdict_reason": "no findings of concern in static scan",
+  "files_scanned": 92,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

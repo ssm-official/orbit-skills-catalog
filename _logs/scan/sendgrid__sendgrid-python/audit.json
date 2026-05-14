@@ -1,0 +1,252 @@
+{
+  "source_url": "https://github.com/sendgrid/sendgrid-python",
+  "proposed_slot": "merchant.marketing.sendgrid-py",
+  "scanned_at": "2026-05-14T05:53:47.655843+00:00",
+  "clone_ok": true,
+  "commit_pinned": "76788e70a76b11ce2990821f190e52f887ab9ed6",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner",
+    "pip-audit"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [
+      {
+        "file": "setup.py",
+        "label": "exec-call",
+        "snippet": "ndgrid/version.py') as f:     exec(f.read())  def getRequires(): "
+      }
+    ],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "www.sendgrid.com": [
+        "README.rst",
+        "app.json"
+      ],
+      "github.com": [
+        "CHANGELOG.md",
+        "CONTRIBUTING.md",
+        "FIRST_TIMERS.md",
+        "PULL_REQUEST_TEMPLATE.md",
+        "README.md"
+      ],
+      "sendgrid.com": [
+        "CONTRIBUTING.md",
+        "README.md",
+        "README.rst",
+        "TROUBLESHOOTING.md",
+        "USAGE.md"
+      ],
+      "stoplight.io": [
+        "CHANGELOG.md"
+      ],
+      "stackoverflow.com": [
+        "cleanup.sh",
+        "sendgrid/helpers/mail/personalization.py"
+      ],
+      "www.contributor-covenant.org": [
+        "CODE_OF_CONDUCT.md"
+      ],
+      "pypi.python.org": [
+        "CONTRIBUTING.md",
+        "TROUBLESHOOTING.md"
+      ],
+      "app.sendgrid.com": [
+        "CONTRIBUTING.md",
+        "README.md",
+        "README.rst",
+        "sendgrid/helpers/inbound/README.md",
+        "use_cases/email_stats.md"
+      ],
+      "docs.docker.com": [
+        "CONTRIBUTING.md"
+      ],
+      "www.python.org": [
+        "CONTRIBUTING.md"
+      ],
+      "www.pylint.org": [
+        "CONTRIBUTING.md"
+      ],
+      "help.github.com": [
+        "CONTRIBUTING.md",
+        "FIRST_TIMERS.md"
+      ],
+      "tbaggery.com": [
+        "CONTRIBUTING.md",
+        "FIRST_TIMERS.md"
+      ],
+      "marketing-image-production.s3.amazonaws.com": [
+        "live_test.py",
+        "test/unit/test_mail_helpers.py"
+      ],
+      "raw.githubusercontent.com": [
+        "Makefile"
+      ],
+      "support.sendgrid.com": [
+        "PULL_REQUEST_TEMPLATE.md",
+        "README.md",
+        "TROUBLESHOOTING.md"
+      ],
+      "img.shields.io": [
+        "README.md",
+        "README.rst"
+      ],
+      "www.codetriage.com": [
+        "README.md",
+        "README.rst"
+      ],
+      "support.sendgrid.com).**": [
+        "README.md"
+      ],
+      "www.twilio.com": [
+        "README.rst",
+        "use_cases/sms.md",
+        "use_cases/twilio-setup.md"
+      ],
+      "pypi.org": [
+        ".github/workflows/test-and-deploy.yml",
+        "README.rst"
+      ],
+      "hub.docker.com": [
+        "README.rst"
+      ],
+      "twitter.com": [
+        "README.rst"
+      ],
+      "tox.testrun.org": [
+        "tox.ini"
+      ],
+      "pip.readthedocs.io": [
+        "TROUBLESHOOTING.md"
+      ],
+      "semver.org": [
+        "TROUBLESHOOTING.md"
+      ],
+      "docs.sendgrid.com": [
+        "TROUBLESHOOTING.md",
+        "examples/helpers/README.md",
+        "use_cases/email_stats.md"
+      ],
+      "support.google.com": [
+        "USAGE.md"
+      ],
+      "email.myhosthame.com": [
+        "USAGE.md",
+        "examples/user/user.py",
+        "test/integ/test_sendgrid.py"
+      ],
+      "newdomain.com": [
+        "USAGE.md",
+        "examples/user/user.py",
+        "test/integ/test_sendgrid.py"
+      ],
+      "beta.ruff.rs": [
+        ".github/workflows/lint-python.yml"
+      ],
+      "api.eu.sendgrid.com','global':'https:": [
+        "sendgrid/base_interface.py"
+      ],
+      "api.sendgrid.com": [
+        "sendgrid/base_interface.py",
+        "sendgrid/sendgrid.py",
+        "test/integ/test_sendgrid.py",
+        "test/unit/test_sendgrid.py"
+      ],
+      "api.eu.sendgrid.com": [
+        "sendgrid/base_interface.py",
+        "test/unit/test_sendgrid.py"
+      ],
+      "email.twilio.com": [
+        "sendgrid/twilio_email.py",
+        "test/unit/test_twilio_email.py"
+      ],
+      "flask.pocoo.org": [
+        "sendgrid/helpers/inbound/README.md",
+        "sendgrid/helpers/inbound/config.yml"
+      ],
+      "ngrok.com": [
+        "sendgrid/helpers/inbound/README.md"
+      ],
+      "xxxxxxx.ngrok.io": [
+        "sendgrid/helpers/inbound/README.md"
+      ],
+      "www.heroku.com": [
+        "sendgrid/helpers/inbound/README.md"
+      ],
+      "www.herokucdn.com": [
+        "sendgrid/helpers/inbound/README.md"
+      ],
+      "dashboard.heroku.com": [
+        "sendgrid/helpers/inbound/README.md"
+      ],
+      "tools.ietf.org": [
+        "sendgrid/helpers/mail/email.py"
+      ],
+      "www.rfc-editor.org": [
+        "sendgrid/helpers/mail/email.py"
+      ],
+      "fake_url": [
+        "test/unit/test_inbound_send.py"
+      ],
+      "amp.dev": [
+        "test/unit/test_mail_helpers.py",
+        "use_cases/sending_amp_html_content.md"
+      ],
+      "cdn.ampproject.org": [
+        "test/unit/test_mail_helpers.py",
+        "use_cases/sending_amp_html_content.md"
+      ],
+      "www.test.com": [
+        "test/unit/test_spam_check.py"
+      ],
+      "www.testing.com": [
+        "test/unit/test_spam_check.py"
+      ],
+      "virtualenv.pypa.io": [
+        "use_cases/aws.md",
+        "use_cases/django.md"
+      ],
+      "docs.python.org": [
+        "use_cases/django.md"
+      ],
+      "devcenter.heroku.com": [
+        "use_cases/django.md"
+      ],
+      "developers.google.com": [
+        "use_cases/sending_amp_html_content.md"
+      ],
+      "api.slack.com": [
+        "use_cases/slack_event_api_integration.md"
+      ],
+      "twil.io": [
+        "use_cases/twilio-setup.md"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\sendgrid__sendgrid-python\\gitleaks.json",
+      "exit_code": 0,
+      "output_path": "_logs/scan/sendgrid__sendgrid-python/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/sendgrid__sendgrid-python/osv.json"
+    },
+    "pip_audit": {
+      "exit_code": 1,
+      "output_path": "_logs/scan/sendgrid__sendgrid-python/pip-audit.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "exec-call in setup.py",
+  "files_scanned": 190,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

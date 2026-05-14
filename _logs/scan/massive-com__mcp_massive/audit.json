@@ -1,0 +1,157 @@
+{
+  "source_url": "https://github.com/massive-com/mcp_massive",
+  "proposed_slot": "personal.finance.massive-com-mcp_massive",
+  "scanned_at": "2026-05-14T05:48:53.655852+00:00",
+  "clone_ok": true,
+  "commit_pinned": "c58ec7e4df7482c53fc4adeb2de0e979f77f3a23",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner",
+    "pip-audit"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "glama.ai": [
+        "glama.json"
+      ],
+      "massive.com": [
+        "README.md",
+        "manifest.json",
+        "src/mcp_massive/constants.py",
+        "tests/fixtures/aggs.md",
+        "tests/fixtures/llms-full.txt"
+      ],
+      "github.com": [
+        "README.md",
+        "manifest.json"
+      ],
+      "img.shields.io": [
+        "README.md"
+      ],
+      "modelcontextprotocol.io": [
+        "README.md"
+      ],
+      "docs.astral.sh": [
+        "README.md"
+      ],
+      "docs.anthropic.com": [
+        "README.md"
+      ],
+      "api.massive.com": [
+        "README.md",
+        "src/mcp_massive/__init__.py",
+        "src/mcp_massive/server.py",
+        "tests/fixtures/aggs.md",
+        "tests/fixtures/llms-full.txt"
+      ],
+      "pypi.org": [
+        "uv.lock"
+      ],
+      "files.pythonhosted.org": [
+        "uv.lock"
+      ],
+      "www.w3.org": [
+        "assets/massive-icon-logo.svg"
+      ],
+      "x": [
+        "tests/test_formatters.py"
+      ],
+      "custom-server.example.com": [
+        "tests/test_index.py"
+      ],
+      "test.example.com": [
+        "tests/test_server.py"
+      ],
+      "www.fabledata.com": [
+        "tests/fixtures/llms-full.txt"
+      ],
+      "www.iso20022.org": [
+        "tests/fixtures/llms-full.txt",
+        "tests/fixtures/llms-partial.txt"
+      ],
+      "www.cusip.com": [
+        "tests/fixtures/llms-full.txt",
+        "tests/fixtures/llms-partial.txt"
+      ],
+      "www.sec.gov": [
+        "tests/fixtures/llms-full.txt",
+        "tests/fixtures/llms-partial.txt"
+      ],
+      "en.wikipedia.org": [
+        "tests/fixtures/llms-full.txt",
+        "tests/fixtures/llms-partial.txt"
+      ],
+      "www.openfigi.com": [
+        "tests/fixtures/llms-full.txt",
+        "tests/fixtures/llms-partial.txt"
+      ],
+      "www.apple.com": [
+        "tests/fixtures/llms-full.txt"
+      ],
+      "cmegroup.com": [
+        "tests/fixtures/llms-full.txt"
+      ],
+      "api.staging.massive.com": [
+        "tests/fixtures/llms-full.txt"
+      ],
+      "www.optionseducation.org": [
+        "tests/fixtures/llms-full.txt"
+      ],
+      "www.benzinga.com": [
+        "tests/fixtures/llms-full.txt"
+      ],
+      "cdn.benzinga.com": [
+        "tests/fixtures/llms-full.txt"
+      ],
+      "arxiv.org": [
+        "tests/fixtures/llms-full.txt"
+      ],
+      "api.massive.com:443": [
+        "tests/fixtures/llms-full.txt"
+      ],
+      "m.uk.investing.com": [
+        "tests/fixtures/llms-full.txt"
+      ],
+      "uk.investing.com": [
+        "tests/fixtures/llms-full.txt"
+      ],
+      "i-invdn-com.investing.com": [
+        "tests/fixtures/llms-full.txt"
+      ],
+      "s3.massive.com": [
+        "tests/fixtures/llms-full.txt"
+      ],
+      "www.investing.com": [
+        "tests/fixtures/llms-full.txt"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\massive-com__mcp_massive\\gitleaks.json",
+      "exit_code": 0,
+      "output_path": "_logs/scan/massive-com__mcp_massive/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/massive-com__mcp_massive/osv.json"
+    },
+    "pip_audit": {
+      "exit_code": 0,
+      "output_path": "_logs/scan/massive-com__mcp_massive/pip-audit.json"
+    }
+  },
+  "verdict": "pass",
+  "verdict_reason": "no findings of concern in static scan",
+  "files_scanned": 43,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

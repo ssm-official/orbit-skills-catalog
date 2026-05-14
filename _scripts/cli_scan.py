@@ -161,12 +161,22 @@ def scan_one(row: dict) -> dict:
     # (Stripe sk_test_*, example keys in `.env.example`, etc.). A finding inside
     # these paths is documented as a note, not an automatic quarantine.
     def _is_test_path(rel: str) -> bool:
-        rl = rel.lower().replace("\\", "/")
+        # Normalise to "/path/like/this" so markers with leading slashes match
+        # files at the repo root too (e.g. "tests/foo.py" → "/tests/foo.py").
+        rl = "/" + rel.lower().replace("\\", "/")
         markers = ("/test/", "/tests/", "/__tests__/", "/spec/", "/specs/",
                    "/fixtures/", "/fixture/", "/__fixtures__/", "/mocks/", "/mock/",
-                   ".example", ".sample", ".test.", ".spec.", "/example/", "/examples/",
-                   "/docs/", "/doc/", "/.github/")
-        return any(m in rl for m in markers) or rl.endswith(".example") or rl.endswith(".sample")
+                   "/example/", "/examples/", "/sample/", "/samples/",
+                   "/docs/", "/doc/", "/.github/", "/site-packages/", "/snapshots/", "/__snapshots__/")
+        if any(m in rl for m in markers):
+            return True
+        # filename-based markers
+        fn = rl.rsplit("/", 1)[-1]
+        if fn.endswith(".example") or fn.endswith(".sample") or fn.startswith("test_") or fn.startswith("spec_"):
+            return True
+        if ".test." in fn or ".spec." in fn or ".example." in fn or ".sample." in fn:
+            return True
+        return False
 
     def _is_test_only_secret(label: str, prefix: str) -> bool:
         # Stripe test keys are intentionally public.

@@ -1,0 +1,65 @@
+{
+  "source_url": "https://github.com/varunneal/spotify-mcp",
+  "proposed_slot": "personal.entertainment.varunneal-spotify-mcp",
+  "scanned_at": "2026-05-14T05:48:19.769532+00:00",
+  "clone_ok": true,
+  "commit_pinned": "a854b00b5cd917cb155ee1fa68c77d9cab360998",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner",
+    "pip-audit"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "github.com": [
+        "README.md"
+      ],
+      "developer.spotify.com": [
+        "README.md"
+      ],
+      "modelcontextprotocol.io": [
+        "README.md"
+      ],
+      "docs.npmjs.com": [
+        "README.md"
+      ],
+      "techcrunch.com": [
+        "README.md"
+      ],
+      "pypi.org": [
+        "uv.lock"
+      ],
+      "files.pythonhosted.org": [
+        "uv.lock"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\varunneal__spotify-mcp\\gitleaks.json",
+      "exit_code": 0,
+      "output_path": "_logs/scan/varunneal__spotify-mcp/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/varunneal__spotify-mcp/osv.json"
+    },
+    "pip_audit": {
+      "exit_code": 1,
+      "output_path": "_logs/scan/varunneal__spotify-mcp/pip-audit.json"
+    }
+  },
+  "verdict": "pass",
+  "verdict_reason": "no findings of concern in static scan",
+  "files_scanned": 10,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

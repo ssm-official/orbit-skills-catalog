@@ -15,27 +15,27 @@
       {
         "file": "__tests__/security/index.test.ts",
         "label": "jwt-like",
-        "match_prefix": "eyJhbGciOiJIUzI1NiIsInR5"
+        "match_redacted": true
       },
       {
         "file": "__tests__/security/index.test.ts",
         "label": "jwt-like",
-        "match_prefix": "eyJhbGciOiJIUzI1NiIsInR5"
+        "match_redacted": true
       },
       {
         "file": "__tests__/security/token-manager.test.ts",
         "label": "jwt-like",
-        "match_prefix": "eyJhbGciOiJIUzI1NiIsInR5"
+        "match_redacted": true
       },
       {
         "file": "__tests__/security/token-manager.test.ts",
         "label": "jwt-like",
-        "match_prefix": "eyJhbGciOiJIUzI1NiIsInR5"
+        "match_redacted": true
       },
       {
         "file": "__tests__/security/token-manager.test.ts",
         "label": "jwt-like",
-        "match_prefix": "eyJhbGciOiJIUzI1NiIsInR5"
+        "match_redacted": true
       }
     ],
     "suspicious": [],
@@ -105,5 +105,7 @@
   "verdict": "pass_with_notes",
   "verdict_reason": "test-path secret findings (5); gitleaks: 6 test-path secret(s)",
   "files_scanned": 61,
-  "files_skipped": 0
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
 }

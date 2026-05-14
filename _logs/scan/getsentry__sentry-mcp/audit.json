@@ -1,0 +1,713 @@
+{
+  "source_url": "https://github.com/getsentry/sentry-mcp",
+  "proposed_slot": "merchant.devops.getsentry-sentry-mcp",
+  "scanned_at": "2026-05-14T05:54:50.109321+00:00",
+  "clone_ok": true,
+  "commit_pinned": "42f14429674fd5b84a2d2107c795938136498e21",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner"
+  ],
+  "findings": {
+    "secrets": [
+      {
+        "file": "packages/mcp-core/src/telem/sentry.test.ts",
+        "label": "jwt-like",
+        "match_redacted": true
+      }
+    ],
+    "suspicious": [
+      {
+        "file": "packages/mcp-cloudflare/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": "seURL?: string): boolean;     exec(input?: (string | URLPatternIn"
+      },
+      {
+        "file": "packages/mcp-cloudflare/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": ": Promise<D1Result<T>[]>;     exec(query: string): Promise<D1Exec"
+      },
+      {
+        "file": "packages/mcp-cloudflare/src/client/components/ui/slash-command-text.tsx",
+        "label": "exec-call",
+        "snippet": "  match = SLASH_COMMAND_REGEX.exec(children);   while (match !== "
+      },
+      {
+        "file": "packages/mcp-cloudflare/src/client/components/ui/slash-command-text.tsx",
+        "label": "exec-call",
+        "snippet": "  match = SLASH_COMMAND_REGEX.exec(children);   }    // Add remai"
+      },
+      {
+        "file": "packages/mcp-cloudflare/src/server/lib/mcp-handler.ts",
+        "label": "exec-call",
+        "snippet": ");     const result = pattern.exec(url);      if (!result) {     "
+      },
+      {
+        "file": "packages/mcp-server/src/auth/device-code-flow.ts",
+        "label": "exec-call",
+        "snippet": "latform === \"darwin\") {       exec(`open ${JSON.stringify(url)}`)"
+      },
+      {
+        "file": "packages/mcp-server/src/auth/device-code-flow.ts",
+        "label": "exec-call",
+        "snippet": "platform === \"win32\") {       exec(`start \"\" ${JSON.stringify(url"
+      },
+      {
+        "file": "packages/mcp-server/src/auth/device-code-flow.ts",
+        "label": "exec-call",
+        "snippet": "en the default browser.       exec(`cmd.exe /c start \"\" ${JSON.st"
+      },
+      {
+        "file": "packages/mcp-server/src/auth/device-code-flow.ts",
+        "label": "exec-call",
+        "snippet": "y(url)}`);     } else {       exec(`xdg-open ${JSON.stringify(url"
+      }
+    ],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "platform.openai.com": [
+        ".env.example",
+        "packages/mcp-cloudflare/.env.example"
+      ],
+      "sentry.io": [
+        ".env.example",
+        "README.md",
+        "docs/cloudflare/oauth-architecture.md",
+        "docs/releases/cloudflare.md",
+        "docs/security.md"
+      ],
+      "spotlightjs.com": [
+        ".env.example"
+      ],
+      "nodejs.org": [
+        ".gitignore",
+        "packages/mcp-core/src/internal/agents/tools/data/v8js.json"
+      ],
+      "mcp.sentry.dev": [
+        ".codex/config.toml",
+        ".cursor/mcp.json",
+        ".github/workflows/deploy.yml",
+        ".mcp.json",
+        ".vscode/mcp.json"
+      ],
+      "www.apache.org": [
+        "LICENSE.md",
+        "packages/mcp-cloudflare/worker-configuration.d.ts"
+      ],
+      "github.com": [
+        ".github/workflows/token-cost.yml",
+        "README.md",
+        "docs/cloudflare/oauth-architecture.md",
+        "docs/flue-hooks.md",
+        "docs/monitoring.md"
+      ],
+      "blog.cloudflare.com": [
+        "README.md"
+      ],
+      "modelcontextprotocol.io": [
+        ".agents/skills/mcp-audit/SOURCES.md",
+        "README.md",
+        "docs/testing-remote.md",
+        "docs/testing-stdio.md"
+      ],
+      "opentelemetry.io": [
+        "TELEMETRY.md",
+        "docs/monitoring.md",
+        "packages/mcp-core/src/internal/agents/tools/data/otel.json"
+      ],
+      "turbo.build": [
+        "turbo.json"
+      ],
+      "anthropic.com": [
+        ".claude-plugin/marketplace.json"
+      ],
+      "sentry-mcp-canary.getsentry.workers.dev": [
+        ".github/workflows/deploy.yml",
+        "docs/github-actions.md"
+      ],
+      "us.sentry.io": [
+        "docs/api-patterns.md",
+        "docs/search-events-api-patterns.md",
+        "docs/security.md",
+        "packages/mcp-cloudflare/src/server/lib/constraint-utils.test.ts",
+        "packages/mcp-cloudflare/src/test-utils/fetch-mock-setup.ts"
+      ],
+      "example.openai.azure.com": [
+        "docs/embedded-agents.md",
+        "packages/mcp-core/README.md",
+        "packages/mcp-core/src/internal/agents/provider-factory.test.ts",
+        "packages/mcp-server/src/cli/usage.ts"
+      ],
+      "custom.openai.example.com": [
+        "docs/embedded-agents.md"
+      ],
+      "logtape.org": [
+        "docs/logging.md"
+      ],
+      "...@sentry.io": [
+        "docs/monitoring.md"
+      ],
+      "docs.sentry.io": [
+        "docs/monitoring.md",
+        "docs/security.md",
+        "packages/mcp-cloudflare/src/client/components/chat/chat.tsx",
+        "packages/mcp-cloudflare/src/client/components/home-layout/footer.tsx",
+        "packages/mcp-cloudflare/src/server/routes/search.test.ts"
+      ],
+      "cli.github.com": [
+        "docs/pr-management.md"
+      ],
+      "mycompany.com": [
+        "docs/security.md",
+        "packages/mcp-core/src/internal/issue-helpers.test.ts"
+      ],
+      "de.sentry.io": [
+        "docs/security.md",
+        "packages/mcp-core/src/internal/tool-helpers/resolve-region-url.test.ts",
+        "packages/mcp-core/src/internal/tool-helpers/validate-region-url.test.ts"
+      ],
+      "evil.com": [
+        "docs/security.md",
+        "packages/mcp-cloudflare/src/server/index.test.ts",
+        "packages/mcp-cloudflare/src/server/utils/cors.test.ts",
+        "packages/mcp-core/src/internal/tool-helpers/validate-region-url.test.ts",
+        "packages/mcp-server-mocks/src/fixtures.ts"
+      ],
+      "eu.sentry.io": [
+        "docs/security.md",
+        "packages/mcp-core/src/api-client/client.test.ts",
+        "packages/mcp-core/src/internal/url-helpers.test.ts"
+      ],
+      "sub.mycompany.com": [
+        "docs/security.md"
+      ],
+      "*.sentry.io": [
+        "docs/releases/cloudflare.md",
+        "docs/security.md"
+      ],
+      "your-worker.workers.dev": [
+        "docs/testing-remote.md"
+      ],
+      "us.mcp.sentry.dev": [
+        "docs/testing-remote.md"
+      ],
+      "eu.mcp.sentry.dev": [
+        "docs/testing-remote.md"
+      ],
+      "staging.mcp.sentry.dev": [
+        "docs/testing-remote.md"
+      ],
+      "your-sentry-host.com": [
+        "docs/testing-stdio.md"
+      ],
+      "vitest.dev": [
+        "docs/testing.md"
+      ],
+      "oauth.net": [
+        "docs/cloudflare/oauth-architecture.md"
+      ],
+      "www.rfc-editor.org": [
+        "docs/cloudflare/oauth-architecture.md",
+        "packages/mcp-cloudflare/worker-configuration.d.ts",
+        "packages/mcp-core/src/internal/agents/tools/data/host.json",
+        "packages/mcp-core/src/internal/agents/tools/data/http.json",
+        "packages/mcp-core/src/internal/agents/tools/data/network.json"
+      ],
+      "developers.cloudflare.com": [
+        "docs/releases/cloudflare.md",
+        "packages/mcp-cloudflare/src/server/routes/chat.ts",
+        "packages/mcp-cloudflare/src/server/routes/search.ts",
+        "packages/mcp-cloudflare/worker-configuration.d.ts",
+        "packages/mcp-cloudflare/wrangler.jsonc"
+      ],
+      "docs.npmjs.com": [
+        "docs/releases/stdio.md"
+      ],
+      "proxy.example.com": [
+        "docs/specs/embedded-agent-openai-routing.md",
+        "packages/mcp-core/README.md",
+        "packages/mcp-core/src/internal/agents/azure-openai-provider.test.ts",
+        "packages/mcp-core/src/internal/agents/openai-provider.test.ts"
+      ],
+      "my-resource.openai.azure.com": [
+        "docs/specs/embedded-agent-openai-routing.md"
+      ],
+      "your-app.pages.dev": [
+        "packages/mcp-cloudflare/.env.example"
+      ],
+      "ui.shadcn.com": [
+        "packages/mcp-cloudflare/components.json"
+      ],
+      "plausible.io": [
+        "packages/mcp-cloudflare/index.html"
+      ],
+      "developer.mozilla.org": [
+        "packages/mcp-cloudflare/worker-configuration.d.ts"
+      ],
+      "dpgr.am": [
+        "packages/mcp-cloudflare/worker-configuration.d.ts"
+      ],
+      "www.iana.org": [
+        "packages/mcp-cloudflare/worker-configuration.d.ts",
+        "packages/mcp-core/src/internal/agents/tools/data/tls.json"
+      ],
+      "en.wikipedia.org": [
+        "packages/mcp-cloudflare/worker-configuration.d.ts"
+      ],
+      "tldp.org": [
+        "packages/mcp-cloudflare/worker-configuration.d.ts"
+      ],
+      "ldapwiki.com": [
+        "packages/mcp-cloudflare/worker-configuration.d.ts"
+      ],
+      "www.iso.org": [
+        "packages/mcp-cloudflare/worker-configuration.d.ts",
+        "packages/mcp-core/src/internal/agents/tools/data/faas.json"
+      ],
+      "support.cloudflare.com": [
+        "packages/mcp-cloudflare/worker-configuration.d.ts"
+      ],
+      "knowledge.digicert.com": [
+        "packages/mcp-cloudflare/worker-configuration.d.ts"
+      ],
+      "opensource.org": [
+        "packages/mcp-cloudflare/worker-configuration.d.ts"
+      ],
+      "docs.oasis-open.org": [
+        "packages/mcp-cloudflare/worker-configuration.d.ts"
+      ],
+      "fonts.googleapis.com": [
+        "packages/mcp-cloudflare/src/client/index.css"
+      ],
+      "www.w3.org": [
+        "packages/mcp-cloudflare/src/client/components/animation/browser-ui/seer-noisefilter.tsx",
+        "packages/mcp-cloudflare/src/client/components/ui/icon.tsx",
+        "packages/mcp-cloudflare/src/client/index.css",
+        "packages/mcp-cloudflare/src/server/lib/approval-dialog.ts",
+        "packages/mcp-cloudflare/src/server/lib/html-utils.ts"
+      ],
+      "sentry.sentry.io": [
+        "packages/mcp-cloudflare/src/client/components/animation/browser-ui/WindowHeader.tsx",
+        "packages/mcp-cloudflare/src/client/components/usecases/fix-bugs.tsx",
+        "packages/mcp-core/src/api-client/client.test.ts",
+        "packages/mcp-core/src/api-client/schema.test.ts",
+        "packages/mcp-core/src/internal/issue-helpers.test.ts"
+      ],
+      "www.npmjs.com": [
+        "packages/mcp-cloudflare/src/client/components/fragments/stdio-setup.tsx"
+      ],
+      "ampcode.com": [
+        "packages/mcp-cloudflare/src/client/components/fragments/instructions/amp.tsx"
+      ],
+      "docs.anthropic.com": [
+        "packages/mcp-cloudflare/src/client/components/fragments/instructions/claude-code.tsx"
+      ],
+      "opencode.ai": [
+        "packages/mcp-cloudflare/src/client/components/fragments/instructions/opencode.tsx"
+      ],
+      "warp.dev": [
+        "packages/mcp-cloudflare/src/client/components/fragments/instructions/warp.tsx"
+      ],
+      "docs.warp.dev": [
+        "packages/mcp-cloudflare/src/client/components/fragments/instructions/warp.tsx"
+      ],
+      "discord.com": [
+        "packages/mcp-cloudflare/src/client/components/home-layout/footer.tsx"
+      ],
+      "mcp.sentry.dev$": [
+        "packages/mcp-cloudflare/src/server/mcp.test.ts"
+      ],
+      "public@example.ingest.sentry.io": [
+        "packages/mcp-cloudflare/src/server/sentry.config.test.ts",
+        "packages/mcp-core/src/api-client/schema.test.ts"
+      ],
+      "legitimate.com": [
+        "packages/mcp-cloudflare/src/server/lib/approval-dialog.test.ts"
+      ],
+      "attacker.com": [
+        "packages/mcp-cloudflare/src/server/oauth/authorize.test.ts",
+        "packages/mcp-cloudflare/src/server/oauth/callback.test.ts",
+        "packages/mcp-cloudflare/src/server/oauth/helpers.test.ts"
+      ],
+      "mcp.sentry.dev:8443": [
+        "packages/mcp-cloudflare/src/server/oauth/helpers.test.ts"
+      ],
+      "mcp.sentry.dev:443": [
+        "packages/mcp-cloudflare/src/server/oauth/helpers.test.ts"
+      ],
+      "evil.sentry.dev": [
+        "packages/mcp-cloudflare/src/server/oauth/helpers.test.ts"
+      ],
+      "mcp.sentry.dev:8080": [
+        "packages/mcp-cloudflare/src/server/oauth/helpers.test.ts"
+      ],
+      "client.example.com": [
+        "packages/mcp-cloudflare/src/server/oauth/helpers.test.ts"
+      ],
+      "host": [
+        "packages/mcp-cloudflare/src/server/oauth/helpers.ts"
+      ],
+      "$": [
+        "packages/mcp-cloudflare/src/server/oauth/routes/authorize.ts",
+        "packages/mcp-cloudflare/src/server/oauth/routes/callback.ts",
+        "packages/mcp-core/src/tools/get-latest-base-snapshot.ts",
+        "packages/mcp-core/src/tools/get-sentry-resource.test.ts",
+        "packages/mcp-core/src/tools/get-snapshot-details.ts"
+      ],
+      "publickey@mysentry.example.com": [
+        "packages/mcp-core/README.md"
+      ],
+      "d0805acebb937435abcb5958da99cdab@o1.ingest.us.sentry.io": [
+        "packages/mcp-core/tsdown.config.ts",
+        "packages/mcp-test-client/tsdown.config.ts"
+      ],
+      "raw.githubusercontent.com": [
+        "packages/mcp-core/scripts/generate-otel-namespaces.ts"
+      ],
+      "my-organization.sentry.io": [
+        "packages/mcp-core/src/schema.ts",
+        "packages/mcp-core/src/skillDefinitions.json",
+        "packages/mcp-core/src/toolDefinitions.json",
+        "packages/mcp-core/src/tools/get-replay-details.ts"
+      ],
+      "my-org.sentry.io": [
+        "packages/mcp-core/src/api-client/client.test.ts",
+        "packages/mcp-core/src/api-client/client.ts",
+        "packages/mcp-core/src/internal/url-helpers.test.ts",
+        "packages/mcp-core/src/internal/url-helpers.ts",
+        "packages/mcp-core/src/skillDefinitions.json"
+      ],
+      "json-schema.org": [
+        "packages/mcp-core/src/toolDefinitions.json"
+      ],
+      "sentry-mcp.sentry.io": [
+        "packages/mcp-core/src/api-client/client.test.ts"
+      ],
+      "sentry.example.com": [
+        "packages/mcp-core/src/api-client/client.test.ts",
+        "packages/mcp-core/src/utils/url-utils.test.ts",
+        "packages/mcp-core/src/utils/url-utils.ts",
+        "packages/mcp-server/src/cli/commands/auth.test.ts",
+        "packages/mcp-server/src/cli/resolve.test.ts"
+      ],
+      "myorg.sentry.io": [
+        "packages/mcp-core/src/api-client/client.test.ts",
+        "packages/mcp-core/src/utils/url-utils.test.ts"
+      ],
+      "sentry.internal:9000": [
+        "packages/mcp-core/src/api-client/client.test.ts",
+        "packages/mcp-core/src/tools/get-sentry-resource.test.ts",
+        "packages/mcp-core/src/tools/search-issues/formatters.test.ts",
+        "packages/mcp-core/src/utils/url-utils.test.ts",
+        "packages/mcp-server/src/cli/resolve.test.ts"
+      ],
+      "sentry.company.com": [
+        "packages/mcp-core/src/api-client/client.ts",
+        "packages/mcp-core/src/internal/tool-helpers/validate-region-url.test.ts"
+      ],
+      "api.openai.com": [
+        "packages/mcp-core/src/internal/agents/callEmbeddedAgent.test.ts",
+        "packages/mcp-core/src/internal/error-handling.test.ts",
+        "packages/mcp-core/src/tools/get-sentry-resource.test.ts",
+        "packages/mcp-core/src/tools/get-trace-details.test.ts",
+        "packages/mcp-core/src/utils/url-utils.test.ts"
+      ],
+      "sentry.example": [
+        "packages/mcp-core/src/internal/formatting.test.ts"
+      ],
+      "my-team.sentry.io": [
+        "packages/mcp-core/src/internal/issue-helpers.test.ts"
+      ],
+      "sentry.mycompany.com": [
+        "packages/mcp-core/src/internal/issue-helpers.test.ts",
+        "packages/mcp-core/src/internal/url-helpers.test.ts",
+        "packages/mcp-core/src/tools/get-sentry-resource-resolve.test.ts"
+      ],
+      "not": [
+        "packages/mcp-core/src/internal/url-helpers.test.ts"
+      ],
+      "custom-openai.example.com": [
+        "packages/mcp-core/src/internal/agents/openai-provider.test.ts"
+      ],
+      "developer.android.com": [
+        "packages/mcp-core/src/internal/agents/tools/data/android.json",
+        "packages/mcp-core/src/internal/agents/tools/data/app.json",
+        "packages/mcp-core/src/internal/agents/tools/data/device.json"
+      ],
+      "developer.apple.com": [
+        "packages/mcp-core/src/internal/agents/tools/data/app.json",
+        "packages/mcp-core/src/internal/agents/tools/data/ios.json"
+      ],
+      "firebase.google.com": [
+        "packages/mcp-core/src/internal/agents/tools/data/app.json"
+      ],
+      "slsa.dev": [
+        "packages/mcp-core/src/internal/agents/tools/data/__namespaces.json",
+        "packages/mcp-core/src/internal/agents/tools/data/artifact.json"
+      ],
+      "nvlpubs.nist.gov": [
+        "packages/mcp-core/src/internal/agents/tools/data/artifact.json",
+        "packages/mcp-core/src/internal/agents/tools/data/vcs.json"
+      ],
+      "learn.microsoft.com": [
+        "packages/mcp-core/src/internal/agents/tools/data/aspnetcore.json",
+        "packages/mcp-core/src/internal/agents/tools/data/azure.json",
+        "packages/mcp-core/src/internal/agents/tools/data/cloud.json",
+        "packages/mcp-core/src/internal/agents/tools/data/url.json"
+      ],
+      "wicg.github.io": [
+        "packages/mcp-core/src/internal/agents/tools/data/browser.json"
+      ],
+      "docs.datastax.com": [
+        "packages/mcp-core/src/internal/agents/tools/data/cassandra.json"
+      ],
+      "wikipedia.org": [
+        "packages/mcp-core/src/internal/agents/tools/data/__namespaces.json",
+        "packages/mcp-core/src/internal/agents/tools/data/cicd.json",
+        "packages/mcp-core/src/internal/agents/tools/data/deployment.json",
+        "packages/mcp-core/src/internal/agents/tools/data/geo.json",
+        "packages/mcp-core/src/internal/agents/tools/data/network.json"
+      ],
+      "www.britannica.com": [
+        "packages/mcp-core/src/internal/agents/tools/data/__namespaces.json",
+        "packages/mcp-core/src/internal/agents/tools/data/cicd.json"
+      ],
+      "cicd.example.org": [
+        "packages/mcp-core/src/internal/agents/tools/data/cicd.json"
+      ],
+      "www.alibabacloud.com": [
+        "packages/mcp-core/src/internal/agents/tools/data/cloud.json"
+      ],
+      "aws.amazon.com": [
+        "packages/mcp-core/src/internal/agents/tools/data/cloud.json"
+      ],
+      "azure.microsoft.com": [
+        "packages/mcp-core/src/internal/agents/tools/data/cloud.json"
+      ],
+      "cloud.google.com": [
+        "packages/mcp-core/src/internal/agents/tools/data/cloud.json",
+        "packages/mcp-core/src/internal/agents/tools/data/faas.json",
+        "packages/mcp-core/src/internal/agents/tools/data/url.json"
+      ],
+      "www.tencentcloud.com": [
+        "packages/mcp-core/src/internal/agents/tools/data/cloud.json"
+      ],
+      "docs.aws.amazon.com": [
+        "packages/mcp-core/src/internal/agents/tools/data/cloud.json",
+        "packages/mcp-core/src/internal/agents/tools/data/faas.json",
+        "packages/mcp-core/src/internal/agents/tools/data/url.json"
+      ],
+      "google.aip.dev": [
+        "packages/mcp-core/src/internal/agents/tools/data/cloud.json"
+      ],
+      "bosh.io": [
+        "packages/mcp-core/src/internal/agents/tools/data/cloudfoundry.json"
+      ],
+      "docs.docker.com": [
+        "packages/mcp-core/src/internal/agents/tools/data/container.json"
+      ],
+      "docs.oracle.com": [
+        "packages/mcp-core/src/internal/agents/tools/data/faas.json",
+        "packages/mcp-core/src/internal/agents/tools/data/jvm.json"
+      ],
+      "openfeature.dev": [
+        "packages/mcp-core/src/internal/agents/tools/data/feature_flags.json"
+      ],
+      "standards.ieee.org": [
+        "packages/mcp-core/src/internal/agents/tools/data/host.json"
+      ],
+      "wiki.osdev.org": [
+        "packages/mcp-core/src/internal/agents/tools/data/host.json"
+      ],
+      "tools.ietf.org": [
+        "packages/mcp-core/src/internal/agents/tools/data/http.json"
+      ],
+      "www.itu.int": [
+        "packages/mcp-core/src/internal/agents/tools/data/k8s.json"
+      ],
+      "kubernetes.io": [
+        "packages/mcp-core/src/internal/agents/tools/data/k8s.json"
+      ],
+      "v1-32.docs.kubernetes.io": [
+        "packages/mcp-core/src/internal/agents/tools/data/k8s.json"
+      ],
+      "datatracker.ietf.org": [
+        "packages/mcp-core/src/internal/agents/tools/data/network.json",
+        "packages/mcp-core/src/internal/agents/tools/data/tls.json"
+      ],
+      "connectrpc.com": [
+        "packages/mcp-core/src/internal/agents/tools/data/rpc.json"
+      ],
+      "www.ietf.org": [
+        "packages/mcp-core/src/internal/agents/tools/data/service.json"
+      ],
+      "www.freedesktop.org": [
+        "packages/mcp-core/src/internal/agents/tools/data/service.json"
+      ],
+      "docs.openssl.org": [
+        "packages/mcp-core/src/internal/agents/tools/data/tls.json"
+      ],
+      "username:password@www.example.com": [
+        "packages/mcp-core/src/internal/agents/tools/data/url.json"
+      ],
+      "redacted:redacted@www.example.com": [
+        "packages/mcp-core/src/internal/agents/tools/data/url.json"
+      ],
+      "img.shields.io": [
+        "packages/mcp-core/src/internal/agents/tools/data/url.json"
+      ],
+      "www.example.com": [
+        "packages/mcp-core/src/internal/agents/tools/data/url.json"
+      ],
+      "www.foo.bar": [
+        "packages/mcp-core/src/internal/agents/tools/data/url.json"
+      ],
+      "publicsuffix.org": [
+        "packages/mcp-core/src/internal/agents/tools/data/url.json"
+      ],
+      "support.google.com": [
+        "packages/mcp-core/src/internal/agents/tools/data/vcs.json"
+      ],
+      "gitlab.com": [
+        "packages/mcp-core/src/internal/agents/tools/data/vcs.json"
+      ],
+      "git-scm.com": [
+        "packages/mcp-core/src/internal/agents/tools/data/vcs.json"
+      ],
+      "www.merriam-webster.com": [
+        "packages/mcp-core/src/internal/agents/tools/data/vcs.json"
+      ],
+      "svnbook.red-bean.com": [
+        "packages/mcp-core/src/internal/agents/tools/data/vcs.json"
+      ],
+      "evil.sentry.io": [
+        "packages/mcp-core/src/internal/tool-helpers/validate-region-url.test.ts"
+      ],
+      "eu.mycompany.com": [
+        "packages/mcp-core/src/internal/tool-helpers/validate-region-url.test.ts"
+      ],
+      "https": [
+        "packages/mcp-core/src/internal/tool-helpers/validate-region-url.test.ts"
+      ],
+      "us.sentry.io:443": [
+        "packages/mcp-core/src/internal/tool-helpers/validate-region-url.test.ts"
+      ],
+      "sentry.company.com:8080": [
+        "packages/mcp-core/src/internal/tool-helpers/validate-region-url.test.ts"
+      ],
+      "d20df0a1ab5031c7f3c7edca9c02814d@o4509106732793856.ingest.us.sentry.io": [
+        "packages/mcp-core/src/tools/create-dsn.test.ts",
+        "packages/mcp-core/src/tools/create-project.test.ts",
+        "packages/mcp-core/src/tools/find-dsns.test.ts",
+        "packages/mcp-server-evals/src/evals/utils/fixtures.ts",
+        "packages/mcp-server-mocks/src/fixtures/client-key.json"
+      ],
+      "malicious.com": [
+        "packages/mcp-core/src/tools/get-doc.test.ts"
+      ],
+      "sentry-mcp-evals.sentry.io": [
+        "packages/mcp-core/src/tools/get-issue-details.test.ts",
+        "packages/mcp-core/src/tools/get-issue-tag-values.test.ts",
+        "packages/mcp-core/src/tools/get-profile-details.test.ts",
+        "packages/mcp-core/src/tools/get-replay-details.test.ts",
+        "packages/mcp-core/src/tools/get-sentry-resource.test.ts"
+      ],
+      "blog.sentry.io": [
+        "packages/mcp-core/src/tools/get-issue-details.test.ts",
+        "packages/mcp-server-mocks/src/fixtures/csp-event.json"
+      ],
+      "amplitude.atlassian.net": [
+        "packages/mcp-core/src/tools/get-issue-details.test.ts"
+      ],
+      "other-org.sentry.io": [
+        "packages/mcp-core/src/tools/get-profile-details.test.ts",
+        "packages/mcp-core/src/tools/get-profile.test.ts"
+      ],
+      "url-org.sentry.io": [
+        "packages/mcp-core/src/tools/get-replay-details.test.ts"
+      ],
+      "test-org.sentry.io": [
+        "packages/mcp-core/src/tools/get-sentry-resource.test.ts",
+        "packages/mcp-core/src/tools/search-events.test.ts",
+        "packages/mcp-core/src/tools/search-issues/formatters.test.ts"
+      ],
+      "invalid-url.com": [
+        "packages/mcp-core/src/tools/search-issue-events.test.ts"
+      ],
+      "example.com:8000": [
+        "packages/mcp-core/src/utils/url-utils.test.ts"
+      ],
+      "example.com:443": [
+        "packages/mcp-core/src/utils/url-utils.test.ts"
+      ],
+      "custom.example.com": [
+        "packages/mcp-core/src/utils/url-utils.test.ts"
+      ],
+      "mcp.example.com": [
+        "packages/mcp-server/src/cli/parse.test.ts"
+      ],
+      "api.example.com": [
+        "packages/mcp-server-mocks/src/fixtures/performance-event.json",
+        "packages/mcp-server/src/cli/parse.test.ts"
+      ],
+      "api.cli": [
+        "packages/mcp-server/src/cli/parse.test.ts"
+      ],
+      "api.proxy.example": [
+        "packages/mcp-server/src/cli/resolve.test.ts"
+      ],
+      "bad": [
+        "packages/mcp-server/src/cli/resolve.test.ts"
+      ],
+      "sentry.io$": [
+        "packages/mcp-server-mocks/src/index.ts"
+      ],
+      "us.sentry.io$": [
+        "packages/mcp-server-mocks/src/index.ts"
+      ],
+      "api.peated.com": [
+        "packages/mcp-server-mocks/src/fixtures/autofix-state.json"
+      ],
+      "d20df0a1ab5031c7f3c7edca9c02814d:154001fd3dfe38130e1c7948a323fad8@o4509106732793856.ingest.us.sentry.io": [
+        "packages/mcp-server-mocks/src/fixtures/client-key.json"
+      ],
+      "o4509106732793856.ingest.us.sentry.io": [
+        "packages/mcp-server-mocks/src/fixtures/client-key.json"
+      ],
+      "js.sentry-cdn.com": [
+        "packages/mcp-server-mocks/src/fixtures/client-key.json"
+      ],
+      "o1.ingest.sentry.io": [
+        "packages/mcp-server-mocks/src/fixtures/csp-event.json"
+      ],
+      "json.schemastore.org": [
+        "packages/mcp-server-tsconfig/tsconfig.base.json",
+        "packages/mcp-server-tsconfig/tsconfig.vite.json"
+      ],
+      "dsn.example": [
+        "packages/mcp-test-client/src/transport.test.ts"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\getsentry__sentry-mcp\\gitleaks.json",
+      "exit_code": 1,
+      "output_path": "_logs/scan/getsentry__sentry-mcp/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/getsentry__sentry-mcp/osv.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "test-path secret findings (1); exec-call in packages/mcp-cloudflare/worker-configuration.d.ts; exec-call in packages/mcp-cloudflare/worker-configuration.d.ts; exec-call in packages/mcp-cloudflare/src/client/components/ui/slash-command-text.tsx; exec-call in packages/mcp-cloudflare/src/client/components/ui/slash-command-text.tsx; exec-call in packages/mcp-cloudflare/src/server/lib/mcp-handler.ts; exec-call in packages/mcp-server/src/auth/device-code-flow.ts; exec-call in packages/mcp-server/src/auth/device-code-flow.ts; exec-call in packages/mcp-server/src/auth/device-code-flow.ts; exec-call in packages/mcp-server/src/auth/device-code-flow.ts; trusted-vendor: 1 gitleaks finding(s) downgraded to notes (likely SDK docs/example values); gitleaks: 13 test-path secret(s)",
+  "files_scanned": 694,
+  "files_skipped": 3,
+  "_reclassified": true,
+  "_sanitized": true
+}

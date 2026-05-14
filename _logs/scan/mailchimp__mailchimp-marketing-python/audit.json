@@ -1,0 +1,73 @@
+{
+  "source_url": "https://github.com/mailchimp/mailchimp-marketing-python",
+  "proposed_slot": "merchant.marketing.mailchimp-py",
+  "scanned_at": "2026-05-14T05:53:43.476767+00:00",
+  "clone_ok": true,
+  "commit_pinned": "3305fa45b3f436767a539c5fba9cb2b0a083d761",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner",
+    "pip-audit"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "mailchimp.com": [
+        "README.md",
+        "mailchimp_marketing/api/account_exports_api.py",
+        "mailchimp_marketing/api/activity_feed_api.py",
+        "mailchimp_marketing/api/authorized_apps_api.py",
+        "mailchimp_marketing/api/automations_api.py"
+      ],
+      "raw.githubusercontent.com": [
+        "README.md"
+      ],
+      "github.com": [
+        ".github/PULL_REQUEST_TEMPLATE.md",
+        "README.md",
+        "mailchimp_marketing.egg-info/PKG-INFO",
+        "mailchimp_marketing/__init__.py",
+        "mailchimp_marketing/api/account_export_api.py"
+      ],
+      "pypi.python.org": [
+        "README.md",
+        "setup.py"
+      ],
+      "server.api.mailchimp.com": [
+        "README.md",
+        "mailchimp_marketing/api_client.py",
+        "mailchimp_marketing/configuration.py"
+      ],
+      "urllib3.readthedocs.io": [
+        "mailchimp_marketing/rest.py"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\mailchimp__mailchimp-marketing-python\\gitleaks.json",
+      "exit_code": 0,
+      "output_path": "_logs/scan/mailchimp__mailchimp-marketing-python/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/mailchimp__mailchimp-marketing-python/osv.json"
+    },
+    "pip_audit": {
+      "exit_code": 1,
+      "output_path": "_logs/scan/mailchimp__mailchimp-marketing-python/pip-audit.json"
+    }
+  },
+  "verdict": "pass",
+  "verdict_reason": "no findings of concern in static scan",
+  "files_scanned": 45,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

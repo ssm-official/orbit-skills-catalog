@@ -1,0 +1,366 @@
+{
+  "source_url": "https://github.com/HKUDS/Vibe-Trading",
+  "proposed_slot": "personal.finance.hkuds-vibe-trading",
+  "scanned_at": "2026-05-14T05:48:25.425767+00:00",
+  "clone_ok": true,
+  "commit_pinned": "9bfaa4cd37d4b2a367fa3e08307103ca26605303",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner",
+    "pip-audit"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [
+      {
+        "file": "agent/tests/test_shadow_codegen_security.py",
+        "label": "exec-call",
+        "snippet": "w_codegen_security_test\"}     exec(compile(source, \"<generated-si"
+      }
+    ],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "github.com": [
+        ".github/ISSUE_TEMPLATE/config.yml",
+        "CODE_OF_CONDUCT.md",
+        "CONTRIBUTING.md",
+        "Dockerfile",
+        "README.md"
+      ],
+      "www.contributor-covenant.org": [
+        "CODE_OF_CONDUCT.md"
+      ],
+      "discord.gg": [
+        ".github/ISSUE_TEMPLATE/config.yml",
+        "CONTRIBUTING.md",
+        "README.md",
+        "README_ar.md",
+        "README_ja.md"
+      ],
+      "www.conventionalcommits.org": [
+        "CONTRIBUTING.md"
+      ],
+      "vibe-trading:8899": [
+        "docker-compose.yml"
+      ],
+      "img.shields.io": [
+        "README.md",
+        "README_ar.md",
+        "README_ja.md",
+        "README_ko.md",
+        "README_zh.md"
+      ],
+      "pypi.org": [
+        "README.md",
+        "README_ar.md",
+        "README_ja.md",
+        "README_ko.md",
+        "README_zh.md"
+      ],
+      "clawhub.ai": [
+        "README.md",
+        "README_ar.md",
+        "README_ja.md",
+        "README_ko.md",
+        "README_zh.md"
+      ],
+      "open-space.cloud": [
+        "README.md",
+        "README_ar.md",
+        "README_ja.md",
+        "README_ko.md",
+        "README_zh.md"
+      ],
+      "contrib.rocks": [
+        "README.md",
+        "README_ar.md",
+        "README_ja.md",
+        "README_ko.md",
+        "README_zh.md"
+      ],
+      "api.star-history.com": [
+        "README.md",
+        "README_ar.md",
+        "README_ja.md",
+        "README_ko.md",
+        "README_zh.md"
+      ],
+      "visitor-badge.laobi.icu": [
+        "README.md",
+        "README_ar.md",
+        "README_ja.md",
+        "README_ko.md",
+        "README_zh.md"
+      ],
+      "openrouter.ai": [
+        "agent/.env.example",
+        "agent/cli.py",
+        "agent/src/providers/llm_providers.json",
+        "agent/tests/test_cli_init.py",
+        "agent/tests/test_llm.py"
+      ],
+      "api.openai.com": [
+        "agent/.env.example",
+        "agent/cli.py",
+        "agent/src/providers/llm_providers.json",
+        "agent/tests/test_openai_codex.py"
+      ],
+      "chatgpt.com": [
+        "agent/.env.example",
+        "agent/cli.py",
+        "agent/src/providers/llm.py",
+        "agent/src/providers/llm_providers.json",
+        "agent/src/providers/openai_codex.py"
+      ],
+      "api.deepseek.com": [
+        "agent/.env.example",
+        "agent/cli.py",
+        "agent/src/providers/llm_providers.json",
+        "agent/tests/test_llm.py",
+        "agent/tests/test_settings_api.py"
+      ],
+      "generativelanguage.googleapis.com": [
+        "agent/.env.example",
+        "agent/cli.py",
+        "agent/src/providers/llm_providers.json",
+        "agent/tests/test_cli_init.py"
+      ],
+      "api.groq.com": [
+        "agent/.env.example",
+        "agent/cli.py",
+        "agent/src/providers/llm_providers.json",
+        "agent/tests/test_llm.py"
+      ],
+      "dashscope.aliyuncs.com": [
+        "agent/.env.example",
+        "agent/cli.py",
+        "agent/src/providers/llm_providers.json",
+        "agent/tests/test_llm.py"
+      ],
+      "open.bigmodel.cn": [
+        "agent/.env.example",
+        "agent/cli.py",
+        "agent/src/providers/llm_providers.json"
+      ],
+      "api.moonshot.ai": [
+        "agent/.env.example",
+        "agent/cli.py",
+        "agent/src/providers/llm_providers.json"
+      ],
+      "api.minimax.io": [
+        "agent/.env.example",
+        "agent/cli.py",
+        "agent/src/providers/llm_providers.json",
+        "agent/tests/test_llm.py"
+      ],
+      "api.xiaomimimo.com": [
+        "agent/.env.example",
+        "agent/cli.py",
+        "agent/src/providers/llm_providers.json"
+      ],
+      "api.z.ai": [
+        "agent/.env.example",
+        "agent/cli.py",
+        "agent/src/providers/llm_providers.json",
+        "agent/tests/test_llm.py"
+      ],
+      "tushare.pro": [
+        "agent/.env.example",
+        "agent/src/skills/tushare/SKILL.md",
+        "agent/src/skills/tushare/references/ETF\u4e13\u9898/ETF\u4efd\u989d\u89c4\u6a21.md",
+        "agent/src/skills/tushare/references/ETF\u4e13\u9898/ETF\u5386\u53f2\u5206\u949f.md",
+        "agent/src/skills/tushare/references/ETF\u4e13\u9898/ETF\u57fa\u51c6\u6307\u6570.md"
+      ],
+      "www.futunn.com": [
+        "agent/.env.example",
+        "agent/backtest/loaders/futu.py"
+      ],
+      "www.okx.com": [
+        "agent/backtest/loaders/okx.py",
+        "agent/src/preflight.py",
+        "agent/src/skills/candlestick/example_signal_engine.py",
+        "agent/src/skills/chanlun/example_signal_engine.py",
+        "agent/src/skills/elliott-wave/example_signal_engine.py"
+      ],
+      "akshare.akfamily.xyz": [
+        "agent/src/skills/akshare/SKILL.md"
+      ],
+      "www.cninfo.com.cn": [
+        "agent/src/skills/ashare-pre-st-filter/SKILL.md"
+      ],
+      "www.sse.com.cn": [
+        "agent/src/skills/ashare-pre-st-filter/SKILL.md"
+      ],
+      "www.szse.cn": [
+        "agent/src/skills/ashare-pre-st-filter/SKILL.md"
+      ],
+      "vip.stock.finance.sina.com.cn": [
+        "agent/src/skills/ashare-pre-st-filter/scripts/fetch_sina_penalties.py"
+      ],
+      "www.sec.gov": [
+        "agent/src/skills/edgar-sec-filings/SKILL.md"
+      ],
+      "efts.sec.gov": [
+        "agent/src/skills/edgar-sec-filings/SKILL.md"
+      ],
+      "www.matteoiacoviello.com": [
+        "agent/src/skills/geopolitical-risk/SKILL.md"
+      ],
+      "www.policyuncertainty.com": [
+        "agent/src/skills/geopolitical-risk/SKILL.md"
+      ],
+      "acleddata.com": [
+        "agent/src/skills/geopolitical-risk/SKILL.md"
+      ],
+      "api.acleddata.com": [
+        "agent/src/skills/geopolitical-risk/SKILL.md"
+      ],
+      "www.reuters.com": [
+        "agent/src/skills/geopolitical-risk/SKILL.md"
+      ],
+      "www.bloomberg.com": [
+        "agent/src/skills/geopolitical-risk/SKILL.md"
+      ],
+      "www.ft.com": [
+        "agent/src/skills/geopolitical-risk/SKILL.md"
+      ],
+      "www.foreignpolicy.com": [
+        "agent/src/skills/geopolitical-risk/SKILL.md"
+      ],
+      "eventregistry.org": [
+        "agent/src/skills/geopolitical-risk/SKILL.md"
+      ],
+      "www.gdeltproject.org": [
+        "agent/src/skills/geopolitical-risk/SKILL.md"
+      ],
+      "www.sipri.org": [
+        "agent/src/skills/geopolitical-risk/SKILL.md"
+      ],
+      "www.balticexchange.com": [
+        "agent/src/skills/geopolitical-risk/SKILL.md"
+      ],
+      "pypi.tuna.tsinghua.edu.cn": [
+        "agent/src/skills/tushare/SKILL.md"
+      ],
+      "tushare.org": [
+        "agent/src/skills/tushare/references/\u884c\u4e1a\u7ecf\u6d4e/TMT\u884c\u4e1a/\u5168\u56fd\u7535\u5f71\u5267\u672c\u5907\u6848\u6570\u636e.md"
+      ],
+      "www.vnpy.com": [
+        "agent/src/skills/vnpy-export/SKILL.md"
+      ],
+      "blog.example.com": [
+        "agent/src/skills/web-reader/SKILL.md"
+      ],
+      "r.jina.ai": [
+        "agent/src/tools/web_reader_tool.py",
+        "agent/tests/test_web_reader_security.py"
+      ],
+      "evil.example.com": [
+        "agent/tests/test_fetch_sina_penalties.py"
+      ],
+      "app.example.com,*": [
+        "agent/tests/test_security_auth_api.py"
+      ],
+      "app.example.com,https:": [
+        "agent/tests/test_security_auth_api.py"
+      ],
+      "app.example.com": [
+        "agent/tests/test_security_auth_api.py"
+      ],
+      "admin.example.com": [
+        "agent/tests/test_security_auth_api.py"
+      ],
+      "user:pass@example.com": [
+        "agent/tests/test_web_reader_security.py"
+      ],
+      "api.localhost": [
+        "agent/tests/test_web_reader_security.py"
+      ],
+      "service.local": [
+        "agent/tests/test_web_reader_security.py"
+      ],
+      "10.0.0.5": [
+        "agent/tests/test_web_reader_security.py"
+      ],
+      "172.16.0.5": [
+        "agent/tests/test_web_reader_security.py"
+      ],
+      "192.168.1.5": [
+        "agent/tests/test_web_reader_security.py"
+      ],
+      "169.254.169.254": [
+        "agent/tests/test_web_reader_security.py"
+      ],
+      "224.0.0.1": [
+        "agent/tests/test_web_reader_security.py"
+      ],
+      "[::1]": [
+        "agent/tests/test_web_reader_security.py"
+      ],
+      "[fc00::1]": [
+        "agent/tests/test_web_reader_security.py"
+      ],
+      "[fe80::1]": [
+        "agent/tests/test_web_reader_security.py"
+      ],
+      "www.w3.org": [
+        "assets/pip-install.svg",
+        "frontend/public/favicon.svg",
+        "frontend/public/logo.svg"
+      ],
+      "fonts.googleapis.com": [
+        "frontend/index.html"
+      ],
+      "fonts.gstatic.com": [
+        "frontend/index.html"
+      ],
+      "registry.npmjs.org": [
+        "frontend/package-lock.json"
+      ],
+      "opencollective.com": [
+        "frontend/package-lock.json"
+      ],
+      "tidelift.com": [
+        "frontend/package-lock.json"
+      ],
+      "paulmillr.com": [
+        "frontend/package-lock.json"
+      ],
+      "www.patreon.com": [
+        "frontend/package-lock.json"
+      ],
+      "feross.org": [
+        "frontend/package-lock.json"
+      ],
+      "www.tradingview.com": [
+        "frontend/src/components/chat/PineScriptViewer.tsx"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\HKUDS__Vibe-Trading\\gitleaks.json",
+      "exit_code": 1,
+      "output_path": "_logs/scan/HKUDS__Vibe-Trading/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/HKUDS__Vibe-Trading/osv.json"
+    },
+    "pip_audit": {
+      "exit_code": 1,
+      "output_path": "_logs/scan/HKUDS__Vibe-Trading/pip-audit.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "manual override: gitleaks generic-api-key match in SKILL.md is a Hugging Face model identifier (`ProsusAI/finbert`), not an API key. Confirmed by hand 2026-05-14.",
+  "files_scanned": 626,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_manual_override": true,
+  "_sanitized": true
+}

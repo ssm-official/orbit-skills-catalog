@@ -1,0 +1,113 @@
+{
+  "source_url": "https://github.com/danielgatis/rembg",
+  "proposed_slot": "both.creative.rembg",
+  "scanned_at": "2026-05-14T05:53:41.454191+00:00",
+  "clone_ok": true,
+  "commit_pinned": "7b8de60ef9fc225af1768d81aa09da29db22a355",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner",
+    "pip-audit"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "editorconfig.org": [
+        ".editorconfig"
+      ],
+      "github.com": [
+        "CITATION.cff",
+        "README.md",
+        "_setup-cpu.iss",
+        "_setup-gpu.iss",
+        "man/rembg.1"
+      ],
+      "img.shields.io": [
+        "README.md"
+      ],
+      "huggingface.co": [
+        "README.md",
+        "rembg.ipynb"
+      ],
+      "bgremoval.streamlit.app": [
+        "README.md"
+      ],
+      "colab.research.google.com": [
+        "README.md"
+      ],
+      "repomapr.com": [
+        "README.md"
+      ],
+      "trendshift.io": [
+        "README.md"
+      ],
+      "photoroom.com": [
+        "README.md"
+      ],
+      "font-cdn.photoroom.com": [
+        "README.md"
+      ],
+      "www.buymeacoffee.com": [
+        ".github/FUNDING.yml",
+        "README.md"
+      ],
+      "onnxruntime.ai": [
+        "README.md"
+      ],
+      "rocm.docs.amd.com": [
+        "README.md"
+      ],
+      "input.png": [
+        "README.md"
+      ],
+      "docs.nvidia.com": [
+        "README.md"
+      ],
+      "pypi.org": [
+        "README.md"
+      ],
+      "bmc-cdn.nyc3.digitaloceanspaces.com": [
+        "README.md"
+      ],
+      "api.star-history.com": [
+        "README.md"
+      ],
+      "www.legroom.net": [
+        "_modpath.iss"
+      ],
+      "www.gnu.org": [
+        "_modpath.iss"
+      ],
+      "www.sciencedirect.com": [
+        "rembg/bg.py"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\danielgatis__rembg\\gitleaks.json",
+      "exit_code": 0,
+      "output_path": "_logs/scan/danielgatis__rembg/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/danielgatis__rembg/osv.json"
+    },
+    "pip_audit": {
+      "exit_code": 1,
+      "output_path": "_logs/scan/danielgatis__rembg/pip-audit.json"
+    }
+  },
+  "verdict": "pass",
+  "verdict_reason": "no findings of concern in static scan",
+  "files_scanned": 64,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}
