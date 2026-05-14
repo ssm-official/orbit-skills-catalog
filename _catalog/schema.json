@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://orbit.xona-agent.com/schemas/skill-manifest/v1.0.json",
+  "title": "Orbit Skill Manifest",
+  "description": "Canonical metadata for a skill in the Orbit catalog. One manifest.json per accepted skill folder.",
+  "type": "object",
+  "required": ["id", "name", "track", "summary", "source", "upstream", "x402_compatible", "tools", "risk", "audit", "smoke"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "type": "string", "const": "1.0" },
+    "id": {
+      "type": "string",
+      "description": "Dot-namespaced unique id: <track>.<category>.<slot>.<implementation>",
+      "pattern": "^[a-z0-9]+(\\.[a-z0-9_-]+){2,}$"
+    },
+    "name": { "type": "string", "minLength": 3 },
+    "slug": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "track": {
+      "type": "array",
+      "items": { "enum": ["personal", "merchant"] },
+      "minItems": 1, "maxItems": 2, "uniqueItems": true
+    },
+    "category": { "type": "string" },
+    "slot": { "type": "string" },
+    "summary": { "type": "string", "minLength": 10, "maxLength": 300 },
+    "version": { "type": "string" },
+    "source": {
+      "type": "object",
+      "required": ["kind", "repo_url", "commit_pinned", "license", "last_commit_at", "primary_language"],
+      "additionalProperties": false,
+      "properties": {
+        "kind": { "enum": ["mcp_server", "sdk_wrapper", "tool_folder", "composite"] },
+        "repo_url": { "type": "string", "format": "uri" },
+        "commit_pinned": { "type": "string", "pattern": "^[0-9a-f]{7,40}$" },
+        "license": { "type": "string" },
+        "last_commit_at": { "type": "string", "format": "date" },
+        "stars": { "type": "integer", "minimum": 0 },
+        "primary_language": { "type": "string" },
+        "maintainer": { "type": "string" }
+      }
+    },
+    "upstream": {
+      "type": "object",
+      "required": ["vendor", "vendor_url", "auth_type", "cost_model"],
+      "additionalProperties": false,
+      "properties": {
+        "vendor": { "type": "string" },
+        "vendor_url": { "type": "string", "format": "uri" },
+        "auth_type": { "enum": ["api_key", "oauth", "username_password", "none", "self_host", "mixed"] },
+        "auth_scope": { "type": "string" },
+        "obtain_url": { "type": "string", "format": "uri" },
+        "env_var": { "type": "string" },
+        "sandbox_available": { "type": "boolean" },
+        "requires_user_oauth": { "type": "boolean" },
+        "cost_model": { "enum": ["free", "freemium", "paid_per_call", "paid_per_seat", "self_host", "mixed"] },
+        "typical_per_call_cost_usd": { "type": "string" },
+        "regional_availability": {
+          "type": "array",
+          "items": { "enum": ["global", "us", "eu", "uk", "ca", "au", "nz", "jp", "in", "br", "mx", "sea", "latam", "cn", "ch", "nl"] }
+        }
+      }
+    },
+    "x402_compatible": { "type": "boolean" },
+    "x402_notes": { "type": "string" },
+    "tools": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "destructive", "idempotent"],
+        "additionalProperties": false,
+        "properties": {
+          "name": { "type": "string" },
+          "summary": { "type": "string" },
+          "destructive": { "type": "boolean" },
+          "idempotent": { "type": "boolean" },
+          "rate_limit": { "type": "string" }
+        }
+      }
+    },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "risk": {
+      "type": "object",
+      "required": ["prompt_injection", "destructive", "spend_capable", "default_mode"],
+      "additionalProperties": false,
+      "properties": {
+        "prompt_injection": { "enum": ["low", "medium", "high"] },
+        "destructive": { "type": "boolean" },
+        "spend_capable": { "type": "boolean" },
+        "regulated_data": {
+          "type": "array",
+          "items": { "enum": ["pii", "phi", "pci", "gdpr", "hipaa", "sox", "ferpa", "none"] }
+        },
+        "default_mode": { "enum": ["live", "dry_run"] },
+        "dynamic_code_loading": { "type": "boolean" },
+        "telemetry": { "type": "string" }
+      }
+    },
+    "audit": {
+      "type": "object",
+      "required": ["verdict", "log"],
+      "additionalProperties": false,
+      "properties": {
+        "verdict": { "enum": ["pass", "pass_with_notes"] },
+        "log": { "type": "string" },
+        "scanners_run": { "type": "array", "items": { "type": "string" } },
+        "behavioral_check": { "enum": ["clean", "clean_with_notes", "skipped_no_creds"] }
+      }
+    },
+    "smoke": {
+      "type": "object",
+      "required": ["verdict", "log"],
+      "additionalProperties": false,
+      "properties": {
+        "verdict": { "enum": ["pass", "pass_with_notes", "deferred"] },
+        "log": { "type": "string" },
+        "last_passed_at": { "type": "string", "format": "date-time" },
+        "deferred_reason": { "type": "string" }
+      }
+    },
+    "orbit": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "suggested_markup_floor_pct": { "type": "number", "minimum": 0 },
+        "suggested_markup_ceiling_pct": { "type": "number", "minimum": 0 },
+        "pricing_note": { "type": "string" },
+        "recommended_personalities": { "type": "array", "items": { "type": "string" } },
+        "tokenization_friendly": { "type": "boolean" }
+      }
+    },
+    "notes": { "type": "string" }
+  }
+}

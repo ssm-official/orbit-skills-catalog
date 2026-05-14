@@ -1,0 +1,31 @@
+# Local secrets / credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+~/.config/orbit-skills/
+
+# Caches
+_cache/
+__pycache__/
+*.pyc
+node_modules/
+.venv/
+venv/
+
+# Clone workdir (skill source lives here pre-acceptance; only vetted survivors get copied into <track>/)
+candidates/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Logs that are too noisy to track (keep curated logs only)
+_logs/run/*.log
+_logs/scan/**/raw/
