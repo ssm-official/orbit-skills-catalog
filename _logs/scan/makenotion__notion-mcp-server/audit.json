@@ -1,0 +1,98 @@
+{
+  "source_url": "https://github.com/makenotion/notion-mcp-server",
+  "proposed_slot": "both.productivity.makenotion-notion-mcp-server",
+  "scanned_at": "2026-05-14T05:48:04.946423+00:00",
+  "clone_ok": true,
+  "commit_pinned": "3bef7addac59b237da3bb41f36a520babc47fa3c",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [
+      {
+        "file": "src/openapi-mcp-server/openapi/parser.ts",
+        "label": "eval-call",
+        "snippet": "ce       // const zodSchema = eval(zodSchemaStr) as z.ZodType    "
+      }
+    ],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "spec.modelcontextprotocol.io": [
+        "CLAUDE.md",
+        "README.md"
+      ],
+      "developers.notion.com": [
+        "CLAUDE.md",
+        "README.md",
+        "scripts/notion-openapi.json"
+      ],
+      "registry.npmjs.org": [
+        "package-lock.json"
+      ],
+      "opencollective.com": [
+        "package-lock.json"
+      ],
+      "github.com": [
+        "README.md",
+        "package-lock.json",
+        "package.json",
+        "scripts/build-cli.js",
+        "scripts/notion-openapi.json"
+      ],
+      "paypal.me": [
+        "package-lock.json"
+      ],
+      "tidelift.com": [
+        "package-lock.json"
+      ],
+      "www.patreon.com": [
+        "package-lock.json"
+      ],
+      "feross.org": [
+        "package-lock.json"
+      ],
+      "www.notion.so": [
+        "README.md",
+        "scripts/start-server.ts"
+      ],
+      "docs.github.com": [
+        "README.md"
+      ],
+      "api.notion.com": [
+        "scripts/notion-openapi.json",
+        "scripts/start-server.ts"
+      ],
+      "test.com": [
+        "src/openapi-mcp-server/client/__tests__/http-client-upload.test.ts",
+        "src/openapi-mcp-server/client/__tests__/http-client.test.ts"
+      ],
+      "api.example.com": [
+        "src/openapi-mcp-server/client/__tests__/http-client.test.ts"
+      ],
+      "test-api.com": [
+        "src/openapi-mcp-server/client/__tests__/http-client.test.ts"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\makenotion__notion-mcp-server\\gitleaks.json",
+      "exit_code": 1,
+      "output_path": "_logs/scan/makenotion__notion-mcp-server/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/makenotion__notion-mcp-server/osv.json"
+    }
+  },
+  "verdict": "quarantine",
+  "verdict_reason": "gitleaks: 2 non-test secret(s)",
+  "files_scanned": 34,
+  "files_skipped": 0
+}

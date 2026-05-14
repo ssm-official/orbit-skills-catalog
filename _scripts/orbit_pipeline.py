@@ -252,10 +252,22 @@ def write_jsonl_atomic(path: Path, rows: Iterable[dict]) -> None:
 # ---------- git ops ----------
 
 def clone_shallow(url: str, target: Path) -> bool:
-    """git clone --depth=1 --filter=blob:none."""
+    """git clone --depth=1 --filter=blob:none. Considers an existing dir valid
+    only if it has a .git/HEAD; otherwise treats it as a leftover from a killed
+    clone and removes it before re-cloning."""
     target.parent.mkdir(parents=True, exist_ok=True)
     if target.exists():
-        return True
+        head_file = target / ".git" / "HEAD"
+        if head_file.exists():
+            return True
+        # leftover incomplete dir — try to remove
+        try:
+            shutil.rmtree(target, ignore_errors=True)
+        except Exception:
+            pass
+        if target.exists():
+            log(f"clone target {target} exists and could not be removed (file lock?); skipping")
+            return False
     try:
         r = subprocess.run(
             ["git", "clone", "--depth=1", "--filter=blob:none", "--no-tags", url, str(target)],
@@ -335,32 +347,66 @@ SECRET_PATTERNS = [
     (re.compile(r"-----BEGIN (RSA |EC |OPENSSH |DSA )?PRIVATE KEY-----"), "private key"),
 ]
 
+# Patterns that suggest malicious or surprising behavior. These only apply
+# to executable source files (not markdown / yaml / issue templates / docs).
 SUSPICIOUS_PATTERNS = [
     (re.compile(r"\beval\s*\("), "eval-call"),
     (re.compile(r"\bexec\s*\("), "exec-call"),
-    (re.compile(r"Function\s*\("), "Function-constructor"),
-    (re.compile(r"child_process|subprocess\.(Popen|run|call|check_output)|spawn\s*\("), "process-spawn"),
-    (re.compile(r"\.discord\.com|\.discordapp\.com|pastebin\.|ngrok\."), "suspicious-host"),
-    (re.compile(r"download_and_run|self_update|auto_update"), "self-update"),
-    (re.compile(r"keylog|clipboard\.read|screencap|screenshot"), "io-snooping"),
-    (re.compile(r"xmrig|stratum\+tcp|coinhive|monero"), "miner-string"),
-    (re.compile(r"window\.location\s*="), "location-redirect"),
-    (re.compile(r"document\.cookie"), "cookie-access"),
+    (re.compile(r"\bnew\s+Function\s*\("), "Function-constructor"),
+    (re.compile(r"\.discord\.com|\.discordapp\.com|pastebin\.com|ngrok\.io"), "suspicious-host"),
+    # self-update style: only flag actual code constructs, not the word
+    (re.compile(r"def\s+self_update\b|function\s+self_update\b|download_and_(?:run|exec)\b|auto_update_binary\b"), "self-update"),
+    # io-snooping: actual code-level calls only — keylogger libraries, clipboard.readText calls,
+    # screen-capture API calls. Plain "screenshot" or "clipboard" in prose does NOT match.
+    (re.compile(r"\bclipboard\.read(?:Text)?\s*\(|navigator\.clipboard\.read|pynput\.keyboard|keyboard\.on_press\b|"
+                r"pyautogui\.screenshot|ImageGrab\.grab\s*\(|Robot\.createScreenCapture|screen_capture_api"), "io-snooping"),
+    (re.compile(r"\bxmrig\b|stratum\+tcp|coinhive\.com|monero\s*pool|cryptonight"), "miner-string"),
+    (re.compile(r"window\.location\.href\s*=\s*['\"]https?://"), "location-redirect-external"),
+    (re.compile(r"document\.cookie\s*="), "cookie-write"),
 ]
+
+# Files we skip for the pattern scan (prose, lockfiles, vendored deps).
+PATTERN_SCAN_SKIP_EXTS = {
+    ".md", ".markdown", ".rst", ".txt", ".html", ".htm",
+    ".yml", ".yaml", ".toml", ".ini", ".cfg", ".conf",
+    ".csv", ".tsv",
+    ".lock", ".sum",  # lockfiles
+    ".log",
+    ".snap",  # jest snapshots
+}
+
+PATTERN_SCAN_SKIP_PATH_HINTS = (
+    "/.github/",          # PR templates, issue templates
+    "\\.github\\",
+    "/changelog",
+    "/docs/",
+    "/doc/",
+    "/test/fixtures/",
+    "/tests/fixtures/",
+    "/__snapshots__/",
+    "/vendor/",
+)
 
 URL_RE = re.compile(r"https?://[A-Za-z0-9._~:/?#\[\]@!$&'()*+,;=%-]+", re.IGNORECASE)
 
 
 def scan_tree_for_patterns(repo_path: Path, max_file_bytes: int = 5_000_000) -> dict:
-    """Walk the repo, grep for secrets/suspicious/URLs. Light static analysis."""
+    """Walk the repo, grep for secrets / suspicious code / URLs.
+
+    Suspicious-code patterns only run on executable source files
+    (not markdown / yaml / docs / .github templates / test fixtures).
+    Secret patterns and URL inventory run on ALL non-binary files
+    because leaked tokens can live in any text file.
+    """
     findings = {"secrets": [], "suspicious": [], "urls": {}, "files_scanned": 0, "files_skipped": 0}
-    skip_dirs = {".git", "node_modules", "__pycache__", "venv", ".venv", "dist", "build", ".next", ".turbo", "target"}
-    binary_exts = {".png", ".jpg", ".jpeg", ".gif", ".webp", ".pdf", ".zip", ".tar", ".gz", ".woff", ".woff2", ".ttf", ".eot", ".ico", ".mp3", ".mp4", ".wav", ".mov", ".bin", ".so", ".dll", ".dylib", ".pyc"}
+    skip_dirs = {".git", "node_modules", "__pycache__", "venv", ".venv", "dist", "build", ".next", ".turbo", "target", ".cache", ".mypy_cache", ".pytest_cache"}
+    binary_exts = {".png", ".jpg", ".jpeg", ".gif", ".webp", ".pdf", ".zip", ".tar", ".gz", ".woff", ".woff2", ".ttf", ".eot", ".ico", ".mp3", ".mp4", ".wav", ".mov", ".bin", ".so", ".dll", ".dylib", ".pyc", ".class", ".jar"}
     for root, dirs, files in os.walk(repo_path):
         dirs[:] = [d for d in dirs if d not in skip_dirs]
         for fn in files:
             p = Path(root) / fn
-            if p.suffix.lower() in binary_exts:
+            ext = p.suffix.lower()
+            if ext in binary_exts:
                 continue
             try:
                 if p.stat().st_size > max_file_bytes:
@@ -372,13 +418,19 @@ def scan_tree_for_patterns(repo_path: Path, max_file_bytes: int = 5_000_000) -> 
                 continue
             findings["files_scanned"] += 1
             rel = str(p.relative_to(repo_path)).replace("\\", "/")
+            rel_lower = "/" + rel.lower()
+            is_prose = ext in PATTERN_SCAN_SKIP_EXTS or any(h.replace("\\", "/") in rel_lower for h in PATTERN_SCAN_SKIP_PATH_HINTS)
+            # secrets — scan ALL text files
             for rx, label in SECRET_PATTERNS:
                 for m in rx.finditer(text):
                     findings["secrets"].append({"file": rel, "label": label, "match_prefix": m.group(0)[:24]})
-            for rx, label in SUSPICIOUS_PATTERNS:
-                for m in rx.finditer(text):
-                    snippet = text[max(0, m.start()-30):m.end()+30].replace("\n", " ")
-                    findings["suspicious"].append({"file": rel, "label": label, "snippet": snippet[:200]})
+            # suspicious patterns — only scan executable source
+            if not is_prose:
+                for rx, label in SUSPICIOUS_PATTERNS:
+                    for m in rx.finditer(text):
+                        snippet = text[max(0, m.start()-30):m.end()+30].replace("\n", " ")
+                        findings["suspicious"].append({"file": rel, "label": label, "snippet": snippet[:200]})
+            # URLs — scan all text files
             for m in URL_RE.finditer(text):
                 u = m.group(0).rstrip(".,;:)\"'")
                 try:
@@ -388,7 +440,6 @@ def scan_tree_for_patterns(repo_path: Path, max_file_bytes: int = 5_000_000) -> 
                 if not host or host.startswith("localhost") or host.startswith("127.") or host.startswith("0.0.0.0") or host == "example.com":
                     continue
                 findings["urls"].setdefault(host, []).append(rel)
-    # dedupe url file lists
     for host, files in findings["urls"].items():
         findings["urls"][host] = sorted(set(files))[:5]
     return findings

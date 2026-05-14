@@ -1,0 +1,109 @@
+{
+  "source_url": "https://github.com/tevonsb/homeassistant-mcp",
+  "proposed_slot": "personal.home.tevonsb-homeassistant-mcp",
+  "scanned_at": "2026-05-14T05:48:01.705216+00:00",
+  "clone_ok": true,
+  "commit_pinned": "da5c30bc5ef83a7dd96fd1ef8122f0b2f3b8c94b",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner"
+  ],
+  "findings": {
+    "secrets": [
+      {
+        "file": "__tests__/security/index.test.ts",
+        "label": "jwt-like",
+        "match_prefix": "eyJhbGciOiJIUzI1NiIsInR5"
+      },
+      {
+        "file": "__tests__/security/index.test.ts",
+        "label": "jwt-like",
+        "match_prefix": "eyJhbGciOiJIUzI1NiIsInR5"
+      },
+      {
+        "file": "__tests__/security/token-manager.test.ts",
+        "label": "jwt-like",
+        "match_prefix": "eyJhbGciOiJIUzI1NiIsInR5"
+      },
+      {
+        "file": "__tests__/security/token-manager.test.ts",
+        "label": "jwt-like",
+        "match_prefix": "eyJhbGciOiJIUzI1NiIsInR5"
+      },
+      {
+        "file": "__tests__/security/token-manager.test.ts",
+        "label": "jwt-like",
+        "match_prefix": "eyJhbGciOiJIUzI1NiIsInR5"
+      }
+    ],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "homeassistant.local:8123": [
+        ".env.example",
+        "README.md",
+        "claude-desktop-macos-setup.sh",
+        "src/config/hass.config.ts"
+      ],
+      "raw.githubusercontent.com": [
+        "claude-desktop-macos-setup.sh"
+      ],
+      "github.com": [
+        "README.md",
+        "claude-desktop-macos-setup.sh"
+      ],
+      "claude.ai": [
+        "claude-desktop-macos-setup.sh"
+      ],
+      "www.apache.org": [
+        "LICENSE"
+      ],
+      "img.shields.io": [
+        "README.md"
+      ],
+      "community.home-assistant.io": [
+        "README.md"
+      ],
+      "modelcontextprotocol.io": [
+        "README.md"
+      ],
+      "www.home-assistant.io": [
+        "README.md"
+      ],
+      "developers.home-assistant.io": [
+        "README.md"
+      ],
+      "hacs.xyz": [
+        "README.md"
+      ],
+      "www.typescriptlang.org": [
+        "README.md"
+      ],
+      "192.168.178.63:8123": [
+        "src/index.ts"
+      ],
+      "hass.example.com": [
+        "__tests__/hass/index.test.ts"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\tevonsb__homeassistant-mcp\\gitleaks.json",
+      "exit_code": 1,
+      "output_path": "_logs/scan/tevonsb__homeassistant-mcp/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/tevonsb__homeassistant-mcp/osv.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "test-path secret findings (5); gitleaks: 6 test-path secret(s)",
+  "files_scanned": 61,
+  "files_skipped": 0
+}

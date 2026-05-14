@@ -1,0 +1,73 @@
+{
+  "source_url": "https://github.com/financial-datasets/mcp-server",
+  "proposed_slot": "personal.finance.financial-datasets-mcp-server",
+  "scanned_at": "2026-05-14T05:48:03.493249+00:00",
+  "clone_ok": true,
+  "commit_pinned": "08e7a3dbb949d3d99bbd6d6f3a22e5f02973ec58",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner",
+    "pip-audit"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "financialdatasets.ai": [
+        ".env.example"
+      ],
+      "python-poetry.org": [
+        ".gitignore"
+      ],
+      "pdm.fming.dev": [
+        ".gitignore"
+      ],
+      "github.com": [
+        ".gitignore",
+        "README.md"
+      ],
+      "www.financialdatasets.ai": [
+        "README.md"
+      ],
+      "astral.sh": [
+        "README.md"
+      ],
+      "claude.ai": [
+        "README.md"
+      ],
+      "api.financialdatasets.ai": [
+        "server.py"
+      ],
+      "pypi.org": [
+        "uv.lock"
+      ],
+      "files.pythonhosted.org": [
+        "uv.lock"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\financial-datasets__mcp-server\\gitleaks.json",
+      "exit_code": 0,
+      "output_path": "_logs/scan/financial-datasets__mcp-server/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/financial-datasets__mcp-server/osv.json"
+    },
+    "pip_audit": {
+      "exit_code": 0,
+      "output_path": "_logs/scan/financial-datasets__mcp-server/pip-audit.json"
+    }
+  },
+  "verdict": "pass",
+  "verdict_reason": "no findings of concern in static scan",
+  "files_scanned": 8,
+  "files_skipped": 0
+}

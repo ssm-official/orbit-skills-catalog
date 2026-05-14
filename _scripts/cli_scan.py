@@ -32,6 +32,7 @@ import os
 import shutil
 import subprocess
 import sys
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -156,42 +157,84 @@ def scan_one(row: dict) -> dict:
             audit["external_scanners"]["pip_audit"] = {"error": str(e)}
 
     # ---- verdict logic ----
-    # §3.1 automatic rejects
+    # Tests / fixtures / examples often legitimately include placeholder secrets
+    # (Stripe sk_test_*, example keys in `.env.example`, etc.). A finding inside
+    # these paths is documented as a note, not an automatic quarantine.
+    def _is_test_path(rel: str) -> bool:
+        rl = rel.lower().replace("\\", "/")
+        markers = ("/test/", "/tests/", "/__tests__/", "/spec/", "/specs/",
+                   "/fixtures/", "/fixture/", "/__fixtures__/", "/mocks/", "/mock/",
+                   ".example", ".sample", ".test.", ".spec.", "/example/", "/examples/",
+                   "/docs/", "/doc/", "/.github/")
+        return any(m in rl for m in markers) or rl.endswith(".example") or rl.endswith(".sample")
+
+    def _is_test_only_secret(label: str, prefix: str) -> bool:
+        # Stripe test keys are intentionally public.
+        if label == "stripe test key":
+            return True
+        if "_test_" in prefix.lower() or prefix.lower().startswith("sk_test_"):
+            return True
+        return False
+
     reject_reasons = []
-    # any secret hit
-    if audit["findings"]["secrets"]:
-        reject_reasons.append(f"hardcoded secrets ({len(audit['findings']['secrets'])} hits)")
+    notes_reasons = []
+
+    # secrets — split into real vs test-path findings
+    real_secret_hits = []
+    test_secret_hits = []
+    for s in audit["findings"]["secrets"]:
+        if _is_test_path(s["file"]) or _is_test_only_secret(s.get("label", ""), s.get("match_prefix", "")):
+            test_secret_hits.append(s)
+        else:
+            real_secret_hits.append(s)
+    if real_secret_hits:
+        reject_reasons.append(f"hardcoded secrets in non-test paths ({len(real_secret_hits)} hits, e.g. {real_secret_hits[0]['file']})")
+    if test_secret_hits:
+        notes_reasons.append(f"test-path secret findings ({len(test_secret_hits)})")
+
     # dangerous install hooks
     for h in audit["findings"]["install_hooks"]:
         if h.get("dangerous"):
             reject_reasons.append(f"dangerous {h['hook']} hook in {h['file']}")
     for h in audit["findings"]["py_build_hooks"]:
         reject_reasons.append(f"python build hook issue: {h['issue']} in {h['file']}")
-    # miner / clipboard / self-update suspicious labels are auto-reject
+
+    # miner / self-update / io-snooping in source (we already filter out
+    # markdown/yaml/.github paths upstream — any hit here is real)
     auto_reject_labels = {"miner-string", "self-update", "io-snooping"}
     for s in audit["findings"]["suspicious"]:
         if s["label"] in auto_reject_labels:
             reject_reasons.append(f"suspicious code: {s['label']} in {s['file']}")
+        else:
+            notes_reasons.append(f"{s['label']} in {s['file']}")
 
-    # external scanner findings (parse light)
+    # gitleaks: parse output; ignore findings in test paths
     gitleaks_path = log_dir / "gitleaks.json"
+    gitleaks_real = 0
+    gitleaks_test = 0
     if gitleaks_path.exists():
         try:
             gl = json.loads(gitleaks_path.read_text(encoding="utf-8"))
-            if isinstance(gl, list) and len(gl) > 0:
-                reject_reasons.append(f"gitleaks: {len(gl)} secret(s)")
+            if isinstance(gl, list):
+                for finding in gl:
+                    f = (finding.get("File") or finding.get("file") or "")
+                    if _is_test_path(f):
+                        gitleaks_test += 1
+                    else:
+                        gitleaks_real += 1
         except Exception:
             pass
+    if gitleaks_real:
+        reject_reasons.append(f"gitleaks: {gitleaks_real} non-test secret(s)")
+    if gitleaks_test:
+        notes_reasons.append(f"gitleaks: {gitleaks_test} test-path secret(s)")
 
     if reject_reasons:
         audit["verdict"] = "quarantine"
         audit["verdict_reason"] = "; ".join(reject_reasons)
-    elif audit["findings"]["suspicious"] or audit["findings"]["install_hooks"]:
+    elif notes_reasons or audit["findings"]["install_hooks"]:
         audit["verdict"] = "pass_with_notes"
-        audit["verdict_reason"] = (
-            f"{len(audit['findings']['suspicious'])} pattern hits / "
-            f"{len(audit['findings']['install_hooks'])} install hooks documented"
-        )
+        audit["verdict_reason"] = "; ".join(notes_reasons) or f"{len(audit['findings']['install_hooks'])} install hooks documented"
     else:
         audit["verdict"] = "pass"
         audit["verdict_reason"] = "no findings of concern in static scan"
@@ -201,29 +244,49 @@ def scan_one(row: dict) -> dict:
     return audit
 
 
+def _safe_scan(row):
+    try:
+        return scan_one(row)
+    except Exception as e:
+        log(f"scan exception {row.get('source_url')}: {e}")
+        return {"source_url": row.get("source_url"), "verdict": "errors", "error": str(e)}
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=0, help="limit number of repos to scan (0 = all)")
     ap.add_argument("--filter", type=str, default="", help="only process rows whose source_url contains this substring")
+    ap.add_argument("--workers", type=int, default=4, help="parallel clone+scan workers")
+    ap.add_argument("--skip-existing", action="store_true", help="skip repos that already have an audit.json")
     args = ap.parse_args()
 
     rows = load_jsonl(SHORTLIST)
     if args.filter:
         rows = [r for r in rows if args.filter.lower() in r["source_url"].lower()]
+    if args.skip_existing:
+        from orbit_pipeline import parse_github_url as _pg
+        kept = []
+        for r in rows:
+            p = _pg(r["source_url"])
+            if not p:
+                continue
+            owner, repo = p
+            if not (SCAN_LOG_BASE / f"{owner}__{repo}" / "audit.json").exists():
+                kept.append(r)
+        rows = kept
     if args.limit > 0:
         rows = rows[: args.limit]
 
-    log(f"scanning {len(rows)} shortlisted repos")
+    log(f"scanning {len(rows)} shortlisted repos with {args.workers} workers")
     summary = {"pass": 0, "pass_with_notes": 0, "quarantine": 0, "drop": 0, "errors": 0}
     audits = []
-    for row in rows:
-        try:
-            a = scan_one(row)
+    with ThreadPoolExecutor(max_workers=args.workers) as ex:
+        futures = {ex.submit(_safe_scan, row): row for row in rows}
+        for f in as_completed(futures):
+            a = f.result()
             audits.append(a)
-            summary[a.get("verdict", "errors")] = summary.get(a.get("verdict", "errors"), 0) + 1
-        except Exception as e:
-            log(f"scan exception {row.get('source_url')}: {e}")
-            summary["errors"] += 1
+            v = a.get("verdict", "errors")
+            summary[v] = summary.get(v, 0) + 1
 
     summary_path = ROOT / "_logs" / "scan_summary.jsonl"
     write_jsonl_atomic(summary_path, audits)

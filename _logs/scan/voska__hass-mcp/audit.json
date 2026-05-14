@@ -1,0 +1,62 @@
+{
+  "source_url": "https://github.com/voska/hass-mcp",
+  "proposed_slot": "personal.home.voska-hass-mcp",
+  "scanned_at": "2026-05-14T05:48:08.076058+00:00",
+  "clone_ok": true,
+  "commit_pinned": "716366b31eb1160f9b18321d840ea9ca8a26d8f9",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner",
+    "pip-audit"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "homeassistant.local:8123": [
+        ".env.example",
+        "README.md",
+        "tests/test_config.py"
+      ],
+      "glama.ai": [
+        "README.md"
+      ],
+      "github.com": [
+        "README.md"
+      ],
+      "host.docker.internal:8123": [
+        "README.md"
+      ],
+      "pypi.org": [
+        "uv.lock"
+      ],
+      "files.pythonhosted.org": [
+        "uv.lock"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\voska__hass-mcp\\gitleaks.json",
+      "exit_code": 0,
+      "output_path": "_logs/scan/voska__hass-mcp/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/voska__hass-mcp/osv.json"
+    },
+    "pip_audit": {
+      "exit_code": 0,
+      "output_path": "_logs/scan/voska__hass-mcp/pip-audit.json"
+    }
+  },
+  "verdict": "pass",
+  "verdict_reason": "no findings of concern in static scan",
+  "files_scanned": 22,
+  "files_skipped": 0
+}

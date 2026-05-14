@@ -1,0 +1,239 @@
+{
+  "source_url": "https://github.com/mapbox/mcp-server",
+  "proposed_slot": "both.maps.mapbox-mcp-server",
+  "scanned_at": "2026-05-14T05:48:03.617093+00:00",
+  "clone_ok": true,
+  "commit_pinned": "bf856790b18cbd696f8b059ffb26dd98d06352a2",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner"
+  ],
+  "findings": {
+    "secrets": [
+      {
+        "file": "test/utils/tracing.test.ts",
+        "label": "jwt-like",
+        "match_prefix": "eyJhbGciOiJIUzI1NiIsInR5"
+      }
+    ],
+    "suspicious": [],
+    "install_hooks": [
+      {
+        "file": "package.json",
+        "hook": "postinstall",
+        "command": "patch-package || (cd ../../.. && node ./node_modules/patch-package/index.js --patch-dir ./node_modules/@mapbox/mcp-server/patches) || true",
+        "dangerous": false
+      }
+    ],
+    "py_build_hooks": [],
+    "urls_found": {
+      "account.mapbox.com": [
+        ".env.example",
+        "README.md",
+        "docs/goose-setup.md",
+        "manifest.json"
+      ],
+      "learn.microsoft.com": [
+        ".env.example",
+        "docs/tracing.md"
+      ],
+      "cloudtrace.googleapis.com": [
+        ".env.example",
+        "docs/tracing-verification.md",
+        "docs/tracing.md"
+      ],
+      "api.datadoghq.com": [
+        ".env.example",
+        "docs/tracing.md"
+      ],
+      "docs.datadoghq.com": [
+        ".env.example",
+        "docs/tracing.md"
+      ],
+      "otlp.nr-data.net:4318": [
+        ".env.example",
+        "docs/tracing.md"
+      ],
+      "otlp.eu01.nr-data.net:4318": [
+        ".env.example",
+        "docs/tracing.md"
+      ],
+      "docs.newrelic.com": [
+        ".env.example",
+        "docs/tracing.md"
+      ],
+      "api.honeycomb.io:443": [
+        ".env.example",
+        "docs/tracing.md"
+      ],
+      "ui.honeycomb.io": [
+        ".env.example"
+      ],
+      "docs.honeycomb.io": [
+        ".env.example",
+        "docs/tracing.md"
+      ],
+      "api.mapbox.com": [
+        ".env.example",
+        "docs/complete-observability.md",
+        "docs/importing-tools.md",
+        "docs/mcp-ui.md",
+        "docs/tracing-verification.md"
+      ],
+      "nodejs.org": [
+        ".gitignore"
+      ],
+      "gruntjs.com": [
+        ".gitignore"
+      ],
+      "bower.io": [
+        ".gitignore"
+      ],
+      "parceljs.org": [
+        ".gitignore"
+      ],
+      "nextjs.org": [
+        ".gitignore"
+      ],
+      "github.com": [
+        "CHANGELOG.md",
+        "CONTRIBUTING.md",
+        "README.md",
+        "docs/claude-desktop-setup.md",
+        "docs/goose-setup.md"
+      ],
+      "mcp.mapbox.com": [
+        "CHANGELOG.md",
+        "README.md",
+        "docs/hosted-mcp-guide.md",
+        "server.json"
+      ],
+      "glama.ai": [
+        "glama.json"
+      ],
+      "registry.npmjs.org": [
+        "package-lock.json",
+        "server.json"
+      ],
+      "opencollective.com": [
+        "package-lock.json"
+      ],
+      "eslint.org": [
+        "package-lock.json"
+      ],
+      "www.patreon.com": [
+        "package-lock.json"
+      ],
+      "feross.org": [
+        "package-lock.json"
+      ],
+      "tidelift.com": [
+        "package-lock.json"
+      ],
+      "paulmillr.com": [
+        "package-lock.json"
+      ],
+      "paypal.me": [
+        "package-lock.json"
+      ],
+      "ko-fi.com": [
+        "package-lock.json"
+      ],
+      "img.shields.io": [
+        "README.md"
+      ],
+      "www.mapbox.com": [
+        "README.md"
+      ],
+      "docs.mapbox.com": [
+        "README.md",
+        "docs/mcp-ui.md",
+        "src/constants/categories.ts",
+        "src/resources/MapboxApiBasedResource.ts",
+        "src/resources/category-list/CategoryListResource.ts"
+      ],
+      "turfjs.org": [
+        "README.md"
+      ],
+      "support.mapbox.com": [
+        "README.md"
+      ],
+      "status.mapbox.com": [
+        "README.md"
+      ],
+      "static.modelcontextprotocol.io": [
+        "server.json"
+      ],
+      "www.w3.org": [
+        "assets/mapbox-logo-black.svg",
+        "assets/mapbox-logo-white.svg"
+      ],
+      "claude.ai": [
+        "docs/claude-desktop-setup.md"
+      ],
+      "www.cursor.com": [
+        "docs/cursor-setup.md"
+      ],
+      "modelcontextprotocol.io": [
+        "docs/elicitations.md"
+      ],
+      "code.visualstudio.com": [
+        "docs/hosted-mcp-guide.md"
+      ],
+      "json-schema.org": [
+        "docs/hosted-mcp-guide.md"
+      ],
+      "api.honeycomb.io": [
+        "docs/tracing-verification.md"
+      ],
+      "aws-otel.github.io": [
+        "docs/tracing.md"
+      ],
+      "cloud.google.com": [
+        "docs/tracing.md"
+      ],
+      "jaeger:4318": [
+        "docs/tracing.md"
+      ],
+      "otel-collector:4318": [
+        "docs/tracing.md"
+      ],
+      "huggingface.co": [
+        "docs/using-mcp-with-smolagents/smolagents_example.py"
+      ],
+      "tools.ietf.org": [
+        "src/schemas/geojson.ts"
+      ],
+      "sfrecpark.org": [
+        "test/tools/place-details-tool/PlaceDetailsTool.test.ts"
+      ],
+      "test": [
+        "test/utils/httpPipeline.test.ts"
+      ],
+      "api.openai.com": [
+        "test/utils/httpPipeline.test.ts"
+      ],
+      "custom.mapbox.example.com": [
+        "test/utils/httpPipeline.test.ts"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\mapbox__mcp-server\\gitleaks.json",
+      "exit_code": 1,
+      "output_path": "_logs/scan/mapbox__mcp-server/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/mapbox__mcp-server/osv.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "test-path secret findings (1); gitleaks: 19 test-path secret(s)",
+  "files_scanned": 261,
+  "files_skipped": 0
+}

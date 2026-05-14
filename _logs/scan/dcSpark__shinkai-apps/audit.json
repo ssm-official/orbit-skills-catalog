@@ -1,0 +1,1451 @@
+{
+  "source_url": "https://github.com/dcSpark/shinkai-apps",
+  "proposed_slot": "personal.finance.dcspark-shinkai-apps",
+  "scanned_at": "2026-05-14T05:48:08.777500+00:00",
+  "clone_ok": true,
+  "commit_pinned": "b3946fc300a99eda8fb7e9b708b571aa9d895296",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [
+      {
+        "file": "apps/shinkai-desktop/src/components/mcp-servers/composio-mcp-servers.tsx",
+        "label": "exec-call",
+        "snippet": "composioAppIdFromSseUrlRegexp.exec(url);     let composioAppIdFro"
+      },
+      {
+        "file": "apps/shinkai-desktop/src/components/mcp-servers/composio-mcp-servers.tsx",
+        "label": "exec-call",
+        "snippet": "omposioAppIdFromHttpUrlRegexp.exec(url);     if (composioAppIdFro"
+      },
+      {
+        "file": "apps/shinkai-desktop/src/windows/shinkai-artifacts/main.tsx",
+        "label": "Function-constructor",
+        "snippet": "     `;      const evalCode = new Function('scope', fullCode);     const "
+      },
+      {
+        "file": "ci-scripts/download-side-binaries.ts",
+        "label": "exec-call",
+        "snippet": "s (+x) to ${path}`);   return exec(`chmod +x ${path}`); };  const"
+      },
+      {
+        "file": "libs/shinkai-node-state/src/v2/queries/getChatConversation/index.ts",
+        "label": "exec-call",
+        "snippet": "while ((match = artifactRegex.exec(text)) !== null) {     // cons"
+      },
+      {
+        "file": "libs/shinkai-ui/src/components/chat/sqlite-preview.tsx",
+        "label": "exec-call",
+        "snippet": "e}`);   const dataResult = db.exec(`SELECT * FROM ${tableName}`);"
+      },
+      {
+        "file": "libs/shinkai-ui/src/components/chat/sqlite-preview.tsx",
+        "label": "exec-call",
+        "snippet": "les   const tablesResult = db.exec(     \"SELECT name FROM sqlite_"
+      },
+      {
+        "file": "libs/shinkai-ui/src/components/chat/sqlite-preview.tsx",
+        "label": "exec-call",
+        "snippet": "     const columnsResult = db.exec(`PRAGMA table_info(${table})`)"
+      },
+      {
+        "file": "libs/shinkai-ui/src/components/chat/sqlite-preview.tsx",
+        "label": "exec-call",
+        "snippet": ");     const countResult = db.exec(`SELECT COUNT(*) FROM ${table}"
+      }
+    ],
+    "install_hooks": [
+      {
+        "file": "package.json",
+        "hook": "postinstall",
+        "command": "npx patch-package",
+        "dangerous": false
+      }
+    ],
+    "py_build_hooks": [],
+    "urls_found": {
+      "editorconfig.org": [
+        ".editorconfig"
+      ],
+      "help.github.com": [
+        ".gitignore"
+      ],
+      "www.apache.org": [
+        "LICENSE"
+      ],
+      "registry.npmjs.org": [
+        "libs/shinkai-message-ts/package-lock.json",
+        "package-lock.json"
+      ],
+      "github.com": [
+        ".github/workflows/release-dev.yml",
+        ".github/workflows/release-prod.yml",
+        "README.es.md",
+        "README.ja.md",
+        "README.ko.md"
+      ],
+      "paulmillr.com": [
+        "libs/shinkai-message-ts/package-lock.json",
+        "package-lock.json"
+      ],
+      "opencollective.com": [
+        "package-lock.json"
+      ],
+      "eslint.org": [
+        "package-lock.json"
+      ],
+      "dotenvx.com": [
+        "package-lock.json"
+      ],
+      "jaywcjlove.github.io": [
+        "package-lock.json"
+      ],
+      "www.patreon.com": [
+        "package-lock.json"
+      ],
+      "feross.org": [
+        "package-lock.json"
+      ],
+      "tidelift.com": [
+        "package-lock.json"
+      ],
+      "joebell.co.uk": [
+        "package-lock.json"
+      ],
+      "locize.com": [
+        "package-lock.json"
+      ],
+      "www.i18next.com": [
+        "package-lock.json"
+      ],
+      "www.npmjs.com": [
+        "package-lock.json"
+      ],
+      "paypal.me": [
+        "package-lock.json"
+      ],
+      "developer.mozilla.org": [
+        "package-lock.json"
+      ],
+      "img.shields.io": [
+        "README.es.md",
+        "README.ja.md",
+        "README.ko.md",
+        "README.md",
+        "README.zh-HK.md"
+      ],
+      "discord.gg": [
+        "README.es.md",
+        "README.ja.md",
+        "README.ko.md",
+        "README.md",
+        "README.zh-HK.md"
+      ],
+      "x.com": [
+        "README.es.md",
+        "README.ja.md",
+        "README.ko.md",
+        "README.md",
+        "README.zh-HK.md"
+      ],
+      "docs.shinkai.com": [
+        "README.es.md",
+        "README.ja.md",
+        "README.ko.md",
+        "README.md",
+        "README.zh-HK.md"
+      ],
+      "docs.shinkai.com)**": [
+        "README.md",
+        "README.zh-HK.md"
+      ],
+      "www.steinberg.net": [
+        ".github/workflows/release-dev.yml",
+        ".github/workflows/release-prod.yml"
+      ],
+      "nsis.sourceforge.io": [
+        ".github/workflows/release-dev.yml",
+        ".github/workflows/release-prod.yml"
+      ],
+      "sourceforge.net": [
+        ".github/workflows/release-dev.yml",
+        ".github/workflows/release-prod.yml"
+      ],
+      "download.shinkai.com": [
+        ".github/workflows/release-dev.yml",
+        ".github/workflows/release-prod.yml",
+        "apps/shinkai-desktop/src-tauri/tauri.conf.development.json",
+        "apps/shinkai-desktop/src-tauri/tauri.conf.json",
+        "apps/shinkai-desktop/src-tauri/tauri.conf.local.json"
+      ],
+      "54bf1bf573b3e6471e574cc4d318db64.r2.cloudflarestorage.com": [
+        ".github/workflows/release-dev.yml",
+        ".github/workflows/release-prod.yml"
+      ],
+      "chromewebstore.google.com": [
+        ".github/workflows/release-dev.yml",
+        ".github/workflows/release-prod.yml"
+      ],
+      "chrome.google.com": [
+        ".github/workflows/release-dev.yml",
+        ".github/workflows/release-prod.yml"
+      ],
+      "timestamp.globalsign.com": [
+        ".github/workflows/release-prod.yml"
+      ],
+      "awscli.amazonaws.com": [
+        ".github/workflows/rollout-version.yml"
+      ],
+      "json.schemastore.org": [
+        ".vscode/settings.json"
+      ],
+      "go.microsoft.com": [
+        ".vscode/tasks.json"
+      ],
+      "code.visualstudio.com": [
+        ".vscode/tasks.json",
+        "apps/shinkai-desktop/README.md"
+      ],
+      "marketplace.visualstudio.com": [
+        "apps/shinkai-desktop/README.md"
+      ],
+      "vitejs.dev": [
+        "apps/shinkai-desktop/vite.config.ts",
+        "libs/shinkai-artifacts/vite.config.ts",
+        "libs/shinkai-i18n/vite.config.ts",
+        "libs/shinkai-node-state/vite.config.ts",
+        "libs/shinkai-ui/vite.config.ts"
+      ],
+      "tauri.studio": [
+        "apps/shinkai-desktop/vite.config.ts"
+      ],
+      "www.w3.org": [
+        "apps/shinkai-desktop/public/onboarding.svg",
+        "apps/shinkai-desktop/public/placeholder.svg",
+        "apps/shinkai-desktop/public/tauri.svg",
+        "apps/shinkai-desktop/public/visor.svg",
+        "apps/shinkai-desktop/public/vite.svg"
+      ],
+      "shinkai.com": [
+        "apps/shinkai-desktop/src/components/agent/configure-agent-dialog.tsx",
+        "apps/shinkai-desktop/src/components/agent/publish-agent-dialog.tsx"
+      ],
+      "cdn.jsdelivr.net": [
+        "apps/shinkai-desktop/src/components/chat/python-code-runner/hooks/__tests__/usePyodideInstance.test.tsx",
+        "apps/shinkai-desktop/src/components/chat/python-code-runner/hooks/usePyodideInstance.ts",
+        "apps/shinkai-desktop/src/components/chat/python-code-runner/python-code-runner-web-worker.ts",
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "sepolia.basescan.org": [
+        "apps/shinkai-desktop/src/components/crypto-wallet/utils.ts",
+        "apps/shinkai-desktop/src/pages/crypto-wallet.tsx"
+      ],
+      "basescan.org": [
+        "apps/shinkai-desktop/src/components/crypto-wallet/utils.ts",
+        "apps/shinkai-desktop/src/pages/crypto-wallet.tsx"
+      ],
+      "www.shinkai.com": [
+        "apps/shinkai-desktop/src/components/hardware-capabilities/resources-banner.tsx",
+        "apps/shinkai-desktop/src/pages/analytics-settings.tsx",
+        "apps/shinkai-desktop/src/pages/analytics.tsx",
+        "apps/shinkai-desktop/src/pages/terms-conditions.tsx"
+      ],
+      "github.githubassets.com": [
+        "apps/shinkai-desktop/src/components/oauth/oauth-connect.tsx"
+      ],
+      "secrets.shinkai.com": [
+        "apps/shinkai-desktop/src/components/playground-tool/schemas.ts"
+      ],
+      "shinkai-contracts.pages.dev": [
+        "apps/shinkai-desktop/src/components/settings/shinkai-identity-dialog.tsx",
+        "apps/shinkai-desktop/src/pages/agents.tsx",
+        "apps/shinkai-desktop/src/pages/settings.tsx"
+      ],
+      "store-api.shinkai.com": [
+        "apps/shinkai-desktop/src-tauri/src/local_shinkai_node/shinkai_node_options.rs",
+        "apps/shinkai-desktop/src/components/store/store-client.ts"
+      ],
+      "us.i.posthog.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json",
+        "apps/shinkai-desktop/src/lib/posthog-provider.tsx"
+      ],
+      "mcp.composio.dev": [
+        "apps/shinkai-desktop/src-tauri/capabilities/main.json",
+        "apps/shinkai-desktop/src/lib/composio/composio-api.ts",
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json",
+        "ci-scripts/composio-repository/composio-api.ts"
+      ],
+      "www.brevo.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "rocketlane.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "finage.co.uk": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.close.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.smugmug.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "screenshotone.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.klipfolio.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "altoviz.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.getmaintainx.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.timecamp.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.cloudflare.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.bigmailer.io": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.brilliantdirectories.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "browserless.io": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "bugbug.io": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "clockify.me": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "cutt.ly": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "emailoctopus.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.enigma.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.leadfeeder.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "leadoku.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.lodgify.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "nextdns.io": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.ragic.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "rootly.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "developer.rosette.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "scrape.do": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "scrapingant.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.starton.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.tpscheck.uk": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "backend.composio.dev": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.googleapis.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "mail.google.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "composio.dev": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json",
+        "apps/shinkai-desktop/src/pages/mcp.tsx"
+      ],
+      "api.github.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "calendar.google.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.notion.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.notion.so": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.example.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "sheets.googleapis.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "sheets.google.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "slack.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.supabase.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "supabase.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "graph.microsoft.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.microsoft.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.perplexity.ai": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "perplexity.ai": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.x.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "developer.twitter.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "drive.google.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "docs.googleapis.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "docs.google.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.hubapi.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "developers.hubspot.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.hubspot.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.linear.app": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "developers.linear.app": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "linear.app": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.airtable.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "airtable.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.airtable.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "serpapi.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.atlassian.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "id.atlassian.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.base64encode.org": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.atlassian.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.firecrawl.dev": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.firecrawl.dev": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.tavily.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "tavily.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.youtube.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json",
+        "apps/shinkai-desktop/src/pages/home.tsx"
+      ],
+      "canvas.instructure.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.instructure.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.bitbucket.org": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "bitbucket.org": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "tasks.googleapis.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "tasks.google.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "discord.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.figma.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.figma.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "oauth.reddit.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.reddit.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.cal.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "cal.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.wrike.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.exa.ai": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "exa.ai": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "sentry.io": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.snowflake.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "news.ycombinator.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.elevenlabs.io": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.elevenlabs.io": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "app.asana.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "asana.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.peopledatalabs.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.peopledatalabs.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "admin.shopify.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.shopify.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.linkedin.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "linkedin.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "routes.googleapis.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "maps.googleapis.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.google.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "account.docusign.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.docusign.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "my.salesforce.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.salesforce.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.calendly.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "developer.calendly.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "calendly.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.trello.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "trello.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.apollo.io": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.apollo.io": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.semrush.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.semrush.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.mem0.ai": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "mem0.ai": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "console.neon.tech": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "neon.tech": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "openweathermap.org": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "us.posthog.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "eu.i.posthog.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "eu.posthog.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "posthog.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.clickup.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "clickup.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.brevo.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.stripe.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "stripe.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "a.klaviyo.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.klaviyo.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "browserbase.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "developers.mailchimp.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "mailchimp.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.attio.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "developers.attio.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "attio.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "meet.googleapis.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "meet.google.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "texttopdf.ddbrief.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.zohoapis": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.zoho.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.fireflies.ai": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.fireflies.ai": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.dropboxapi.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "developers.dropbox.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.dropbox.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.app.shortcut.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.shortcut.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.freshworks.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "demo2.app.borneodata.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.borneo.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "mixpanel.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "coda.io": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.acculynx.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "acculynx.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "docs.ahrefs.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "ahrefs.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.affinity.co": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.affinity.co": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.amplitude.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "amplitude.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.heygen.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.heygen.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.agencyzoom.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.agencyzoom.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "bigquery.googleapis.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "cloud.google.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.clarity.ms": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "clarity.microsoft.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.coinbase.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.coinbase.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.monday.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "monday.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.semanticscholar.org": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.semanticscholar.org": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.sendgrid.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "login.sendgrid.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "developer.junglescout.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.junglescout.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "developers.pipedrive.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.pipedrive.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "pipedrive.readme.io": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.bamboohr.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.bamboohr.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "graph.facebook.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "developers.facebook.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "web.whatsapp.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.zendesk.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "photoslibrary.googleapis.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "photos.google.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.lmnt.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "drinklmnt.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "business.meta.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "app.zenrows.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.zenrows.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.ydc-index.io": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "you.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "linkup.so": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.linkup.so": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.linkup.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "listen-api.listennotes.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.listennotes.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.typefully.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "typefully.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.bolna.dev": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.bolna.ai": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.rocketlane.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "gateway.stage.bill.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.bill.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.zoom.us": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.zoom.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "marketplace.zoom.us": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "onepage-v2-prod.azurewebsites.net": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "onepagerapp.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "entelligence.ddbrief.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.entelligence.ai": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.retellai.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.retellai.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.servicenow.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "googleads.googleapis.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "ads.google.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.pagerduty.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.pagerduty.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.finage.co.uk": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.fomo.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "fomo.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.bannerbear.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.bannerbear.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.contentful.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.eu.contentful.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "cdn.contentful.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "cdn.eu.contentful.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.contentful.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.close.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "rest.ably.io": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "ably.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "user-management-service.platform.moretrees.eco": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.moretrees.eco": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.recall.ai": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.apaleo.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "apaleo.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.crustdata.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "crustdata.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.brandfetch.io": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "brandfetch.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.canva.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.canva.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.dailybot.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.dailybot.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.ln.ht": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "linkhut.org": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.box.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.box.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.smugmug.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.webflow.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "webflow.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.amcards.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "amcards.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.simplesat.io": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.simplesat.io": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.flutterwave.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "flutterwave.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.process.st": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.process.st": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.screenshotone.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.chatwork.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "developer.chatwork.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "go.chatwork.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "app.klipfolio.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.altoviz.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.d2l.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.blackboard.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.pandadoc.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.pandadoc.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.workiom.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "workiom.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.gorgias.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.todoist.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.todoist.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "developer.todoist.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.ngrok.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "ngrok.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.baserow.io": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "baserow.io": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "dialpad.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.dialpad.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.formsite.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.kommo.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.browse.ai": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.browseai.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.getmaintainx.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.tinyurl.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.tinyurl.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "app.timecamp.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "dashboard.alchemyapi.io": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.alchemy.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.foursquare.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.foursquare.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.opensea.io": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "opensea.io": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.humanloop.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "humanloop.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.zoominfo.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.zoominfo.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.gong.io": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.placekey.io": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.placekey.io": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.textrazor.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.textrazor.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.cloudflare.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json",
+        "scripts/rollout-version.sh"
+      ],
+      "dash.cloudflare.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "youraccount.api-us1.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.activecampaign.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.intercom.io": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "www.intercom.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.echtpost.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "echtpost.de": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.bigmailer.io": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "production-sfo.browserless.io": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.bugbug.io": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "companyx.clockify.me": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.clockify.me": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.enigma.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "excel.cloud.microsoft": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.leadfeeder.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.leadoku.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.lodgify.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.nextdns.io": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "quickbooks.api.intuit.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "quickbooks.intuit.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.ramp.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "ramp.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.resend.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "resend.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.rootly.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.rosette.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.scrape.do": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.scrapingant.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "api.starton.com": [
+        "apps/shinkai-desktop/src/lib/composio/composio-registry.json"
+      ],
+      "backend-hosting.shinkai.com": [
+        "apps/shinkai-desktop/src/lib/galxe/galxe-client.ts"
+      ],
+      "dev-backend-hosting.shinkai.com": [
+        "apps/shinkai-desktop/src/lib/galxe/galxe-client.ts"
+      ],
+      "store.shinkai.com": [
+        "apps/shinkai-desktop/src/pages/agents.tsx",
+        "apps/shinkai-desktop/src/utils/store.ts"
+      ],
+      "ai.google.dev": [
+        "apps/shinkai-desktop/src/pages/ai-model-installation.tsx"
+      ],
+      "console.groq.com": [
+        "apps/shinkai-desktop/src/pages/ai-model-installation.tsx"
+      ],
+      "openrouter.ai": [
+        "apps/shinkai-desktop/src/pages/ai-model-installation.tsx",
+        "libs/shinkai-node-state/src/lib/utils/models.ts"
+      ],
+      "docs.anthropic.com": [
+        "apps/shinkai-desktop/src/pages/ai-model-installation.tsx"
+      ],
+      "docs.x.ai": [
+        "apps/shinkai-desktop/src/pages/ai-model-installation.tsx"
+      ],
+      "dashboard.ngrok.com": [
+        "apps/shinkai-desktop/src/pages/internet-access.tsx"
+      ],
+      "smithery.ai": [
+        "apps/shinkai-desktop/src/pages/mcp.tsx"
+      ],
+      "pub-0f9ce9e619a7477aa6e92197a3ec4a1e.r2.dev": [
+        "apps/shinkai-desktop/src/utils/constants.ts"
+      ],
+      "pub-5b510bf382c744c093bdd1619d2d6d3e.r2.dev": [
+        "apps/shinkai-desktop/src/utils/constants.ts"
+      ],
+      "$": [
+        "apps/shinkai-desktop/src/windows/shinkai-node-manager/main.tsx",
+        "scripts/rollout-version.sh"
+      ],
+      "doc.rust-lang.org": [
+        "apps/shinkai-desktop/src-tauri/Cargo.toml"
+      ],
+      "schemas.microsoft.com": [
+        "apps/shinkai-desktop/src-tauri/dummy.wxs"
+      ],
+      "www.apple.com": [
+        "apps/shinkai-desktop/src-tauri/Info.plist",
+        "apps/shinkai-desktop/src-tauri/entitlements.plist"
+      ],
+      "download.shinkai.app": [
+        "apps/shinkai-desktop/src-tauri/src/deep_links.rs"
+      ],
+      "api.shinkai.com": [
+        "apps/shinkai-desktop/src-tauri/src/local_shinkai_node/shinkai_node_options.rs",
+        "libs/shinkai-message-ts/src/api/tools/index.ts"
+      ],
+      "sepolia.base.org": [
+        "apps/shinkai-desktop/src-tauri/src/local_shinkai_node/shinkai_node_options.rs"
+      ],
+      "ollama.com": [
+        "ci-scripts/generate-ollama-models-repository.ts"
+      ],
+      "tauri.app": [
+        "docs/shinkai-tray-update-system.md"
+      ],
+      "nx.dev": [
+        "libs/shinkai-artifacts/README.md",
+        "libs/shinkai-message-ts/README.md",
+        "libs/shinkai-node-state/README.md"
+      ],
+      "vitest.dev": [
+        "libs/shinkai-artifacts/README.md",
+        "libs/shinkai-node-state/README.md",
+        "libs/shinkai-ui/README.md"
+      ],
+      "fonts.googleapis.com": [
+        "libs/shinkai-artifacts/src/styles/styles.css",
+        "libs/shinkai-ui/src/styles/styles.css"
+      ],
+      "react.i18next.com": [
+        "libs/shinkai-i18n/README.md"
+      ],
+      "acme.com": [
+        "libs/shinkai-i18n/README.md"
+      ],
+      "jestjs.io": [
+        "libs/shinkai-message-ts/README.md"
+      ],
+      "formspree.io": [
+        "libs/shinkai-message-ts/src/api/external-services/index.ts"
+      ],
+      "google.com": [
+        "libs/shinkai-message-ts/src/utils/url-join.test.ts"
+      ],
+      "api.openai.com": [
+        "libs/shinkai-node-state/src/lib/utils/models.ts"
+      ],
+      "api.together.xyz": [
+        "libs/shinkai-node-state/src/lib/utils/models.ts"
+      ],
+      "generativelanguage.googleapis.com": [
+        "libs/shinkai-node-state/src/lib/utils/models.ts"
+      ],
+      "api.groq.com": [
+        "libs/shinkai-node-state/src/lib/utils/models.ts"
+      ],
+      "api.anthropic.com": [
+        "libs/shinkai-node-state/src/lib/utils/models.ts"
+      ],
+      "api.deepseek.com": [
+        "libs/shinkai-node-state/src/lib/utils/models.ts"
+      ],
+      "api.x.ai": [
+        "libs/shinkai-node-state/src/lib/utils/models.ts"
+      ],
+      "indieground.net": [
+        "libs/shinkai-ui/src/assets/fonts/newake.otf"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\dcSpark__shinkai-apps\\gitleaks.json",
+      "exit_code": 0,
+      "output_path": "_logs/scan/dcSpark__shinkai-apps/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/dcSpark__shinkai-apps/osv.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "exec-call in apps/shinkai-desktop/src/components/mcp-servers/composio-mcp-servers.tsx; exec-call in apps/shinkai-desktop/src/components/mcp-servers/composio-mcp-servers.tsx; Function-constructor in apps/shinkai-desktop/src/windows/shinkai-artifacts/main.tsx; exec-call in ci-scripts/download-side-binaries.ts; exec-call in libs/shinkai-node-state/src/v2/queries/getChatConversation/index.ts; exec-call in libs/shinkai-ui/src/components/chat/sqlite-preview.tsx; exec-call in libs/shinkai-ui/src/components/chat/sqlite-preview.tsx; exec-call in libs/shinkai-ui/src/components/chat/sqlite-preview.tsx; exec-call in libs/shinkai-ui/src/components/chat/sqlite-preview.tsx",
+  "files_scanned": 1101,
+  "files_skipped": 0
+}

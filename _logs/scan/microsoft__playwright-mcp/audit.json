@@ -1,0 +1,156 @@
+{
+  "source_url": "https://github.com/microsoft/playwright-mcp",
+  "proposed_slot": "_uncategorized.from_aggregator",
+  "scanned_at": "2026-05-14T05:48:29.543647+00:00",
+  "clone_ok": true,
+  "commit_pinned": "ae27b8638aaf3a6be17d378964ae683864d20440",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner"
+  ],
+  "findings": {
+    "secrets": [
+      {
+        "file": "tests/testserver/key.pem",
+        "label": "private key",
+        "match_prefix": "-----BEGIN PRIVATE KEY--"
+      }
+    ],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "github.com": [
+        ".claude/skills/release.md",
+        ".github/workflows/publish.yml",
+        "CLAUDE.md",
+        "CONTRIBUTING.md",
+        "README.md"
+      ],
+      "www.apache.org": [
+        "LICENSE",
+        "cli.js",
+        "config.d.ts",
+        "index.d.ts",
+        "index.js"
+      ],
+      "playwright.dev": [
+        "CONTRIBUTING.md",
+        "README.md",
+        "config.d.ts",
+        "package.json"
+      ],
+      "example.com:8080": [
+        "README.md",
+        "config.d.ts"
+      ],
+      "docs.github.com": [
+        "CONTRIBUTING.md",
+        "README.md"
+      ],
+      "www.conventionalcommits.org": [
+        "CONTRIBUTING.md"
+      ],
+      "help.github.com": [
+        "CONTRIBUTING.md"
+      ],
+      "cla.opensource.microsoft.com": [
+        "CONTRIBUTING.md"
+      ],
+      "opensource.microsoft.com": [
+        "CONTRIBUTING.md"
+      ],
+      "registry.npmjs.org": [
+        ".github/workflows/publish.yml",
+        "package-lock.json"
+      ],
+      "opencollective.com": [
+        "package-lock.json"
+      ],
+      "img.shields.io": [
+        "README.md"
+      ],
+      "insiders.vscode.dev": [
+        "README.md"
+      ],
+      "modelcontextprotocol.io": [
+        "README.md"
+      ],
+      "docs.cline.bot": [
+        "README.md"
+      ],
+      "cursor.com": [
+        "README.md"
+      ],
+      "docs.factory.ai": [
+        "README.md"
+      ],
+      "block.github.io": [
+        "README.md"
+      ],
+      "junie.jetbrains.com": [
+        "README.md"
+      ],
+      "kiro.dev": [
+        "README.md"
+      ],
+      "files.lmstudio.ai": [
+        "README.md"
+      ],
+      "opencode.ai": [
+        "README.md"
+      ],
+      "docs.qodo.ai": [
+        "README.md"
+      ],
+      "code.visualstudio.com": [
+        "README.md"
+      ],
+      "docs.warp.dev": [
+        "README.md"
+      ],
+      "docs.windsurf.com": [
+        "README.md"
+      ],
+      "myproxy:3128": [
+        "README.md"
+      ],
+      "aka.ms": [
+        "SECURITY.md"
+      ],
+      "msrc.microsoft.com": [
+        "SECURITY.md"
+      ],
+      "www.microsoft.com": [
+        "SECURITY.md"
+      ],
+      "static.modelcontextprotocol.io": [
+        "server.json"
+      ],
+      "raw.githubusercontent.com": [
+        ".devcontainer/devcontainer.json"
+      ],
+      "portal.microsofticm.com": [
+        ".github/workflows/publish.yml"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\microsoft__playwright-mcp\\gitleaks.json",
+      "exit_code": 1,
+      "output_path": "_logs/scan/microsoft__playwright-mcp/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/microsoft__playwright-mcp/osv.json"
+    }
+  },
+  "verdict": "quarantine",
+  "verdict_reason": "hardcoded secrets in non-test paths (1 hits, e.g. tests/testserver/key.pem); gitleaks: 1 non-test secret(s)",
+  "files_scanned": 33,
+  "files_skipped": 0
+}
