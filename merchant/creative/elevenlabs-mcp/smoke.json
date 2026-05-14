@@ -1,0 +1,40 @@
+{
+  "source_url": "https://github.com/elevenlabs/elevenlabs-mcp",
+  "proposed_slot": "both.creative.elevenlabs-elevenlabs-mcp",
+  "smoked_at": "2026-05-14T06:10:29.110761+00:00",
+  "platform": "windows",
+  "sandbox": "fresh venv / fresh node_modules (Docker unavailable on host)",
+  "network_monitoring": "Get-NetTCPConnection deltas (weaker than netns isolation)",
+  "package": "elevenlabs-mcp",
+  "language": "python",
+  "kind": "python",
+  "steps": [
+    {
+      "step": "uv_dryrun",
+      "rc": 0,
+      "stderr": ""
+    },
+    {
+      "step": "uv_run_import",
+      "rc": 0,
+      "stdout": "OK ['__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__path__', '__spec__', '__version__']\n",
+      "stderr": "   Building elevenlabs-mcp @ file:///C:/Users/ssmca/orbit-skills-catalog/candidates/elevenlabs__elevenlabs-mcp\nDownloading elevenlabs (1.5MiB)\nDownloading rapidfuzz (1.5MiB)\n Downloaded rapidfuzz\n      Built elevenlabs-mcp @ file:///C:/Users/ssmca/orbit-skills-catalog/candidates/elevenlabs__elevenlabs-mcp\n Downloaded elevenlabs\nInstalled 50 packages in 1.59s\n",
+      "new_outbound_connections": [
+        {
+          "host": "103.225.148.21",
+          "port": 443
+        },
+        {
+          "host": "103.225.148.22",
+          "port": 443
+        },
+        {
+          "host": "216.239.38.223",
+          "port": 443
+        }
+      ]
+    }
+  ],
+  "verdict": "pass",
+  "reason": "uv install + import OK"
+}

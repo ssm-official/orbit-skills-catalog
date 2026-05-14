@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "id": "both.marketing.resend-py",
+  "name": "Resend SDK (Python)",
+  "slug": "resend-py",
+  "track": [
+    "personal",
+    "merchant"
+  ],
+  "category": "marketing",
+  "slot": "resend-py",
+  "summary": "Resend Python SDK",
+  "version": "1.0.0",
+  "source": {
+    "kind": "sdk_wrapper",
+    "repo_url": "https://github.com/resend/resend-python",
+    "commit_pinned": "d0420a60a2c237ed71e2b1271e5b9a77bca4b158",
+    "license": "MIT",
+    "last_commit_at": "2026-05-13",
+    "stars": 122,
+    "primary_language": "Python",
+    "maintainer": "resend"
+  },
+  "upstream": {
+    "vendor": "Resend",
+    "vendor_url": "https://resend.com",
+    "auth_type": "api_key",
+    "sandbox_available": false,
+    "requires_user_oauth": false,
+    "cost_model": "freemium",
+    "typical_per_call_cost_usd": "free tier 100/day"
+  },
+  "x402_compatible": true,
+  "x402_notes": "per-call, deterministic JSON response",
+  "tools": [
+    {
+      "name": "primary",
+      "summary": "Primary entry point (smoke-tested via import / require). Tool catalogue derived at runtime from the upstream package.",
+      "destructive": true,
+      "idempotent": false,
+      "rate_limit": "see upstream docs"
+    }
+  ],
+  "tags": [
+    "marketing",
+    "resend",
+    "both"
+  ],
+  "risk": {
+    "prompt_injection": "low",
+    "destructive": true,
+    "spend_capable": false,
+    "regulated_data": [],
+    "default_mode": "dry_run"
+  },
+  "audit": {
+    "verdict": "pass_with_notes",
+    "log": "audit.json",
+    "scanners_run": [
+      "orbit_pattern_scan",
+      "install_hook_audit",
+      "gitleaks",
+      "osv-scanner",
+      "pip-audit"
+    ],
+    "behavioral_check": "clean_with_notes"
+  },
+  "smoke": {
+    "verdict": "deferred",
+    "log": "smoke.json",
+    "last_passed_at": "2026-05-14T06:09:25.985005+00:00"
+  },
+  "orbit": {
+    "suggested_markup_floor_pct": 5,
+    "suggested_markup_ceiling_pct": 50,
+    "pricing_note": "Upstream cost model: freemium.",
+    "tokenization_friendly": true
+  },
+  "notes": "Resend Python SDK"
+}

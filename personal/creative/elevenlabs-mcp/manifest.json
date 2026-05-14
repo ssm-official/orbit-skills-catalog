@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "id": "both.creative.elevenlabs-mcp",
+  "name": "ElevenLabs MCP",
+  "slug": "elevenlabs-mcp",
+  "track": [
+    "personal",
+    "merchant"
+  ],
+  "category": "creative",
+  "slot": "elevenlabs-mcp",
+  "summary": "The official ElevenLabs MCP server",
+  "version": "1.0.0",
+  "source": {
+    "kind": "mcp_server",
+    "repo_url": "https://github.com/elevenlabs/elevenlabs-mcp",
+    "commit_pinned": "998b61108c2ac53df1fed2e7bd2bc89e32edded7",
+    "license": "MIT",
+    "last_commit_at": "2026-03-20",
+    "stars": 1359,
+    "primary_language": "Python",
+    "maintainer": "elevenlabs"
+  },
+  "upstream": {
+    "vendor": "ElevenLabs",
+    "vendor_url": "https://elevenlabs.io",
+    "auth_type": "api_key",
+    "sandbox_available": true,
+    "requires_user_oauth": false,
+    "cost_model": "freemium",
+    "typical_per_call_cost_usd": "~0.0001/char"
+  },
+  "x402_compatible": true,
+  "x402_notes": "per-call, deterministic JSON response",
+  "tools": [
+    {
+      "name": "primary",
+      "summary": "Primary entry point (smoke-tested via import / require). Tool catalogue derived at runtime from the upstream package.",
+      "destructive": false,
+      "idempotent": true,
+      "rate_limit": "see upstream docs"
+    }
+  ],
+  "tags": [
+    "creative",
+    "elevenlabs",
+    "both"
+  ],
+  "risk": {
+    "prompt_injection": "low",
+    "destructive": false,
+    "spend_capable": false,
+    "regulated_data": [],
+    "default_mode": "live"
+  },
+  "audit": {
+    "verdict": "pass",
+    "log": "audit.json",
+    "scanners_run": [
+      "orbit_pattern_scan",
+      "install_hook_audit",
+      "gitleaks",
+      "osv-scanner",
+      "pip-audit"
+    ],
+    "behavioral_check": "clean_with_notes"
+  },
+  "smoke": {
+    "verdict": "pass",
+    "log": "smoke.json",
+    "last_passed_at": "2026-05-14T06:10:29.110761+00:00"
+  },
+  "orbit": {
+    "suggested_markup_floor_pct": 5,
+    "suggested_markup_ceiling_pct": 50,
+    "pricing_note": "Upstream cost model: freemium.",
+    "tokenization_friendly": true
+  },
+  "notes": "discovered_from:wong2"
+}

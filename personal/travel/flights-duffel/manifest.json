@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "id": "personal.travel.flights-duffel",
+  "name": "Duffel Flights MCP",
+  "slug": "flights-duffel",
+  "track": [
+    "personal"
+  ],
+  "category": "travel",
+  "slot": "flights-duffel",
+  "summary": "Duffel flight search MCP",
+  "version": "1.0.0",
+  "source": {
+    "kind": "mcp_server",
+    "repo_url": "https://github.com/ravinahp/flights-mcp",
+    "commit_pinned": "749d7ad14cce86cd1ecd2c236c30b272f23f2d1e",
+    "license": "MIT",
+    "last_commit_at": "2025-06-11",
+    "stars": 196,
+    "primary_language": "Python",
+    "maintainer": "ravinahp"
+  },
+  "upstream": {
+    "vendor": "Ravinahp",
+    "vendor_url": "",
+    "auth_type": "api_key",
+    "sandbox_available": false,
+    "requires_user_oauth": false,
+    "cost_model": "varies",
+    "typical_per_call_cost_usd": "varies"
+  },
+  "x402_compatible": false,
+  "x402_notes": "spend-capable in live mode \u2014 needs sandbox-gated invocation in Orbit",
+  "tools": [
+    {
+      "name": "primary",
+      "summary": "Primary entry point (smoke-tested via import / require). Tool catalogue derived at runtime from the upstream package.",
+      "destructive": false,
+      "idempotent": true,
+      "rate_limit": "see upstream docs"
+    }
+  ],
+  "tags": [
+    "travel",
+    "ravinahp",
+    "personal"
+  ],
+  "risk": {
+    "prompt_injection": "low",
+    "destructive": false,
+    "spend_capable": true,
+    "regulated_data": [],
+    "default_mode": "live"
+  },
+  "audit": {
+    "verdict": "pass",
+    "log": "audit.json",
+    "scanners_run": [
+      "orbit_pattern_scan",
+      "install_hook_audit",
+      "gitleaks",
+      "osv-scanner",
+      "pip-audit"
+    ],
+    "behavioral_check": "clean_with_notes"
+  },
+  "smoke": {
+    "verdict": "pass_with_notes",
+    "log": "smoke.json",
+    "last_passed_at": "2026-05-14T06:07:54.114298+00:00"
+  },
+  "orbit": {
+    "suggested_markup_floor_pct": 5,
+    "suggested_markup_ceiling_pct": 50,
+    "pricing_note": "Upstream cost model: varies.",
+    "tokenization_friendly": false
+  },
+  "notes": "Duffel flight search MCP"
+}

@@ -1,0 +1,108 @@
+{
+  "source_url": "https://github.com/Joooook/12306-mcp",
+  "proposed_slot": "both.search.joooook-12306-mcp",
+  "scanned_at": "2026-05-14T05:54:49.472626+00:00",
+  "clone_ok": true,
+  "commit_pinned": "2c8e01c04044924d2f65bf35a8c7075dc5d3ccdd",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [
+      {
+        "file": "src/index.ts",
+        "label": "eval-call",
+        "snippet": "');     }     const rawData = eval(stationNameJS.replace('var sta"
+      }
+    ],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "nodejs.org": [
+        ".gitignore"
+      ],
+      "gruntjs.com": [
+        ".gitignore"
+      ],
+      "bower.io": [
+        ".gitignore"
+      ],
+      "snowpack.dev": [
+        ".gitignore"
+      ],
+      "parceljs.org": [
+        ".gitignore"
+      ],
+      "nextjs.org": [
+        ".gitignore"
+      ],
+      "glama.ai": [
+        "README.md",
+        "glama.json"
+      ],
+      "registry.npmjs.org": [
+        "package-lock.json"
+      ],
+      "github.com": [
+        "README.md",
+        "package-lock.json"
+      ],
+      "polar.sh": [
+        "package-lock.json"
+      ],
+      "opencollective.com": [
+        "package-lock.json"
+      ],
+      "www.patreon.com": [
+        "package-lock.json"
+      ],
+      "feross.org": [
+        "package-lock.json"
+      ],
+      "img.shields.io": [
+        "README.md"
+      ],
+      "s2.loli.net": [
+        "README.md"
+      ],
+      "mseep.net": [
+        "README.md"
+      ],
+      "afdian.com": [
+        "README.md"
+      ],
+      "www.12306.cn": [
+        "docs/principle.md",
+        "src/index.ts"
+      ],
+      "kyfw.12306.cn": [
+        "src/index.ts"
+      ],
+      "search.12306.cn": [
+        "src/index.ts"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\Joooook__12306-mcp\\gitleaks.json",
+      "exit_code": 0,
+      "output_path": "_logs/scan/Joooook__12306-mcp/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/Joooook__12306-mcp/osv.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "eval-call in src/index.ts",
+  "files_scanned": 14,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

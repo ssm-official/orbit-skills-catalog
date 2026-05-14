@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "id": "both.creative.openai-py",
+  "name": "OpenAI SDK (Python)",
+  "slug": "openai-py",
+  "track": [
+    "personal",
+    "merchant"
+  ],
+  "category": "creative",
+  "slot": "openai-py",
+  "summary": "OpenAI Python SDK",
+  "version": "1.0.0",
+  "source": {
+    "kind": "sdk_wrapper",
+    "repo_url": "https://github.com/openai/openai-python",
+    "commit_pinned": "38d75d74a5626472cd7d1be9705ea8aba29a6b22",
+    "license": "Apache-2.0",
+    "last_commit_at": "2026-05-13",
+    "stars": 30762,
+    "primary_language": "Python",
+    "maintainer": "openai"
+  },
+  "upstream": {
+    "vendor": "OpenAI",
+    "vendor_url": "https://openai.com",
+    "auth_type": "api_key",
+    "sandbox_available": false,
+    "requires_user_oauth": false,
+    "cost_model": "paid_per_call",
+    "typical_per_call_cost_usd": "varies by model"
+  },
+  "x402_compatible": true,
+  "x402_notes": "per-call, deterministic JSON response",
+  "tools": [
+    {
+      "name": "primary",
+      "summary": "Primary entry point (smoke-tested via import / require). Tool catalogue derived at runtime from the upstream package.",
+      "destructive": false,
+      "idempotent": true,
+      "rate_limit": "see upstream docs"
+    }
+  ],
+  "tags": [
+    "creative",
+    "openai",
+    "both"
+  ],
+  "risk": {
+    "prompt_injection": "low",
+    "destructive": false,
+    "spend_capable": false,
+    "regulated_data": [],
+    "default_mode": "live"
+  },
+  "audit": {
+    "verdict": "pass_with_notes",
+    "log": "audit.json",
+    "scanners_run": [
+      "orbit_pattern_scan",
+      "install_hook_audit",
+      "gitleaks",
+      "osv-scanner",
+      "pip-audit"
+    ],
+    "behavioral_check": "clean_with_notes"
+  },
+  "smoke": {
+    "verdict": "pass",
+    "log": "smoke.json",
+    "last_passed_at": "2026-05-14T06:08:05.440753+00:00"
+  },
+  "orbit": {
+    "suggested_markup_floor_pct": 5,
+    "suggested_markup_ceiling_pct": 50,
+    "pricing_note": "Upstream cost model: paid_per_call.",
+    "tokenization_friendly": false
+  },
+  "notes": "OpenAI Python SDK"
+}

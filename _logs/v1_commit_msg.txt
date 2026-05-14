@@ -1,0 +1,29 @@
+phase5+6: ship v1.0 — 50 vetted skills, INDEX/GAPS/RECOMMENDATIONS
+
+Phase 5 — Document:
+- Per-skill folders: SKILL.md + manifest.json + audit.json (sanitised)
+  + smoke.json + examples/input.json + examples/output.json.
+- _NAME_OVERRIDES table renders human-friendly skill names
+  ("OpenAI SDK (Python)" not "Openai Python").
+- _pretty_summary prefers seed notes or repo description, falls back
+  to "repo — see vendor URL". Aggregator discovered_from markers no
+  longer leak into user-facing summary.
+- Slug double-owner fix limited to the literal owner-owner-repo case
+  so openai-py no longer collapses to just py.
+- 50 skills written: 28 personal + 47 merchant + 25 cross-listed.
+- 2 audit-passing candidates skipped at document time for unresolvable
+  slot mapping.
+
+Phase 6 — Final delivery:
+- _catalog/INDEX.md — browseable table by track + category.
+- _catalog/GAPS.md — slots without a v1.0 survivor + near-misses.
+- _catalog/RECOMMENDATIONS.md — top-10-each launch picks.
+- _catalog/SUMMARY.md — operator one-pager.
+- _logs/status_final.md — final status report.
+- README + CHANGELOG updated with v1.0 headline and v1.1 backlog.
+
+Quarantine record (1): skarlekar/mcp_travelassistant ships a 64-char
+SerpAPI key in env_template_visible.sh. Memo at
+_quarantine/skarlekar__mcp_travelassistant/MEMO.md.
+
+Co-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>

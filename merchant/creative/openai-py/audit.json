@@ -1,0 +1,281 @@
+{
+  "source_url": "https://github.com/openai/openai-python",
+  "proposed_slot": "both.creative.openai-py",
+  "scanned_at": "2026-05-14T05:52:52.009536+00:00",
+  "clone_ok": true,
+  "commit_pinned": "38d75d74a5626472cd7d1be9705ea8aba29a6b22",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner",
+    "pip-audit"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [
+      {
+        "file": "tests/utils.py",
+        "label": "eval-call",
+        "snippet": "tr, Any]) -> type:     return eval(str(forwardref), globalns)  # "
+      }
+    ],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "storage.googleapis.com": [
+        ".stats.yml"
+      ],
+      "github.com": [
+        ".devcontainer/devcontainer.json",
+        "CHANGELOG.md",
+        "CONTRIBUTING.md",
+        "README.md",
+        "pyproject.toml"
+      ],
+      "rye.astral.sh": [
+        ".devcontainer/Dockerfile",
+        "CONTRIBUTING.md"
+      ],
+      "docs.python.org": [
+        "CONTRIBUTING.md",
+        "README.md"
+      ],
+      "www.github.com": [
+        ".github/workflows/publish-pypi.yml",
+        "CONTRIBUTING.md",
+        "README.md",
+        "src/openai/resources/admin/admin.py",
+        "src/openai/resources/admin/organization/admin_api_keys.py"
+      ],
+      "platform.openai.com": [
+        "README.md",
+        "helpers.md",
+        "src/openai/lib/_validators.py",
+        "src/openai/lib/streaming/chat/_completions.py",
+        "src/openai/resources/admin/organization/audit_logs.py"
+      ],
+      "cookbook.openai.com": [
+        "helpers.md",
+        "src/openai/resources/completions.py",
+        "src/openai/resources/embeddings.py",
+        "src/openai/types/completion_create_params.py",
+        "src/openai/types/embedding_create_params.py"
+      ],
+      "www.apache.org": [
+        "LICENSE"
+      ],
+      "img.shields.io": [
+        "README.md"
+      ],
+      "stainlessapi.com": [
+        "README.md"
+      ],
+      "pypi.org": [
+        "README.md",
+        "src/openai/resources/embeddings.py",
+        "src/openai/types/embedding_create_params.py"
+      ],
+      "management.azure.com": [
+        "README.md",
+        "src/openai/auth/_workload.py"
+      ],
+      "api.openai.com": [
+        "README.md",
+        "src/openai/_client.py",
+        "src/openai/auth/_workload.py",
+        "tests/test_auth.py",
+        "tests/test_module_client.py"
+      ],
+      "upload.wikimedia.org": [
+        "README.md"
+      ],
+      "websockets.readthedocs.io": [
+        "README.md",
+        "src/openai/types/websocket_connection_options.py"
+      ],
+      "docs.pydantic.dev": [
+        "README.md",
+        "src/openai/_models.py",
+        "tests/utils.py"
+      ],
+      "www.python-httpx.org": [
+        "README.md",
+        "src/openai/_base_client.py",
+        "src/openai/_client.py"
+      ],
+      "my.test.server.example.com:8083": [
+        "README.md"
+      ],
+      "my.test.proxy.example.com": [
+        "README.md"
+      ],
+      "learn.microsoft.com": [
+        "README.md",
+        "examples/azure.py",
+        "examples/azure_ad.py",
+        "examples/realtime/azure_realtime.py",
+        "examples/realtime/realtime.py"
+      ],
+      "example-endpoint.openai.azure.com": [
+        "README.md",
+        "examples/azure.py"
+      ],
+      "semver.org": [
+        "README.md"
+      ],
+      "raw.githubusercontent.com": [
+        "release-please-config.json"
+      ],
+      "stainless.com": [
+        "SECURITY.md"
+      ],
+      "openai.com": [
+        "SECURITY.md",
+        "src/openai/resources/chat/completions/completions.py",
+        "src/openai/resources/responses/responses.py",
+        "src/openai/types/chat/chat_completion.py",
+        "src/openai/types/chat/chat_completion_chunk.py"
+      ],
+      "aka.ms": [
+        ".devcontainer/devcontainer.json"
+      ],
+      "containers.dev": [
+        ".devcontainer/devcontainer.json"
+      ],
+      "help.github.com": [
+        ".github/CODEOWNERS"
+      ],
+      "community.openai.com": [
+        ".github/ISSUE_TEMPLATE/bug_report.yml",
+        ".github/ISSUE_TEMPLATE/feature_request.yml"
+      ],
+      "help.openai.com": [
+        ".github/ISSUE_TEMPLATE/config.yml",
+        "src/openai/resources/files.py"
+      ],
+      "pkg.stainless.com": [
+        ".github/workflows/ci.yml",
+        "scripts/utils/upload-artifact.sh"
+      ],
+      "example-resource.azure.openai.com": [
+        "examples/azure.py",
+        "src/openai/lib/azure.py",
+        "tests/lib/test_azure.py"
+      ],
+      "cognitiveservices.azure.com": [
+        "examples/azure_ad.py",
+        "examples/realtime/azure_realtime.py"
+      ],
+      "my-resource.openai.azure.com": [
+        "examples/azure_ad.py"
+      ],
+      "developer.mozilla.org": [
+        "src/openai/_base_client.py",
+        "src/openai/resources/audio/transcriptions.py",
+        "src/openai/resources/chat/completions/completions.py",
+        "src/openai/resources/completions.py",
+        "src/openai/resources/responses/responses.py"
+      ],
+      "distro.readthedocs.io": [
+        "src/openai/_base_client.py"
+      ],
+      "html.spec.whatwg.org": [
+        "src/openai/_streaming.py"
+      ],
+      "auth.openai.com": [
+        "src/openai/auth/_workload.py",
+        "tests/test_auth.py",
+        "tests/test_client.py"
+      ],
+      "169.254.169.254": [
+        "src/openai/auth/_workload.py",
+        "tests/test_auth.py"
+      ],
+      "cloud.google.com": [
+        "src/openai/auth/_workload.py"
+      ],
+      "metadata.google.internal": [
+        "src/openai/auth/_workload.py",
+        "tests/test_auth.py"
+      ],
+      "www.microsoft.com": [
+        "src/openai/lib/azure.py"
+      ],
+      "en.wikipedia.org": [
+        "src/openai/resources/audio/transcriptions.py",
+        "src/openai/resources/audio/translations.py",
+        "src/openai/types/audio/transcription_create_params.py",
+        "src/openai/types/audio/translation_create_params.py",
+        "src/openai/types/beta/realtime/session.py"
+      ],
+      "json-schema.org": [
+        "src/openai/types/chat/completion_create_params.py",
+        "src/openai/types/eval_create_response.py",
+        "src/openai/types/eval_custom_data_source_config.py",
+        "src/openai/types/eval_list_response.py",
+        "src/openai/types/eval_retrieve_response.py"
+      ],
+      "timeapi.io": [
+        "src/openai/types/chat/completion_create_params.py",
+        "src/openai/types/responses/web_search_preview_tool.py",
+        "src/openai/types/responses/web_search_preview_tool_param.py",
+        "src/openai/types/responses/web_search_tool.py",
+        "src/openai/types/responses/web_search_tool_param.py"
+      ],
+      "modelcontextprotocol.io": [
+        "src/openai/types/realtime/realtime_response_create_mcp_tool.py",
+        "src/openai/types/realtime/realtime_response_create_mcp_tool_param.py",
+        "src/openai/types/realtime/realtime_session_create_response.py",
+        "src/openai/types/realtime/realtime_tools_config_param.py",
+        "src/openai/types/realtime/realtime_tools_config_union.py"
+      ],
+      "datatracker.ietf.org": [
+        "src/openai/_utils/_path.py"
+      ],
+      "myapi.com": [
+        "tests/test_client.py"
+      ],
+      "example.org": [
+        "tests/test_client.py"
+      ],
+      "foo.com": [
+        "tests/test_module_client.py"
+      ],
+      "www.example": [
+        "tests/test_module_client.py"
+      ],
+      "deployments.example-resource.azure.openai.com": [
+        "tests/lib/test_azure.py"
+      ],
+      "example.azure-api.net": [
+        "tests/lib/test_azure.py"
+      ],
+      "deployments.azure.openai.com": [
+        "tests/lib/test_azure.py"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\openai__openai-python\\gitleaks.json",
+      "exit_code": 1,
+      "output_path": "_logs/scan/openai__openai-python/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/openai__openai-python/osv.json"
+    },
+    "pip_audit": {
+      "exit_code": 0,
+      "output_path": "_logs/scan/openai__openai-python/pip-audit.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "eval-call in tests/utils.py; trusted-vendor: 1 gitleaks finding(s) downgraded to notes (likely SDK docs/example values)",
+  "files_scanned": 1433,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

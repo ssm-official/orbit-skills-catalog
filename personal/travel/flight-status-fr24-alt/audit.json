@@ -1,0 +1,59 @@
+{
+  "source_url": "https://github.com/sunsetcoder/flightradar24-mcp-server",
+  "proposed_slot": "personal.travel.flight-status-fr24-alt",
+  "scanned_at": "2026-05-14T05:48:52.345640+00:00",
+  "clone_ok": true,
+  "commit_pinned": "97d3e99614605c5fb21005d0ebaf93847cdde829",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "fr24api.flightradar24.com": [
+        ".env.example",
+        "README.md"
+      ],
+      "registry.npmjs.org": [
+        "package-lock.json"
+      ],
+      "dotenvx.com": [
+        "package-lock.json"
+      ],
+      "github.com": [
+        "README.md",
+        "package-lock.json"
+      ],
+      "claude.ai": [
+        "README.md"
+      ],
+      "www.flightradar24.com": [
+        "README.md"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\sunsetcoder__flightradar24-mcp-server\\gitleaks.json",
+      "exit_code": 0,
+      "output_path": "_logs/scan/sunsetcoder__flightradar24-mcp-server/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/sunsetcoder__flightradar24-mcp-server/osv.json"
+    }
+  },
+  "verdict": "pass",
+  "verdict_reason": "no findings of concern in static scan",
+  "files_scanned": 13,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

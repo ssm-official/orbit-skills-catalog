@@ -1,0 +1,132 @@
+{
+  "source_url": "https://github.com/octokit/octokit.js",
+  "proposed_slot": "merchant.devops.octokit-js",
+  "scanned_at": "2026-05-14T05:54:12.417786+00:00",
+  "clone_ok": true,
+  "commit_pinned": "fd769731bee3bfdffbdc5869ec00e9cb525a0b37",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner"
+  ],
+  "findings": {
+    "secrets": [
+      {
+        "file": "README.md",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "test/app.test.ts",
+        "label": "jwt-like",
+        "match_redacted": true
+      },
+      {
+        "file": "test/app.test.ts",
+        "label": "private key",
+        "match_redacted": true
+      }
+    ],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "contributor-covenant.org": [
+        "CODE_OF_CONDUCT.md"
+      ],
+      "github.com": [
+        ".github/pull_request_template.md",
+        ".github/workflows/add_to_octokit_project.yml",
+        ".github/workflows/immediate-response.yml",
+        ".github/workflows/release.yml",
+        "CONTRIBUTING.md"
+      ],
+      "runkit.com": [
+        "CONTRIBUTING.md",
+        "test/app.test.ts"
+      ],
+      "github.pika.dev": [
+        "CONTRIBUTING.md"
+      ],
+      "git-scm.com": [
+        "MAINTAINING.md"
+      ],
+      "registry.npmjs.org": [
+        "package-lock.json"
+      ],
+      "opencollective.com": [
+        "package-lock.json"
+      ],
+      "tidelift.com": [
+        "package-lock.json"
+      ],
+      "nodejs.org": [
+        "README.md"
+      ],
+      "deno.land": [
+        "README.md"
+      ],
+      "esm.sh": [
+        "README.md"
+      ],
+      "www.typescriptlang.org": [
+        "README.md"
+      ],
+      "gist.github.com": [
+        "README.md"
+      ],
+      "docs.github.com": [
+        "README.md",
+        "test/app.test.ts"
+      ],
+      "github.acme-inc.com": [
+        "README.md"
+      ],
+      "developer.mozilla.org": [
+        "README.md"
+      ],
+      "www.npmjs.com": [
+        "README.md"
+      ],
+      "en.wikipedia.org": [
+        "README.md"
+      ],
+      "developer.github.com": [
+        "README.md"
+      ],
+      "undici.nodejs.org": [
+        "README.md"
+      ],
+      "expressjs.com": [
+        "README.md"
+      ],
+      "bounty.github.com": [
+        "SECURITY.md"
+      ],
+      "api.github.com": [
+        "test/app.test.ts",
+        "test/smoke.test.ts",
+        "test/typescript-validate.ts"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\octokit__octokit.js\\gitleaks.json",
+      "exit_code": 1,
+      "output_path": "_logs/scan/octokit__octokit.js/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/octokit__octokit.js/osv.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "test-path secret findings (3); gitleaks: 3 test-path secret(s)",
+  "files_scanned": 32,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

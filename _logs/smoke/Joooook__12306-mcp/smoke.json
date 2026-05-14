@@ -1,0 +1,29 @@
+{
+  "source_url": "https://github.com/Joooook/12306-mcp",
+  "proposed_slot": "both.search.joooook-12306-mcp",
+  "smoked_at": "2026-05-14T06:10:24.284899+00:00",
+  "platform": "windows",
+  "sandbox": "fresh venv / fresh node_modules (Docker unavailable on host)",
+  "network_monitoring": "Get-NetTCPConnection deltas (weaker than netns isolation)",
+  "package": "12306-mcp",
+  "language": "node",
+  "kind": "node",
+  "steps": [
+    {
+      "step": "npm_install",
+      "rc": 0,
+      "stderr": ""
+    },
+    {
+      "step": "node_check_main",
+      "main": "build/index.js",
+      "rc": 0,
+      "stderr": ""
+    },
+    {
+      "new_outbound_connections": []
+    }
+  ],
+  "verdict": "pass",
+  "reason": "npm install + syntax-check OK"
+}

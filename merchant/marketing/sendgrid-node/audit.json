@@ -1,0 +1,222 @@
+{
+  "source_url": "https://github.com/sendgrid/sendgrid-nodejs",
+  "proposed_slot": "merchant.marketing.sendgrid-node",
+  "scanned_at": "2026-05-14T05:53:51.595140+00:00",
+  "clone_ok": true,
+  "commit_pinned": "498e2329e87d804d83f4a7b519d33fa09198d0ca",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "github.com": [
+        "CHANGELOG.md",
+        "CONTRIBUTING.md",
+        "FIRST_TIMERS.md",
+        "PULL_REQUEST_TEMPLATE.md",
+        "README.md"
+      ],
+      "stoplight.io": [
+        "CHANGELOG.md",
+        "docs/examples/webhooks-docker/CONTRIBUTING.md"
+      ],
+      "www.contributor-covenant.org": [
+        "CODE_OF_CONDUCT.md"
+      ],
+      "sendgrid.com": [
+        "CONTRIBUTING.md",
+        "README.md",
+        "TROUBLESHOOTING.md",
+        "USAGE.md",
+        "docs/examples/webhooks-docker/CONTRIBUTING.md"
+      ],
+      "docs.docker.com": [
+        "CONTRIBUTING.md"
+      ],
+      "eslint.org": [
+        "CONTRIBUTING.md",
+        "docs/examples/webhooks-docker/CONTRIBUTING.md"
+      ],
+      "esdoc.org": [
+        "CONTRIBUTING.md"
+      ],
+      "help.github.com": [
+        "CONTRIBUTING.md",
+        "FIRST_TIMERS.md",
+        "docs/examples/webhooks-docker/CONTRIBUTING.md"
+      ],
+      "tbaggery.com": [
+        "CONTRIBUTING.md",
+        "FIRST_TIMERS.md",
+        "docs/examples/webhooks-docker/CONTRIBUTING.md"
+      ],
+      "raw.githubusercontent.com": [
+        "Makefile"
+      ],
+      "support.sendgrid.com": [
+        "PULL_REQUEST_TEMPLATE.md",
+        "README.md",
+        "TROUBLESHOOTING.md",
+        "packages/client/README.md",
+        "packages/contact-importer/README.md"
+      ],
+      "travis-ci.com": [
+        "README.md",
+        "packages/client/README.md",
+        "packages/helpers/README.md",
+        "packages/inbound-mail-parser/README.md",
+        "packages/mail/README.md"
+      ],
+      "badge.fury.io": [
+        "README.md",
+        "packages/client/README.md",
+        "packages/contact-importer/README.md",
+        "packages/helpers/README.md",
+        "packages/inbound-mail-parser/README.md"
+      ],
+      "img.shields.io": [
+        "README.md"
+      ],
+      "www.codetriage.com": [
+        "README.md"
+      ],
+      "docs.sendgrid.com": [
+        "README.md",
+        "TROUBLESHOOTING.md",
+        "docs/use-cases/email-stats.md",
+        "docs/use-cases/multiple-emails-personalizations-with-substitutions.md",
+        "docs/use-cases/multiple-emails-personalizations.md"
+      ],
+      "support.sendgrid.com).**": [
+        "README.md"
+      ],
+      "npmjs.org": [
+        "TROUBLESHOOTING.md",
+        "packages/client/README.md",
+        "packages/inbound-mail-parser/README.md",
+        "packages/mail/README.md"
+      ],
+      "semver.org": [
+        "TROUBLESHOOTING.md"
+      ],
+      "www.npmjs.com": [
+        "TROUBLESHOOTING.md",
+        "docs/migration-guides/migrating-from-version-6-to-7.md",
+        "docs/use-cases/event-webhook.md",
+        "packages/client/README.md",
+        "packages/helpers/README.md"
+      ],
+      "www.sendgrid.com": [
+        "docs/examples/webhooks-docker/example-event-notification.txt"
+      ],
+      "www.docker.com": [
+        "docs/examples/webhooks-docker/README.md"
+      ],
+      "ngrok.com": [
+        "docs/examples/webhooks-docker/README.md"
+      ],
+      "app.sendgrid.com": [
+        "docs/examples/webhooks-docker/README.md",
+        "docs/use-cases/email-stats.md",
+        "packages/client/README.md",
+        "packages/client/USAGE.md",
+        "packages/client/USE_CASES.md"
+      ],
+      "kubernetes.io": [
+        "docs/examples/webhooks-docker/README.md"
+      ],
+      "www.ntweekly.com": [
+        "docs/examples/webhooks-docker/README.md"
+      ],
+      "api.eu.sendgrid.com": [
+        "docs/use-cases/data-residency-set-hostname.md",
+        "packages/client/src/classes/client.js",
+        "packages/client/src/client.spec.js"
+      ],
+      "api.sendgrid.com": [
+        "docs/use-cases/data-residency-set-hostname.md",
+        "packages/client/README.md",
+        "packages/client/USAGE.md",
+        "packages/client/src/classes/client.js",
+        "packages/client/src/client.spec.js"
+      ],
+      "en.wikipedia.org": [
+        "docs/use-cases/scheduled-send.md"
+      ],
+      "www.twilio.com": [
+        "docs/use-cases/sms.md",
+        "docs/use-cases/twilio-setup.md"
+      ],
+      "handlebarsjs.com": [
+        "docs/use-cases/transactional-templates.md"
+      ],
+      "twil.io": [
+        "docs/use-cases/twilio-setup.md"
+      ],
+      "yarnpkg.com": [
+        "packages/client/README.md",
+        "packages/inbound-mail-parser/README.md",
+        "packages/mail/README.md"
+      ],
+      "meyerweb.com": [
+        "packages/client/USAGE.md"
+      ],
+      "support.google.com": [
+        "packages/client/USAGE.md",
+        "packages/eventwebhook/src/eventwebhook.spec.js"
+      ],
+      "email.myhosthame.com": [
+        "packages/client/USAGE.md",
+        "packages/client/src/client.spec.js"
+      ],
+      "newdomain.com": [
+        "packages/client/USAGE.md",
+        "packages/client/src/client.spec.js"
+      ],
+      "email.twilio.com": [
+        "packages/client/src/classes/client.js",
+        "packages/client/src/client.spec.js"
+      ],
+      "docs.npmjs.com": [
+        "packages/mail/README.md"
+      ],
+      "signup.heroku.com": [
+        "packages/subscription-widget/README.md"
+      ],
+      "www.herokucdn.com": [
+        "packages/subscription-widget/README.md"
+      ],
+      "your_heroku_app_name.herokuapp.com": [
+        "packages/subscription-widget/README.md"
+      ],
+      "devcenter.heroku.com": [
+        "packages/subscription-widget/README.md"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\sendgrid__sendgrid-nodejs\\gitleaks.json",
+      "exit_code": 0,
+      "output_path": "_logs/scan/sendgrid__sendgrid-nodejs/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/sendgrid__sendgrid-nodejs/osv.json"
+    }
+  },
+  "verdict": "pass",
+  "verdict_reason": "no findings of concern in static scan",
+  "files_scanned": 212,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

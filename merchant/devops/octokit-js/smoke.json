@@ -1,0 +1,38 @@
+{
+  "source_url": "https://github.com/octokit/octokit.js",
+  "proposed_slot": "merchant.devops.octokit-js",
+  "smoked_at": "2026-05-14T06:10:02.887115+00:00",
+  "platform": "windows",
+  "sandbox": "fresh venv / fresh node_modules (Docker unavailable on host)",
+  "network_monitoring": "Get-NetTCPConnection deltas (weaker than netns isolation)",
+  "package": "octokit",
+  "language": "node",
+  "kind": "node",
+  "steps": [
+    {
+      "step": "npm_install",
+      "rc": 0,
+      "stderr": ""
+    },
+    {
+      "step": "node_require_relative",
+      "rc": 2,
+      "stdout": "",
+      "stderr": "IMPORT_ERR:Cannot find module './'\nRequire stack:\n- C:\\Users\\ssmca\\orbit-skills-catalog\\candidates\\octokit__octokit.js\\[eval]\n"
+    },
+    {
+      "new_outbound_connections": [
+        {
+          "host": "151.101.0.223",
+          "port": 443
+        },
+        {
+          "host": "151.101.192.223",
+          "port": 443
+        }
+      ]
+    }
+  ],
+  "verdict": "pass_with_notes",
+  "reason": "install OK; relative-require failed (likely TS-only / build required)"
+}

@@ -1,0 +1,44 @@
+{
+  "source_url": "https://github.com/googleapis/google-api-python-client",
+  "proposed_slot": "both.productivity.google-apis-py",
+  "smoked_at": "2026-05-14T06:07:41.324237+00:00",
+  "platform": "windows",
+  "sandbox": "fresh venv / fresh node_modules (Docker unavailable on host)",
+  "network_monitoring": "Get-NetTCPConnection deltas (weaker than netns isolation)",
+  "package": "google-api-python-client",
+  "language": "python",
+  "kind": "python",
+  "steps": [
+    {
+      "step": "uv_dryrun",
+      "rc": 0,
+      "stderr": ""
+    },
+    {
+      "step": "uv_run_import",
+      "rc": 1,
+      "stdout": "",
+      "stderr": "nt @ file:///C:/Users/ssmca/orbit-skills-catalog/candidates/googleapis__google-api-python-client\nInstalled 20 packages in 284ms\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    import google_api_python_client; print('OK', sorted(set(dir(google_api_python_client)))[:20])\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nModuleNotFoundError: No module named 'google_api_python_client'\n",
+      "new_outbound_connections": [
+        {
+          "host": "151.101.192.223",
+          "port": 443
+        },
+        {
+          "host": "172.217.194.101",
+          "port": 443
+        },
+        {
+          "host": "20.201.192.56",
+          "port": 443
+        },
+        {
+          "host": "44.215.234.239",
+          "port": 443
+        }
+      ]
+    }
+  ],
+  "verdict": "pass_with_notes",
+  "reason": "installable but direct import google_api_python_client failed (may use non-standard module name)"
+}

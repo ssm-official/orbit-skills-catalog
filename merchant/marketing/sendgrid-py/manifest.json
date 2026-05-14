@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "id": "merchant.marketing.sendgrid-py",
+  "name": "Twilio SendGrid (Python)",
+  "slug": "sendgrid-py",
+  "track": [
+    "merchant"
+  ],
+  "category": "marketing",
+  "slot": "sendgrid-py",
+  "summary": "Twilio SendGrid Python SDK",
+  "version": "1.0.0",
+  "source": {
+    "kind": "sdk_wrapper",
+    "repo_url": "https://github.com/sendgrid/sendgrid-python",
+    "commit_pinned": "76788e70a76b11ce2990821f190e52f887ab9ed6",
+    "license": "MIT",
+    "last_commit_at": "2025-09-19",
+    "stars": 1628,
+    "primary_language": "Python",
+    "maintainer": "sendgrid"
+  },
+  "upstream": {
+    "vendor": "Twilio SendGrid",
+    "vendor_url": "https://sendgrid.com",
+    "auth_type": "api_key",
+    "sandbox_available": false,
+    "requires_user_oauth": false,
+    "cost_model": "freemium",
+    "typical_per_call_cost_usd": "free tier 100/day, then ~0.001/email"
+  },
+  "x402_compatible": true,
+  "x402_notes": "per-call, deterministic JSON response",
+  "tools": [
+    {
+      "name": "primary",
+      "summary": "Primary entry point (smoke-tested via import / require). Tool catalogue derived at runtime from the upstream package.",
+      "destructive": true,
+      "idempotent": false,
+      "rate_limit": "see upstream docs"
+    }
+  ],
+  "tags": [
+    "marketing",
+    "sendgrid",
+    "merchant"
+  ],
+  "risk": {
+    "prompt_injection": "low",
+    "destructive": true,
+    "spend_capable": false,
+    "regulated_data": [],
+    "default_mode": "dry_run"
+  },
+  "audit": {
+    "verdict": "pass_with_notes",
+    "log": "audit.json",
+    "scanners_run": [
+      "orbit_pattern_scan",
+      "install_hook_audit",
+      "gitleaks",
+      "osv-scanner",
+      "pip-audit"
+    ],
+    "behavioral_check": "clean_with_notes"
+  },
+  "smoke": {
+    "verdict": "pass",
+    "log": "smoke.json",
+    "last_passed_at": "2026-05-14T06:09:10.959629+00:00"
+  },
+  "orbit": {
+    "suggested_markup_floor_pct": 5,
+    "suggested_markup_ceiling_pct": 50,
+    "pricing_note": "Upstream cost model: freemium.",
+    "tokenization_friendly": true
+  },
+  "notes": "Twilio SendGrid Python SDK"
+}

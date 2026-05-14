@@ -1,0 +1,137 @@
+{
+  "source_url": "https://github.com/makenotion/notion-sdk-js",
+  "proposed_slot": "both.productivity.notion",
+  "scanned_at": "2026-05-14T05:51:45.817752+00:00",
+  "clone_ok": true,
+  "commit_pinned": "ece663bdb846dc3f1e297e02634c2e58bb19bb64",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "github.com": [
+        ".gitignore",
+        "README.md",
+        "package-lock.json",
+        "package.json",
+        "tsconfig.json"
+      ],
+      "nodejs.org": [
+        ".gitignore"
+      ],
+      "gruntjs.com": [
+        ".gitignore"
+      ],
+      "bower.io": [
+        ".gitignore"
+      ],
+      "snowpack.dev": [
+        ".gitignore"
+      ],
+      "parceljs.org": [
+        ".gitignore"
+      ],
+      "nextjs.org": [
+        ".gitignore"
+      ],
+      "biomejs.dev": [
+        "biome.jsonc"
+      ],
+      "registry.npmjs.org": [
+        ".github/workflows/increment-version.yml",
+        ".github/workflows/publish.yml",
+        "package-lock.json"
+      ],
+      "opencollective.com": [
+        "package-lock.json"
+      ],
+      "tidelift.com": [
+        "package-lock.json"
+      ],
+      "eslint.org": [
+        "package-lock.json"
+      ],
+      "www.patreon.com": [
+        "package-lock.json"
+      ],
+      "feross.org": [
+        "package-lock.json"
+      ],
+      "developers.notion.com": [
+        "README.md",
+        "package.json"
+      ],
+      "www.notion.so": [
+        "README.md",
+        "test/id-extraction.test.ts"
+      ],
+      "developers.notion.com).**": [
+        "README.md"
+      ],
+      "badge.fury.io": [
+        "README.md"
+      ],
+      "stevekrouse-badge.web.val.run": [
+        "README.md"
+      ],
+      "secure.notion-static.com": [
+        "README.md"
+      ],
+      "api.notion.com": [
+        "README.md",
+        "src/constants.ts",
+        "test/Client.test.ts"
+      ],
+      "www.typescriptlang.org": [
+        "README.md"
+      ],
+      "developer.mozilla.org": [
+        "README.md"
+      ],
+      "aka.ms": [
+        "tsconfig.json"
+      ],
+      "node.green": [
+        "tsconfig.json"
+      ],
+      "help.github.com": [
+        ".github/workflows/ci.yml"
+      ],
+      "notion.so": [
+        "src/helpers.ts",
+        "test/id-extraction.test.ts"
+      ],
+      "basarat.gitbook.io": [
+        "src/utils.ts"
+      ],
+      "notion.site": [
+        "test/id-extraction.test.ts"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\makenotion__notion-sdk-js\\gitleaks.json",
+      "exit_code": 0,
+      "output_path": "_logs/scan/makenotion__notion-sdk-js/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/makenotion__notion-sdk-js/osv.json"
+    }
+  },
+  "verdict": "pass",
+  "verdict_reason": "no findings of concern in static scan",
+  "files_scanned": 54,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

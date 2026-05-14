@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0",
+  "id": "merchant.devops.sentry-mcp",
+  "name": "Sentry MCP Server",
+  "slug": "sentry-mcp",
+  "track": [
+    "merchant"
+  ],
+  "category": "devops",
+  "slot": "sentry-mcp",
+  "summary": "An MCP server for interacting with Sentry via LLMs.",
+  "version": "1.0.0",
+  "source": {
+    "kind": "mcp_server",
+    "repo_url": "https://github.com/getsentry/sentry-mcp",
+    "commit_pinned": "42f14429674fd5b84a2d2107c795938136498e21",
+    "license": "NOASSERTION",
+    "last_commit_at": "2026-05-14",
+    "stars": 687,
+    "primary_language": "TypeScript",
+    "maintainer": "getsentry"
+  },
+  "upstream": {
+    "vendor": "Sentry",
+    "vendor_url": "https://sentry.io",
+    "auth_type": "api_key",
+    "sandbox_available": true,
+    "requires_user_oauth": false,
+    "cost_model": "freemium",
+    "typical_per_call_cost_usd": "free tier"
+  },
+  "x402_compatible": true,
+  "x402_notes": "per-call, deterministic JSON response",
+  "tools": [
+    {
+      "name": "primary",
+      "summary": "Primary entry point (smoke-tested via import / require). Tool catalogue derived at runtime from the upstream package.",
+      "destructive": false,
+      "idempotent": true,
+      "rate_limit": "see upstream docs"
+    }
+  ],
+  "tags": [
+    "devops",
+    "getsentry",
+    "merchant"
+  ],
+  "risk": {
+    "prompt_injection": "low",
+    "destructive": false,
+    "spend_capable": false,
+    "regulated_data": [],
+    "default_mode": "live"
+  },
+  "audit": {
+    "verdict": "pass_with_notes",
+    "log": "audit.json",
+    "scanners_run": [
+      "orbit_pattern_scan",
+      "install_hook_audit",
+      "gitleaks",
+      "osv-scanner"
+    ],
+    "behavioral_check": "clean_with_notes"
+  },
+  "smoke": {
+    "verdict": "deferred",
+    "log": "smoke.json",
+    "last_passed_at": "2026-05-14T06:10:27.519254+00:00"
+  },
+  "orbit": {
+    "suggested_markup_floor_pct": 5,
+    "suggested_markup_ceiling_pct": 50,
+    "pricing_note": "Upstream cost model: freemium.",
+    "tokenization_friendly": true
+  },
+  "notes": "discovered_from:punkpeye"
+}

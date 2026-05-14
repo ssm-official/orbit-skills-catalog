@@ -1,0 +1,44 @@
+{
+  "source_url": "https://github.com/replicate/replicate-python",
+  "proposed_slot": "both.creative.replicate-py",
+  "smoked_at": "2026-05-14T06:07:59.937465+00:00",
+  "platform": "windows",
+  "sandbox": "fresh venv / fresh node_modules (Docker unavailable on host)",
+  "network_monitoring": "Get-NetTCPConnection deltas (weaker than netns isolation)",
+  "package": "replicate",
+  "language": "python",
+  "kind": "python",
+  "steps": [
+    {
+      "step": "uv_dryrun",
+      "rc": 0,
+      "stderr": ""
+    },
+    {
+      "step": "uv_run_import",
+      "rc": 0,
+      "stdout": "OK ['Client', '__about__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__path__', '__spec__', '_async_paginate', '_paginate', 'account', 'async_paginate', 'async_run', 'async_stream', 'client', 'collection', 'collections']\n",
+      "stderr": "ows-x86_64-none (download) (39.3MiB)\n Downloaded cpython-3.12.2-windows-x86_64-none (download)\n   Building replicate @ file:///C:/Users/ssmca/orbit-skills-catalog/candidates/replicate__replicate-python\nDownloading pydantic-core (2.0MiB)\n Downloaded pydantic-core\n      Built replicate @ file:///C:/Users/ssmca/orbit-skills-catalog/candidates/replicate__replicate-python\nInstalled 13 packages in 67ms\n",
+      "new_outbound_connections": [
+        {
+          "host": "104.16.3.34",
+          "port": 443
+        },
+        {
+          "host": "104.18.35.227",
+          "port": 443
+        },
+        {
+          "host": "151.101.0.223",
+          "port": 443
+        },
+        {
+          "host": "151.101.192.223",
+          "port": 443
+        }
+      ]
+    }
+  ],
+  "verdict": "pass",
+  "reason": "uv install + import OK"
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "id": "merchant.crm.hubspot-py",
+  "name": "HubSpot SDK (Python)",
+  "slug": "hubspot-py",
+  "track": [
+    "merchant"
+  ],
+  "category": "crm",
+  "slot": "hubspot-py",
+  "summary": "Official HubSpot Python SDK",
+  "version": "1.0.0",
+  "source": {
+    "kind": "sdk_wrapper",
+    "repo_url": "https://github.com/HubSpot/hubspot-api-python",
+    "commit_pinned": "a2a528a97f4c1131d7f65d0303bfbd2e523a8eba",
+    "license": "Apache-2.0",
+    "last_commit_at": "2026-02-24",
+    "stars": 418,
+    "primary_language": "Python",
+    "maintainer": "HubSpot"
+  },
+  "upstream": {
+    "vendor": "HubSpot",
+    "vendor_url": "https://hubspot.com",
+    "auth_type": "api_key",
+    "sandbox_available": true,
+    "requires_user_oauth": true,
+    "cost_model": "freemium",
+    "typical_per_call_cost_usd": "free CRM tier"
+  },
+  "x402_compatible": true,
+  "x402_notes": "per-call, deterministic JSON response",
+  "tools": [
+    {
+      "name": "primary",
+      "summary": "Primary entry point (smoke-tested via import / require). Tool catalogue derived at runtime from the upstream package.",
+      "destructive": false,
+      "idempotent": true,
+      "rate_limit": "see upstream docs"
+    }
+  ],
+  "tags": [
+    "crm",
+    "HubSpot",
+    "merchant"
+  ],
+  "risk": {
+    "prompt_injection": "low",
+    "destructive": false,
+    "spend_capable": false,
+    "regulated_data": [
+      "pii"
+    ],
+    "default_mode": "live"
+  },
+  "audit": {
+    "verdict": "pass",
+    "log": "audit.json",
+    "scanners_run": [
+      "orbit_pattern_scan",
+      "install_hook_audit",
+      "gitleaks",
+      "osv-scanner",
+      "pip-audit"
+    ],
+    "behavioral_check": "clean_with_notes"
+  },
+  "smoke": {
+    "verdict": "pass_with_notes",
+    "log": "smoke.json",
+    "last_passed_at": "2026-05-14T06:08:38.028571+00:00"
+  },
+  "orbit": {
+    "suggested_markup_floor_pct": 5,
+    "suggested_markup_ceiling_pct": 50,
+    "pricing_note": "Upstream cost model: freemium.",
+    "tokenization_friendly": true
+  },
+  "notes": "Official HubSpot Python SDK"
+}

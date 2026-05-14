@@ -1,0 +1,27 @@
+{
+  "source_url": "https://github.com/stripe/stripe-python",
+  "proposed_slot": "merchant.finance.stripe-py",
+  "smoked_at": "2026-05-14T06:09:54.482428+00:00",
+  "platform": "windows",
+  "sandbox": "fresh venv / fresh node_modules (Docker unavailable on host)",
+  "network_monitoring": "Get-NetTCPConnection deltas (weaker than netns isolation)",
+  "package": "stripe",
+  "language": "python",
+  "kind": "python",
+  "steps": [
+    {
+      "step": "uv_dryrun",
+      "rc": 0,
+      "stderr": ""
+    },
+    {
+      "step": "uv_run_import",
+      "rc": 0,
+      "stdout": "OK ['AppInfo', 'DEFAULT_API_BASE', 'DEFAULT_CONNECT_API_BASE', 'DEFAULT_METER_EVENTS_API_BASE', 'DEFAULT_UPLOAD_API_BASE', 'Literal', 'Optional', 'TYPE_CHECKING', 'VERSION', '_ApiVersion', '__annotations__', '__builtins__', '__cached__', '__doc__', '__file__', '__getattr__', '__loader__', '__name__', '__package__', '__path__']\n",
+      "stderr": "   Building stripe @ file:///C:/Users/ssmca/orbit-skills-catalog/candidates/stripe__stripe-python\n      Built stripe @ file:///C:/Users/ssmca/orbit-skills-catalog/candidates/stripe__stripe-python\nInstalled 7 packages in 395ms\n",
+      "new_outbound_connections": []
+    }
+  ],
+  "verdict": "pass",
+  "reason": "uv install + import OK"
+}

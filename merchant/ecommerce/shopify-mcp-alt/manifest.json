@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0",
+  "id": "merchant.ecommerce.shopify-mcp-alt",
+  "name": "Shopify MCP Server (alt)",
+  "slug": "shopify-mcp-alt",
+  "track": [
+    "merchant"
+  ],
+  "category": "ecommerce",
+  "slot": "shopify-mcp-alt",
+  "summary": "Alt community Shopify MCP",
+  "version": "1.0.0",
+  "source": {
+    "kind": "mcp_server",
+    "repo_url": "https://github.com/amir-bengherbi/shopify-mcp-server",
+    "commit_pinned": "ef60720385f4f5e2bc2d5af03a68e0a76318c969",
+    "license": "MIT",
+    "last_commit_at": "2025-01-27",
+    "stars": 16,
+    "primary_language": "TypeScript",
+    "maintainer": "amir-bengherbi"
+  },
+  "upstream": {
+    "vendor": "Amir-bengherbi",
+    "vendor_url": "",
+    "auth_type": "api_key",
+    "sandbox_available": false,
+    "requires_user_oauth": false,
+    "cost_model": "varies",
+    "typical_per_call_cost_usd": "varies"
+  },
+  "x402_compatible": true,
+  "x402_notes": "per-call, deterministic JSON response",
+  "tools": [
+    {
+      "name": "primary",
+      "summary": "Primary entry point (smoke-tested via import / require). Tool catalogue derived at runtime from the upstream package.",
+      "destructive": false,
+      "idempotent": true,
+      "rate_limit": "see upstream docs"
+    }
+  ],
+  "tags": [
+    "ecommerce",
+    "amir-bengherbi",
+    "merchant"
+  ],
+  "risk": {
+    "prompt_injection": "low",
+    "destructive": false,
+    "spend_capable": false,
+    "regulated_data": [],
+    "default_mode": "live"
+  },
+  "audit": {
+    "verdict": "pass",
+    "log": "audit.json",
+    "scanners_run": [
+      "orbit_pattern_scan",
+      "install_hook_audit",
+      "gitleaks",
+      "osv-scanner"
+    ],
+    "behavioral_check": "clean_with_notes"
+  },
+  "smoke": {
+    "verdict": "pass_with_notes",
+    "log": "smoke.json",
+    "last_passed_at": "2026-05-14T06:10:20.335901+00:00"
+  },
+  "orbit": {
+    "suggested_markup_floor_pct": 5,
+    "suggested_markup_ceiling_pct": 50,
+    "pricing_note": "Upstream cost model: varies.",
+    "tokenization_friendly": false
+  },
+  "notes": "Alt community Shopify MCP"
+}

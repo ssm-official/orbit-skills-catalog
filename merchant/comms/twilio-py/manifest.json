@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "id": "both.comms.twilio-py",
+  "name": "Twilio SDK (Python)",
+  "slug": "twilio-py",
+  "track": [
+    "personal",
+    "merchant"
+  ],
+  "category": "comms",
+  "slot": "twilio-py",
+  "summary": "Twilio Python SDK",
+  "version": "1.0.0",
+  "source": {
+    "kind": "sdk_wrapper",
+    "repo_url": "https://github.com/twilio/twilio-python",
+    "commit_pinned": "82adf8fd99a82492982e4cb6b770829f86d378bf",
+    "license": "MIT",
+    "last_commit_at": "2026-05-07",
+    "stars": 2057,
+    "primary_language": "Python",
+    "maintainer": "twilio"
+  },
+  "upstream": {
+    "vendor": "Twilio",
+    "vendor_url": "https://twilio.com",
+    "auth_type": "api_key",
+    "sandbox_available": true,
+    "requires_user_oauth": false,
+    "cost_model": "paid_per_call",
+    "typical_per_call_cost_usd": "~0.0075/SMS, ~0.013/min"
+  },
+  "x402_compatible": true,
+  "x402_notes": "per-call, deterministic JSON response",
+  "tools": [
+    {
+      "name": "primary",
+      "summary": "Primary entry point (smoke-tested via import / require). Tool catalogue derived at runtime from the upstream package.",
+      "destructive": false,
+      "idempotent": true,
+      "rate_limit": "see upstream docs"
+    }
+  ],
+  "tags": [
+    "comms",
+    "twilio",
+    "both"
+  ],
+  "risk": {
+    "prompt_injection": "low",
+    "destructive": false,
+    "spend_capable": false,
+    "regulated_data": [],
+    "default_mode": "live"
+  },
+  "audit": {
+    "verdict": "pass_with_notes",
+    "log": "audit.json",
+    "scanners_run": [
+      "orbit_pattern_scan",
+      "install_hook_audit",
+      "gitleaks",
+      "osv-scanner",
+      "pip-audit"
+    ],
+    "behavioral_check": "clean_with_notes"
+  },
+  "smoke": {
+    "verdict": "pass",
+    "log": "smoke.json",
+    "last_passed_at": "2026-05-14T06:09:46.572804+00:00"
+  },
+  "orbit": {
+    "suggested_markup_floor_pct": 5,
+    "suggested_markup_ceiling_pct": 50,
+    "pricing_note": "Upstream cost model: paid_per_call.",
+    "tokenization_friendly": false
+  },
+  "notes": "Twilio Python SDK"
+}

@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0",
+  "id": "merchant.marketing.mailchimp-node",
+  "name": "Mailchimp Marketing (Node)",
+  "slug": "mailchimp-node",
+  "track": [
+    "merchant"
+  ],
+  "category": "marketing",
+  "slot": "mailchimp-node",
+  "summary": "Mailchimp Node SDK",
+  "version": "1.0.0",
+  "source": {
+    "kind": "sdk_wrapper",
+    "repo_url": "https://github.com/mailchimp/mailchimp-marketing-node",
+    "commit_pinned": "7c1edd292e2d4732a0ea209de6b6dd38f968bf9d",
+    "license": "NOASSERTION",
+    "last_commit_at": "2022-11-02",
+    "stars": 166,
+    "primary_language": "JavaScript",
+    "maintainer": "mailchimp"
+  },
+  "upstream": {
+    "vendor": "Mailchimp",
+    "vendor_url": "https://mailchimp.com",
+    "auth_type": "api_key",
+    "sandbox_available": false,
+    "requires_user_oauth": false,
+    "cost_model": "freemium",
+    "typical_per_call_cost_usd": "free tier 500 contacts"
+  },
+  "x402_compatible": true,
+  "x402_notes": "per-call, deterministic JSON response",
+  "tools": [
+    {
+      "name": "primary",
+      "summary": "Primary entry point (smoke-tested via import / require). Tool catalogue derived at runtime from the upstream package.",
+      "destructive": false,
+      "idempotent": true,
+      "rate_limit": "see upstream docs"
+    }
+  ],
+  "tags": [
+    "marketing",
+    "mailchimp",
+    "merchant"
+  ],
+  "risk": {
+    "prompt_injection": "low",
+    "destructive": false,
+    "spend_capable": false,
+    "regulated_data": [],
+    "default_mode": "live"
+  },
+  "audit": {
+    "verdict": "pass",
+    "log": "audit.json",
+    "scanners_run": [
+      "orbit_pattern_scan",
+      "install_hook_audit",
+      "gitleaks",
+      "osv-scanner"
+    ],
+    "behavioral_check": "clean_with_notes"
+  },
+  "smoke": {
+    "verdict": "pass",
+    "log": "smoke.json",
+    "last_passed_at": "2026-05-14T06:09:14.332564+00:00"
+  },
+  "orbit": {
+    "suggested_markup_floor_pct": 5,
+    "suggested_markup_ceiling_pct": 50,
+    "pricing_note": "Upstream cost model: freemium.",
+    "tokenization_friendly": true
+  },
+  "notes": "Mailchimp Node SDK"
+}

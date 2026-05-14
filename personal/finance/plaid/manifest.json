@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0",
+  "id": "both.finance.plaid",
+  "name": "Plaid SDK (Python)",
+  "slug": "plaid",
+  "track": [
+    "personal",
+    "merchant"
+  ],
+  "category": "finance",
+  "slot": "plaid",
+  "summary": "Plaid official Python SDK",
+  "version": "1.0.0",
+  "source": {
+    "kind": "sdk_wrapper",
+    "repo_url": "https://github.com/plaid/plaid-python",
+    "commit_pinned": "b1f7daa7f812c913ed2db03d490405bc9919835c",
+    "license": "MIT",
+    "last_commit_at": "2026-04-27",
+    "stars": 507,
+    "primary_language": "Python",
+    "maintainer": "plaid"
+  },
+  "upstream": {
+    "vendor": "Plaid",
+    "vendor_url": "https://plaid.com",
+    "auth_type": "api_key",
+    "sandbox_available": true,
+    "requires_user_oauth": true,
+    "cost_model": "paid_per_call",
+    "typical_per_call_cost_usd": "varies by product"
+  },
+  "x402_compatible": true,
+  "x402_notes": "per-call, deterministic JSON response",
+  "tools": [
+    {
+      "name": "primary",
+      "summary": "Primary entry point (smoke-tested via import / require). Tool catalogue derived at runtime from the upstream package.",
+      "destructive": false,
+      "idempotent": true,
+      "rate_limit": "see upstream docs"
+    }
+  ],
+  "tags": [
+    "finance",
+    "plaid",
+    "both"
+  ],
+  "risk": {
+    "prompt_injection": "low",
+    "destructive": false,
+    "spend_capable": false,
+    "regulated_data": [
+      "pii"
+    ],
+    "default_mode": "live"
+  },
+  "audit": {
+    "verdict": "pass",
+    "log": "audit.json",
+    "scanners_run": [
+      "orbit_pattern_scan",
+      "install_hook_audit",
+      "gitleaks",
+      "osv-scanner",
+      "pip-audit"
+    ],
+    "behavioral_check": "clean_with_notes"
+  },
+  "smoke": {
+    "verdict": "pass_with_notes",
+    "log": "smoke.json",
+    "last_passed_at": "2026-05-14T06:07:31.958731+00:00"
+  },
+  "orbit": {
+    "suggested_markup_floor_pct": 5,
+    "suggested_markup_ceiling_pct": 50,
+    "pricing_note": "Upstream cost model: paid_per_call.",
+    "tokenization_friendly": false
+  },
+  "notes": "Plaid official Python SDK"
+}

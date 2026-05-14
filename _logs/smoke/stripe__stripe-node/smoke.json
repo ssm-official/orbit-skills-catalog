@@ -1,0 +1,29 @@
+{
+  "source_url": "https://github.com/stripe/stripe-node",
+  "proposed_slot": "merchant.finance.stripe-node",
+  "smoked_at": "2026-05-14T06:10:09.404384+00:00",
+  "platform": "windows",
+  "sandbox": "fresh venv / fresh node_modules (Docker unavailable on host)",
+  "network_monitoring": "Get-NetTCPConnection deltas (weaker than netns isolation)",
+  "package": "stripe",
+  "language": "node",
+  "kind": "node",
+  "steps": [
+    {
+      "step": "npm_install",
+      "rc": 0,
+      "stderr": ""
+    },
+    {
+      "step": "node_require_relative",
+      "rc": 2,
+      "stdout": "",
+      "stderr": "IMPORT_ERR:Cannot find module 'C:\\Users\\ssmca\\orbit-skills-catalog\\candidates\\stripe__stripe-node\\cjs\\stripe.cjs.node.js'. Please verify that the package.json has a valid \"main\" entry\n"
+    },
+    {
+      "new_outbound_connections": []
+    }
+  ],
+  "verdict": "pass_with_notes",
+  "reason": "install OK; relative-require failed (likely TS-only / build required)"
+}

@@ -1,0 +1,90 @@
+{
+  "source_url": "https://github.com/elevenlabs/elevenlabs-mcp",
+  "proposed_slot": "both.creative.elevenlabs-elevenlabs-mcp",
+  "scanned_at": "2026-05-14T05:54:56.585699+00:00",
+  "clone_ok": true,
+  "commit_pinned": "998b61108c2ac53df1fed2e7bd2bc89e32edded7",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner",
+    "pip-audit"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "github.com": [
+        ".pre-commit-config.yaml",
+        "README.md",
+        "server.json"
+      ],
+      "elevenlabs.io": [
+        "ELEVENLABS.md",
+        "README.md"
+      ],
+      "img.shields.io": [
+        "README.md"
+      ],
+      "www.anthropic.com": [
+        "README.md"
+      ],
+      "www.cursor.so": [
+        "README.md"
+      ],
+      "codeium.com": [
+        "README.md"
+      ],
+      "astral.sh": [
+        "README.md"
+      ],
+      "static.modelcontextprotocol.io": [
+        "server.json"
+      ],
+      "pypi.org": [
+        "server.json",
+        "uv.lock"
+      ],
+      "files.pythonhosted.org": [
+        "uv.lock"
+      ],
+      "api.elevenlabs.io": [
+        "elevenlabs_mcp/utils.py",
+        "tests/test_utils.py"
+      ],
+      "api.eu.residency.elevenlabs.io": [
+        "elevenlabs_mcp/utils.py",
+        "tests/test_utils.py"
+      ],
+      "api.in.residency.elevenlabs.io": [
+        "elevenlabs_mcp/utils.py",
+        "tests/test_utils.py"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\elevenlabs__elevenlabs-mcp\\gitleaks.json",
+      "exit_code": 0,
+      "output_path": "_logs/scan/elevenlabs__elevenlabs-mcp/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/elevenlabs__elevenlabs-mcp/osv.json"
+    },
+    "pip_audit": {
+      "exit_code": 1,
+      "output_path": "_logs/scan/elevenlabs__elevenlabs-mcp/pip-audit.json"
+    }
+  },
+  "verdict": "pass",
+  "verdict_reason": "no findings of concern in static scan",
+  "files_scanned": 27,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

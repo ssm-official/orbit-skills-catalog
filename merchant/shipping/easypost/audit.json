@@ -1,0 +1,217 @@
+{
+  "source_url": "https://github.com/easypost/easypost-node",
+  "proposed_slot": "both.shipping.easypost",
+  "scanned_at": "2026-05-14T05:49:03.608334+00:00",
+  "clone_ok": true,
+  "commit_pinned": "ac2a73296fe0ca520a90f007942935be4d210e6b",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner"
+  ],
+  "findings": {
+    "secrets": [
+      {
+        "file": "test/cassettes/Report-Service_3431112000/retrieves-all-reports_3952278090/recording.har",
+        "label": "aws access key",
+        "match_redacted": true
+      },
+      {
+        "file": "test/cassettes/Report-Service_3431112000/retrieves-all-reports_3952278090/recording.har",
+        "label": "aws access key",
+        "match_redacted": true
+      },
+      {
+        "file": "test/cassettes/Report-Service_3431112000/retrieves-all-reports_3952278090/recording.har",
+        "label": "aws access key",
+        "match_redacted": true
+      },
+      {
+        "file": "test/cassettes/Report-Service_3431112000/retrieves-all-reports_3952278090/recording.har",
+        "label": "aws access key",
+        "match_redacted": true
+      },
+      {
+        "file": "test/cassettes/Report-Service_3431112000/retrieves-next-page-of-reports_2554341452/recording.har",
+        "label": "aws access key",
+        "match_redacted": true
+      },
+      {
+        "file": "test/cassettes/Report-Service_3431112000/retrieves-next-page-of-reports_2554341452/recording.har",
+        "label": "aws access key",
+        "match_redacted": true
+      },
+      {
+        "file": "test/cassettes/Report-Service_3431112000/retrieves-next-page-of-reports_2554341452/recording.har",
+        "label": "aws access key",
+        "match_redacted": true
+      },
+      {
+        "file": "test/cassettes/Report-Service_3431112000/retrieves-next-page-of-reports_2554341452/recording.har",
+        "label": "aws access key",
+        "match_redacted": true
+      },
+      {
+        "file": "test/cassettes/Report-Service_3431112000/retrieves-next-page-of-reports_2554341452/recording.har",
+        "label": "aws access key",
+        "match_redacted": true
+      },
+      {
+        "file": "test/cassettes/Report-Service_3431112000/retrieves-next-page-of-reports_2554341452/recording.har",
+        "label": "aws access key",
+        "match_redacted": true
+      },
+      {
+        "file": "test/cassettes/Report-Service_3431112000/retrieves-next-page-of-reports_2554341452/recording.har",
+        "label": "aws access key",
+        "match_redacted": true
+      },
+      {
+        "file": "test/cassettes/Report-Service_3431112000/retrieves-next-page-of-reports_2554341452/recording.har",
+        "label": "aws access key",
+        "match_redacted": true
+      },
+      {
+        "file": "test/cassettes/Report-Service_3431112000/retrieves-next-page-of-reports_2554341452/recording.har",
+        "label": "aws access key",
+        "match_redacted": true
+      },
+      {
+        "file": "test/cassettes/Report-Service_3431112000/retrieves-next-page-of-reports_2554341452/recording.har",
+        "label": "aws access key",
+        "match_redacted": true
+      }
+    ],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "github.com": [
+        ".github/ISSUE_TEMPLATE/bug_report.yml",
+        ".github/ISSUE_TEMPLATE/feature_request.yml",
+        ".gitmodules",
+        "README.md",
+        "UPGRADE_GUIDE.md"
+      ],
+      "support.easypost.com": [
+        "CHANGELOG.md",
+        "types/FedExRegistration/FedExRegistration.d.ts"
+      ],
+      "registry.npmjs.org": [
+        ".github/workflows/release.yml",
+        "package-lock.json",
+        "types/demo/package-lock.json"
+      ],
+      "opencollective.com": [
+        "package-lock.json"
+      ],
+      "paulmillr.com": [
+        "package-lock.json"
+      ],
+      "tidelift.com": [
+        "package-lock.json"
+      ],
+      "eslint.org": [
+        "package-lock.json"
+      ],
+      "ko-fi.com": [
+        "package-lock.json"
+      ],
+      "www.patreon.com": [
+        "package-lock.json"
+      ],
+      "feross.org": [
+        "package-lock.json"
+      ],
+      "easypost.com": [
+        "README.md",
+        "package.json"
+      ],
+      "codecov.io": [
+        "README.md"
+      ],
+      "badge.fury.io": [
+        "README.md"
+      ],
+      "api.easypost.com": [
+        "README.md",
+        "src/easypost.js",
+        "test/cassettes/Address-Service_1115845720/creates-a-verified-address_2691107999/recording.har",
+        "test/cassettes/Address-Service_1115845720/creates-an-address-with-an-array-verify-param_1154761701/recording.har",
+        "test/cassettes/Address-Service_1115845720/creates-an-address-with-verify-param_348500273/recording.har"
+      ],
+      "docs.easypost.com": [
+        "README.md",
+        "src/models/address.js",
+        "src/models/api_key.js",
+        "src/models/batch.js",
+        "src/models/brand.js"
+      ],
+      "easypost.github.io": [
+        "README.md"
+      ],
+      "flaviocopes.com": [
+        ".github/ISSUE_TEMPLATE/bug_report.yml"
+      ],
+      "api.stripe.com": [
+        "src/services/referral_customer_service.js",
+        "test/cassettes/ReferralCustomer-Service_3380152635/add-a-referral-user-credit-card_1978527022/recording.har"
+      ],
+      "easypost-files.s3.us-west-2.amazonaws.com": [
+        "test/cassettes/Batch-Service_3950244400/adds-and-removes-shipments-from-a-batch_444431701/recording.har",
+        "test/cassettes/Claim-Service_1417924316/cancels-a-standalone-claim_1710270578/recording.har",
+        "test/cassettes/Claim-Service_1417924316/creates-a-claim-object_2101092128/recording.har",
+        "test/cassettes/Claim-Service_1417924316/retrieves-a-claim-object_3414227044/recording.har",
+        "test/cassettes/Insurance-Service_1251316388/creates-an-insurance-object_4069302148/recording.har"
+      ],
+      "track.easypost.com": [
+        "test/cassettes/Batch-Service_3950244400/adds-and-removes-shipments-from-a-batch_444431701/recording.har",
+        "test/cassettes/Claim-Service_1417924316/cancels-a-standalone-claim_1710270578/recording.har",
+        "test/cassettes/Claim-Service_1417924316/creates-a-claim-object_2101092128/recording.har",
+        "test/cassettes/Claim-Service_1417924316/retrieves-a-claim-object_3414227044/recording.har",
+        "test/cassettes/Insurance-Service_1251316388/creates-an-insurance-object_4069302148/recording.har"
+      ],
+      "easypost-files.s3-us-west-2.amazonaws.com": [
+        "test/cassettes/Claim-Service_1417924316/cancels-a-standalone-claim_1710270578/recording.har",
+        "test/cassettes/Claim-Service_1417924316/creates-a-claim-object_2101092128/recording.har",
+        "test/cassettes/Claim-Service_1417924316/retrieves-a-claim-object_3414227044/recording.har",
+        "test/cassettes/Claim-Service_1417924316/retrieves-all-claim-objects_2221815381/recording.har",
+        "test/cassettes/Claim-Service_1417924316/retrieves-next-page-of-claims_131645032/recording.har"
+      ],
+      "app.easypost.com": [
+        "test/cassettes/CustomerPortal-Service_2920490948/creates-a-portal-session_1527218545/recording.har"
+      ],
+      "q.stripe.com": [
+        "test/cassettes/ReferralCustomer-Service_3380152635/add-a-referral-user-credit-card_1978527022/recording.har"
+      ],
+      "assets.easypost.com": [
+        "test/cassettes/User-Service_2658581389/updates-the-authenticated-user-s-brand_879260623/recording.har"
+      ],
+      "www.easypost.com": [
+        "test/cassettes/User-Service_2658581389/updates-the-authenticated-user-s-brand_879260623/recording.har"
+      ],
+      "hts.usitc.gov": [
+        "types/Customs/CustomsItem/CustomsItem.d.ts"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\easypost__easypost-node\\gitleaks.json",
+      "exit_code": 1,
+      "output_path": "_logs/scan/easypost__easypost-node/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/easypost__easypost-node/osv.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "test-path secret findings (14); gitleaks: 30 test-path secret(s)",
+  "files_scanned": 467,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

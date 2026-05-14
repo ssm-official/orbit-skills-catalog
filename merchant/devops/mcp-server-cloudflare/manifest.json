@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0",
+  "id": "merchant.devops.mcp-server-cloudflare",
+  "name": "Cloudflare MCP Server",
+  "slug": "mcp-server-cloudflare",
+  "track": [
+    "merchant"
+  ],
+  "category": "devops",
+  "slot": "mcp-server-cloudflare",
+  "summary": "mcp-server-cloudflare \u2014 see vendor URL for capability details.",
+  "version": "1.0.0",
+  "source": {
+    "kind": "mcp_server",
+    "repo_url": "https://github.com/cloudflare/mcp-server-cloudflare",
+    "commit_pinned": "10a47554af4d10d022e7ad75d83bfd012167fe35",
+    "license": "Apache-2.0",
+    "last_commit_at": "2026-04-30",
+    "stars": 3739,
+    "primary_language": "TypeScript",
+    "maintainer": "cloudflare"
+  },
+  "upstream": {
+    "vendor": "Cloudflare",
+    "vendor_url": "https://cloudflare.com",
+    "auth_type": "api_key",
+    "sandbox_available": true,
+    "requires_user_oauth": true,
+    "cost_model": "freemium",
+    "typical_per_call_cost_usd": "varies"
+  },
+  "x402_compatible": true,
+  "x402_notes": "per-call, deterministic JSON response",
+  "tools": [
+    {
+      "name": "primary",
+      "summary": "Primary entry point (smoke-tested via import / require). Tool catalogue derived at runtime from the upstream package.",
+      "destructive": false,
+      "idempotent": true,
+      "rate_limit": "see upstream docs"
+    }
+  ],
+  "tags": [
+    "devops",
+    "cloudflare",
+    "merchant"
+  ],
+  "risk": {
+    "prompt_injection": "low",
+    "destructive": false,
+    "spend_capable": false,
+    "regulated_data": [],
+    "default_mode": "live"
+  },
+  "audit": {
+    "verdict": "pass_with_notes",
+    "log": "audit.json",
+    "scanners_run": [
+      "orbit_pattern_scan",
+      "install_hook_audit",
+      "gitleaks",
+      "osv-scanner"
+    ],
+    "behavioral_check": "clean_with_notes"
+  },
+  "smoke": {
+    "verdict": "deferred",
+    "log": "smoke.json",
+    "last_passed_at": "2026-05-14T06:10:41.103499+00:00"
+  },
+  "orbit": {
+    "suggested_markup_floor_pct": 5,
+    "suggested_markup_ceiling_pct": 50,
+    "pricing_note": "Upstream cost model: freemium.",
+    "tokenization_friendly": true
+  },
+  "notes": "discovered_from:punkpeye"
+}

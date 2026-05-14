@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "id": "merchant.finance.stripe-py",
+  "name": "Stripe SDK (Python)",
+  "slug": "stripe-py",
+  "track": [
+    "merchant"
+  ],
+  "category": "finance",
+  "slot": "stripe-py",
+  "summary": "Official Stripe Python SDK",
+  "version": "1.0.0",
+  "source": {
+    "kind": "sdk_wrapper",
+    "repo_url": "https://github.com/stripe/stripe-python",
+    "commit_pinned": "41a2ece934c8d365b9fc88253bc3c4675913d09e",
+    "license": "MIT",
+    "last_commit_at": "2026-05-14",
+    "stars": 2002,
+    "primary_language": "Python",
+    "maintainer": "stripe"
+  },
+  "upstream": {
+    "vendor": "Stripe",
+    "vendor_url": "https://stripe.com",
+    "auth_type": "api_key",
+    "sandbox_available": true,
+    "requires_user_oauth": false,
+    "cost_model": "paid_per_call",
+    "typical_per_call_cost_usd": "0.005\u20130.029 per txn"
+  },
+  "x402_compatible": false,
+  "x402_notes": "spend-capable in live mode \u2014 needs sandbox-gated invocation in Orbit",
+  "tools": [
+    {
+      "name": "primary",
+      "summary": "Primary entry point (smoke-tested via import / require). Tool catalogue derived at runtime from the upstream package.",
+      "destructive": false,
+      "idempotent": true,
+      "rate_limit": "see upstream docs"
+    }
+  ],
+  "tags": [
+    "finance",
+    "stripe",
+    "merchant"
+  ],
+  "risk": {
+    "prompt_injection": "low",
+    "destructive": false,
+    "spend_capable": true,
+    "regulated_data": [
+      "pii"
+    ],
+    "default_mode": "live"
+  },
+  "audit": {
+    "verdict": "pass_with_notes",
+    "log": "audit.json",
+    "scanners_run": [
+      "orbit_pattern_scan",
+      "install_hook_audit",
+      "gitleaks",
+      "osv-scanner",
+      "pip-audit"
+    ],
+    "behavioral_check": "clean_with_notes"
+  },
+  "smoke": {
+    "verdict": "pass",
+    "log": "smoke.json",
+    "last_passed_at": "2026-05-14T06:09:54.482428+00:00"
+  },
+  "orbit": {
+    "suggested_markup_floor_pct": 5,
+    "suggested_markup_ceiling_pct": 50,
+    "pricing_note": "Upstream cost model: paid_per_call.",
+    "tokenization_friendly": false
+  },
+  "notes": "Official Stripe Python SDK"
+}

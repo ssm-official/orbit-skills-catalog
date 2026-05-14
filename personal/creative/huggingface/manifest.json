@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "id": "both.creative.huggingface",
+  "name": "Hugging Face Hub",
+  "slug": "huggingface",
+  "track": [
+    "personal",
+    "merchant"
+  ],
+  "category": "creative",
+  "slot": "huggingface",
+  "summary": "Hugging Face hub client",
+  "version": "1.0.0",
+  "source": {
+    "kind": "sdk_wrapper",
+    "repo_url": "https://github.com/huggingface/huggingface_hub",
+    "commit_pinned": "9c05199c41e8a1dc20082a25af2d6927a4c21002",
+    "license": "Apache-2.0",
+    "last_commit_at": "2026-05-13",
+    "stars": 3591,
+    "primary_language": "Python",
+    "maintainer": "huggingface"
+  },
+  "upstream": {
+    "vendor": "Hugging Face",
+    "vendor_url": "https://huggingface.co",
+    "auth_type": "api_key",
+    "sandbox_available": false,
+    "requires_user_oauth": false,
+    "cost_model": "freemium",
+    "typical_per_call_cost_usd": "free tier + paid pro"
+  },
+  "x402_compatible": true,
+  "x402_notes": "per-call, deterministic JSON response",
+  "tools": [
+    {
+      "name": "primary",
+      "summary": "Primary entry point (smoke-tested via import / require). Tool catalogue derived at runtime from the upstream package.",
+      "destructive": false,
+      "idempotent": true,
+      "rate_limit": "see upstream docs"
+    }
+  ],
+  "tags": [
+    "creative",
+    "huggingface",
+    "both"
+  ],
+  "risk": {
+    "prompt_injection": "low",
+    "destructive": false,
+    "spend_capable": false,
+    "regulated_data": [],
+    "default_mode": "live"
+  },
+  "audit": {
+    "verdict": "pass_with_notes",
+    "log": "audit.json",
+    "scanners_run": [
+      "orbit_pattern_scan",
+      "install_hook_audit",
+      "gitleaks",
+      "osv-scanner",
+      "pip-audit"
+    ],
+    "behavioral_check": "clean_with_notes"
+  },
+  "smoke": {
+    "verdict": "pass",
+    "log": "smoke.json",
+    "last_passed_at": "2026-05-14T06:08:04.164524+00:00"
+  },
+  "orbit": {
+    "suggested_markup_floor_pct": 5,
+    "suggested_markup_ceiling_pct": 50,
+    "pricing_note": "Upstream cost model: freemium.",
+    "tokenization_friendly": true
+  },
+  "notes": "Hugging Face hub client"
+}

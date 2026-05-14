@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "id": "both.comms.twilio-node",
+  "name": "Twilio SDK (Node)",
+  "slug": "twilio-node",
+  "track": [
+    "personal",
+    "merchant"
+  ],
+  "category": "comms",
+  "slot": "twilio-node",
+  "summary": "Twilio Node SDK",
+  "version": "1.0.0",
+  "source": {
+    "kind": "sdk_wrapper",
+    "repo_url": "https://github.com/twilio/twilio-node",
+    "commit_pinned": "e9e546985dcc293e4f71888160725739e7b28c37",
+    "license": "MIT",
+    "last_commit_at": "2026-05-07",
+    "stars": 1534,
+    "primary_language": "TypeScript",
+    "maintainer": "twilio"
+  },
+  "upstream": {
+    "vendor": "Twilio",
+    "vendor_url": "https://twilio.com",
+    "auth_type": "api_key",
+    "sandbox_available": true,
+    "requires_user_oauth": false,
+    "cost_model": "paid_per_call",
+    "typical_per_call_cost_usd": "~0.0075/SMS, ~0.013/min"
+  },
+  "x402_compatible": true,
+  "x402_notes": "per-call, deterministic JSON response",
+  "tools": [
+    {
+      "name": "primary",
+      "summary": "Primary entry point (smoke-tested via import / require). Tool catalogue derived at runtime from the upstream package.",
+      "destructive": false,
+      "idempotent": true,
+      "rate_limit": "see upstream docs"
+    }
+  ],
+  "tags": [
+    "comms",
+    "twilio",
+    "both"
+  ],
+  "risk": {
+    "prompt_injection": "low",
+    "destructive": false,
+    "spend_capable": false,
+    "regulated_data": [],
+    "default_mode": "live"
+  },
+  "audit": {
+    "verdict": "pass_with_notes",
+    "log": "audit.json",
+    "scanners_run": [
+      "orbit_pattern_scan",
+      "install_hook_audit",
+      "gitleaks",
+      "osv-scanner"
+    ],
+    "behavioral_check": "clean_with_notes"
+  },
+  "smoke": {
+    "verdict": "deferred",
+    "log": "smoke.json",
+    "last_passed_at": "2026-05-14T06:09:46.330668+00:00"
+  },
+  "orbit": {
+    "suggested_markup_floor_pct": 5,
+    "suggested_markup_ceiling_pct": 50,
+    "pricing_note": "Upstream cost model: paid_per_call.",
+    "tokenization_friendly": false
+  },
+  "notes": "Twilio Node SDK"
+}

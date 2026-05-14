@@ -1,0 +1,419 @@
+{
+  "source_url": "https://github.com/anthropics/anthropic-sdk-python",
+  "proposed_slot": "both.creative.anthropic-py",
+  "scanned_at": "2026-05-14T05:53:11.313944+00:00",
+  "clone_ok": true,
+  "commit_pinned": "9aa85c8a3c099e8a49206aad37ff1e96af69b824",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner",
+    "pip-audit"
+  ],
+  "findings": {
+    "secrets": [
+      {
+        "file": "tests/lib/test_aws_auth.py",
+        "label": "aws access key",
+        "match_redacted": true
+      },
+      {
+        "file": "tests/lib/test_aws_auth.py",
+        "label": "aws access key",
+        "match_redacted": true
+      },
+      {
+        "file": "tests/lib/test_aws_auth.py",
+        "label": "aws access key",
+        "match_redacted": true
+      },
+      {
+        "file": "tests/lib/test_aws_auth.py",
+        "label": "aws access key",
+        "match_redacted": true
+      },
+      {
+        "file": "tests/lib/test_aws_auth.py",
+        "label": "aws access key",
+        "match_redacted": true
+      },
+      {
+        "file": "tests/lib/test_aws_auth.py",
+        "label": "aws access key",
+        "match_redacted": true
+      },
+      {
+        "file": "tests/lib/test_aws_auth.py",
+        "label": "aws access key",
+        "match_redacted": true
+      },
+      {
+        "file": "tests/lib/test_aws_auth.py",
+        "label": "aws access key",
+        "match_redacted": true
+      },
+      {
+        "file": "tests/lib/test_aws_auth.py",
+        "label": "aws access key",
+        "match_redacted": true
+      }
+    ],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "storage.googleapis.com": [
+        ".stats.yml"
+      ],
+      "github.com": [
+        ".devcontainer/devcontainer.json",
+        "CHANGELOG.md",
+        "CONTRIBUTING.md",
+        "pyproject.toml",
+        "scripts/bootstrap"
+      ],
+      "platform.claude.com": [
+        "CONTRIBUTING.md",
+        "README.md",
+        "src/anthropic/lib/tools/_beta_compaction_control.py",
+        "src/anthropic/lib/tools/_beta_runner.py",
+        "src/anthropic/resources/beta/agents/agents.py"
+      ],
+      "docs.astral.sh": [
+        "CONTRIBUTING.md"
+      ],
+      "docs.python.org": [
+        "CONTRIBUTING.md"
+      ],
+      "15r10nk.github.io": [
+        "CONTRIBUTING.md"
+      ],
+      "www.github.com": [
+        ".github/workflows/publish-pypi.yml",
+        "CONTRIBUTING.md",
+        "src/anthropic/lib/bedrock/_beta.py",
+        "src/anthropic/lib/bedrock/_beta_messages.py",
+        "src/anthropic/lib/vertex/_beta.py"
+      ],
+      "docs.anthropic.com": [
+        "README.md",
+        "helpers.md",
+        "src/anthropic/_exceptions.py",
+        "src/anthropic/resources/beta/messages/messages.py",
+        "src/anthropic/resources/completions.py"
+      ],
+      "modelcontextprotocol.io": [
+        "helpers.md"
+      ],
+      "pypi.org": [
+        "pyproject.toml",
+        "uv.lock"
+      ],
+      "img.shields.io": [
+        "README.md"
+      ],
+      "raw.githubusercontent.com": [
+        "release-please-config.json"
+      ],
+      "stainless.com": [
+        "SECURITY.md"
+      ],
+      "files.pythonhosted.org": [
+        "uv.lock"
+      ],
+      "aka.ms": [
+        ".devcontainer/devcontainer.json"
+      ],
+      "containers.dev": [
+        ".devcontainer/devcontainer.json"
+      ],
+      "help.github.com": [
+        ".github/CODEOWNERS"
+      ],
+      "pkg.stainless.com": [
+        ".github/workflows/ci.yml",
+        "scripts/utils/upload-artifact.sh"
+      ],
+      "api.githubcopilot.com": [
+        "examples/agents_comprehensive.py"
+      ],
+      "boto3.amazonaws.com": [
+        "examples/bedrock.py"
+      ],
+      "api.anthropic.com": [
+        "examples/workload_identity.py",
+        "src/anthropic/_client.py",
+        "src/anthropic/lib/credentials/_chain.py",
+        "src/anthropic/lib/credentials/_constants.py",
+        "tests/lib/_parse/__inline_snapshot__/test_beta_messages/TestAsyncMessages/9381e2b7-7fa1-46f7-9f78-46dc8431ea9d.json"
+      ],
+      "www.python-httpx.org": [
+        "src/anthropic/_base_client.py",
+        "src/anthropic/_client.py",
+        "src/anthropic/lib/bedrock/_client.py",
+        "src/anthropic/lib/vertex/_client.py"
+      ],
+      "developer.mozilla.org": [
+        "src/anthropic/_base_client.py"
+      ],
+      "distro.readthedocs.io": [
+        "src/anthropic/_base_client.py"
+      ],
+      "docs.pydantic.dev": [
+        "src/anthropic/_models.py",
+        "tests/utils.py"
+      ],
+      "html.spec.whatwg.org": [
+        "src/anthropic/_streaming.py"
+      ],
+      "ai.azure.com": [
+        "src/anthropic/lib/foundry.md"
+      ],
+      "example-resource.services.ai.azure.com": [
+        "src/anthropic/lib/foundry.py",
+        "tests/lib/test_azure.py"
+      ],
+      "aws-external-anthropic": [
+        "src/anthropic/lib/aws/_credentials.py",
+        "tests/lib/test_aws.py"
+      ],
+      "bedrock-runtime": [
+        "src/anthropic/lib/bedrock/_client.py",
+        "tests/lib/test_bedrock.py"
+      ],
+      "bedrock-mantle": [
+        "src/anthropic/lib/bedrock/_mantle.py",
+        "tests/lib/test_aws_auth.py"
+      ],
+      "[::1]": [
+        "src/anthropic/lib/credentials/_constants.py"
+      ],
+      "evil": [
+        "src/anthropic/lib/credentials/_providers.py",
+        "tests/lib/test_credentials.py"
+      ],
+      "www.googleapis.com": [
+        "src/anthropic/lib/vertex/_auth.py"
+      ],
+      "aiplatform.googleapis.com": [
+        "src/anthropic/lib/vertex/_client.py",
+        "tests/lib/test_vertex.py"
+      ],
+      "aiplatform.us.rep.googleapis.com": [
+        "src/anthropic/lib/vertex/_client.py",
+        "tests/lib/test_vertex.py"
+      ],
+      "aiplatform.eu.rep.googleapis.com": [
+        "src/anthropic/lib/vertex/_client.py",
+        "tests/lib/test_vertex.py"
+      ],
+      "docs.claude.com": [
+        "src/anthropic/resources/beta/messages/batches.py",
+        "src/anthropic/resources/beta/messages/messages.py",
+        "src/anthropic/resources/completions.py",
+        "src/anthropic/resources/messages/batches.py",
+        "src/anthropic/resources/messages/messages.py"
+      ],
+      "towardsdatascience.com": [
+        "src/anthropic/resources/beta/messages/messages.py",
+        "src/anthropic/resources/completions.py",
+        "src/anthropic/resources/messages/messages.py",
+        "src/anthropic/types/beta/message_create_params.py",
+        "src/anthropic/types/completion_create_params.py"
+      ],
+      "json-schema.org": [
+        "src/anthropic/resources/beta/messages/messages.py",
+        "src/anthropic/resources/messages/messages.py",
+        "src/anthropic/types/beta/beta_tool_param.py",
+        "src/anthropic/types/beta/message_count_tokens_params.py",
+        "src/anthropic/types/beta/message_create_params.py"
+      ],
+      "en.wikipedia.org": [
+        "src/anthropic/types/beta/beta_user_location_param.py",
+        "src/anthropic/types/user_location_param.py"
+      ],
+      "nodatime.org": [
+        "src/anthropic/types/beta/beta_user_location_param.py",
+        "src/anthropic/types/user_location_param.py"
+      ],
+      "jsonlines.org": [
+        "src/anthropic/_decoders/jsonl.py"
+      ],
+      "datatracker.ietf.org": [
+        "src/anthropic/_utils/_path.py"
+      ],
+      "myapi.com": [
+        "tests/test_client.py"
+      ],
+      "example.org": [
+        "tests/test_client.py"
+      ],
+      "example-server.modelcontextprotocol.io": [
+        "tests/api_resources/beta/test_agents.py",
+        "tests/api_resources/beta/vaults/test_credentials.py"
+      ],
+      "custom.example.com": [
+        "tests/lib/test_aws.py",
+        "tests/lib/test_aws_auth.py",
+        "tests/lib/test_bedrock_mantle.py"
+      ],
+      "custom": [
+        "tests/lib/test_aws.py"
+      ],
+      "custom-gateway.example.com": [
+        "tests/lib/test_aws.py"
+      ],
+      "aws-external-anthropic.eu-central-1.api.aws": [
+        "tests/lib/test_aws.py"
+      ],
+      "aws-external-anthropic.eu-west-1.api.aws": [
+        "tests/lib/test_aws.py"
+      ],
+      "aws-external-anthropic.us-east-1.api.aws": [
+        "tests/lib/test_aws.py"
+      ],
+      "env-gateway.example.com": [
+        "tests/lib/test_aws_auth.py"
+      ],
+      "aws-external-anthropic.us-west-2.api.aws": [
+        "tests/lib/test_aws_auth.py"
+      ],
+      "arg.example.com": [
+        "tests/lib/test_aws_auth.py"
+      ],
+      "bedrock-mantle.us-east-1.api.aws": [
+        "tests/lib/test_aws_auth.py",
+        "tests/lib/test_bedrock_mantle.py"
+      ],
+      "mantle.example.com": [
+        "tests/lib/test_aws_auth.py"
+      ],
+      "aws-fallback.example.com": [
+        "tests/lib/test_aws_auth.py"
+      ],
+      "gateway.us-east-1.api.aws": [
+        "tests/lib/test_aws_auth.py"
+      ],
+      "example.services.ai.azure.com": [
+        "tests/lib/test_azure.py"
+      ],
+      "docs.aws.amazon.com": [
+        "tests/lib/test_bedrock.py"
+      ],
+      "bedrock-runtime.us-east-1.amazonaws.com": [
+        "tests/lib/test_bedrock.py"
+      ],
+      "bedrock-mantle.us-west-2.api.aws": [
+        "tests/lib/test_bedrock_mantle.py"
+      ],
+      "from-env.example.com": [
+        "tests/lib/test_bedrock_mantle.py"
+      ],
+      "from-arg.example.com": [
+        "tests/lib/test_bedrock_mantle.py"
+      ],
+      "bedrock-mantle.eu-west-1.api.aws": [
+        "tests/lib/test_bedrock_mantle.py"
+      ],
+      "bound.example": [
+        "tests/lib/test_credentials.py"
+      ],
+      "from-config.example": [
+        "tests/lib/test_credentials.py"
+      ],
+      "first.example": [
+        "tests/lib/test_credentials.py"
+      ],
+      "second.example": [
+        "tests/lib/test_credentials.py"
+      ],
+      "evil.example": [
+        "tests/lib/test_credentials.py"
+      ],
+      "evil.example.com": [
+        "tests/lib/test_credentials.py"
+      ],
+      "from-config.example.com": [
+        "tests/lib/test_credentials.py"
+      ],
+      "api-staging.example": [
+        "tests/lib/test_credentials.py"
+      ],
+      "staging.example": [
+        "tests/lib/test_credentials.py"
+      ],
+      "env.example": [
+        "tests/lib/test_credentials.py"
+      ],
+      "kwarg.example": [
+        "tests/lib/test_credentials.py"
+      ],
+      "api.example": [
+        "tests/lib/test_credentials.py"
+      ],
+      "region-aiplatform.googleapis.com": [
+        "tests/lib/test_vertex.py"
+      ],
+      "custom-endpoint.googleapis.com": [
+        "tests/lib/test_vertex.py"
+      ],
+      "test.googleapis.com": [
+        "tests/lib/test_vertex.py"
+      ],
+      "www.accuweather.com": [
+        "tests/lib/tools/__inline_snapshot__/test_runners/TestSyncRunTools/32da0815-2270-4d29-87be-3b5b63ab42e2.json"
+      ],
+      "www.wunderground.com": [
+        "tests/lib/tools/__inline_snapshot__/test_runners/TestSyncRunTools/32da0815-2270-4d29-87be-3b5b63ab42e2.json"
+      ],
+      "www.nbcbayarea.com": [
+        "tests/lib/tools/__inline_snapshot__/test_runners/TestSyncRunTools/32da0815-2270-4d29-87be-3b5b63ab42e2.json"
+      ],
+      "abc7news.com": [
+        "tests/lib/tools/__inline_snapshot__/test_runners/TestSyncRunTools/32da0815-2270-4d29-87be-3b5b63ab42e2.json"
+      ],
+      "www.weather.gov": [
+        "tests/lib/tools/__inline_snapshot__/test_runners/TestSyncRunTools/32da0815-2270-4d29-87be-3b5b63ab42e2.json"
+      ],
+      "www.theweathernetwork.com": [
+        "tests/lib/tools/__inline_snapshot__/test_runners/TestSyncRunTools/32da0815-2270-4d29-87be-3b5b63ab42e2.json"
+      ],
+      "forecast.weather.gov": [
+        "tests/lib/tools/__inline_snapshot__/test_runners/TestSyncRunTools/32da0815-2270-4d29-87be-3b5b63ab42e2.json"
+      ],
+      "weather.yahoo.com": [
+        "tests/lib/tools/__inline_snapshot__/test_runners/TestSyncRunTools/32da0815-2270-4d29-87be-3b5b63ab42e2.json"
+      ],
+      "www.cbsnews.com": [
+        "tests/lib/tools/__inline_snapshot__/test_runners/TestSyncRunTools/32da0815-2270-4d29-87be-3b5b63ab42e2.json"
+      ],
+      "www.anthropic.com": [
+        "tests/lib/_parse/__inline_snapshot__/test_messages/TestAsyncParse/d743d628-16aa-4c9f-ae78-51deb578f746.json",
+        "tests/lib/_parse/__inline_snapshot__/test_messages/TestAsyncStream/a8b7dbb8-2321-4624-abdb-7ba2136b5c38.json"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\anthropics__anthropic-sdk-python\\gitleaks.json",
+      "exit_code": 1,
+      "output_path": "_logs/scan/anthropics__anthropic-sdk-python/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/anthropics__anthropic-sdk-python/osv.json"
+    },
+    "pip_audit": {
+      "exit_code": 0,
+      "output_path": "_logs/scan/anthropics__anthropic-sdk-python/pip-audit.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "test-path secret findings (9); trusted-vendor: 1 gitleaks finding(s) downgraded to notes (likely SDK docs/example values); gitleaks: 1 test-path secret(s)",
+  "files_scanned": 1040,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

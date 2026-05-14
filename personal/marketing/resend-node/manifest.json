@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "id": "both.marketing.resend-node",
+  "name": "Resend SDK (Node)",
+  "slug": "resend-node",
+  "track": [
+    "personal",
+    "merchant"
+  ],
+  "category": "marketing",
+  "slot": "resend-node",
+  "summary": "Resend Node SDK",
+  "version": "1.0.0",
+  "source": {
+    "kind": "sdk_wrapper",
+    "repo_url": "https://github.com/resend/resend-node",
+    "commit_pinned": "6cf8c669b725b26c99180c04edc2415efada1e2b",
+    "license": "MIT",
+    "last_commit_at": "2026-05-13",
+    "stars": 906,
+    "primary_language": "TypeScript",
+    "maintainer": "resend"
+  },
+  "upstream": {
+    "vendor": "Resend",
+    "vendor_url": "https://resend.com",
+    "auth_type": "api_key",
+    "sandbox_available": false,
+    "requires_user_oauth": false,
+    "cost_model": "freemium",
+    "typical_per_call_cost_usd": "free tier 100/day"
+  },
+  "x402_compatible": true,
+  "x402_notes": "per-call, deterministic JSON response",
+  "tools": [
+    {
+      "name": "primary",
+      "summary": "Primary entry point (smoke-tested via import / require). Tool catalogue derived at runtime from the upstream package.",
+      "destructive": true,
+      "idempotent": false,
+      "rate_limit": "see upstream docs"
+    }
+  ],
+  "tags": [
+    "marketing",
+    "resend",
+    "both"
+  ],
+  "risk": {
+    "prompt_injection": "low",
+    "destructive": true,
+    "spend_capable": false,
+    "regulated_data": [],
+    "default_mode": "dry_run"
+  },
+  "audit": {
+    "verdict": "pass_with_notes",
+    "log": "audit.json",
+    "scanners_run": [
+      "orbit_pattern_scan",
+      "install_hook_audit",
+      "gitleaks",
+      "osv-scanner"
+    ],
+    "behavioral_check": "clean_with_notes"
+  },
+  "smoke": {
+    "verdict": "deferred",
+    "log": "smoke.json",
+    "last_passed_at": "2026-05-14T06:09:32.805206+00:00"
+  },
+  "orbit": {
+    "suggested_markup_floor_pct": 5,
+    "suggested_markup_ceiling_pct": 50,
+    "pricing_note": "Upstream cost model: freemium.",
+    "tokenization_friendly": true
+  },
+  "notes": "Resend Node SDK"
+}

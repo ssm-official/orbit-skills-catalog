@@ -1,0 +1,36 @@
+{
+  "source_url": "https://github.com/danielgatis/rembg",
+  "proposed_slot": "both.creative.rembg",
+  "smoked_at": "2026-05-14T06:08:59.734043+00:00",
+  "platform": "windows",
+  "sandbox": "fresh venv / fresh node_modules (Docker unavailable on host)",
+  "network_monitoring": "Get-NetTCPConnection deltas (weaker than netns isolation)",
+  "package": "rembg",
+  "language": "python",
+  "kind": "python",
+  "steps": [
+    {
+      "step": "uv_dryrun",
+      "rc": 0,
+      "stderr": ""
+    },
+    {
+      "step": "uv_run_import",
+      "rc": 1,
+      "stdout": "No onnxruntime backend found.\nPlease install rembg with CPU or GPU support:\n\n    pip install \"rembg[cpu]\"  # for CPU\n    pip install \"rembg[gpu]\"  # for NVIDIA/CUDA GPU\n\nFor more information, see: https://github.com/danielgatis/rembg#installation\n",
+      "stderr": "ipy (34.8MiB)\nDownloading numpy (11.7MiB)\nDownloading numba (2.6MiB)\nDownloading scikit-image (11.4MiB)\nDownloading llvmlite (36.4MiB)\n      Built rembg @ file:///C:/Users/ssmca/orbit-skills-catalog/candidates/danielgatis__rembg\n Downloaded networkx\n Downloaded numba\n Downloaded pillow\n Downloaded scikit-image\n Downloaded numpy\n Downloaded scipy\n Downloaded llvmlite\nInstalled 27 packages in 964ms\n",
+      "new_outbound_connections": [
+        {
+          "host": "151.101.0.223",
+          "port": 443
+        },
+        {
+          "host": "151.101.192.223",
+          "port": 443
+        }
+      ]
+    }
+  ],
+  "verdict": "pass_with_notes",
+  "reason": "installable but direct import rembg failed (may use non-standard module name)"
+}

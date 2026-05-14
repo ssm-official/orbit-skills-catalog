@@ -1,0 +1,32 @@
+{
+  "source_url": "https://github.com/sendgrid/sendgrid-python",
+  "proposed_slot": "merchant.marketing.sendgrid-py",
+  "smoked_at": "2026-05-14T06:09:10.959629+00:00",
+  "platform": "windows",
+  "sandbox": "fresh venv / fresh node_modules (Docker unavailable on host)",
+  "network_monitoring": "Get-NetTCPConnection deltas (weaker than netns isolation)",
+  "package": "sendgrid",
+  "language": "python",
+  "kind": "python",
+  "steps": [
+    {
+      "step": "uv_dryrun",
+      "rc": 0,
+      "stderr": ""
+    },
+    {
+      "step": "uv_run_import",
+      "rc": 0,
+      "stdout": "OK ['AmpHtmlContent', 'ApiKeyIncludedException', 'Asm', 'Attachment', 'BatchId', 'Bcc', 'BccSettings', 'BccSettingsEmail', 'BypassBounceManagement', 'BypassListManagement', 'BypassSpamManagement', 'BypassUnsubscribeManagement', 'Category', 'CategoryStats', 'Cc', 'ClickTracking', 'Content', 'ContentId', 'CustomArg', 'Disposition']\n",
+      "stderr": "   Building sendgrid @ file:///C:/Users/ssmca/orbit-skills-catalog/candidates/sendgrid__sendgrid-python\n      Built sendgrid @ file:///C:/Users/ssmca/orbit-skills-catalog/candidates/sendgrid__sendgrid-python\nInstalled 7 packages in 70ms\n",
+      "new_outbound_connections": [
+        {
+          "host": "151.101.0.223",
+          "port": 443
+        }
+      ]
+    }
+  ],
+  "verdict": "pass",
+  "reason": "uv install + import OK"
+}

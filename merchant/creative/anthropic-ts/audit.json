@@ -1,0 +1,363 @@
+{
+  "source_url": "https://github.com/anthropics/anthropic-sdk-typescript",
+  "proposed_slot": "both.creative.anthropic-ts",
+  "scanned_at": "2026-05-14T05:53:31.771367+00:00",
+  "clone_ok": true,
+  "commit_pinned": "a53f60d59ca904f3e79296586642aac3ce68ae02",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [
+      {
+        "file": "src/internal/detect-platform.ts",
+        "label": "exec-call",
+        "snippet": ") {     const match = pattern.exec(navigator.userAgent);     if ("
+      },
+      {
+        "file": "src/internal/utils/path.ts",
+        "label": "exec-call",
+        "snippet": "match = invalidSegmentPattern.exec(pathOnly)) !== null) {       i"
+      }
+    ],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "storage.googleapis.com": [
+        ".stats.yml"
+      ],
+      "github.com": [
+        ".devcontainer/devcontainer.json",
+        ".github/workflows/claude.yml",
+        "CHANGELOG.md",
+        "CONTRIBUTING.md",
+        "MIGRATION.md"
+      ],
+      "platform.claude.com": [
+        "CONTRIBUTING.md",
+        "README.md",
+        "packages/bedrock-sdk/README.md",
+        "packages/foundry-sdk/README.md",
+        "packages/vertex-sdk/README.md"
+      ],
+      "classic.yarnpkg.com": [
+        "CONTRIBUTING.md"
+      ],
+      "www.github.com": [
+        ".github/workflows/publish-npm.yml",
+        "CONTRIBUTING.md"
+      ],
+      "www.npmjs.com": [
+        "CONTRIBUTING.md",
+        "packages/vertex-sdk/src/client.ts",
+        "src/_vendor/partial-json-parser/README.md"
+      ],
+      "developer.mozilla.org": [
+        "MIGRATION.md",
+        "src/client.ts",
+        "src/internal/builtin-types.ts",
+        "src/internal/to-file.ts"
+      ],
+      "nodejs.org": [
+        "MIGRATION.md",
+        "src/internal/detect-platform.ts"
+      ],
+      "bun.sh": [
+        "MIGRATION.md"
+      ],
+      "img.shields.io": [
+        "README.md",
+        "packages/bedrock-sdk/README.md",
+        "packages/foundry-sdk/README.md",
+        "packages/vertex-sdk/README.md"
+      ],
+      "docs.anthropic.com": [
+        "README.md",
+        "src/resources/beta/agents/agents.ts",
+        "src/resources/beta/messages/batches.ts",
+        "src/resources/beta/messages/messages.ts",
+        "src/resources/completions.ts"
+      ],
+      "raw.githubusercontent.com": [
+        "release-please-config.json"
+      ],
+      "stainless.com": [
+        "SECURITY.md"
+      ],
+      "registry.yarnpkg.com": [
+        "packages/aws-sdk/yarn.lock",
+        "packages/bedrock-sdk/yarn.lock",
+        "packages/foundry-sdk/yarn.lock",
+        "packages/vertex-sdk/yarn.lock",
+        "yarn.lock"
+      ],
+      "aka.ms": [
+        ".devcontainer/devcontainer.json"
+      ],
+      "help.github.com": [
+        ".github/CODEOWNERS"
+      ],
+      "www.w3.org": [
+        ".github/logo.svg"
+      ],
+      "pkg.stainless.com": [
+        ".github/workflows/ci.yml",
+        "scripts/utils/upload-artifact.sh"
+      ],
+      "code.claude.com": [
+        ".github/workflows/claude.yml"
+      ],
+      "api.githubcopilot.com": [
+        "examples/agents-comprehensive.ts"
+      ],
+      "example-server.modelcontextprotocol.io": [
+        "examples/mcp.ts",
+        "src/resources/beta/vaults/credentials.ts",
+        "tests/api-resources/beta/agents/agents.test.ts",
+        "tests/api-resources/beta/vaults/credentials.test.ts"
+      ],
+      "aws-external-anthropic": [
+        "packages/aws-sdk/src/client.ts"
+      ],
+      "aws-external-anthropic.$": [
+        "packages/aws-sdk/src/client.ts"
+      ],
+      "aws-external-anthropic.us-east-1.api.aws": [
+        "packages/aws-sdk/tests/auth.test.ts",
+        "packages/aws-sdk/tests/client.test.ts"
+      ],
+      "aws-external-anthropic.eu-west-1.api.aws": [
+        "packages/aws-sdk/tests/client.test.ts"
+      ],
+      "custom.api.example.com": [
+        "packages/aws-sdk/tests/client.test.ts"
+      ],
+      "aws-external-anthropic.us-west-2.api.aws": [
+        "packages/aws-sdk/tests/client.test.ts"
+      ],
+      "custom.example.com": [
+        "packages/aws-sdk/tests/client.test.ts"
+      ],
+      "aws-external-anthropic.eu-west-2.api.aws": [
+        "packages/aws-sdk/tests/client.test.ts"
+      ],
+      "aws-external-anthropic.ca-central-1.api.aws": [
+        "packages/aws-sdk/tests/client.test.ts"
+      ],
+      "aws-external-anthropic.ap-southeast-1.api.aws": [
+        "packages/aws-sdk/tests/client.test.ts"
+      ],
+      "custom.gateway.api.aws": [
+        "packages/aws-sdk/tests/client.test.ts"
+      ],
+      "aws-external-anthropic.eu-central-1.api.aws": [
+        "packages/aws-sdk/tests/client.test.ts"
+      ],
+      "aws-external-anthropic.from-arg.api.aws": [
+        "packages/aws-sdk/tests/client.test.ts"
+      ],
+      "my-gateway.example.com": [
+        "packages/aws-sdk/tests/client.test.ts"
+      ],
+      "docs.aws.amazon.com": [
+        "packages/bedrock-sdk/README.md",
+        "packages/bedrock-sdk/examples/demo.ts",
+        "packages/bedrock-sdk/examples/streaming.ts"
+      ],
+      "endoflife.date": [
+        "packages/bedrock-sdk/README.md",
+        "packages/vertex-sdk/README.md"
+      ],
+      "bedrock-runtime.$": [
+        "packages/bedrock-sdk/src/client.ts"
+      ],
+      "bedrock-mantle": [
+        "packages/bedrock-sdk/src/mantle-client.ts"
+      ],
+      "bedrock-mantle.$": [
+        "packages/bedrock-sdk/src/mantle-client.ts"
+      ],
+      "bedrock-mantle.us-east-1.api.aws": [
+        "packages/bedrock-sdk/tests/bedrock-mantle.test.ts"
+      ],
+      "bedrock-mantle.us-west-2.api.aws": [
+        "packages/bedrock-sdk/tests/bedrock-mantle.test.ts"
+      ],
+      "custom.mantle.example.com": [
+        "packages/bedrock-sdk/tests/bedrock-mantle.test.ts"
+      ],
+      "from-env.example.com": [
+        "packages/bedrock-sdk/tests/bedrock-mantle.test.ts",
+        "tests/credentials.test.ts"
+      ],
+      "from-arg.example.com": [
+        "packages/bedrock-sdk/tests/bedrock-mantle.test.ts"
+      ],
+      "ai.azure.com": [
+        "packages/foundry-sdk/README.md",
+        "packages/foundry-sdk/examples/adTokenProvider.ts"
+      ],
+      "example-resource.azure.anthropic.com": [
+        "packages/foundry-sdk/src/client.ts"
+      ],
+      "$": [
+        "packages/foundry-sdk/src/client.ts",
+        "packages/vertex-sdk/src/client.ts",
+        "packages/vertex-sdk/tests/client.test.ts"
+      ],
+      "example-resource.services.ai.azure.com": [
+        "packages/foundry-sdk/tests/client.test.ts"
+      ],
+      "example.azure.anthropic.com": [
+        "packages/foundry-sdk/tests/client.test.ts"
+      ],
+      "my-resource.services.ai.azure.com": [
+        "packages/foundry-sdk/tests/client.test.ts"
+      ],
+      "cloud.google.com": [
+        "packages/vertex-sdk/README.md",
+        "packages/vertex-sdk/src/client.ts"
+      ],
+      "www.googleapis.com": [
+        "packages/vertex-sdk/README.md",
+        "packages/vertex-sdk/src/client.ts"
+      ],
+      "aiplatform.googleapis.com": [
+        "packages/vertex-sdk/src/client.ts",
+        "packages/vertex-sdk/tests/client.test.ts"
+      ],
+      "aiplatform.us.rep.googleapis.com": [
+        "packages/vertex-sdk/src/client.ts",
+        "packages/vertex-sdk/tests/client.test.ts"
+      ],
+      "aiplatform.eu.rep.googleapis.com": [
+        "packages/vertex-sdk/src/client.ts",
+        "packages/vertex-sdk/tests/client.test.ts"
+      ],
+      "test.googleapis.com": [
+        "packages/vertex-sdk/tests/client.test.ts"
+      ],
+      "uploads.github.com": [
+        "scripts/publish-packages.ts"
+      ],
+      "api.example.com": [
+        "src/client.ts",
+        "tests/lib/credentials/oidc-federation.test.ts",
+        "tests/lib/credentials/user-oauth.test.ts"
+      ],
+      "api.anthropic.com": [
+        "src/client.ts",
+        "tests/index.test.ts",
+        "tests/lib/credentials/client-integration.test.ts",
+        "tests/lib/credentials/credential-chain.test.ts",
+        "tests/lib/credentials/oidc-federation.test.ts"
+      ],
+      "example": [
+        "src/client.ts"
+      ],
+      "docs.expo.dev": [
+        "src/core/streaming.ts",
+        "src/internal/decoders/jsonl.ts"
+      ],
+      "doc.deno.land": [
+        "src/internal/detect-platform.ts"
+      ],
+      "undici.nodejs.org": [
+        "src/internal/shims.ts"
+      ],
+      "www.typescriptlang.org": [
+        "src/internal/types.ts"
+      ],
+      "datatracker.ietf.org": [
+        "src/internal/utils/path.ts"
+      ],
+      "stackoverflow.com": [
+        "src/internal/utils/uuid.ts",
+        "src/internal/utils/values.ts"
+      ],
+      "url.spec.whatwg.org": [
+        "src/internal/utils/values.ts"
+      ],
+      "eslint.org": [
+        "src/internal/utils/values.ts"
+      ],
+      "docs.claude.com": [
+        "src/resources/beta/messages/batches.ts",
+        "src/resources/beta/messages/messages.ts",
+        "src/resources/completions.ts",
+        "src/resources/messages/batches.ts",
+        "src/resources/messages/messages.ts"
+      ],
+      "json-schema.org": [
+        "src/resources/beta/messages/batches.ts",
+        "src/resources/beta/messages/messages.ts",
+        "src/resources/messages/messages.ts",
+        "tests/helpers/beta/zod.test.ts",
+        "tests/lib/tools/nockFixtures/ToolRunner.json"
+      ],
+      "en.wikipedia.org": [
+        "src/resources/beta/messages/messages.ts",
+        "src/resources/messages/messages.ts"
+      ],
+      "nodatime.org": [
+        "src/resources/beta/messages/messages.ts",
+        "src/resources/messages/messages.ts"
+      ],
+      "from-file.example.com": [
+        "tests/credentials.test.ts"
+      ],
+      "example.com').href": [
+        "tests/path.test.ts"
+      ],
+      "staging.example.com": [
+        "tests/lib/credentials/client-integration.test.ts"
+      ],
+      "env.example.com": [
+        "tests/lib/credentials/client-integration.test.ts"
+      ],
+      "profile.example.com": [
+        "tests/lib/credentials/client-integration.test.ts"
+      ],
+      "opt.example.com": [
+        "tests/lib/credentials/client-integration.test.ts"
+      ],
+      "override.example.com": [
+        "tests/lib/credentials/client-integration.test.ts"
+      ],
+      "custom-api.example.com": [
+        "tests/lib/credentials/credential-chain.test.ts"
+      ],
+      "[::1]:8080']": [
+        "tests/lib/credentials/oidc-federation.test.ts"
+      ],
+      "x": [
+        "tests/lib/credentials/oidc-federation.test.ts"
+      ],
+      "api.anthropic.com:443": [
+        "tests/lib/tools/nockFixtures/ToolRunner.json"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\anthropics__anthropic-sdk-typescript\\gitleaks.json",
+      "exit_code": 1,
+      "output_path": "_logs/scan/anthropics__anthropic-sdk-typescript/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/anthropics__anthropic-sdk-typescript/osv.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "exec-call in src/internal/detect-platform.ts; exec-call in src/internal/utils/path.ts; trusted-vendor: 1 gitleaks finding(s) downgraded to notes (likely SDK docs/example values); gitleaks: 1 test-path secret(s)",
+  "files_scanned": 369,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

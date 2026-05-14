@@ -1,0 +1,166 @@
+{
+  "source_url": "https://github.com/linear/linear",
+  "proposed_slot": "both.productivity.linear",
+  "scanned_at": "2026-05-14T05:51:48.758159+00:00",
+  "clone_ok": true,
+  "commit_pinned": "bfb8a938305ba13631cd4a4912e5ada535c54fd2",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "gruntjs.com": [
+        ".gitignore"
+      ],
+      "bower.io": [
+        ".gitignore"
+      ],
+      "github.com": [
+        ".changeset/README.md",
+        ".github/workflows/build.yaml",
+        ".github/workflows/release.yaml",
+        ".github/workflows/schema.yaml",
+        "README.md"
+      ],
+      "www.prisma.io": [
+        "pnpm-lock.yaml"
+      ],
+      "mui.com": [
+        "pnpm-lock.yaml"
+      ],
+      "linear.app": [
+        "README.md",
+        "examples/nextjs-file-upload/README.md",
+        "packages/import/README.md",
+        "packages/import/src/cli.ts",
+        "packages/import/src/importIssues.ts"
+      ],
+      "raw.githubusercontent.com": [
+        "README.md",
+        "packages/sdk/README.md",
+        "packages/sdk/scripts/generate-schema-changeset.ts"
+      ],
+      "img.shields.io": [
+        "README.md",
+        "packages/sdk/README.md"
+      ],
+      "developers.linear.app": [
+        "README.md",
+        "docs/API.md",
+        "docs/Attachments.md",
+        "docs/OAuth2.md",
+        "docs/Webhooks.md"
+      ],
+      "graphql-code-generator.com": [
+        "README.md",
+        "packages/codegen-doc/README.md",
+        "packages/codegen-sdk/README.md",
+        "packages/codegen-test/README.md",
+        "packages/sdk/README.md"
+      ],
+      "unpkg.com": [
+        ".changeset/config.json"
+      ],
+      "docs.github.com": [
+        ".github/dependabot.yml"
+      ],
+      "docs.npmjs.com": [
+        ".github/workflows/release.yaml"
+      ],
+      "registry.npmjs.org": [
+        ".github/workflows/release.yaml"
+      ],
+      "www.w3.org": [
+        "docs/logo.svg"
+      ],
+      "nextjs.org": [
+        "examples/nextjs-file-upload/README.md",
+        "examples/nextjs-file-upload/next-env.d.ts"
+      ],
+      "conventionalcommits.org": [
+        "packages/codegen-doc/CHANGELOG.md",
+        "packages/codegen-sdk/CHANGELOG.md",
+        "packages/codegen-test/CHANGELOG.md",
+        "packages/import/CHANGELOG.md",
+        "packages/sdk/CHANGELOG.md"
+      ],
+      "www.graphql-js.org": [
+        "packages/codegen-sdk/CHANGELOG.md",
+        "packages/sdk/CHANGELOG.md"
+      ],
+      "local.linear.dev:8090": [
+        "packages/import/package.json"
+      ],
+      "app.asana.com": [
+        "packages/import/src/importers/asanaCsv/index.ts"
+      ],
+      "api.github.com": [
+        "packages/import/src/importers/github/client.ts"
+      ],
+      "acme.atlassian.net)": [
+        "packages/import/src/importers/jiraCsv/index.ts"
+      ],
+      "jira.mydomain.com": [
+        "packages/import/src/importers/jiraCsv/index.ts"
+      ],
+      "acme.atlassian.net": [
+        "packages/import/src/importers/jiraCsv/index.ts"
+      ],
+      "$": [
+        "packages/import/src/importers/jiraCsv/JiraCsvImporter.ts"
+      ],
+      "app.shortcut.com": [
+        "packages/import/src/importers/shortcutCsv/ShortcutCsvImporter.ts",
+        "packages/import/src/importers/shortcutCsv/index.ts"
+      ],
+      "api.linear.app": [
+        "packages/sdk/codegen.schema.yml",
+        "packages/sdk/src/_tests/readme.test.ts",
+        "packages/sdk/src/client.ts"
+      ],
+      "studio.apollographql.com": [
+        "packages/sdk/codegen.schema.yml"
+      ],
+      "the-guild.dev": [
+        "packages/sdk/codegen.sdk.yml"
+      ],
+      "auth.linear.app": [
+        "packages/sdk/src/_generated_documents.graphql",
+        "packages/sdk/src/_generated_documents.ts",
+        "packages/sdk/src/_generated_sdk.ts",
+        "packages/sdk/src/schema.graphql"
+      ],
+      "stackoverflow.com": [
+        "packages/sdk/src/_tests/bundle.test.ts"
+      ],
+      "relay.dev": [
+        "packages/sdk/src/_tests/readme.test.ts"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\linear__linear\\gitleaks.json",
+      "exit_code": 0,
+      "output_path": "_logs/scan/linear__linear/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/linear__linear/osv.json"
+    }
+  },
+  "verdict": "pass",
+  "verdict_reason": "no findings of concern in static scan",
+  "files_scanned": 176,
+  "files_skipped": 1,
+  "_reclassified": true,
+  "_sanitized": true
+}

@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "id": "both.creative.rembg",
+  "name": "rembg \u2014 background removal",
+  "slug": "rembg",
+  "track": [
+    "personal",
+    "merchant"
+  ],
+  "category": "creative",
+  "slot": "rembg",
+  "summary": "Background removal (self-host)",
+  "version": "1.0.0",
+  "source": {
+    "kind": "tool_folder",
+    "repo_url": "https://github.com/danielgatis/rembg",
+    "commit_pinned": "7b8de60ef9fc225af1768d81aa09da29db22a355",
+    "license": "MIT",
+    "last_commit_at": "2026-04-08",
+    "stars": 22950,
+    "primary_language": "Python",
+    "maintainer": "danielgatis"
+  },
+  "upstream": {
+    "vendor": "Danielgatis",
+    "vendor_url": "",
+    "auth_type": "api_key",
+    "sandbox_available": false,
+    "requires_user_oauth": false,
+    "cost_model": "varies",
+    "typical_per_call_cost_usd": "varies"
+  },
+  "x402_compatible": true,
+  "x402_notes": "per-call, deterministic JSON response",
+  "tools": [
+    {
+      "name": "primary",
+      "summary": "Primary entry point (smoke-tested via import / require). Tool catalogue derived at runtime from the upstream package.",
+      "destructive": false,
+      "idempotent": true,
+      "rate_limit": "see upstream docs"
+    }
+  ],
+  "tags": [
+    "creative",
+    "danielgatis",
+    "both"
+  ],
+  "risk": {
+    "prompt_injection": "low",
+    "destructive": false,
+    "spend_capable": false,
+    "regulated_data": [],
+    "default_mode": "live"
+  },
+  "audit": {
+    "verdict": "pass",
+    "log": "audit.json",
+    "scanners_run": [
+      "orbit_pattern_scan",
+      "install_hook_audit",
+      "gitleaks",
+      "osv-scanner",
+      "pip-audit"
+    ],
+    "behavioral_check": "clean_with_notes"
+  },
+  "smoke": {
+    "verdict": "pass_with_notes",
+    "log": "smoke.json",
+    "last_passed_at": "2026-05-14T06:08:59.734043+00:00"
+  },
+  "orbit": {
+    "suggested_markup_floor_pct": 5,
+    "suggested_markup_ceiling_pct": 50,
+    "pricing_note": "Upstream cost model: varies.",
+    "tokenization_friendly": false
+  },
+  "notes": "Background removal (self-host)"
+}

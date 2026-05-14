@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "id": "merchant.finance.agent-toolkit",
+  "name": "Stripe Agent Toolkit",
+  "slug": "agent-toolkit",
+  "track": [
+    "merchant"
+  ],
+  "category": "finance",
+  "slot": "agent-toolkit",
+  "summary": "One-stop shop for building AI-powered products and businesses with Stripe.",
+  "version": "1.0.0",
+  "source": {
+    "kind": "mcp_server",
+    "repo_url": "https://github.com/stripe/agent-toolkit",
+    "commit_pinned": "ec93d4c4b9ffdbc994ac45ce692d4ec1cdb755f0",
+    "license": "MIT",
+    "last_commit_at": "2026-05-13",
+    "stars": 1548,
+    "primary_language": "TypeScript",
+    "maintainer": "stripe"
+  },
+  "upstream": {
+    "vendor": "Stripe",
+    "vendor_url": "https://stripe.com",
+    "auth_type": "api_key",
+    "sandbox_available": true,
+    "requires_user_oauth": false,
+    "cost_model": "paid_per_call",
+    "typical_per_call_cost_usd": "0.005\u20130.029 per txn"
+  },
+  "x402_compatible": false,
+  "x402_notes": "spend-capable in live mode \u2014 needs sandbox-gated invocation in Orbit",
+  "tools": [
+    {
+      "name": "primary",
+      "summary": "Primary entry point (smoke-tested via import / require). Tool catalogue derived at runtime from the upstream package.",
+      "destructive": false,
+      "idempotent": true,
+      "rate_limit": "see upstream docs"
+    }
+  ],
+  "tags": [
+    "finance",
+    "stripe",
+    "merchant"
+  ],
+  "risk": {
+    "prompt_injection": "low",
+    "destructive": false,
+    "spend_capable": true,
+    "regulated_data": [
+      "pii"
+    ],
+    "default_mode": "live"
+  },
+  "audit": {
+    "verdict": "pass_with_notes",
+    "log": "audit.json",
+    "scanners_run": [
+      "orbit_pattern_scan",
+      "install_hook_audit",
+      "gitleaks",
+      "osv-scanner"
+    ],
+    "behavioral_check": "clean_with_notes"
+  },
+  "smoke": {
+    "verdict": "deferred",
+    "log": "smoke.json",
+    "last_passed_at": "2026-05-14T06:10:29.108660+00:00"
+  },
+  "orbit": {
+    "suggested_markup_floor_pct": 5,
+    "suggested_markup_ceiling_pct": 50,
+    "pricing_note": "Upstream cost model: paid_per_call.",
+    "tokenization_friendly": false
+  },
+  "notes": "discovered_from:wong2"
+}

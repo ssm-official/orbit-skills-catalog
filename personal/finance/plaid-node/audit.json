@@ -1,0 +1,142 @@
+{
+  "source_url": "https://github.com/plaid/plaid-node",
+  "proposed_slot": "both.finance.plaid-node",
+  "scanned_at": "2026-05-14T05:49:48.001149+00:00",
+  "clone_ok": true,
+  "commit_pinned": "49270ba0467ce7e70486ed634c4f3dc1e5c06ade",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "registry.npmjs.com": [
+        ".npmrc",
+        "package.json"
+      ],
+      "plaid.com": [
+        "CHANGELOG.md",
+        "CONTRIBUTING.md",
+        "README.md",
+        "api.ts",
+        "base.ts"
+      ],
+      "openapi-generator.tech": [
+        "api.ts",
+        "base.ts",
+        "common.ts",
+        "configuration.ts",
+        "index.ts"
+      ],
+      "en.wikipedia.org": [
+        "api.ts"
+      ],
+      "wikipedia.org": [
+        "api.ts"
+      ],
+      "dashboard.plaid.com": [
+        "CONTRIBUTING.md",
+        "api.ts"
+      ],
+      "docs.google.com": [
+        "api.ts"
+      ],
+      "datatracker.ietf.org": [
+        "api.ts"
+      ],
+      "xml2rfc.tools.ietf.org": [
+        "api.ts"
+      ],
+      "cognitohq.com": [
+        "api.ts"
+      ],
+      "jwt.io": [
+        "api.ts"
+      ],
+      "github.com": [
+        ".github/workflows/add_to_project.yml",
+        "CHANGELOG.md",
+        "CONTRIBUTING.md",
+        "README.md",
+        "api.ts"
+      ],
+      "www.plaid.com": [
+        "api.ts"
+      ],
+      "my.plaid.com": [
+        "api.ts"
+      ],
+      "production.plaid.com": [
+        "README.md",
+        "base.ts",
+        "configuration.ts",
+        "templates/typescript-axios/configuration.mustache"
+      ],
+      "blog.plaid.com": [
+        "CHANGELOG.md",
+        "README.md"
+      ],
+      "sandbox.plaid.com": [
+        "README.md",
+        "configuration.ts",
+        "templates/typescript-axios/configuration.mustache"
+      ],
+      "registry.npmjs.org": [
+        "package-lock.json"
+      ],
+      "paulmillr.com": [
+        "package-lock.json"
+      ],
+      "opencollective.com": [
+        "package-lock.json"
+      ],
+      "www.patreon.com": [
+        "package-lock.json"
+      ],
+      "feross.org": [
+        "package-lock.json"
+      ],
+      "badge.fury.io": [
+        "README.md"
+      ],
+      "www.npmjs.com": [
+        "README.md"
+      ],
+      "stripe.com": [
+        "README.md"
+      ],
+      "httpstat.us": [
+        "test/assets.spec.ts",
+        "test/item.spec.ts",
+        "test/sandbox.spec.ts"
+      ],
+      "sample-web-hook.com": [
+        "test/linkTokens.spec.ts"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\plaid__plaid-node\\gitleaks.json",
+      "exit_code": 0,
+      "output_path": "_logs/scan/plaid__plaid-node/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/plaid__plaid-node/osv.json"
+    }
+  },
+  "verdict": "pass",
+  "verdict_reason": "no findings of concern in static scan",
+  "files_scanned": 52,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

@@ -1,0 +1,401 @@
+{
+  "source_url": "https://github.com/github/github-mcp-server",
+  "proposed_slot": "merchant.devops.github-mcp",
+  "scanned_at": "2026-05-14T05:52:14.581215+00:00",
+  "clone_ok": true,
+  "commit_pinned": "3a4bc2666f17d241c58e9ccd3d083a0bd6d24a63",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner"
+  ],
+  "findings": {
+    "secrets": [
+      {
+        "file": "pkg/http/middleware/pat_scope_test.go",
+        "label": "github personal token",
+        "match_redacted": true
+      },
+      {
+        "file": "pkg/http/middleware/pat_scope_test.go",
+        "label": "github personal token",
+        "match_redacted": true
+      },
+      {
+        "file": "pkg/http/middleware/pat_scope_test.go",
+        "label": "github personal token",
+        "match_redacted": true
+      },
+      {
+        "file": "pkg/http/middleware/pat_scope_test.go",
+        "label": "github personal token",
+        "match_redacted": true
+      },
+      {
+        "file": "pkg/http/middleware/pat_scope_test.go",
+        "label": "github oauth token",
+        "match_redacted": true
+      },
+      {
+        "file": "pkg/http/middleware/token_test.go",
+        "label": "github personal token",
+        "match_redacted": true
+      },
+      {
+        "file": "pkg/http/middleware/token_test.go",
+        "label": "github personal token",
+        "match_redacted": true
+      },
+      {
+        "file": "pkg/http/middleware/token_test.go",
+        "label": "github personal token",
+        "match_redacted": true
+      },
+      {
+        "file": "pkg/http/middleware/token_test.go",
+        "label": "github personal token",
+        "match_redacted": true
+      },
+      {
+        "file": "pkg/http/middleware/token_test.go",
+        "label": "github personal token",
+        "match_redacted": true
+      },
+      {
+        "file": "pkg/http/middleware/token_test.go",
+        "label": "github personal token",
+        "match_redacted": true
+      },
+      {
+        "file": "pkg/http/middleware/token_test.go",
+        "label": "github personal token",
+        "match_redacted": true
+      },
+      {
+        "file": "pkg/http/middleware/token_test.go",
+        "label": "github oauth token",
+        "match_redacted": true
+      },
+      {
+        "file": "pkg/http/middleware/token_test.go",
+        "label": "github oauth token",
+        "match_redacted": true
+      },
+      {
+        "file": "pkg/http/middleware/token_test.go",
+        "label": "github oauth token",
+        "match_redacted": true
+      },
+      {
+        "file": "pkg/http/middleware/token_test.go",
+        "label": "github oauth token",
+        "match_redacted": true
+      }
+    ],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "www.contributor-covenant.org": [
+        "CODE_OF_CONDUCT.md"
+      ],
+      "github.com": [
+        ".github/licenses.tmpl",
+        ".github/pull_request_template.md",
+        ".github/workflows/docker-publish.yml",
+        ".github/workflows/go.yml",
+        ".github/workflows/license-check.yml"
+      ],
+      "help.github.com": [
+        "CONTRIBUTING.md"
+      ],
+      "go.dev": [
+        "CONTRIBUTING.md",
+        "docs/installation-guides/README.md"
+      ],
+      "formulae.brew.sh": [
+        "CONTRIBUTING.md"
+      ],
+      "golangci-lint.run": [
+        "CONTRIBUTING.md",
+        "script/lint"
+      ],
+      "tbaggery.com": [
+        "CONTRIBUTING.md"
+      ],
+      "opensource.guide": [
+        "CONTRIBUTING.md"
+      ],
+      "api.githubcopilot.com": [
+        "README.md",
+        "cmd/github-mcp-server/generate_docs.go",
+        "docs/installation-guides/README.md",
+        "docs/installation-guides/install-antigravity.md",
+        "docs/installation-guides/install-claude.md"
+      ],
+      "goreportcard.com": [
+        "README.md"
+      ],
+      "img.shields.io": [
+        "README.md",
+        "docs/remote-server.md"
+      ],
+      "code.visualstudio.com": [
+        "README.md"
+      ],
+      "octocorp.ghe.com": [
+        "README.md"
+      ],
+      "copilot-api.octocorp.ghe.com": [
+        "README.md"
+      ],
+      "docs.github.com": [
+        ".github/dependabot.yml",
+        ".github/workflows/docker-publish.yml",
+        "README.md",
+        "SECURITY.md",
+        "docs/host-integration.md"
+      ],
+      "www.docker.com": [
+        "README.md",
+        "docs/installation-guides/README.md",
+        "docs/installation-guides/install-claude.md",
+        "docs/installation-guides/install-copilot-cli.md",
+        "docs/installation-guides/install-cursor.md"
+      ],
+      "yoursubdomain.ghe.com": [
+        "README.md"
+      ],
+      "bounty.github.com": [
+        "SECURITY.md"
+      ],
+      "static.modelcontextprotocol.io": [
+        "server.json"
+      ],
+      "pkg.go.dev": [
+        ".github/licenses.tmpl",
+        "third-party-licenses.darwin.md",
+        "third-party-licenses.linux.md",
+        "third-party-licenses.windows.md"
+      ],
+      "cs.opensource.google": [
+        "third-party-licenses.darwin.md",
+        "third-party-licenses.linux.md",
+        "third-party-licenses.windows.md"
+      ],
+      "go.microsoft.com": [
+        ".vscode/launch.json"
+      ],
+      "insiders.vscode.dev": [
+        "cmd/github-mcp-server/generate_docs.go",
+        "docs/remote-server.md"
+      ],
+      "api.github.com": [
+        "cmd/mcpcurl/README.md",
+        "docs/scope-filtering.md",
+        "pkg/github/git_test.go",
+        "pkg/github/issues.go",
+        "pkg/github/issues_test.go"
+      ],
+      "modelcontextprotocol.io": [
+        "docs/host-integration.md",
+        "docs/insiders-features.md",
+        "docs/policies-and-governance.md",
+        "docs/server-configuration.md"
+      ],
+      "datatracker.ietf.org": [
+        "docs/host-integration.md"
+      ],
+      "myserver.com": [
+        "docs/streamable-http.md"
+      ],
+      "primer.style": [
+        "docs/toolsets-and-icons.md",
+        "pkg/github/tools.go",
+        "pkg/inventory/server_tool.go",
+        "pkg/octicons/octicons.go"
+      ],
+      "developer.apple.com": [
+        "docs/installation-guides/install-claude.md",
+        "docs/installation-guides/install-xcode.md"
+      ],
+      "developers.openai.com": [
+        "docs/installation-guides/install-codex.md",
+        "docs/installation-guides/install-xcode.md"
+      ],
+      "cursor.com": [
+        "docs/installation-guides/install-cursor.md"
+      ],
+      "google-gemini.github.io": [
+        "docs/installation-guides/install-gemini-cli.md"
+      ],
+      "learn.microsoft.com": [
+        "docs/installation-guides/install-other-copilot-ides.md"
+      ],
+      "plugins.jetbrains.com": [
+        "docs/installation-guides/install-other-copilot-ides.md"
+      ],
+      "devblogs.microsoft.com": [
+        "docs/installation-guides/install-other-copilot-ides.md"
+      ],
+      "marketplace.eclipse.org": [
+        "docs/installation-guides/install-other-copilot-ides.md"
+      ],
+      "jsonlint.com": [
+        "docs/installation-guides/install-windsurf.md"
+      ],
+      "spec.graphql.org": [
+        "internal/githubv4mock/query.go"
+      ],
+      "gist.github.com": [
+        "pkg/github/gists_test.go"
+      ],
+      "travis-ci.org": [
+        "pkg/github/pullrequests_test.go"
+      ],
+      "codecov.io": [
+        "pkg/github/pullrequests_test.go"
+      ],
+      "golangci.com": [
+        "pkg/github/pullrequests_test.go"
+      ],
+      "raw.githubusercontent.com": [
+        "pkg/github/repositories_test.go",
+        "pkg/utils/api.go",
+        "script/fetch-icons"
+      ],
+      "raw.example.com": [
+        "pkg/github/repository_resource_test.go",
+        "pkg/raw/raw_test.go"
+      ],
+      "avatars.githubusercontent.com": [
+        "pkg/github/search_test.go",
+        "pkg/github/ui_resources.go",
+        "ui/src/apps/get-me/index.html"
+      ],
+      "api.example.com": [
+        "pkg/http/middleware/token_test.go",
+        "pkg/http/oauth/oauth_test.go"
+      ],
+      "mcp.example.com": [
+        "pkg/http/middleware/token_test.go"
+      ],
+      "custom.example.com": [
+        "pkg/http/oauth/oauth_test.go"
+      ],
+      "public.example.com": [
+        "pkg/http/oauth/oauth_test.go"
+      ],
+      "custom.auth.example.com": [
+        "pkg/http/oauth/oauth_test.go"
+      ],
+      "test.ghe.com": [
+        "pkg/http/oauth/oauth_test.go"
+      ],
+      "ghe.example.com": [
+        "pkg/http/oauth/oauth_test.go"
+      ],
+      "api.github.enterprise.com": [
+        "pkg/scopes/fetcher_test.go"
+      ],
+      "uploads.github.com": [
+        "pkg/utils/api.go"
+      ],
+      "api.%s": [
+        "pkg/utils/api.go"
+      ],
+      "uploads.%s": [
+        "pkg/utils/api.go"
+      ],
+      "raw.%s": [
+        "pkg/utils/api.go"
+      ],
+      "%s": [
+        "pkg/utils/api.go"
+      ],
+      "uploads.hostname": [
+        "pkg/utils/api.go"
+      ],
+      "hostname": [
+        "pkg/utils/api.go"
+      ],
+      "raw.hostname": [
+        "pkg/utils/api.go"
+      ],
+      "foo.github.com": [
+        "pkg/utils/api_test.go"
+      ],
+      "mycompanygithub.com": [
+        "pkg/utils/api_test.go"
+      ],
+      "notgithub.com": [
+        "pkg/utils/api_test.go"
+      ],
+      "ghe.com": [
+        "pkg/utils/api_test.go"
+      ],
+      "api.ghe.com": [
+        "pkg/utils/api_test.go"
+      ],
+      "mycompany.ghe.com": [
+        "pkg/utils/api_test.go"
+      ],
+      "api.mycompany.ghe.com": [
+        "pkg/utils/api_test.go"
+      ],
+      "myghe.com": [
+        "pkg/utils/api_test.go"
+      ],
+      "www.apache.org": [
+        "third-party/github.com/inconshreveable/mousetrap/LICENSE",
+        "third-party/github.com/modelcontextprotocol/go-sdk/LICENSE",
+        "third-party/github.com/spf13/afero/LICENSE.txt",
+        "third-party/github.com/spf13/cobra/LICENSE.txt",
+        "third-party/go.yaml.in/yaml/v3/LICENSE"
+      ],
+      "creativecommons.org": [
+        "third-party/github.com/modelcontextprotocol/go-sdk/LICENSE"
+      ],
+      "yosida95.com": [
+        "third-party/github.com/yosida95/uritemplate/v3/LICENSE"
+      ],
+      "registry.npmjs.org": [
+        "ui/package-lock.json"
+      ],
+      "opencollective.com": [
+        "ui/package-lock.json"
+      ],
+      "tidelift.com": [
+        "ui/package-lock.json"
+      ],
+      "www.patreon.com": [
+        "ui/package-lock.json"
+      ],
+      "feross.org": [
+        "ui/package-lock.json"
+      ],
+      "*.githubusercontent.com": [
+        "ui/src/apps/get-me/index.html"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\github__github-mcp-server\\gitleaks.json",
+      "exit_code": 0,
+      "output_path": "_logs/scan/github__github-mcp-server/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/github__github-mcp-server/osv.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "test-path secret findings (16)",
+  "files_scanned": 396,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "id": "merchant.crm.hubspot-node",
+  "name": "HubSpot SDK (Node)",
+  "slug": "hubspot-node",
+  "track": [
+    "merchant"
+  ],
+  "category": "crm",
+  "slot": "hubspot-node",
+  "summary": "Official HubSpot Node SDK",
+  "version": "1.0.0",
+  "source": {
+    "kind": "sdk_wrapper",
+    "repo_url": "https://github.com/HubSpot/hubspot-api-nodejs",
+    "commit_pinned": "77ae0dd45f800b4df4c992c3717fb2699724229b",
+    "license": "Apache-2.0",
+    "last_commit_at": "2026-05-07",
+    "stars": 393,
+    "primary_language": "TypeScript",
+    "maintainer": "HubSpot"
+  },
+  "upstream": {
+    "vendor": "HubSpot",
+    "vendor_url": "https://hubspot.com",
+    "auth_type": "api_key",
+    "sandbox_available": true,
+    "requires_user_oauth": true,
+    "cost_model": "freemium",
+    "typical_per_call_cost_usd": "free CRM tier"
+  },
+  "x402_compatible": true,
+  "x402_notes": "per-call, deterministic JSON response",
+  "tools": [
+    {
+      "name": "primary",
+      "summary": "Primary entry point (smoke-tested via import / require). Tool catalogue derived at runtime from the upstream package.",
+      "destructive": false,
+      "idempotent": true,
+      "rate_limit": "see upstream docs"
+    }
+  ],
+  "tags": [
+    "crm",
+    "HubSpot",
+    "merchant"
+  ],
+  "risk": {
+    "prompt_injection": "low",
+    "destructive": false,
+    "spend_capable": false,
+    "regulated_data": [
+      "pii"
+    ],
+    "default_mode": "live"
+  },
+  "audit": {
+    "verdict": "pass",
+    "log": "audit.json",
+    "scanners_run": [
+      "orbit_pattern_scan",
+      "install_hook_audit",
+      "gitleaks",
+      "osv-scanner"
+    ],
+    "behavioral_check": "clean_with_notes"
+  },
+  "smoke": {
+    "verdict": "pass_with_notes",
+    "log": "smoke.json",
+    "last_passed_at": "2026-05-14T06:08:43.325365+00:00"
+  },
+  "orbit": {
+    "suggested_markup_floor_pct": 5,
+    "suggested_markup_ceiling_pct": 50,
+    "pricing_note": "Upstream cost model: freemium.",
+    "tokenization_friendly": true
+  },
+  "notes": "Official HubSpot Node SDK"
+}

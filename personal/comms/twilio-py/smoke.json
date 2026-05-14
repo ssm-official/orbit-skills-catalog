@@ -1,0 +1,27 @@
+{
+  "source_url": "https://github.com/twilio/twilio-python",
+  "proposed_slot": "both.comms.twilio-py",
+  "smoked_at": "2026-05-14T06:09:46.572804+00:00",
+  "platform": "windows",
+  "sandbox": "fresh venv / fresh node_modules (Docker unavailable on host)",
+  "network_monitoring": "Get-NetTCPConnection deltas (weaker than netns isolation)",
+  "package": "twilio",
+  "language": "python",
+  "kind": "python",
+  "steps": [
+    {
+      "step": "uv_dryrun",
+      "rc": 0,
+      "stderr": ""
+    },
+    {
+      "step": "uv_run_import",
+      "rc": 0,
+      "stdout": "OK ['__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__path__', '__spec__', '__version__', '__version_info__']\n",
+      "stderr": "   Building twilio @ file:///C:/Users/ssmca/orbit-skills-catalog/candidates/twilio__twilio-python\n      Built twilio @ file:///C:/Users/ssmca/orbit-skills-catalog/candidates/twilio__twilio-python\nInstalled 16 packages in 563ms\n",
+      "new_outbound_connections": []
+    }
+  ],
+  "verdict": "pass",
+  "reason": "uv install + import OK"
+}

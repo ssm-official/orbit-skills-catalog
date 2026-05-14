@@ -1,0 +1,111 @@
+{
+  "source_url": "https://github.com/zendesk/zendesk_api_client_rb",
+  "proposed_slot": "merchant.support.zendesk-rb",
+  "scanned_at": "2026-05-14T05:53:55.436374+00:00",
+  "clone_ok": true,
+  "commit_pinned": "7f573a8e0448255ea1f2b7d8b3190d6469bc6d74",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "support.zendesk.com": [
+        "CHANGELOG.md"
+      ],
+      "rubygems.org": [
+        "CHANGELOG.md",
+        "Gemfile",
+        "Gemfile.lock"
+      ],
+      "github.com": [
+        "CHANGELOG.md",
+        "Gemfile",
+        "README.md",
+        "Rakefile",
+        "lib/zendesk_api/helpers.rb"
+      ],
+      "bugs.ruby-lang.org": [
+        "CHANGELOG.md"
+      ],
+      "developer.zendesk.com": [
+        "CHANGELOG.md",
+        "README.md",
+        "lib/zendesk_api/resource.rb",
+        "zendesk_api.gemspec"
+      ],
+      "www.apache.org": [
+        "LICENSE"
+      ],
+      "badge.fury.io": [
+        "README.md"
+      ],
+      "www.rubydoc.info": [
+        "README.md",
+        "zendesk_api.gemspec"
+      ],
+      "yoursubdomain.zendesk.com": [
+        "README.md"
+      ],
+      "hackerone.com": [
+        "SECURITY.md"
+      ],
+      "www.zendesk.com": [
+        "zendesk_api.gemspec"
+      ],
+      "lostisland.github.io": [
+        "lib/zendesk_api/client.rb"
+      ],
+      "codesnippets.joyent.com": [
+        "lib/zendesk_api/lru_cache.rb"
+      ],
+      "example.zendesk.com": [
+        "spec/core/client_spec.rb",
+        "spec/core/middleware/request/etag_cache_spec.rb",
+        "spec/core/middleware/response/zendesk_request_event_spec.rb"
+      ],
+      "www.google.com": [
+        "spec/core/client_spec.rb"
+      ],
+      "zen.com": [
+        "spec/core/collection_spec.rb"
+      ],
+      "test_resources.json": [
+        "spec/core/collection_spec.rb"
+      ],
+      "my.zendesk.com": [
+        "spec/core/spec_helper.rb"
+      ],
+      "your_zendesk_host": [
+        "spec/fixtures/credentials.yml.example"
+      ],
+      "lvh.me": [
+        "spec/live/webhook_spec.rb"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\zendesk__zendesk_api_client_rb\\gitleaks.json",
+      "exit_code": 0,
+      "output_path": "_logs/scan/zendesk__zendesk_api_client_rb/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/zendesk__zendesk_api_client_rb/osv.json"
+    }
+  },
+  "verdict": "pass",
+  "verdict_reason": "no findings of concern in static scan",
+  "files_scanned": 148,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

@@ -1,0 +1,36 @@
+{
+  "source_url": "https://github.com/easypost/easypost-python",
+  "proposed_slot": "both.shipping.easypost-py",
+  "smoked_at": "2026-05-14T06:07:29.149609+00:00",
+  "platform": "windows",
+  "sandbox": "fresh venv / fresh node_modules (Docker unavailable on host)",
+  "network_monitoring": "Get-NetTCPConnection deltas (weaker than netns isolation)",
+  "package": "easypost",
+  "language": "python",
+  "kind": "python",
+  "steps": [
+    {
+      "step": "uv_dryrun",
+      "rc": 0,
+      "stderr": ""
+    },
+    {
+      "step": "uv_run_import",
+      "rc": 0,
+      "stdout": "OK ['AUTHOR', 'EasyPostClient', 'VERSION', 'VERSION_INFO', '__author__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__path__', '__spec__', '__version__', 'constant', 'easypost_client', 'easypost_object', 'errors', 'get_lowest_object_rate']\n",
+      "stderr": "   Building easypost @ file:///C:/Users/ssmca/orbit-skills-catalog/candidates/easypost__easypost-python\n      Built easypost @ file:///C:/Users/ssmca/orbit-skills-catalog/candidates/easypost__easypost-python\nInstalled 6 packages in 51ms\n",
+      "new_outbound_connections": [
+        {
+          "host": "151.101.0.223",
+          "port": 443
+        },
+        {
+          "host": "57.155.142.104",
+          "port": 443
+        }
+      ]
+    }
+  ],
+  "verdict": "pass",
+  "reason": "uv install + import OK"
+}

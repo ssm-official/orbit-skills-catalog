@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "id": "personal.finance.crypto-ccxt",
+  "name": "CCXT \u2014 unified crypto exchange API",
+  "slug": "crypto-ccxt",
+  "track": [
+    "personal"
+  ],
+  "category": "finance",
+  "slot": "crypto-ccxt",
+  "summary": "Unified crypto exchange API",
+  "version": "1.0.0",
+  "source": {
+    "kind": "sdk_wrapper",
+    "repo_url": "https://github.com/ccxt/ccxt",
+    "commit_pinned": "77fb7959b4974fd0d4f26c0c16886a7347a6c4f9",
+    "license": "MIT",
+    "last_commit_at": "2026-05-13",
+    "stars": 42436,
+    "primary_language": "Python",
+    "maintainer": "ccxt"
+  },
+  "upstream": {
+    "vendor": "CCXT (multi-exchange)",
+    "vendor_url": "https://github.com/ccxt/ccxt",
+    "auth_type": "api_key",
+    "sandbox_available": false,
+    "requires_user_oauth": true,
+    "cost_model": "free",
+    "typical_per_call_cost_usd": "free (self-host)"
+  },
+  "x402_compatible": true,
+  "x402_notes": "per-call, deterministic JSON response",
+  "tools": [
+    {
+      "name": "primary",
+      "summary": "Primary entry point (smoke-tested via import / require). Tool catalogue derived at runtime from the upstream package.",
+      "destructive": false,
+      "idempotent": true,
+      "rate_limit": "see upstream docs"
+    }
+  ],
+  "tags": [
+    "finance",
+    "ccxt",
+    "personal"
+  ],
+  "risk": {
+    "prompt_injection": "low",
+    "destructive": false,
+    "spend_capable": false,
+    "regulated_data": [
+      "pii"
+    ],
+    "default_mode": "live"
+  },
+  "audit": {
+    "verdict": "pass_with_notes",
+    "log": "audit.json",
+    "scanners_run": [
+      "orbit_pattern_scan",
+      "install_hook_audit",
+      "gitleaks",
+      "osv-scanner",
+      "pip-audit"
+    ],
+    "behavioral_check": "clean_with_notes"
+  },
+  "smoke": {
+    "verdict": "deferred",
+    "log": "smoke.json",
+    "last_passed_at": "2026-05-14T06:07:27.532569+00:00"
+  },
+  "orbit": {
+    "suggested_markup_floor_pct": 5,
+    "suggested_markup_ceiling_pct": 50,
+    "pricing_note": "Upstream cost model: free.",
+    "tokenization_friendly": true
+  },
+  "notes": "Unified crypto exchange API"
+}

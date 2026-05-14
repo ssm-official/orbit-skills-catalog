@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "id": "both.productivity.google-apis-py",
+  "name": "Google APIs Client (Python)",
+  "slug": "google-apis-py",
+  "track": [
+    "personal",
+    "merchant"
+  ],
+  "category": "productivity",
+  "slot": "google-apis-py",
+  "summary": "Official Google APIs Python client",
+  "version": "1.0.0",
+  "source": {
+    "kind": "sdk_wrapper",
+    "repo_url": "https://github.com/googleapis/google-api-python-client",
+    "commit_pinned": "91ccdbee07bd762a05207c87c021314c2d965f70",
+    "license": "Apache-2.0",
+    "last_commit_at": "2026-05-12",
+    "stars": 8819,
+    "primary_language": "Python",
+    "maintainer": "googleapis"
+  },
+  "upstream": {
+    "vendor": "Google",
+    "vendor_url": "https://cloud.google.com",
+    "auth_type": "api_key",
+    "sandbox_available": true,
+    "requires_user_oauth": true,
+    "cost_model": "paid_per_call",
+    "typical_per_call_cost_usd": "varies"
+  },
+  "x402_compatible": true,
+  "x402_notes": "per-call, deterministic JSON response",
+  "tools": [
+    {
+      "name": "primary",
+      "summary": "Primary entry point (smoke-tested via import / require). Tool catalogue derived at runtime from the upstream package.",
+      "destructive": false,
+      "idempotent": true,
+      "rate_limit": "see upstream docs"
+    }
+  ],
+  "tags": [
+    "productivity",
+    "googleapis",
+    "both"
+  ],
+  "risk": {
+    "prompt_injection": "low",
+    "destructive": false,
+    "spend_capable": false,
+    "regulated_data": [],
+    "default_mode": "live"
+  },
+  "audit": {
+    "verdict": "pass_with_notes",
+    "log": "audit.json",
+    "scanners_run": [
+      "orbit_pattern_scan",
+      "install_hook_audit",
+      "gitleaks",
+      "osv-scanner",
+      "pip-audit"
+    ],
+    "behavioral_check": "clean_with_notes"
+  },
+  "smoke": {
+    "verdict": "pass_with_notes",
+    "log": "smoke.json",
+    "last_passed_at": "2026-05-14T06:07:41.324237+00:00"
+  },
+  "orbit": {
+    "suggested_markup_floor_pct": 5,
+    "suggested_markup_ceiling_pct": 50,
+    "pricing_note": "Upstream cost model: paid_per_call.",
+    "tokenization_friendly": false
+  },
+  "notes": "Official Google APIs Python client"
+}

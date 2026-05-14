@@ -1,0 +1,12 @@
+{
+  "source_url": "https://github.com/zendesk/zendesk_api_client_rb",
+  "proposed_slot": "merchant.support.zendesk-rb",
+  "smoked_at": "2026-05-14T06:09:46.329429+00:00",
+  "platform": "windows",
+  "sandbox": "fresh venv / fresh node_modules (Docker unavailable on host)",
+  "network_monitoring": "Get-NetTCPConnection deltas (weaker than netns isolation)",
+  "package": "zendesk_api_client_rb",
+  "language": "unknown",
+  "verdict": "deferred",
+  "reason": "unknown package kind (no python or node manifest)"
+}

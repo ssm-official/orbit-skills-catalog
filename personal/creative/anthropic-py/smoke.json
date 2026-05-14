@@ -1,0 +1,36 @@
+{
+  "source_url": "https://github.com/anthropics/anthropic-sdk-python",
+  "proposed_slot": "both.creative.anthropic-py",
+  "smoked_at": "2026-05-14T06:08:32.460611+00:00",
+  "platform": "windows",
+  "sandbox": "fresh venv / fresh node_modules (Docker unavailable on host)",
+  "network_monitoring": "Get-NetTCPConnection deltas (weaker than netns isolation)",
+  "package": "anthropic",
+  "language": "python",
+  "kind": "python",
+  "steps": [
+    {
+      "step": "uv_dryrun",
+      "rc": 0,
+      "stderr": ""
+    },
+    {
+      "step": "uv_run_import",
+      "rc": 0,
+      "stdout": "OK ['AI_PROMPT', 'APIConnectionError', 'APIError', 'APIResponse', 'APIResponseValidationError', 'APIStatusError', 'APITimeoutError', 'APIWebhookValidationError', 'AccessToken', 'AccessTokenAuth', 'AccessTokenProvider', 'Anthropic', 'AnthropicAWS', 'AnthropicBedrock', 'AnthropicBedrockMantle', 'AnthropicError', 'AnthropicFoundry', 'AnthropicVertex', 'AsyncAPIResponse', 'AsyncAnthropic']\n",
+      "stderr": "   Building anthropic @ file:///C:/Users/ssmca/orbit-skills-catalog/candidates/anthropics__anthropic-sdk-python\n      Built anthropic @ file:///C:/Users/ssmca/orbit-skills-catalog/candidates/anthropics__anthropic-sdk-python\nInstalled 17 packages in 314ms\n",
+      "new_outbound_connections": [
+        {
+          "host": "104.16.6.34",
+          "port": 443
+        },
+        {
+          "host": "151.101.0.223",
+          "port": 443
+        }
+      ]
+    }
+  ],
+  "verdict": "pass",
+  "reason": "uv install + import OK"
+}

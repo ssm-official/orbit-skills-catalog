@@ -1,0 +1,282 @@
+{
+  "source_url": "https://github.com/replicate/replicate-python",
+  "proposed_slot": "both.creative.replicate-py",
+  "scanned_at": "2026-05-14T05:52:21.303215+00:00",
+  "clone_ok": true,
+  "commit_pinned": "d2956ff9c3e26ef434bc839cc5c87a50c49dfe20",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner",
+    "pip-audit"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "git-scm.com": [
+        "CONTRIBUTING.md"
+      ],
+      "developercertificate.org": [
+        "CONTRIBUTING.md"
+      ],
+      "uv.astral.sh": [
+        "CONTRIBUTING.md"
+      ],
+      "api.replicate.com": [
+        "CONTRIBUTING.md",
+        "replicate/client.py",
+        "tests/cassettes/collections-get.yaml",
+        "tests/cassettes/collections-list.yaml",
+        "tests/cassettes/file-operations.yaml"
+      ],
+      "replicate.com": [
+        "CONTRIBUTING.md",
+        "README.md",
+        "pyproject.toml",
+        "tests/cassettes/collections-get.yaml",
+        "tests/cassettes/collections-list.yaml"
+      ],
+      "github.com": [
+        "CONTRIBUTING.md",
+        "README.md",
+        "pyproject.toml",
+        "replicate/client.py",
+        "replicate/model.py"
+      ],
+      "www.apache.org": [
+        "LICENSE"
+      ],
+      "colab.research.google.com": [
+        "README.md"
+      ],
+      "docs.python.org": [
+        "README.md"
+      ],
+      "delivery.replicate.com": [
+        "README.md"
+      ],
+      "my-domain": [
+        "README.md"
+      ],
+      "www.python-httpx.org": [
+        "README.md"
+      ],
+      "pypi.org": [
+        "uv.lock"
+      ],
+      "files.pythonhosted.org": [
+        "uv.lock"
+      ],
+      "astral.sh": [
+        "script/setup"
+      ],
+      "replicate.delivery": [
+        "tests/cassettes/collections-get.yaml",
+        "tests/cassettes/collections-list.yaml",
+        "tests/cassettes/file-prediction.yaml",
+        "tests/cassettes/hardware-list.yaml",
+        "tests/cassettes/models-create.yaml"
+      ],
+      "streaming.api.replicate.com": [
+        "tests/test_prediction.py"
+      ],
+      "weights.replicate.com": [
+        "tests/test_training.py"
+      ],
+      "test.host": [
+        "tests/test_webhooks.py"
+      ],
+      "arxiv.org": [
+        "tests/cassettes/collections-get.yaml",
+        "tests/cassettes/models-get.yaml",
+        "tests/cassettes/models-list.yaml",
+        "tests/cassettes/predictions-cancel.yaml",
+        "tests/cassettes/predictions-create.yaml"
+      ],
+      "tjzk.replicate.delivery": [
+        "tests/cassettes/collections-get.yaml",
+        "tests/cassettes/models-get.yaml",
+        "tests/cassettes/models-list.yaml",
+        "tests/cassettes/predictions-cancel.yaml",
+        "tests/cassettes/predictions-create.yaml"
+      ],
+      "dazhizhong.gitbook.io": [
+        "tests/cassettes/collections-get.yaml"
+      ],
+      "wandb.ai": [
+        "tests/cassettes/collections-get.yaml"
+      ],
+      "translate.google.com:443": [
+        "tests/cassettes/collections-get.yaml"
+      ],
+      "huggingface.co": [
+        "tests/cassettes/collections-get.yaml",
+        "tests/cassettes/models-list.yaml"
+      ],
+      "*.replicate.delivery": [
+        "tests/cassettes/collections-get.yaml",
+        "tests/cassettes/collections-list.yaml",
+        "tests/cassettes/hardware-list.yaml",
+        "tests/cassettes/models-create.yaml",
+        "tests/cassettes/models-get.yaml"
+      ],
+      "*.githubusercontent.com": [
+        "tests/cassettes/collections-get.yaml",
+        "tests/cassettes/collections-list.yaml",
+        "tests/cassettes/hardware-list.yaml",
+        "tests/cassettes/models-create.yaml",
+        "tests/cassettes/models-get.yaml"
+      ],
+      "*.rudderlabs.com": [
+        "tests/cassettes/collections-get.yaml",
+        "tests/cassettes/collections-list.yaml",
+        "tests/cassettes/hardware-list.yaml",
+        "tests/cassettes/models-create.yaml",
+        "tests/cassettes/models-get.yaml"
+      ],
+      "*.rudderstack.com": [
+        "tests/cassettes/collections-get.yaml",
+        "tests/cassettes/collections-list.yaml",
+        "tests/cassettes/hardware-list.yaml",
+        "tests/cassettes/models-create.yaml",
+        "tests/cassettes/models-get.yaml"
+      ],
+      "*.mux.com": [
+        "tests/cassettes/collections-get.yaml",
+        "tests/cassettes/collections-list.yaml",
+        "tests/cassettes/hardware-list.yaml",
+        "tests/cassettes/models-create.yaml",
+        "tests/cassettes/models-get.yaml"
+      ],
+      "*.sentry.io": [
+        "tests/cassettes/collections-get.yaml",
+        "tests/cassettes/collections-list.yaml",
+        "tests/cassettes/hardware-list.yaml",
+        "tests/cassettes/models-create.yaml",
+        "tests/cassettes/models-get.yaml"
+      ],
+      "cdn.rudderlabs.com": [
+        "tests/cassettes/collections-get.yaml",
+        "tests/cassettes/collections-list.yaml",
+        "tests/cassettes/hardware-list.yaml",
+        "tests/cassettes/models-create.yaml",
+        "tests/cassettes/models-get.yaml"
+      ],
+      "nel.heroku.com": [
+        "tests/cassettes/collections-get.yaml",
+        "tests/cassettes/collections-list.yaml",
+        "tests/cassettes/hardware-list.yaml",
+        "tests/cassettes/models-create.yaml",
+        "tests/cassettes/models-get.yaml"
+      ],
+      "pbxt.replicate.delivery": [
+        "tests/cassettes/models-get.yaml",
+        "tests/cassettes/predictions-cancel.yaml",
+        "tests/cassettes/test_predictions_cancel[False].yaml",
+        "tests/cassettes/test_predictions_cancel[True].yaml"
+      ],
+      "www.interioraidesigns.com": [
+        "tests/cassettes/models-list.yaml"
+      ],
+      "www.photoaistudio.com": [
+        "tests/cassettes/models-list.yaml"
+      ],
+      "download.pytorch.org": [
+        "tests/cassettes/models-list.yaml"
+      ],
+      "www.modelscope.cn": [
+        "tests/cassettes/models-list.yaml"
+      ],
+      "pytorch.org": [
+        "tests/cassettes/models-list.yaml"
+      ],
+      "invoke-ai.github.io": [
+        "tests/cassettes/models-list.yaml"
+      ],
+      "raw.githubusercontent.com": [
+        "tests/cassettes/models-list.yaml"
+      ],
+      "replicatestatus.com": [
+        "tests/cassettes/models-search.yaml",
+        "tests/cassettes/predictions-cancel.yaml",
+        "tests/cassettes/test_predictions_cancel[False].yaml",
+        "tests/cassettes/test_predictions_cancel[True].yaml",
+        "tests/cassettes/test_predictions_create_blocking[False-10].yaml"
+      ],
+      "d31rfu1d3w8e4q.cloudfront.net": [
+        "tests/cassettes/models-search.yaml",
+        "tests/cassettes/test_predictions_create_blocking[False-10].yaml",
+        "tests/cassettes/test_predictions_create_blocking[False-True].yaml",
+        "tests/cassettes/test_predictions_create_blocking[True-10].yaml",
+        "tests/cassettes/test_predictions_create_blocking[True-True].yaml"
+      ],
+      "api.markprompt.com": [
+        "tests/cassettes/models-search.yaml",
+        "tests/cassettes/test_predictions_create_blocking[False-10].yaml",
+        "tests/cassettes/test_predictions_create_blocking[False-True].yaml",
+        "tests/cassettes/test_predictions_create_blocking[True-10].yaml",
+        "tests/cassettes/test_predictions_create_blocking[True-True].yaml"
+      ],
+      "fonts.googleapis.com": [
+        "tests/cassettes/predictions-create.yaml",
+        "tests/cassettes/trainings-get.yaml"
+      ],
+      "fonts.replicate.ai": [
+        "tests/cassettes/predictions-create.yaml",
+        "tests/cassettes/trainings-get.yaml"
+      ],
+      "fonts.gstatic.com": [
+        "tests/cassettes/predictions-create.yaml",
+        "tests/cassettes/trainings-get.yaml"
+      ],
+      "*.gstatic.com": [
+        "tests/cassettes/predictions-create.yaml",
+        "tests/cassettes/trainings-get.yaml"
+      ],
+      "ai.meta.com": [
+        "tests/cassettes/predictions-stream.yaml"
+      ],
+      "streaming-api.svc.us.c.replicate.net": [
+        "tests/cassettes/predictions-stream.yaml"
+      ],
+      "streaming-api.svc.rno2.c.replicate.net": [
+        "tests/cassettes/test_models_predictions_create_blocking[False-10].yaml",
+        "tests/cassettes/test_models_predictions_create_blocking[False-True].yaml",
+        "tests/cassettes/test_models_predictions_create_blocking[True-10].yaml",
+        "tests/cassettes/test_models_predictions_create_blocking[True-True].yaml"
+      ],
+      "stream.replicate.com": [
+        "tests/cassettes/test_predictions_create_blocking[False-10].yaml",
+        "tests/cassettes/test_predictions_create_blocking[False-True].yaml",
+        "tests/cassettes/test_predictions_create_blocking[True-10].yaml",
+        "tests/cassettes/test_predictions_create_blocking[True-True].yaml"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\replicate__replicate-python\\gitleaks.json",
+      "exit_code": 1,
+      "output_path": "_logs/scan/replicate__replicate-python/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/replicate__replicate-python/osv.json"
+    },
+    "pip_audit": {
+      "exit_code": 0,
+      "output_path": "_logs/scan/replicate__replicate-python/pip-audit.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "gitleaks: 1 test-path secret(s)",
+  "files_scanned": 89,
+  "files_skipped": 1,
+  "_reclassified": true,
+  "_sanitized": true
+}

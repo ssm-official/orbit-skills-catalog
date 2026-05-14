@@ -1,0 +1,129 @@
+{
+  "source_url": "https://github.com/easypost/easypost-python",
+  "proposed_slot": "both.shipping.easypost-py",
+  "scanned_at": "2026-05-14T05:49:09.252715+00:00",
+  "clone_ok": true,
+  "commit_pinned": "655796dc7debdbf1897fa596b31088675fb84836",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner",
+    "pip-audit"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "github.com": [
+        ".github/ISSUE_TEMPLATE/bug_report.yml",
+        ".github/ISSUE_TEMPLATE/feature_request.yml",
+        ".gitmodules",
+        "CHANGELOG.md",
+        "README.md"
+      ],
+      "support.easypost.com": [
+        "CHANGELOG.md"
+      ],
+      "docs.easypost.com": [
+        "README.md",
+        "pyproject.toml"
+      ],
+      "codecov.io": [
+        "README.md"
+      ],
+      "badge.fury.io": [
+        "README.md"
+      ],
+      "easypost.com": [
+        "README.md"
+      ],
+      "easypost.github.io": [
+        "README.md"
+      ],
+      "cloud.google.com": [
+        "README.md"
+      ],
+      "formulae.brew.sh": [
+        "README.md"
+      ],
+      "stackoverflow.com": [
+        ".github/ISSUE_TEMPLATE/bug_report.yml"
+      ],
+      "api.easypost.com": [
+        "easypost/constant.py",
+        "tests/cassettes/test_address_all.yaml",
+        "tests/cassettes/test_address_create.yaml",
+        "tests/cassettes/test_address_create_and_verify.yaml",
+        "tests/cassettes/test_address_create_and_verify_carrier.yaml"
+      ],
+      "api.stripe.com": [
+        "easypost/services/referral_customer_service.py",
+        "tests/cassettes/test_referral_customer_add_credit_card.yaml"
+      ],
+      "easypost-files.s3.us-west-2.amazonaws.com": [
+        "tests/cassettes/test_batch_add_remove_shipment.yaml",
+        "tests/cassettes/test_claim_cancel.yaml",
+        "tests/cassettes/test_claim_create.yaml",
+        "tests/cassettes/test_claim_retrieve.yaml",
+        "tests/cassettes/test_insurance_create.yaml"
+      ],
+      "track.easypost.com": [
+        "tests/cassettes/test_batch_add_remove_shipment.yaml",
+        "tests/cassettes/test_claim_cancel.yaml",
+        "tests/cassettes/test_claim_create.yaml",
+        "tests/cassettes/test_claim_retrieve.yaml",
+        "tests/cassettes/test_insurance_all.yaml"
+      ],
+      "easypost-files.s3-us-west-2.amazonaws.com": [
+        "tests/cassettes/test_claim_all.yaml",
+        "tests/cassettes/test_claim_cancel.yaml",
+        "tests/cassettes/test_claim_create.yaml",
+        "tests/cassettes/test_claim_get_next_page.yaml",
+        "tests/cassettes/test_claim_retrieve.yaml"
+      ],
+      "app.easypost.com": [
+        "tests/cassettes/test_customer_portal_account_link_create.yaml"
+      ],
+      "dashboard.stripe.com": [
+        "tests/cassettes/test_referral_customer_add_credit_card.yaml"
+      ],
+      "support.stripe.com": [
+        "tests/cassettes/test_referral_customer_add_credit_card.yaml"
+      ],
+      "q.stripe.com": [
+        "tests/cassettes/test_referral_customer_add_credit_card.yaml"
+      ],
+      "assets.easypost.com": [
+        "tests/cassettes/test_user_update_brand.yaml"
+      ],
+      "www.easypost.com": [
+        "tests/cassettes/test_user_update_brand.yaml"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\easypost__easypost-python\\gitleaks.json",
+      "exit_code": 1,
+      "output_path": "_logs/scan/easypost__easypost-python/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/easypost__easypost-python/osv.json"
+    },
+    "pip_audit": {
+      "exit_code": 0,
+      "output_path": "_logs/scan/easypost__easypost-python/pip-audit.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "gitleaks: 1 test-path secret(s)",
+  "files_scanned": 309,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

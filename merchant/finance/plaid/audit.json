@@ -1,0 +1,156 @@
+{
+  "source_url": "https://github.com/plaid/plaid-python",
+  "proposed_slot": "both.finance.plaid",
+  "scanned_at": "2026-05-14T05:49:29.485724+00:00",
+  "clone_ok": true,
+  "commit_pinned": "b1f7daa7f812c913ed2db03d490405bc9919835c",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner",
+    "pip-audit"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "github.com": [
+        ".github/workflows/add_to_project.yml",
+        "CHANGELOG.md",
+        "CONTRIBUTING.md",
+        "README.md",
+        "plaid/rest.py"
+      ],
+      "plaid.com": [
+        "CHANGELOG.md",
+        "CONTRIBUTING.md",
+        "README.md",
+        "plaid/__init__.py",
+        "plaid/api/plaid_api.py"
+      ],
+      "dashboard.plaid.com": [
+        "CONTRIBUTING.md",
+        "plaid/api/plaid_api.py",
+        "plaid/model/beta_partner_customer_v1_create_request.py",
+        "plaid/model/item_with_consent_fields.py",
+        "plaid/model/item_with_consent_fields_all_of.py"
+      ],
+      "discuss.circleci.com": [
+        "Dockerfile"
+      ],
+      "badge.fury.io": [
+        "README.md"
+      ],
+      "pypi.org": [
+        "README.md"
+      ],
+      "docs.python.org": [
+        "README.md"
+      ],
+      "www.enricozini.org": [
+        "README.md"
+      ],
+      "plaid.github.io": [
+        "README.md"
+      ],
+      "cloud.google.com": [
+        "README.md"
+      ],
+      "blog.plaid.com": [
+        "README.md"
+      ],
+      "openapi-generator.tech": [
+        "plaid/__init__.py",
+        "plaid/api/plaid_api.py",
+        "plaid/api_client.py",
+        "plaid/configuration.py",
+        "plaid/exceptions.py"
+      ],
+      "production.plaid.com": [
+        "plaid/configuration.py"
+      ],
+      "sandbox.plaid.com": [
+        "plaid/configuration.py"
+      ],
+      "urllib3.readthedocs.io": [
+        "plaid/rest.py",
+        "templates/python/rest.mustache"
+      ],
+      "docs.google.com": [
+        "plaid/api/plaid_api.py",
+        "plaid/model/base_report_investment_security.py",
+        "plaid/model/security.py",
+        "plaid/model/security_override.py",
+        "plaid/model/transfer_platform_requirement_submission.py"
+      ],
+      "my.plaid.com": [
+        "plaid/api/plaid_api.py"
+      ],
+      "wikipedia.org": [
+        "plaid/model/accounts_balance_get_request_options.py",
+        "plaid/model/activity.py",
+        "plaid/model/application.py",
+        "plaid/model/asset_report.py",
+        "plaid/model/asset_report_investment_transaction.py"
+      ],
+      "en.wikipedia.org": [
+        "plaid/model/account_balance.py",
+        "plaid/model/asset_report_account_balance.py",
+        "plaid/model/base_report_account_balances.py",
+        "plaid/model/consent_event.py",
+        "plaid/model/investment_account_balance.py"
+      ],
+      "datatracker.ietf.org": [
+        "plaid/model/beacon_user_data.py",
+        "plaid/model/beacon_user_request_data.py",
+        "plaid/model/beacon_user_update_request_data.py",
+        "plaid/model/business_search_terms.py",
+        "plaid/model/business_verification_create_request_business.py"
+      ],
+      "xml2rfc.tools.ietf.org": [
+        "plaid/model/fdx_lifecycle_event.py",
+        "plaid/model/fdx_notification.py"
+      ],
+      "cognitohq.com": [
+        "plaid/model/id_number_type.py"
+      ],
+      "www.plaid.com": [
+        "plaid/model/transfer_create_request.py"
+      ],
+      "www.example.com": [
+        "tests/integration/test_assets.py"
+      ],
+      "www.employer.com": [
+        "tests/integration/test_income_verification.py"
+      ],
+      "sample-webhook-uri.com": [
+        "tests/integration/test_link_token.py"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\plaid__plaid-python\\gitleaks.json",
+      "exit_code": 0,
+      "output_path": "_logs/scan/plaid__plaid-python/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/plaid__plaid-python/osv.json"
+    },
+    "pip_audit": {
+      "exit_code": 1,
+      "output_path": "_logs/scan/plaid__plaid-python/pip-audit.json"
+    }
+  },
+  "verdict": "pass",
+  "verdict_reason": "no findings of concern in static scan",
+  "files_scanned": 2135,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

@@ -1,0 +1,27 @@
+{
+  "source_url": "https://github.com/resend/resend-python",
+  "proposed_slot": "both.marketing.resend-py",
+  "smoked_at": "2026-05-14T06:09:25.985005+00:00",
+  "platform": "windows",
+  "sandbox": "fresh venv / fresh node_modules (Docker unavailable on host)",
+  "network_monitoring": "Get-NetTCPConnection deltas (weaker than netns isolation)",
+  "package": "resend",
+  "language": "python",
+  "kind": "python",
+  "steps": [
+    {
+      "step": "uv_dryrun",
+      "rc": 2,
+      "stderr": "nds on `typing_extensions`, but doesn't declare it as a build dependency. If `file` is a first-party package, consider adding `typing_extensions` to its `build-system.requires`. Otherwise, either add it to your `pyproject.toml` under:\n\n[tool.uv.extra-build-dependencies]\nfile = [\"typing_extensions\"]\n\nor `uv pip install typing_extensions` into the environment and re-run with `--no-build-isolation`.\n"
+    },
+    {
+      "step": "uv_run_import",
+      "rc": 1,
+      "stdout": "",
+      "stderr": "  \u00c3\u2014 Failed to resolve `--with` requirement\n  \u00e2\u2022\u00b0\u00e2\u201d\u20ac\u00e2\u2013\u00b6 The build backend returned an error\n",
+      "new_outbound_connections": []
+    }
+  ],
+  "verdict": "deferred",
+  "reason": "uv install dry-run failed; package may need uvx-style invocation or extra system deps"
+}

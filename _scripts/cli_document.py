@@ -126,6 +126,85 @@ def infer_risk(audit: dict, row: dict) -> dict:
     return risk
 
 
+_NAME_OVERRIDES = {
+    "elevenlabs-mcp": "ElevenLabs MCP",
+    "anthropic-sdk-python": "Anthropic SDK (Python)",
+    "anthropic-sdk-typescript": "Anthropic SDK (TypeScript)",
+    "openai-python": "OpenAI SDK (Python)",
+    "openai-node": "OpenAI SDK (Node)",
+    "stripe-python": "Stripe SDK (Python)",
+    "stripe-node": "Stripe SDK (Node)",
+    "agent-toolkit": "Stripe Agent Toolkit",
+    "huggingface_hub": "Hugging Face Hub",
+    "replicate-python": "Replicate SDK (Python)",
+    "replicate-javascript": "Replicate SDK (Node)",
+    "google-maps-services-python": "Google Maps Services (Python)",
+    "google-maps-services-js": "Google Maps Services (Node)",
+    "google-api-python-client": "Google APIs Client (Python)",
+    "google-api-nodejs-client": "Google APIs Client (Node)",
+    "mapbox-sdk-js": "Mapbox SDK (Node)",
+    "twilio-python": "Twilio SDK (Python)",
+    "twilio-node": "Twilio SDK (Node)",
+    "sendgrid-python": "Twilio SendGrid (Python)",
+    "sendgrid-nodejs": "Twilio SendGrid (Node)",
+    "resend-python": "Resend SDK (Python)",
+    "resend-node": "Resend SDK (Node)",
+    "plaid-python": "Plaid SDK (Python)",
+    "plaid-node": "Plaid SDK (Node)",
+    "hubspot-api-python": "HubSpot SDK (Python)",
+    "hubspot-api-nodejs": "HubSpot SDK (Node)",
+    "easypost-python": "EasyPost SDK (Python)",
+    "easypost-node": "EasyPost SDK (Node)",
+    "mailchimp-marketing-python": "Mailchimp Marketing (Python)",
+    "mailchimp-marketing-node": "Mailchimp Marketing (Node)",
+    "square-python-sdk": "Square SDK (Python)",
+    "square-nodejs-sdk": "Square SDK (Node)",
+    "octokit.js": "Octokit (GitHub) for Node",
+    "PyGithub": "PyGithub (GitHub) for Python",
+    "github-mcp-server": "GitHub MCP Server",
+    "sentry-mcp": "Sentry MCP Server",
+    "mcp-server-cloudflare": "Cloudflare MCP Server",
+    "mcp-server-browserbase": "Browserbase MCP Server",
+    "playwright-mcp": "Playwright MCP Server",
+    "notion-sdk-js": "Notion SDK (Node)",
+    "notion-mcp-server": "Notion MCP Server",
+    "linear": "Linear SDK",
+    "jsforce": "Salesforce SDK (jsforce)",
+    "client-nodejs": "Pipedrive SDK (Node)",
+    "client-python": "Pipedrive SDK (Python)",
+    "flights-mcp": "Duffel Flights MCP",
+    "duffel-api-javascript": "Duffel SDK (Node)",
+    "duffel-api-python": "Duffel SDK (Python)",
+    "zendesk_api_client_rb": "Zendesk SDK (Ruby)",
+    "rembg": "rembg — background removal",
+    "ccxt": "CCXT — unified crypto exchange API",
+    "spotify-mcp": "Spotify MCP Server",
+    "12306-mcp": "China Rail (12306) MCP",
+    "apify-mcp-server": "Apify MCP Server (web scraping)",
+    "shopify-mcp": "Shopify MCP Server",
+    "shopify-mcp-server": "Shopify MCP Server (alt)",
+    "mcp_massive": "Massive Financial Market Data MCP",
+    "mcp-toolbox": "Google MCP Toolbox",
+}
+
+
+def _pretty_name(slot: str, repo: str) -> str:
+    if repo in _NAME_OVERRIDES:
+        return _NAME_OVERRIDES[repo]
+    return repo.replace("-", " ").replace("_", " ").title()
+
+
+def _pretty_summary(row: dict, manifest_repo: str) -> str:
+    notes = (row.get("notes") or "").strip()
+    desc = (row.get("description") or "").strip()
+    # If notes are useful (not just "discovered_from:..."), prefer them
+    if notes and not notes.startswith("discovered_from:") and len(notes) > 6:
+        return notes[:280]
+    if desc and len(desc) > 6:
+        return desc[:280]
+    return f"{manifest_repo} — see vendor URL for capability details."
+
+
 def build_manifest(row: dict, audit: dict, smoke: dict) -> dict | None:
     slot = row.get("proposed_slot") or ""
     tracks, category, slug = slot_to_path(slot)
@@ -135,6 +214,9 @@ def build_manifest(row: dict, audit: dict, smoke: dict) -> dict | None:
     if not parsed:
         return None
     owner, repo = parsed
+    # avoid only the literal double-owner case (e.g. "elevenlabs-elevenlabs-mcp" → "elevenlabs-mcp")
+    if slug.lower() == f"{owner.lower()}-{repo.lower()}":
+        slug = repo.lower()
     upstream = infer_upstream(row["source_url"], row, audit)
     risk = infer_risk(audit, row)
     # x402 compat: idempotent read-only calls are x402-compatible by default;
@@ -147,13 +229,13 @@ def build_manifest(row: dict, audit: dict, smoke: dict) -> dict | None:
 
     manifest = {
         "schema_version": "1.0",
-        "id": slot if slot.count(".") >= 2 else f"both.uncategorized.{slug}",
-        "name": repo.replace("-", " ").title(),
+        "id": f"{'both' if len(tracks) == 2 else tracks[0]}.{category}.{slug}",
+        "name": _pretty_name(slot, repo),
         "slug": slug,
         "track": tracks,
         "category": category,
         "slot": slug,
-        "summary": (row.get("notes") or row.get("description") or repo).strip()[:280] or repo,
+        "summary": _pretty_summary(row, repo),
         "version": "1.0.0",
         "source": {
             "kind": row.get("kind", "sdk_wrapper") if row.get("kind") in ("mcp_server", "sdk_wrapper", "tool_folder", "composite") else "sdk_wrapper",

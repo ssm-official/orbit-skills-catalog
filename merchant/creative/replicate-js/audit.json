@@ -1,0 +1,168 @@
+{
+  "source_url": "https://github.com/replicate/replicate-javascript",
+  "proposed_slot": "both.creative.replicate-js",
+  "scanned_at": "2026-05-14T05:52:18.571677+00:00",
+  "clone_ok": true,
+  "commit_pinned": "2fd6f3944f5e252f2eb7cd4e9e5416786b9c4861",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "nodejs.org": [
+        ".github/workflows/ci.yml",
+        ".gitignore",
+        "README.md"
+      ],
+      "gruntjs.com": [
+        ".gitignore"
+      ],
+      "bower.io": [
+        ".gitignore"
+      ],
+      "parceljs.org": [
+        ".gitignore"
+      ],
+      "nextjs.org": [
+        ".gitignore"
+      ],
+      "biomejs.dev": [
+        "biome.json"
+      ],
+      "bundlejs.com": [
+        "CONTRIBUTING.md"
+      ],
+      "replicate.com": [
+        "README.md",
+        "index.js",
+        "index.test.ts",
+        "lib/collections.js"
+      ],
+      "api.replicate.com": [
+        "README.md",
+        "index.js",
+        "index.test.ts",
+        "integration/browser/index.test.js"
+      ],
+      "github.com": [
+        "README.md",
+        "index.js",
+        "index.test.ts",
+        "lib/util.js",
+        "package-lock.json"
+      ],
+      "test.host": [
+        "index.test.ts"
+      ],
+      "ai.meta.com": [
+        "index.test.ts"
+      ],
+      "replicate.delivery": [
+        "README.md",
+        "index.test.ts"
+      ],
+      "stream.replicate.com": [
+        "index.test.ts"
+      ],
+      "delivery.replicate.com": [
+        "index.test.ts"
+      ],
+      "www.apache.org": [
+        "LICENSE"
+      ],
+      "registry.npmjs.org": [
+        "integration/bun/bun.lockb",
+        "package-lock.json"
+      ],
+      "opencollective.com": [
+        "package-lock.json"
+      ],
+      "www.patreon.com": [
+        "package-lock.json"
+      ],
+      "feross.org": [
+        "package-lock.json"
+      ],
+      "tidelift.com": [
+        "package-lock.json"
+      ],
+      "bjornlu.com": [
+        "package-lock.json"
+      ],
+      "bun.sh": [
+        "README.md"
+      ],
+      "deno.com": [
+        "README.md"
+      ],
+      "developers.cloudflare.com": [
+        "README.md",
+        "integration/cloudflare-worker/index.test.js"
+      ],
+      "vercel.com": [
+        "README.md"
+      ],
+      "aws.amazon.com": [
+        "README.md"
+      ],
+      "my.app": [
+        "README.md"
+      ],
+      "developer.mozilla.org": [
+        "README.md",
+        "lib/util.js"
+      ],
+      "www.npmjs.com": [
+        "README.md"
+      ],
+      "smee.io": [
+        "README.md"
+      ],
+      "streaming.api.replicate.com": [
+        "README.md"
+      ],
+      "playwright.dev": [
+        "integration/browser/README.md",
+        "integration/browser/index.test.js"
+      ],
+      "aka.ms": [
+        "integration/typescript/tsconfig.json"
+      ],
+      "stackoverflow.com": [
+        "lib/util.js"
+      ],
+      "jsben.ch": [
+        "lib/util.js"
+      ],
+      "unpkg.com": [
+        "vendor/eventsource-parser/stream.js",
+        "vendor/streams-text-encoding/text-decoder-stream.js"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\replicate__replicate-javascript\\gitleaks.json",
+      "exit_code": 1,
+      "output_path": "_logs/scan/replicate__replicate-javascript/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/replicate__replicate-javascript/osv.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "gitleaks: 3 test-path secret(s)",
+  "files_scanned": 73,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

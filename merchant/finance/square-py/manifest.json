@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "id": "merchant.finance.square-py",
+  "name": "Square SDK (Python)",
+  "slug": "square-py",
+  "track": [
+    "merchant"
+  ],
+  "category": "finance",
+  "slot": "square-py",
+  "summary": "Square Python SDK",
+  "version": "1.0.0",
+  "source": {
+    "kind": "sdk_wrapper",
+    "repo_url": "https://github.com/square/square-python-sdk",
+    "commit_pinned": "813313da9098aacfa234225449b0c67cf4a6284c",
+    "license": "MIT",
+    "last_commit_at": "2026-02-11",
+    "stars": 112,
+    "primary_language": "Python",
+    "maintainer": "square"
+  },
+  "upstream": {
+    "vendor": "Square",
+    "vendor_url": "",
+    "auth_type": "api_key",
+    "sandbox_available": false,
+    "requires_user_oauth": false,
+    "cost_model": "varies",
+    "typical_per_call_cost_usd": "varies"
+  },
+  "x402_compatible": false,
+  "x402_notes": "spend-capable in live mode \u2014 needs sandbox-gated invocation in Orbit",
+  "tools": [
+    {
+      "name": "primary",
+      "summary": "Primary entry point (smoke-tested via import / require). Tool catalogue derived at runtime from the upstream package.",
+      "destructive": false,
+      "idempotent": true,
+      "rate_limit": "see upstream docs"
+    }
+  ],
+  "tags": [
+    "finance",
+    "square",
+    "merchant"
+  ],
+  "risk": {
+    "prompt_injection": "low",
+    "destructive": false,
+    "spend_capable": true,
+    "regulated_data": [
+      "pii"
+    ],
+    "default_mode": "live"
+  },
+  "audit": {
+    "verdict": "pass_with_notes",
+    "log": "audit.json",
+    "scanners_run": [
+      "orbit_pattern_scan",
+      "install_hook_audit",
+      "gitleaks",
+      "osv-scanner",
+      "pip-audit"
+    ],
+    "behavioral_check": "clean_with_notes"
+  },
+  "smoke": {
+    "verdict": "pass_with_notes",
+    "log": "smoke.json",
+    "last_passed_at": "2026-05-14T06:10:11.464082+00:00"
+  },
+  "orbit": {
+    "suggested_markup_floor_pct": 5,
+    "suggested_markup_ceiling_pct": 50,
+    "pricing_note": "Upstream cost model: varies.",
+    "tokenization_friendly": false
+  },
+  "notes": "Square Python SDK"
+}

@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "id": "merchant.devops.pygithub",
+  "name": "PyGithub (GitHub) for Python",
+  "slug": "pygithub",
+  "track": [
+    "merchant"
+  ],
+  "category": "devops",
+  "slot": "pygithub",
+  "summary": "PyGithub",
+  "version": "1.0.0",
+  "source": {
+    "kind": "sdk_wrapper",
+    "repo_url": "https://github.com/PyGithub/PyGithub",
+    "commit_pinned": "7806e7dcc813735413798a45fac2e073b4b30924",
+    "license": "LGPL-3.0",
+    "last_commit_at": "2026-05-13",
+    "stars": 7716,
+    "primary_language": "Python",
+    "maintainer": "PyGithub"
+  },
+  "upstream": {
+    "vendor": "GitHub (PyGithub)",
+    "vendor_url": "https://github.com",
+    "auth_type": "oauth",
+    "sandbox_available": false,
+    "requires_user_oauth": true,
+    "cost_model": "freemium",
+    "typical_per_call_cost_usd": "rate-limited free tier"
+  },
+  "x402_compatible": true,
+  "x402_notes": "per-call, deterministic JSON response",
+  "tools": [
+    {
+      "name": "primary",
+      "summary": "Primary entry point (smoke-tested via import / require). Tool catalogue derived at runtime from the upstream package.",
+      "destructive": false,
+      "idempotent": true,
+      "rate_limit": "see upstream docs"
+    }
+  ],
+  "tags": [
+    "devops",
+    "PyGithub",
+    "merchant"
+  ],
+  "risk": {
+    "prompt_injection": "low",
+    "destructive": false,
+    "spend_capable": false,
+    "regulated_data": [],
+    "default_mode": "live"
+  },
+  "audit": {
+    "verdict": "pass_with_notes",
+    "log": "audit.json",
+    "scanners_run": [
+      "orbit_pattern_scan",
+      "install_hook_audit",
+      "gitleaks",
+      "osv-scanner",
+      "pip-audit"
+    ],
+    "behavioral_check": "clean_with_notes"
+  },
+  "smoke": {
+    "verdict": "pass_with_notes",
+    "log": "smoke.json",
+    "last_passed_at": "2026-05-14T06:10:07.176753+00:00"
+  },
+  "orbit": {
+    "suggested_markup_floor_pct": 5,
+    "suggested_markup_ceiling_pct": 50,
+    "pricing_note": "Upstream cost model: freemium.",
+    "tokenization_friendly": true
+  },
+  "notes": "PyGithub"
+}

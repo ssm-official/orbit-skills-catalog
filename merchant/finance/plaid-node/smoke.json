@@ -1,0 +1,38 @@
+{
+  "source_url": "https://github.com/plaid/plaid-node",
+  "proposed_slot": "both.finance.plaid-node",
+  "smoked_at": "2026-05-14T06:07:35.167117+00:00",
+  "platform": "windows",
+  "sandbox": "fresh venv / fresh node_modules (Docker unavailable on host)",
+  "network_monitoring": "Get-NetTCPConnection deltas (weaker than netns isolation)",
+  "package": "plaid",
+  "language": "node",
+  "kind": "node",
+  "steps": [
+    {
+      "step": "npm_install",
+      "rc": 0,
+      "stderr": ""
+    },
+    {
+      "step": "node_check_main",
+      "main": "dist/index.js",
+      "rc": 0,
+      "stderr": ""
+    },
+    {
+      "new_outbound_connections": [
+        {
+          "host": "104.16.3.34",
+          "port": 443
+        },
+        {
+          "host": "20.205.243.166",
+          "port": 443
+        }
+      ]
+    }
+  ],
+  "verdict": "pass",
+  "reason": "npm install + syntax-check OK"
+}

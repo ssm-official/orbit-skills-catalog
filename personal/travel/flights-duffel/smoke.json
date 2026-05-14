@@ -1,0 +1,40 @@
+{
+  "source_url": "https://github.com/ravinahp/flights-mcp",
+  "proposed_slot": "personal.travel.flights-duffel",
+  "smoked_at": "2026-05-14T06:07:54.114298+00:00",
+  "platform": "windows",
+  "sandbox": "fresh venv / fresh node_modules (Docker unavailable on host)",
+  "network_monitoring": "Get-NetTCPConnection deltas (weaker than netns isolation)",
+  "package": "flights-mcp",
+  "language": "python",
+  "kind": "python",
+  "steps": [
+    {
+      "step": "uv_dryrun",
+      "rc": 0,
+      "stderr": ""
+    },
+    {
+      "step": "uv_run_import",
+      "rc": 1,
+      "stdout": "",
+      "stderr": " Downloaded pydantic-core\n Downloaded pywin32\n      Built flights-mcp @ file:///C:/Users/ssmca/orbit-skills-catalog/candidates/ravinahp__flights-mcp\nInstalled 32 packages in 532ms\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    import flights_mcp; print('OK', sorted(set(dir(flights_mcp)))[:20])\n    ^^^^^^^^^^^^^^^^^^\nModuleNotFoundError: No module named 'flights_mcp'\n",
+      "new_outbound_connections": [
+        {
+          "host": "172.67.68.3",
+          "port": 443
+        },
+        {
+          "host": "44.215.234.239",
+          "port": 443
+        },
+        {
+          "host": "72.153.5.60",
+          "port": 443
+        }
+      ]
+    }
+  ],
+  "verdict": "pass_with_notes",
+  "reason": "installable but direct import flights_mcp failed (may use non-standard module name)"
+}

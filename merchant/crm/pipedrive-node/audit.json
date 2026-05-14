@@ -1,0 +1,150 @@
+{
+  "source_url": "https://github.com/pipedrive/client-nodejs",
+  "proposed_slot": "merchant.crm.pipedrive-node",
+  "scanned_at": "2026-05-14T05:53:36.162188+00:00",
+  "clone_ok": true,
+  "commit_pinned": "c24f334a28d69d903ecc61a2d051e38832fb2131",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [
+      {
+        "file": "test/config/environment.js",
+        "label": "exec-call",
+        "snippet": "}`);  \tconst { code } = shell.exec(`./node_modules/.bin/jest ${op"
+      }
+    ],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "gruntjs.com": [
+        ".gitignore"
+      ],
+      "nodejs.org": [
+        ".gitignore"
+      ],
+      "github.com": [
+        ".openapi-generator-ignore",
+        "CHANGELOG.md",
+        "package-lock.json",
+        "package.json",
+        "src/versions/v1/api.ts"
+      ],
+      "keepachangelog.com": [
+        "CHANGELOG.md"
+      ],
+      "semver.org": [
+        "CHANGELOG.md"
+      ],
+      "pipedrive.readme.io": [
+        "CHANGELOG.md",
+        "README.md",
+        "migration.md",
+        "src/versions/v1/api/channels-api.ts",
+        "src/versions/v1/api/deal-fields-api.ts"
+      ],
+      "devcommunity.pipedrive.com": [
+        "CHANGELOG.md"
+      ],
+      "developers.pipedrive.com": [
+        "CHANGELOG.md",
+        "README.md",
+        "migration.md",
+        "package.json",
+        "src/versions/v1/api/leads-api.ts"
+      ],
+      "help.github.com": [
+        "git_push.sh"
+      ],
+      "$": [
+        "git_push.sh"
+      ],
+      "www.npmjs.com": [
+        "README.md",
+        "migration.md"
+      ],
+      "npm-registry-proxy.pipedrive.tools": [
+        "package-lock.json"
+      ],
+      "opencollective.com": [
+        "package-lock.json"
+      ],
+      "tidelift.com": [
+        "package-lock.json"
+      ],
+      "paulmillr.com": [
+        "package-lock.json"
+      ],
+      "eslint.org": [
+        "package-lock.json"
+      ],
+      "www.patreon.com": [
+        "package-lock.json"
+      ],
+      "feross.org": [
+        "package-lock.json"
+      ],
+      "api.pipedrive.com": [
+        "docs/v1.md",
+        "docs/v2.md",
+        "src/versions/v1/base.ts",
+        "src/versions/v1/configuration.ts",
+        "src/versions/v2/base.ts"
+      ],
+      "oauth.pipedrive.com": [
+        "docs/v1.md",
+        "docs/v2.md",
+        "src/versions/v1/configuration.ts",
+        "src/versions/v2/configuration.ts"
+      ],
+      "openapi-generator.tech": [
+        "src/versions/v1/api.ts",
+        "src/versions/v1/api/activity-fields-api.ts",
+        "src/versions/v1/api/activity-types-api.ts",
+        "src/versions/v1/api/billing-api.ts",
+        "src/versions/v1/api/call-logs-api.ts"
+      ],
+      "support.pipedrive.com": [
+        "src/versions/v1/api/roles-api.ts",
+        "src/versions/v1/models/add-or-update-role-setting-request.ts",
+        "src/versions/v2/api/beta-api.ts",
+        "src/versions/v2/api/deals-api.ts",
+        "src/versions/v2/api/item-search-api.ts"
+      ],
+      "app.pipedrive.com": [
+        "src/versions/v1/models/base-deal.ts",
+        "src/versions/v1/models/lead.ts",
+        "src/versions/v2/models/deal.ts"
+      ],
+      "example.org": [
+        "test/functional/constants.ts",
+        "test/functional/oauth/access-token.test.ts",
+        "test/functional/oauth/authorisation.test.ts",
+        "test/functional/oauth/automatic-token-refresh.test.ts"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\pipedrive__client-nodejs\\gitleaks.json",
+      "exit_code": 0,
+      "output_path": "_logs/scan/pipedrive__client-nodejs/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/pipedrive__client-nodejs/osv.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "exec-call in test/config/environment.js",
+  "files_scanned": 1029,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

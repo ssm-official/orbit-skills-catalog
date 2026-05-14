@@ -1,0 +1,607 @@
+{
+  "source_url": "https://github.com/cloudflare/mcp-server-cloudflare",
+  "proposed_slot": "merchant.devops.cloudflare-mcp-server-cloudflare",
+  "scanned_at": "2026-05-14T05:55:01.362652+00:00",
+  "clone_ok": true,
+  "commit_pinned": "10a47554af4d10d022e7ad75d83bfd012167fe35",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [
+      {
+        "file": "apps/ai-gateway/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": "seURL?: string): boolean;     exec(input?: (string | URLPatternUR"
+      },
+      {
+        "file": "apps/ai-gateway/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": ": Promise<D1Result<T>[]>;     exec(query: string): Promise<D1Exec"
+      },
+      {
+        "file": "apps/auditlogs/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": "seURL?: string): boolean;     exec(input?: (string | URLPatternUR"
+      },
+      {
+        "file": "apps/auditlogs/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": ": Promise<D1Result<T>[]>;     exec(query: string): Promise<D1Exec"
+      },
+      {
+        "file": "apps/autorag/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": "seURL?: string): boolean;     exec(input?: (string | URLPatternUR"
+      },
+      {
+        "file": "apps/autorag/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": ": Promise<D1Result<T>[]>;     exec(query: string): Promise<D1Exec"
+      },
+      {
+        "file": "apps/browser-rendering/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": "seURL?: string): boolean;     exec(input?: (string | URLPatternUR"
+      },
+      {
+        "file": "apps/browser-rendering/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": ": Promise<D1Result<T>[]>;     exec(query: string): Promise<D1Exec"
+      },
+      {
+        "file": "apps/cloudflare-one-casb/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": "seURL?: string): boolean;     exec(input?: (string | URLPatternUR"
+      },
+      {
+        "file": "apps/cloudflare-one-casb/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": ": Promise<D1Result<T>[]>;     exec(query: string): Promise<D1Exec"
+      },
+      {
+        "file": "apps/demo-day/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": "seURL?: string): boolean;     exec(input?: (string | URLPatternUR"
+      },
+      {
+        "file": "apps/demo-day/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": ": Promise<D1Result<T>[]>;     exec(query: string): Promise<D1Exec"
+      },
+      {
+        "file": "apps/dex-analysis/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": "seURL?: string): boolean;     exec(input?: (string | URLPatternUR"
+      },
+      {
+        "file": "apps/dex-analysis/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": ": Promise<D1Result<T>[]>;     exec(query: string): Promise<D1Exec"
+      },
+      {
+        "file": "apps/dns-analytics/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": "seURL?: string): boolean;     exec(input?: (string | URLPatternIn"
+      },
+      {
+        "file": "apps/dns-analytics/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": ": Promise<D1Result<T>[]>;     exec(query: string): Promise<D1Exec"
+      },
+      {
+        "file": "apps/docs-ai-search/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": "seURL?: string): boolean;     exec(input?: (string | URLPatternUR"
+      },
+      {
+        "file": "apps/docs-ai-search/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": ": Promise<D1Result<T>[]>;     exec(query: string): Promise<D1Exec"
+      },
+      {
+        "file": "apps/docs-autorag/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": "seURL?: string): boolean;     exec(input?: (string | URLPatternUR"
+      },
+      {
+        "file": "apps/docs-autorag/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": ": Promise<D1Result<T>[]>;     exec(query: string): Promise<D1Exec"
+      },
+      {
+        "file": "apps/docs-vectorize/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": "seURL?: string): boolean;     exec(input?: (string | URLPatternUR"
+      },
+      {
+        "file": "apps/docs-vectorize/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": ": Promise<D1Result<T>[]>;     exec(query: string): Promise<D1Exec"
+      },
+      {
+        "file": "apps/graphql/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": "seURL?: string): boolean;     exec(input?: (string | URLPatternUR"
+      },
+      {
+        "file": "apps/graphql/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": ": Promise<D1Result<T>[]>;     exec(query: string): Promise<D1Exec"
+      },
+      {
+        "file": "apps/logpush/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": "seURL?: string): boolean;     exec(input?: (string | URLPatternUR"
+      },
+      {
+        "file": "apps/logpush/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": ": Promise<D1Result<T>[]>;     exec(query: string): Promise<D1Exec"
+      },
+      {
+        "file": "apps/radar/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": "seURL?: string): boolean;     exec(input?: (string | URLPatternUR"
+      },
+      {
+        "file": "apps/radar/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": ": Promise<D1Result<T>[]>;     exec(query: string): Promise<D1Exec"
+      },
+      {
+        "file": "apps/sandbox-container/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": "seURL?: string): boolean;     exec(input?: (string | URLPatternUR"
+      },
+      {
+        "file": "apps/sandbox-container/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": ": Promise<D1Result<T>[]>;     exec(query: string): Promise<D1Exec"
+      },
+      {
+        "file": "apps/sandbox-container/container/sandbox.container.app.ts",
+        "label": "exec-call",
+        "snippet": "q.valid('json') \tconst proc = exec(execParams.args) \treturn strea"
+      },
+      {
+        "file": "apps/workers-bindings/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": "seURL?: string): boolean;     exec(input?: (string | URLPatternUR"
+      },
+      {
+        "file": "apps/workers-bindings/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": ": Promise<D1Result<T>[]>;     exec(query: string): Promise<D1Exec"
+      },
+      {
+        "file": "apps/workers-builds/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": "seURL?: string): boolean;     exec(input?: (string | URLPatternUR"
+      },
+      {
+        "file": "apps/workers-builds/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": ": Promise<D1Result<T>[]>;     exec(query: string): Promise<D1Exec"
+      },
+      {
+        "file": "apps/workers-observability/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": "seURL?: string): boolean;     exec(input?: (string | URLPatternUR"
+      },
+      {
+        "file": "apps/workers-observability/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": ": Promise<D1Result<T>[]>;     exec(query: string): Promise<D1Exec"
+      },
+      {
+        "file": "packages/eval-tools/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": "seURL?: string): boolean;     exec(input?: (string | URLPatternUR"
+      },
+      {
+        "file": "packages/eval-tools/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": ": Promise<D1Result<T>[]>;     exec(query: string): Promise<D1Exec"
+      },
+      {
+        "file": "packages/mcp-common/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": "seURL?: string): boolean;     exec(input?: (string | URLPatternUR"
+      },
+      {
+        "file": "packages/mcp-common/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": ": Promise<D1Result<T>[]>;     exec(query: string): Promise<D1Exec"
+      },
+      {
+        "file": "packages/mcp-observability/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": "seURL?: string): boolean;     exec(input?: (string | URLPatternUR"
+      },
+      {
+        "file": "packages/mcp-observability/worker-configuration.d.ts",
+        "label": "exec-call",
+        "snippet": ": Promise<D1Result<T>[]>;     exec(query: string): Promise<D1Exec"
+      }
+    ],
+    "install_hooks": [
+      {
+        "file": "apps/sandbox-container/package.json",
+        "hook": "postinstall",
+        "command": "mkdir -p workdir",
+        "dangerous": false
+      }
+    ],
+    "py_build_hooks": [],
+    "urls_found": {
+      "editorconfig.org": [
+        ".editorconfig"
+      ],
+      "help.github.com": [
+        ".gitignore"
+      ],
+      "turbo.build": [
+        "CONTRIBUTING.md",
+        "turbo.json"
+      ],
+      "pnpm.io": [
+        "CONTRIBUTING.md"
+      ],
+      "developers.cloudflare.com": [
+        "CONTRIBUTING.md",
+        "apps/ai-gateway/README.md",
+        "apps/ai-gateway/worker-configuration.d.ts",
+        "apps/ai-gateway/wrangler.jsonc",
+        "apps/auditlogs/README.md"
+      ],
+      "www.apache.org": [
+        "LICENSE",
+        "apps/ai-gateway/worker-configuration.d.ts",
+        "apps/auditlogs/worker-configuration.d.ts",
+        "apps/autorag/worker-configuration.d.ts",
+        "apps/browser-rendering/worker-configuration.d.ts"
+      ],
+      "cloudflare.com": [
+        "package.json"
+      ],
+      "github.com": [
+        ".changeset/README.md",
+        "README.md",
+        "apps/autorag/CHANGELOG.md",
+        "apps/autorag/CONTRIBUTING.md",
+        "apps/autorag/README.md"
+      ],
+      "eslint.org": [
+        "pnpm-lock.yaml"
+      ],
+      "modelcontextprotocol.io": [
+        "README.md",
+        "apps/ai-gateway/CONTRIBUTING.md",
+        "apps/ai-gateway/README.md",
+        "apps/auditlogs/README.md",
+        "apps/autorag/CONTRIBUTING.md"
+      ],
+      "docs.mcp.cloudflare.com": [
+        "README.md",
+        "apps/docs-ai-search/README.md",
+        "apps/docs-vectorize/README.md",
+        "server.json"
+      ],
+      "bindings.mcp.cloudflare.com": [
+        "README.md",
+        "apps/workers-bindings/README.md",
+        "server.json"
+      ],
+      "builds.mcp.cloudflare.com": [
+        "README.md",
+        "apps/workers-builds/README.md",
+        "server.json"
+      ],
+      "observability.mcp.cloudflare.com": [
+        ".github/ISSUE_TEMPLATE/bug_report.md",
+        "README.md",
+        "apps/workers-observability/README.md",
+        "server.json"
+      ],
+      "radar.mcp.cloudflare.com": [
+        "README.md",
+        "apps/radar/README.md",
+        "server.json"
+      ],
+      "containers.mcp.cloudflare.com": [
+        "README.md",
+        "apps/sandbox-container/README.md",
+        "server.json"
+      ],
+      "browser.mcp.cloudflare.com": [
+        "README.md",
+        "apps/browser-rendering/README.md",
+        "server.json"
+      ],
+      "logs.mcp.cloudflare.com": [
+        "README.md",
+        "apps/logpush/README.md",
+        "server.json"
+      ],
+      "ai-gateway.mcp.cloudflare.com": [
+        "README.md",
+        "apps/ai-gateway/README.md",
+        "server.json"
+      ],
+      "auditlogs.mcp.cloudflare.com": [
+        "README.md",
+        "apps/auditlogs/README.md",
+        "server.json"
+      ],
+      "dns-analytics.mcp.cloudflare.com": [
+        "README.md",
+        "apps/dns-analytics/README.md",
+        "server.json"
+      ],
+      "dex.mcp.cloudflare.com": [
+        "README.md",
+        "apps/dex-analysis/README.md",
+        "server.json"
+      ],
+      "casb.mcp.cloudflare.com": [
+        "README.md",
+        "server.json"
+      ],
+      "graphql.mcp.cloudflare.com": [
+        "README.md",
+        "apps/graphql/README.md",
+        "server.json"
+      ],
+      "playground.ai.cloudflare.com": [
+        "README.md",
+        "apps/ai-gateway/README.md",
+        "apps/auditlogs/README.md",
+        "apps/autorag/README.md",
+        "apps/browser-rendering/README.md"
+      ],
+      "www.npmjs.com": [
+        "README.md",
+        "apps/ai-gateway/README.md",
+        "apps/auditlogs/README.md",
+        "apps/autorag/README.md",
+        "apps/browser-rendering/README.md"
+      ],
+      "openai.com": [
+        "README.md"
+      ],
+      "dash.cloudflare.com": [
+        "README.md",
+        "packages/mcp-common/src/cloudflare-auth.spec.ts",
+        "packages/mcp-common/src/cloudflare-auth.ts",
+        "packages/mcp-common/src/sentry.spec.ts"
+      ],
+      "static.modelcontextprotocol.io": [
+        "server.json"
+      ],
+      "unpkg.com": [
+        ".changeset/config.json"
+      ],
+      "go.microsoft.com": [
+        ".vscode/extensions.json"
+      ],
+      "arktype.io": [
+        ".vscode/settings.json"
+      ],
+      "developer.mozilla.org": [
+        "apps/ai-gateway/worker-configuration.d.ts",
+        "apps/auditlogs/worker-configuration.d.ts",
+        "apps/autorag/worker-configuration.d.ts",
+        "apps/browser-rendering/worker-configuration.d.ts",
+        "apps/cloudflare-one-casb/worker-configuration.d.ts"
+      ],
+      "www.iana.org": [
+        "apps/ai-gateway/worker-configuration.d.ts",
+        "apps/auditlogs/worker-configuration.d.ts",
+        "apps/autorag/worker-configuration.d.ts",
+        "apps/browser-rendering/worker-configuration.d.ts",
+        "apps/cloudflare-one-casb/worker-configuration.d.ts"
+      ],
+      "en.wikipedia.org": [
+        "apps/ai-gateway/worker-configuration.d.ts",
+        "apps/auditlogs/worker-configuration.d.ts",
+        "apps/autorag/worker-configuration.d.ts",
+        "apps/browser-rendering/worker-configuration.d.ts",
+        "apps/cloudflare-one-casb/worker-configuration.d.ts"
+      ],
+      "tldp.org": [
+        "apps/ai-gateway/worker-configuration.d.ts",
+        "apps/auditlogs/worker-configuration.d.ts",
+        "apps/autorag/worker-configuration.d.ts",
+        "apps/browser-rendering/worker-configuration.d.ts",
+        "apps/cloudflare-one-casb/worker-configuration.d.ts"
+      ],
+      "www.rfc-editor.org": [
+        "apps/ai-gateway/worker-configuration.d.ts",
+        "apps/auditlogs/worker-configuration.d.ts",
+        "apps/autorag/worker-configuration.d.ts",
+        "apps/browser-rendering/worker-configuration.d.ts",
+        "apps/cloudflare-one-casb/worker-configuration.d.ts"
+      ],
+      "ldapwiki.com": [
+        "apps/ai-gateway/worker-configuration.d.ts",
+        "apps/auditlogs/worker-configuration.d.ts",
+        "apps/autorag/worker-configuration.d.ts",
+        "apps/browser-rendering/worker-configuration.d.ts",
+        "apps/cloudflare-one-casb/worker-configuration.d.ts"
+      ],
+      "www.iso.org": [
+        "apps/ai-gateway/worker-configuration.d.ts",
+        "apps/auditlogs/worker-configuration.d.ts",
+        "apps/autorag/worker-configuration.d.ts",
+        "apps/browser-rendering/worker-configuration.d.ts",
+        "apps/cloudflare-one-casb/worker-configuration.d.ts"
+      ],
+      "support.cloudflare.com": [
+        "apps/ai-gateway/worker-configuration.d.ts",
+        "apps/auditlogs/worker-configuration.d.ts",
+        "apps/autorag/worker-configuration.d.ts",
+        "apps/browser-rendering/worker-configuration.d.ts",
+        "apps/cloudflare-one-casb/worker-configuration.d.ts"
+      ],
+      "knowledge.digicert.com": [
+        "apps/ai-gateway/worker-configuration.d.ts",
+        "apps/auditlogs/worker-configuration.d.ts",
+        "apps/autorag/worker-configuration.d.ts",
+        "apps/browser-rendering/worker-configuration.d.ts",
+        "apps/cloudflare-one-casb/worker-configuration.d.ts"
+      ],
+      "opensource.org": [
+        "apps/ai-gateway/worker-configuration.d.ts",
+        "apps/auditlogs/worker-configuration.d.ts",
+        "apps/autorag/worker-configuration.d.ts",
+        "apps/browser-rendering/worker-configuration.d.ts",
+        "apps/cloudflare-one-casb/worker-configuration.d.ts"
+      ],
+      "docs.oasis-open.org": [
+        "apps/ai-gateway/worker-configuration.d.ts",
+        "apps/auditlogs/worker-configuration.d.ts",
+        "apps/autorag/worker-configuration.d.ts",
+        "apps/browser-rendering/worker-configuration.d.ts",
+        "apps/cloudflare-one-casb/worker-configuration.d.ts"
+      ],
+      "mcp.cloudflare.com": [
+        "apps/autorag/CHANGELOG.md",
+        "apps/autorag/CONTRIBUTING.md",
+        "apps/autorag/README.md",
+        "apps/autorag/src/autorag.app.ts"
+      ],
+      "blog.cloudflare.com": [
+        "apps/autorag/README.md"
+      ],
+      "autorag.mcp.cloudflare.com": [
+        "apps/autorag/README.md"
+      ],
+      "demo-day.mcp.cloudflare.com": [
+        "apps/demo-day/frontend/index.html",
+        "apps/demo-day/src/demo-day.app.ts"
+      ],
+      "fonts.googleapis.com": [
+        "apps/demo-day/frontend/index.html"
+      ],
+      "fonts.gstatic.com": [
+        "apps/demo-day/frontend/index.html"
+      ],
+      "www.youtube.com": [
+        "apps/demo-day/frontend/index.html"
+      ],
+      "www.w3.org": [
+        "apps/demo-day/frontend/index.html",
+        "apps/demo-day/frontend/public/anthropic.svg",
+        "apps/demo-day/frontend/public/asana.svg",
+        "apps/demo-day/frontend/public/atlassian.svg",
+        "apps/demo-day/frontend/public/canva.svg"
+      ],
+      "starbasedb-3285.outerbase.workers.dev": [
+        "apps/demo-day/frontend/script.js"
+      ],
+      "cloudflare.tv": [
+        "apps/demo-day/frontend/script.js"
+      ],
+      "calendar.google.com": [
+        "apps/demo-day/frontend/script.js"
+      ],
+      "outlook.live.com": [
+        "apps/demo-day/frontend/script.js"
+      ],
+      "assets.local": [
+        "apps/demo-day/src/demo-day.app.ts"
+      ],
+      "api.cloudflare.com": [
+        "apps/dex-analysis/src/warp_diag_reader.ts",
+        "apps/graphql/src/tools/graphql.tools.ts",
+        "apps/radar/src/tools/radar.tools.ts",
+        "apps/radar/src/tools/url-scanner.tools.ts",
+        "packages/mcp-common/src/cloudflare-api.spec.ts"
+      ],
+      "d3ffa014f0daa57b27a174476bc2573f@sentry10.cfdata.org": [
+        "apps/docs-ai-search/wrangler.jsonc",
+        "apps/docs-vectorize/wrangler.jsonc"
+      ],
+      "graphql.cloudflare.com": [
+        "apps/graphql/README.md",
+        "apps/graphql/src/tools/graphql.tools.ts"
+      ],
+      "radar.cloudflare.com": [
+        "apps/radar/README.md"
+      ],
+      "prerelease-registry.devprod.cloudflare.dev": [
+        "apps/sandbox-container/CONTRIBUTING.md"
+      ],
+      "container-starter-2.cmsparks.workers.dev": [
+        "apps/sandbox-container/CONTRIBUTING.md"
+      ],
+      "host": [
+        "apps/sandbox-container/server/containerHelpers.ts"
+      ],
+      "host:$": [
+        "apps/sandbox-container/server/userContainer.ts"
+      ],
+      "nodejs.org": [
+        "apps/workers-bindings/.gitignore"
+      ],
+      "gruntjs.com": [
+        "apps/workers-bindings/.gitignore"
+      ],
+      "bower.io": [
+        "apps/workers-bindings/.gitignore"
+      ],
+      "snowpack.dev": [
+        "apps/workers-bindings/.gitignore"
+      ],
+      "parceljs.org": [
+        "apps/workers-bindings/.gitignore"
+      ],
+      "nextjs.org": [
+        "apps/workers-bindings/.gitignore"
+      ],
+      "2cc5007c2ad5f33e9be007d4b40208ef@sentry10.cfdata.org": [
+        "apps/workers-builds/wrangler.jsonc"
+      ],
+      "033e673c1b004626609d9a68a8b86b56@sentry10.cfdata.org": [
+        "apps/workers-observability/wrangler.jsonc"
+      ],
+      "datatracker.ietf.org": [
+        "packages/mcp-common/src/cloudflare-oauth-handler.ts"
+      ],
+      "images.mcp.cloudflare.com": [
+        "packages/mcp-common/src/cloudflare-oauth-handler.ts"
+      ],
+      "ai.google.dev": [
+        "packages/mcp-common/src/tools/docs-vectorize.tools.ts"
+      ],
+      "json.schemastore.org": [
+        "packages/typescript-config/tools.json",
+        "packages/typescript-config/workers-lib.json",
+        "packages/typescript-config/workers.json"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\cloudflare__mcp-server-cloudflare\\gitleaks.json",
+      "exit_code": 0,
+      "output_path": "_logs/scan/cloudflare__mcp-server-cloudflare/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/cloudflare__mcp-server-cloudflare/osv.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "exec-call in apps/ai-gateway/worker-configuration.d.ts; exec-call in apps/ai-gateway/worker-configuration.d.ts; exec-call in apps/auditlogs/worker-configuration.d.ts; exec-call in apps/auditlogs/worker-configuration.d.ts; exec-call in apps/autorag/worker-configuration.d.ts; exec-call in apps/autorag/worker-configuration.d.ts; exec-call in apps/browser-rendering/worker-configuration.d.ts; exec-call in apps/browser-rendering/worker-configuration.d.ts; exec-call in apps/cloudflare-one-casb/worker-configuration.d.ts; exec-call in apps/cloudflare-one-casb/worker-configuration.d.ts; exec-call in apps/demo-day/worker-configuration.d.ts; exec-call in apps/demo-day/worker-configuration.d.ts; exec-call in apps/dex-analysis/worker-configuration.d.ts; exec-call in apps/dex-analysis/worker-configuration.d.ts; exec-call in apps/dns-analytics/worker-configuration.d.ts; exec-call in apps/dns-analytics/worker-configuration.d.ts; exec-call in apps/docs-ai-search/worker-configuration.d.ts; exec-call in apps/docs-ai-search/worker-configuration.d.ts; exec-call in apps/docs-autorag/worker-configuration.d.ts; exec-call in apps/docs-autorag/worker-configuration.d.ts; exec-call in apps/docs-vectorize/worker-configuration.d.ts; exec-call in apps/docs-vectorize/worker-configuration.d.ts; exec-call in apps/graphql/worker-configuration.d.ts; exec-call in apps/graphql/worker-configuration.d.ts; exec-call in apps/logpush/worker-configuration.d.ts; exec-call in apps/logpush/worker-configuration.d.ts; exec-call in apps/radar/worker-configuration.d.ts; exec-call in apps/radar/worker-configuration.d.ts; exec-call in apps/sandbox-container/worker-configuration.d.ts; exec-call in apps/sandbox-container/worker-configuration.d.ts; exec-call in apps/sandbox-container/container/sandbox.container.app.ts; exec-call in apps/workers-bindings/worker-configuration.d.ts; exec-call in apps/workers-bindings/worker-configuration.d.ts; exec-call in apps/workers-builds/worker-configuration.d.ts; exec-call in apps/workers-builds/worker-configuration.d.ts; exec-call in apps/workers-observability/worker-configuration.d.ts; exec-call in apps/workers-observability/worker-configuration.d.ts; exec-call in packages/eval-tools/worker-configuration.d.ts; exec-call in packages/eval-tools/worker-configuration.d.ts; exec-call in packages/mcp-common/worker-configuration.d.ts; exec-call in packages/mcp-common/worker-configuration.d.ts; exec-call in packages/mcp-observability/worker-configuration.d.ts; exec-call in packages/mcp-observability/worker-configuration.d.ts",
+  "files_scanned": 424,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

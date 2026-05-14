@@ -1,0 +1,139 @@
+{
+  "source_url": "https://github.com/HubSpot/hubspot-api-nodejs",
+  "proposed_slot": "merchant.crm.hubspot-node",
+  "scanned_at": "2026-05-14T05:53:30.110898+00:00",
+  "clone_ok": true,
+  "commit_pinned": "77ae0dd45f800b4df4c992c3717fb2699724229b",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "editorconfig.org": [
+        ".editorconfig"
+      ],
+      "keepachangelog.com": [
+        "CHANGELOG.md"
+      ],
+      "semver.org": [
+        "CHANGELOG.md"
+      ],
+      "github.com": [
+        "CHANGELOG.md",
+        "README.md",
+        "codegen/automation/actions/models/BatchInputCallbackCompletionBatchRequest.ts",
+        "codegen/automation/actions/models/CallbackCompletionBatchRequest.ts",
+        "codegen/automation/actions/models/CallbackCompletionRequest.ts"
+      ],
+      "www.apache.org": [
+        "LICENSE"
+      ],
+      "registry.npmjs.org": [
+        "package-lock.json"
+      ],
+      "opencollective.com": [
+        "package-lock.json"
+      ],
+      "eslint.org": [
+        "package-lock.json"
+      ],
+      "www.patreon.com": [
+        "package-lock.json"
+      ],
+      "feross.org": [
+        "package-lock.json"
+      ],
+      "developers.hubspot.com": [
+        "README.md",
+        "codegen/cms/blogs/blog_posts/apis/MultiLanguageApi.ts",
+        "codegen/cms/blogs/blog_posts/types/ObjectParamAPI.ts",
+        "codegen/cms/blogs/blog_posts/types/ObservableAPI.ts",
+        "codegen/cms/blogs/blog_posts/types/PromiseAPI.ts"
+      ],
+      "github.hubspot.com": [
+        "README.md"
+      ],
+      "some-url": [
+        "README.md"
+      ],
+      "developer.mozilla.org": [
+        "README.md"
+      ],
+      "openapi-generator.tech": [
+        "README.md",
+        "codegen/automation/actions/models/BatchInputCallbackCompletionBatchRequest.ts",
+        "codegen/automation/actions/models/CallbackCompletionBatchRequest.ts",
+        "codegen/automation/actions/models/CallbackCompletionRequest.ts",
+        "codegen/automation/actions/models/CollectionResponsePublicActionDefinitionForwardPaging.ts"
+      ],
+      "api.hubapi.com": [
+        "codegen/automation/actions/servers.ts",
+        "codegen/cms/audit_logs/servers.ts",
+        "codegen/cms/blogs/authors/servers.ts",
+        "codegen/cms/blogs/blog_posts/servers.ts",
+        "codegen/cms/blogs/tags/servers.ts"
+      ],
+      "httpwg.org": [
+        "codegen/automation/actions/http/http.ts",
+        "codegen/cms/audit_logs/http/http.ts",
+        "codegen/cms/blogs/authors/http/http.ts",
+        "codegen/cms/blogs/blog_posts/http/http.ts",
+        "codegen/cms/blogs/tags/http/http.ts"
+      ],
+      "en.wikipedia.org": [
+        "codegen/cms/site_search/apis/PublicApi.ts",
+        "codegen/cms/site_search/types/ObjectParamAPI.ts",
+        "codegen/cms/site_search/types/ObservableAPI.ts",
+        "codegen/cms/site_search/types/PromiseAPI.ts"
+      ],
+      "www.elastic.co": [
+        "codegen/cms/site_search/apis/PublicApi.ts",
+        "codegen/cms/site_search/types/ObjectParamAPI.ts",
+        "codegen/cms/site_search/types/ObservableAPI.ts",
+        "codegen/cms/site_search/types/PromiseAPI.ts"
+      ],
+      "knowledge.hubspot.com": [
+        "codegen/cms/url_redirects/models/UrlMapping.ts",
+        "codegen/crm/companies/apis/BasicApi.ts",
+        "codegen/crm/companies/apis/BatchApi.ts",
+        "codegen/crm/companies/types/ObjectParamAPI.ts",
+        "codegen/crm/companies/types/ObservableAPI.ts"
+      ],
+      "my.event.app": [
+        "codegen/marketing/events/models/EventDetailSettingsUrl.ts"
+      ],
+      "app.hubspot.com": [
+        "src/discovery/oauth/OauthDiscovery.ts",
+        "test/unit/authorizationUrl.spec.ts"
+      ],
+      "www.example.com": [
+        "test/unit/signature.spec.ts"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\HubSpot__hubspot-api-nodejs\\gitleaks.json",
+      "exit_code": 0,
+      "output_path": "_logs/scan/HubSpot__hubspot-api-nodejs/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/HubSpot__hubspot-api-nodejs/osv.json"
+    }
+  },
+  "verdict": "pass",
+  "verdict_reason": "no findings of concern in static scan",
+  "files_scanned": 2745,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

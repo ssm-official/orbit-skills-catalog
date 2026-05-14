@@ -1,0 +1,27 @@
+{
+  "source_url": "https://github.com/PyGithub/PyGithub",
+  "proposed_slot": "merchant.devops.pygithub",
+  "smoked_at": "2026-05-14T06:10:07.176753+00:00",
+  "platform": "windows",
+  "sandbox": "fresh venv / fresh node_modules (Docker unavailable on host)",
+  "network_monitoring": "Get-NetTCPConnection deltas (weaker than netns isolation)",
+  "package": "PyGithub",
+  "language": "python",
+  "kind": "python",
+  "steps": [
+    {
+      "step": "uv_dryrun",
+      "rc": 0,
+      "stderr": ""
+    },
+    {
+      "step": "uv_run_import",
+      "rc": 1,
+      "stdout": "",
+      "stderr": ":/Users/ssmca/orbit-skills-catalog/candidates/PyGithub__PyGithub\n      Built pygithub @ file:///C:/Users/ssmca/orbit-skills-catalog/candidates/PyGithub__PyGithub\nInstalled 12 packages in 92ms\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    import PyGithub; print('OK', sorted(set(dir(PyGithub)))[:20])\n    ^^^^^^^^^^^^^^^\nModuleNotFoundError: No module named 'PyGithub'\n",
+      "new_outbound_connections": []
+    }
+  ],
+  "verdict": "pass_with_notes",
+  "reason": "installable but direct import PyGithub failed (may use non-standard module name)"
+}

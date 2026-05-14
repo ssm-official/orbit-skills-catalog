@@ -1,0 +1,29 @@
+{
+  "source_url": "https://github.com/mailchimp/mailchimp-marketing-node",
+  "proposed_slot": "merchant.marketing.mailchimp-node",
+  "smoked_at": "2026-05-14T06:09:14.332564+00:00",
+  "platform": "windows",
+  "sandbox": "fresh venv / fresh node_modules (Docker unavailable on host)",
+  "network_monitoring": "Get-NetTCPConnection deltas (weaker than netns isolation)",
+  "package": "@mailchimp/mailchimp_marketing",
+  "language": "node",
+  "kind": "node",
+  "steps": [
+    {
+      "step": "npm_install",
+      "rc": 0,
+      "stderr": ""
+    },
+    {
+      "step": "node_check_main",
+      "main": "src/index.js",
+      "rc": 0,
+      "stderr": ""
+    },
+    {
+      "new_outbound_connections": []
+    }
+  ],
+  "verdict": "pass",
+  "reason": "npm install + syntax-check OK"
+}

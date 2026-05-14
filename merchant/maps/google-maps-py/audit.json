@@ -1,0 +1,153 @@
+{
+  "source_url": "https://github.com/googlemaps/google-maps-services-python",
+  "proposed_slot": "both.maps.google-maps-py",
+  "scanned_at": "2026-05-14T05:48:58.271723+00:00",
+  "clone_ok": true,
+  "commit_pinned": "9ec69cb66eec929d08ca90a82081b8ee4eef8b54",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner",
+    "pip-audit"
+  ],
+  "findings": {
+    "secrets": [
+      {
+        "file": "tests/test_addressvalidation.py",
+        "label": "google api key",
+        "match_redacted": true
+      }
+    ],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "developers.google.com": [
+        ".github/ISSUE_TEMPLATE/bug_report.md",
+        ".github/ISSUE_TEMPLATE/feature_request.md",
+        ".github/ISSUE_TEMPLATE/support_request.md",
+        "CHANGELOG.md",
+        "README.md"
+      ],
+      "nox.thea.codes": [
+        "CHANGELOG.md"
+      ],
+      "github.com": [
+        ".github/stale.yml",
+        ".github/sync-repo-settings.yaml",
+        "CHANGELOG.md",
+        "CONTRIB.md",
+        "README.md"
+      ],
+      "opensource.google": [
+        "CODE_OF_CONDUCT.md"
+      ],
+      "indieweb.org": [
+        "CODE_OF_CONDUCT.md"
+      ],
+      "code.google.com": [
+        "CONTRIB.md"
+      ],
+      "coverage.readthedocs.io": [
+        "coverage.xml"
+      ],
+      "raw.githubusercontent.com": [
+        "coverage.xml"
+      ],
+      "www.apache.org": [
+        ".github/CODEOWNERS",
+        ".github/dependabot.yml",
+        ".github/scripts/distribution.sh",
+        ".github/scripts/install.sh",
+        ".github/stale.yml"
+      ],
+      "codecov.io": [
+        "README.md"
+      ],
+      "badge.fury.io": [
+        "README.md"
+      ],
+      "img.shields.io": [
+        "README.md"
+      ],
+      "console.cloud.google.com": [
+        "README.md"
+      ],
+      "googlemaps.github.io": [
+        "README.md"
+      ],
+      "stackoverflow.com": [
+        ".github/ISSUE_TEMPLATE/bug_report.md",
+        ".github/ISSUE_TEMPLATE/feature_request.md",
+        ".github/ISSUE_TEMPLATE/support_request.md",
+        "README.md"
+      ],
+      "g.co": [
+        "SECURITY.md"
+      ],
+      "help.github.com": [
+        ".github/CODEOWNERS"
+      ],
+      "cloud.google.com": [
+        ".github/ISSUE_TEMPLATE/bug_report.md",
+        ".github/ISSUE_TEMPLATE/feature_request.md",
+        ".github/ISSUE_TEMPLATE/support_request.md",
+        "googlemaps/places.py"
+      ],
+      "bootstrap.pypa.io": [
+        ".github/scripts/install.sh"
+      ],
+      "addressvalidation.googleapis.com": [
+        "googlemaps/addressvalidation.py",
+        "tests/test_addressvalidation.py"
+      ],
+      "maps.googleapis.com": [
+        "googlemaps/client.py",
+        "tests/test_client.py",
+        "tests/test_directions.py",
+        "tests/test_distance_matrix.py",
+        "tests/test_elevation.py"
+      ],
+      "docs.python-requests.org": [
+        "googlemaps/client.py"
+      ],
+      "www.googleapis.com": [
+        "googlemaps/geolocation.py",
+        "tests/test_geolocation.py"
+      ],
+      "roads.googleapis.com": [
+        "googlemaps/roads.py",
+        "tests/test_roads.py"
+      ],
+      "en.wikipedia.org": [
+        "tests/test_client.py"
+      ],
+      "foo.com": [
+        "tests/test_client.py"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\googlemaps__google-maps-services-python\\gitleaks.json",
+      "exit_code": 1,
+      "output_path": "_logs/scan/googlemaps__google-maps-services-python/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/googlemaps__google-maps-services-python/osv.json"
+    },
+    "pip_audit": {
+      "exit_code": 1,
+      "output_path": "_logs/scan/googlemaps__google-maps-services-python/pip-audit.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "test-path secret findings (1); gitleaks: 1 test-path secret(s)",
+  "files_scanned": 60,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

@@ -1,0 +1,444 @@
+{
+  "source_url": "https://github.com/twilio/twilio-node",
+  "proposed_slot": "both.comms.twilio-node",
+  "scanned_at": "2026-05-14T05:53:57.531061+00:00",
+  "clone_ok": true,
+  "commit_pinned": "e9e546985dcc293e4f71888160725739e7b28c37",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner"
+  ],
+  "findings": {
+    "secrets": [
+      {
+        "file": "src/rest/accounts/v1/credential/aws.ts",
+        "label": "aws access key",
+        "match_redacted": true
+      },
+      {
+        "file": "src/rest/chat/v1/credential.ts",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "src/rest/chat/v1/credential.ts",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "src/rest/chat/v2/credential.ts",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "src/rest/chat/v2/credential.ts",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "src/rest/conversations/v1/credential.ts",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "src/rest/conversations/v1/credential.ts",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "src/rest/notify/v1/credential.ts",
+        "label": "private key",
+        "match_redacted": true
+      },
+      {
+        "file": "src/rest/notify/v1/credential.ts",
+        "label": "private key",
+        "match_redacted": true
+      }
+    ],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "github.com": [
+        ".github/ISSUE_TEMPLATE/feature-request.yml",
+        "CHANGES.md",
+        "CONTRIBUTING.md",
+        "PULL_REQUEST_TEMPLATE.md",
+        "README.md"
+      ],
+      "twilio.github.io": [
+        "CHANGES.md",
+        "README.md"
+      ],
+      "www.contributor-covenant.org": [
+        "CODE_OF_CONDUCT.md"
+      ],
+      "www.twilio.com": [
+        ".github/ISSUE_TEMPLATE/config.yml",
+        "CONTRIBUTING.md",
+        "LICENSE",
+        "README.md",
+        "UPGRADE.md"
+      ],
+      "twilio.com": [
+        ".github/ISSUE_TEMPLATE/config.yml",
+        "PULL_REQUEST_TEMPLATE.md",
+        "README.md",
+        "spec/unit/twiml/MessagingResponse.spec.js",
+        "src/rest/api/v2010/account/message.ts"
+      ],
+      "semver.org": [
+        "README.md",
+        "VERSIONS.md"
+      ],
+      "support.twilio.com": [
+        "README.md",
+        "src/rest/api/v2010/account/conference/participant.ts",
+        "src/rest/api/v2010/account/message.ts",
+        "src/rest/taskrouter/v1/workspace/task/reservation.ts",
+        "src/rest/taskrouter/v1/workspace/worker/reservation.ts"
+      ],
+      "gun.io": [
+        "README.md"
+      ],
+      "help.github.com": [
+        "README.md"
+      ],
+      "nodejs.org": [
+        "README.md"
+      ],
+      "img.shields.io": [
+        "README.md"
+      ],
+      "npmcharts.com": [
+        "README.md"
+      ],
+      "badgen.net": [
+        "README.md"
+      ],
+      "packagephobia.com": [
+        "README.md"
+      ],
+      "npmjs.org": [
+        "README.md"
+      ],
+      "stackoverflow.com": [
+        ".github/ISSUE_TEMPLATE/config.yml"
+      ],
+      "www.npmjs.com": [
+        "advanced-examples/custom-http-client.md"
+      ],
+      "console.twilio.com": [
+        "advanced-examples/custom-http-client.md"
+      ],
+      "demo.twilio.com": [
+        "examples/typescript/example.ts"
+      ],
+      "api.twilio.com": [
+        "spec/integration.spec.js",
+        "spec/unit/base/Version.spec.js",
+        "spec/unit/jwt/validation/ValidationToken.spec.js",
+        "spec/unit/rest/Twilio.spec.js",
+        "spec/unit/rest/incomingPhoneNumber.spec.js"
+      ],
+      "mycompany.com": [
+        "spec/validation.spec.js"
+      ],
+      "user:pass@mycompany.com": [
+        "spec/validation.spec.js"
+      ],
+      "user@mycompany.com": [
+        "spec/validation.spec.js"
+      ],
+      "example.com:8080": [
+        "spec/unit/base/RequestClient.spec.js"
+      ],
+      "000.us-east-1.playback.live-video.net": [
+        "spec/unit/jwt/AccessToken.spec.js"
+      ],
+      "taskrouter.twilio.com": [
+        "spec/unit/jwt/taskrouter/TaskRouterCapability.spec.js",
+        "spec/unit/jwt/taskrouter/util.spec.js",
+        "src/jwt/taskrouter/util.ts",
+        "src/rest/TaskrouterBase.ts"
+      ],
+      "event-bridge.twilio.com": [
+        "spec/unit/jwt/taskrouter/TaskRouterCapability.spec.js",
+        "src/jwt/taskrouter/util.ts"
+      ],
+      "api.edge.us1.twilio.com": [
+        "spec/unit/rest/Twilio.spec.js"
+      ],
+      "api.edge.region.twilio.com": [
+        "spec/unit/rest/Twilio.spec.js"
+      ],
+      "api.region.twilio.com": [
+        "spec/unit/rest/Twilio.spec.js"
+      ],
+      "api.edge2.region.twilio.com": [
+        "spec/unit/rest/Twilio.spec.js"
+      ],
+      "api.edge1.region.twilio.com": [
+        "spec/unit/rest/Twilio.spec.js"
+      ],
+      "api.edge.region2.twilio.com": [
+        "spec/unit/rest/Twilio.spec.js"
+      ],
+      "api.region2.twilio.com": [
+        "spec/unit/rest/Twilio.spec.js"
+      ],
+      "api.region2.domain.com": [
+        "spec/unit/rest/Twilio.spec.js"
+      ],
+      "api.domain.com": [
+        "spec/unit/rest/Twilio.spec.js"
+      ],
+      "api.region.twilio.com:123": [
+        "spec/unit/rest/Twilio.spec.js"
+      ],
+      "api.twilio.com:123": [
+        "spec/unit/rest/Twilio.spec.js"
+      ],
+      "example.com:443": [
+        "spec/unit/webhooks/webhooks.spec.js"
+      ],
+      "tls-test.twilio.com:443": [
+        "src/base/BaseTwilio.ts"
+      ],
+      "openapi-generator.tech": [
+        "src/rest/AccountsBase.ts",
+        "src/rest/ApiBase.ts",
+        "src/rest/AssistantsBase.ts",
+        "src/rest/BulkexportsBase.ts",
+        "src/rest/ChatBase.ts"
+      ],
+      "accounts.twilio.com": [
+        "src/rest/AccountsBase.ts",
+        "src/rest/accounts/v1/authTokenPromotion.ts",
+        "src/rest/accounts/v1/credential/aws.ts",
+        "src/rest/accounts/v1/credential/publicKey.ts",
+        "src/rest/accounts/v1/secondaryAuthToken.ts"
+      ],
+      "assistants.twilio.com": [
+        "src/rest/AssistantsBase.ts"
+      ],
+      "bulkexports.twilio.com": [
+        "src/rest/BulkexportsBase.ts"
+      ],
+      "chat.twilio.com": [
+        "src/rest/ChatBase.ts"
+      ],
+      "content.twilio.com": [
+        "src/rest/ContentBase.ts",
+        "src/rest/content/v1/content.ts",
+        "src/rest/content/v1/content/approvalFetch.ts",
+        "src/rest/content/v1/legacyContent.ts",
+        "src/rest/content/v2/content.ts"
+      ],
+      "conversations.twilio.com": [
+        "src/rest/ConversationsBase.ts"
+      ],
+      "events.twilio.com": [
+        "src/rest/EventsBase.ts"
+      ],
+      "flex-api.twilio.com": [
+        "src/rest/FlexApiBase.ts"
+      ],
+      "frontline-api.twilio.com": [
+        "src/rest/FrontlineApiBase.ts"
+      ],
+      "iam.twilio.com": [
+        "src/rest/IamBase.ts"
+      ],
+      "insights.twilio.com": [
+        "src/rest/InsightsBase.ts"
+      ],
+      "intelligence.twilio.com": [
+        "src/rest/IntelligenceBase.ts"
+      ],
+      "ip-messaging.twilio.com": [
+        "src/rest/IpMessagingBase.ts"
+      ],
+      "knowledge.twilio.com": [
+        "src/rest/KnowledgeBase.ts"
+      ],
+      "lookups.twilio.com": [
+        "src/rest/LookupsBase.ts"
+      ],
+      "marketplace.twilio.com": [
+        "src/rest/MarketplaceBase.ts"
+      ],
+      "memory.twilio.com": [
+        "src/rest/MemoryBase.ts"
+      ],
+      "messaging.twilio.com": [
+        "src/rest/MessagingBase.ts"
+      ],
+      "monitor.twilio.com": [
+        "src/rest/MonitorBase.ts"
+      ],
+      "notify.twilio.com": [
+        "src/rest/NotifyBase.ts"
+      ],
+      "numbers.twilio.com": [
+        "src/rest/NumbersBase.ts"
+      ],
+      "oauth.twilio.com": [
+        "src/rest/OauthBase.ts"
+      ],
+      "preview.twilio.com": [
+        "src/rest/PreviewBase.ts"
+      ],
+      "preview-iam.twilio.com": [
+        "src/rest/PreviewIamBase.ts"
+      ],
+      "pricing.twilio.com": [
+        "src/rest/PricingBase.ts"
+      ],
+      "proxy.twilio.com": [
+        "src/rest/ProxyBase.ts"
+      ],
+      "routes.twilio.com": [
+        "src/rest/RoutesBase.ts"
+      ],
+      "serverless.twilio.com": [
+        "src/rest/ServerlessBase.ts"
+      ],
+      "studio.twilio.com": [
+        "src/rest/StudioBase.ts"
+      ],
+      "supersim.twilio.com": [
+        "src/rest/SupersimBase.ts"
+      ],
+      "sync.twilio.com": [
+        "src/rest/SyncBase.ts"
+      ],
+      "trunking.twilio.com": [
+        "src/rest/TrunkingBase.ts"
+      ],
+      "trusthub.twilio.com": [
+        "src/rest/TrusthubBase.ts"
+      ],
+      "verify.twilio.com": [
+        "src/rest/VerifyBase.ts"
+      ],
+      "video.twilio.com": [
+        "src/rest/VideoBase.ts"
+      ],
+      "voice.twilio.com": [
+        "src/rest/VoiceBase.ts"
+      ],
+      "wireless.twilio.com": [
+        "src/rest/WirelessBase.ts"
+      ],
+      "en.wikipedia.org": [
+        "src/rest/accounts/v1/authTokenPromotion.ts",
+        "src/rest/accounts/v1/secondaryAuthToken.ts",
+        "src/rest/api/v2010/account/availablePhoneNumberCountry.ts",
+        "src/rest/api/v2010/account/availablePhoneNumberCountry/local.ts",
+        "src/rest/api/v2010/account/availablePhoneNumberCountry/machineToMachine.ts"
+      ],
+      "www.ietf.org": [
+        "src/rest/accounts/v1/credential/aws.ts",
+        "src/rest/accounts/v1/credential/publicKey.ts",
+        "src/rest/api/v2010/account/address.ts",
+        "src/rest/api/v2010/account/address/dependentPhoneNumber.ts",
+        "src/rest/api/v2010/account/application.ts"
+      ],
+      "wwnw.twilio.com": [
+        "src/rest/api/v2010/account/call.ts"
+      ],
+      "www.php.net": [
+        "src/rest/api/v2010/account/call.ts",
+        "src/rest/api/v2010/account/call/recording.ts",
+        "src/rest/api/v2010/account/conference/recording.ts",
+        "src/rest/api/v2010/account/recording.ts",
+        "src/rest/api/v2010/account/sip/credentialList.ts"
+      ],
+      "www.iso.org": [
+        "src/rest/api/v2010/account/call.ts",
+        "src/rest/api/v2010/account/call/payment.ts",
+        "src/rest/api/v2010/account/message.ts",
+        "src/rest/api/v2010/account/recording/transcription.ts",
+        "src/rest/api/v2010/account/transcription.ts"
+      ],
+      "datatracker.ietf.org": [
+        "src/rest/api/v2010/account/message.ts"
+      ],
+      "www.rfc-editor.org": [
+        "src/rest/api/v2010/account/call/transcription.ts"
+      ],
+      "json-schema.org": [
+        "src/rest/intelligence/v2/operatorType.ts",
+        "src/rest/verify/v2/form.ts"
+      ],
+      "platform.openai.com": [
+        "src/rest/intelligence/v3/operator.ts",
+        "src/rest/intelligence/v3/version.ts"
+      ],
+      "www.facebook.com": [
+        "src/rest/messaging/v2/channelsSender.ts"
+      ],
+      "firebase.google.com": [
+        "src/rest/notify/v1/service/notification.ts"
+      ],
+      "developer.apple.com": [
+        "src/rest/notify/v1/service/notification.ts"
+      ],
+      "developer.mozilla.org": [
+        "src/rest/sync/v1/service/syncList/syncListItem.ts",
+        "src/rest/sync/v1/service/syncMap/syncMapItem.ts",
+        "src/rest/taskrouter/v1/workspace/task.ts",
+        "src/rest/verify/v2/service/approveChallenge.ts",
+        "src/rest/verify/v2/service/newVerifyFactor.ts"
+      ],
+      "base64.guru": [
+        "src/rest/verify/v2/service/approveChallenge.ts",
+        "src/rest/verify/v2/service/newVerifyFactor.ts"
+      ],
+      "developers.google.com": [
+        "src/rest/verify/v2/service/verification.ts"
+      ],
+      "documentation-example-twilio-bucket": [
+        "src/rest/video/v1/compositionSettings.ts",
+        "src/rest/video/v1/recordingSettings.ts"
+      ],
+      "tools.ietf.org": [
+        "src/rest/video/v1/compositionSettings.ts",
+        "src/rest/video/v1/recordingSettings.ts",
+        "src/rest/video/v1/room.ts",
+        "src/rest/voice/v1/ipRecord.ts"
+      ],
+      "www.itu.int": [
+        "src/rest/voice/v1/dialingPermissions/country.ts"
+      ],
+      "mcc-mnc.com": [
+        "src/rest/wireless/v1/sim/dataSession.ts"
+      ],
+      "expressjs.com": [
+        "src/webhooks/webhooks.ts"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\twilio__twilio-node\\gitleaks.json",
+      "exit_code": 1,
+      "output_path": "_logs/scan/twilio__twilio-node/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/twilio__twilio-node/osv.json"
+    }
+  },
+  "verdict": "pass_with_notes",
+  "verdict_reason": "trusted-vendor: 9 pattern-scan secret hit(s) downgraded to notes (likely docstring/example values); trusted-vendor: 4 gitleaks finding(s) downgraded to notes (likely SDK docs/example values); gitleaks: 3 test-path secret(s)",
+  "files_scanned": 815,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

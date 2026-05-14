@@ -1,0 +1,64 @@
+{
+  "source_url": "https://github.com/ravinahp/flights-mcp",
+  "proposed_slot": "personal.travel.flights-duffel",
+  "scanned_at": "2026-05-14T05:51:55.003577+00:00",
+  "clone_ok": true,
+  "commit_pinned": "749d7ad14cce86cd1ecd2c236c30b272f23f2d1e",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner",
+    "pip-audit"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "github.com": [
+        "README.md"
+      ],
+      "app.duffel.com": [
+        "README.md"
+      ],
+      "smithery.ai": [
+        "README.md",
+        "smithery.yaml"
+      ],
+      "pypi.org": [
+        "uv.lock"
+      ],
+      "files.pythonhosted.org": [
+        "uv.lock"
+      ],
+      "api.duffel.com": [
+        "src/flights/api/client.py",
+        "src/flights/config/api.py"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\ravinahp__flights-mcp\\gitleaks.json",
+      "exit_code": 0,
+      "output_path": "_logs/scan/ravinahp__flights-mcp/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/ravinahp__flights-mcp/osv.json"
+    },
+    "pip_audit": {
+      "exit_code": 0,
+      "output_path": "_logs/scan/ravinahp__flights-mcp/pip-audit.json"
+    }
+  },
+  "verdict": "pass",
+  "verdict_reason": "no findings of concern in static scan",
+  "files_scanned": 25,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

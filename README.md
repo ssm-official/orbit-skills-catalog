@@ -88,4 +88,16 @@ Catalog metadata (everything *outside* `personal/*/source/` and `merchant/*/sour
 
 ## Status
 
-See `_logs/status_phase_*.md` for phase-by-phase progress, and `_logs/status_final.md` once `v1.0` is tagged.
+**v1.0 — 50 vetted skills shipped** (2026-05-14)
+
+- Personal track: 28 skills · Merchant track: 47 skills · Cross-listed: 25
+- 1 quarantined (genuine leaked SerpAPI key in a community travel-assistant MCP)
+- 3727 candidates considered (curated + 5 MCP awesome-list crawls)
+
+Headline picks: ElevenLabs MCP, Stripe Agent Toolkit, Plaid (Python+Node), OpenAI/Anthropic SDKs, Google Maps Services, Mapbox SDK, Notion SDK, Twilio, SendGrid, Resend, GitHub MCP Server, Sentry MCP, HubSpot, Salesforce (jsforce), Pipedrive, Square, Replicate, Hugging Face, rembg, CCXT, Spotify MCP, China-Rail (12306) MCP, Apify MCP, Mailchimp Marketing, Shopify MCP (community), Browserbase MCP, Playwright MCP, Cloudflare MCP. See `_catalog/INDEX.md` for the full table.
+
+See `_logs/status_phase_*.md` for phase-by-phase progress and `_logs/status_final.md` for the final report.
+
+### v1.1 backlog
+
+`_candidates_raw/shortlist_v1_full.jsonl` retains the 86 high-star aggregator-discovered MCP servers that we deferred from v1.0 to limit blast radius of the first audit pass. Re-running `cli_scan` + `cli_smoke` + `cli_document` against those is the v1.1 plan.

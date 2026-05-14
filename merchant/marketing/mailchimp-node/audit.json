@@ -1,0 +1,76 @@
+{
+  "source_url": "https://github.com/mailchimp/mailchimp-marketing-node",
+  "proposed_slot": "merchant.marketing.mailchimp-node",
+  "scanned_at": "2026-05-14T05:53:48.930601+00:00",
+  "clone_ok": true,
+  "commit_pinned": "7c1edd292e2d4732a0ea209de6b6dd38f968bf9d",
+  "scanners_run": [
+    "orbit_pattern_scan",
+    "install_hook_audit",
+    "gitleaks",
+    "osv-scanner"
+  ],
+  "findings": {
+    "secrets": [],
+    "suspicious": [],
+    "install_hooks": [],
+    "py_build_hooks": [],
+    "urls_found": {
+      "help.github.com": [
+        "git_push.sh"
+      ],
+      "github.com": [
+        ".github/PULL_REQUEST_TEMPLATE.md",
+        "README.md",
+        "git_push.sh",
+        "package.json",
+        "src/ApiClient.js"
+      ],
+      "$": [
+        "git_push.sh"
+      ],
+      "mailchimp.com": [
+        "README.md",
+        "src/api/AccountExportsApi.js",
+        "src/api/ActivityFeedApi.js",
+        "src/api/AuthorizedAppsApi.js",
+        "src/api/AutomationsApi.js"
+      ],
+      "raw.githubusercontent.com": [
+        "README.md"
+      ],
+      "server.api.mailchimp.com": [
+        "README.md",
+        "src/ApiClient.js"
+      ],
+      "visionmedia.github.io": [
+        "src/ApiClient.js"
+      ],
+      "www.promisejs.org": [
+        "src/ApiClient.js",
+        "src/api/AccountExportApi.js",
+        "src/api/AccountExportsApi.js",
+        "src/api/ActivityFeedApi.js",
+        "src/api/AuthorizedAppsApi.js"
+      ]
+    }
+  },
+  "external_scanners": {
+    "gitleaks": {
+      "command": "gitleaks detect --no-banner --no-git --source . --report-format json --report-path C:\\Users\\ssmca\\orbit-skills-catalog\\_logs\\scan\\mailchimp__mailchimp-marketing-node\\gitleaks.json",
+      "exit_code": 0,
+      "output_path": "_logs/scan/mailchimp__mailchimp-marketing-node/gitleaks.stdout.txt"
+    },
+    "osv": {
+      "command": "osv-scanner --recursive --format=json .",
+      "exit_code": 128,
+      "output_path": "_logs/scan/mailchimp__mailchimp-marketing-node/osv.json"
+    }
+  },
+  "verdict": "pass",
+  "verdict_reason": "no findings of concern in static scan",
+  "files_scanned": 36,
+  "files_skipped": 0,
+  "_reclassified": true,
+  "_sanitized": true
+}

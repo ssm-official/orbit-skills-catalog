@@ -1,0 +1,27 @@
+{
+  "source_url": "https://github.com/mailchimp/mailchimp-marketing-python",
+  "proposed_slot": "merchant.marketing.mailchimp-py",
+  "smoked_at": "2026-05-14T06:08:59.868126+00:00",
+  "platform": "windows",
+  "sandbox": "fresh venv / fresh node_modules (Docker unavailable on host)",
+  "network_monitoring": "Get-NetTCPConnection deltas (weaker than netns isolation)",
+  "package": "mailchimp__mailchimp-marketing-python",
+  "language": "python",
+  "kind": "python",
+  "steps": [
+    {
+      "step": "uv_dryrun",
+      "rc": 0,
+      "stderr": ""
+    },
+    {
+      "step": "uv_run_import",
+      "rc": 1,
+      "stdout": "",
+      "stderr": "file:///C:/Users/ssmca/orbit-skills-catalog/candidates/mailchimp__mailchimp-marketing-python\n      Built mailchimp-marketing @ file:///C:/Users/ssmca/orbit-skills-catalog/candidates/mailchimp__mailchimp-marketing-python\nInstalled 8 packages in 39ms\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\nModuleNotFoundError: No module named 'mailchimp__mailchimp_marketing_python'\n",
+      "new_outbound_connections": []
+    }
+  ],
+  "verdict": "pass_with_notes",
+  "reason": "installable but direct import mailchimp__mailchimp_marketing_python failed (may use non-standard module name)"
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "id": "both.creative.anthropic-ts",
+  "name": "Anthropic SDK (TypeScript)",
+  "slug": "anthropic-ts",
+  "track": [
+    "personal",
+    "merchant"
+  ],
+  "category": "creative",
+  "slot": "anthropic-ts",
+  "summary": "Anthropic TS SDK",
+  "version": "1.0.0",
+  "source": {
+    "kind": "sdk_wrapper",
+    "repo_url": "https://github.com/anthropics/anthropic-sdk-typescript",
+    "commit_pinned": "a53f60d59ca904f3e79296586642aac3ce68ae02",
+    "license": "MIT",
+    "last_commit_at": "2026-05-13",
+    "stars": 1935,
+    "primary_language": "TypeScript",
+    "maintainer": "anthropics"
+  },
+  "upstream": {
+    "vendor": "Anthropic",
+    "vendor_url": "https://anthropic.com",
+    "auth_type": "api_key",
+    "sandbox_available": false,
+    "requires_user_oauth": false,
+    "cost_model": "paid_per_call",
+    "typical_per_call_cost_usd": "varies by model"
+  },
+  "x402_compatible": true,
+  "x402_notes": "per-call, deterministic JSON response",
+  "tools": [
+    {
+      "name": "primary",
+      "summary": "Primary entry point (smoke-tested via import / require). Tool catalogue derived at runtime from the upstream package.",
+      "destructive": false,
+      "idempotent": true,
+      "rate_limit": "see upstream docs"
+    }
+  ],
+  "tags": [
+    "creative",
+    "anthropics",
+    "both"
+  ],
+  "risk": {
+    "prompt_injection": "low",
+    "destructive": false,
+    "spend_capable": false,
+    "regulated_data": [
+      "pii"
+    ],
+    "default_mode": "live"
+  },
+  "audit": {
+    "verdict": "pass_with_notes",
+    "log": "audit.json",
+    "scanners_run": [
+      "orbit_pattern_scan",
+      "install_hook_audit",
+      "gitleaks",
+      "osv-scanner"
+    ],
+    "behavioral_check": "clean_with_notes"
+  },
+  "smoke": {
+    "verdict": "pass_with_notes",
+    "log": "smoke.json",
+    "last_passed_at": "2026-05-14T06:08:45.593324+00:00"
+  },
+  "orbit": {
+    "suggested_markup_floor_pct": 5,
+    "suggested_markup_ceiling_pct": 50,
+    "pricing_note": "Upstream cost model: paid_per_call.",
+    "tokenization_friendly": false
+  },
+  "notes": "Anthropic TS SDK"
+}
